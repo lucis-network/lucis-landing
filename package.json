@@ -34,12 +34,15 @@
     "@types/fbemitter": "^2.0.32",
     "@types/node": "16.11.12",
     "@types/react": "17.0.37",
+    "autoprefixer": "^10.4.2",
     "babel-plugin-import": "^1.13.3",
     "eslint": "8.4.1",
     "eslint-config-next": "12.0.7",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
+    "postcss": "^8.4.5",
     "sass": "^1.45.1",
+    "tailwindcss": "^3.0.15",
     "typescript": "4.5.3"
   }
 }

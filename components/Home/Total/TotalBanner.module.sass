@@ -1,14 +1,14 @@
 @import "styles/common"
 
 .total_content
-  background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%)
+  background: linear-gradient(209deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%)
   backdrop-filter: blur(6px)
   min-width: 270px
   max-width: 270px
   min-height: 220px
   border-radius: 20px
   padding: 0px 45px
-  margin-bottom: 12px
+  margin-bottom: 40px
   @apply flex flex-col items-center justify-center text-white text-center
 
   h1
@@ -31,3 +31,51 @@
       font-size: 28px
     h2
       font-size: 48px
+
+
+@media (min-width: 992px) and (max-width: 1024px)
+  .total_content
+    min-width: 200px
+    max-width: 200px
+    min-height: 200px
+    margin-right: 40px
+
+    h1
+      font-size: 24px
+    h2
+      font-size: 40px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .total_content
+    padding: 0
+    margin-right: 40px
+
+    h1
+      font-size: 28px
+    h2
+      font-size: 48px
+
+@media (min-width:  541px) and (max-width: 767px)
+  .total_content
+    min-width: 44%
+    max-width: 44%
+    min-height: 200px
+    margin: 12px
+
+    h1
+      font-size: 24px
+    h2
+      font-size: 40px
+
+@media (min-width: 0px) and (max-width: 540px)
+  .total_content
+    min-width: 44%
+    max-width: 44%
+    min-height: 162px
+    margin: 8px
+
+    h1
+      font-size: 18px
+    h2
+      font-size: 36px
+      padding: 0

@@ -30,8 +30,8 @@
     min-width: 268px
     border-radius: 16px
     padding: 16px 0px
-    margin-bottom: 12px
-    @include my-text(24px, 28px, 500)
+    margin-bottom: 24px
+    @include my-text(20px, 28px, 500)
     @apply text-white
     cursor: pointer
     transition: 0.3s
@@ -102,3 +102,87 @@
     .block_total
       justify-content: center
       margin-top: 40px
+@media (min-width: 992px) and (max-width: 1024px)
+  .container
+    .heading
+      h1
+        font-size: 40px
+      p
+        font-size: 24px
+    .groupButton
+      button
+        font-size: 18px
+    .content_glass
+      min-width: 600px
+    .block_total
+      justify-content: center
+      margin-top: 40px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .container
+    padding: 50px 50px 0px 50px !important
+  .im_banner
+    @apply flex-col
+  .groupButton
+    max-width: 500px
+
+  .content_glass
+    width: 100%
+    min-width: 100%
+    transform: translate(154px, -230px)
+  .content_glass:after
+    display: none
+  .block_total
+    justify-content: center
+    padding-right: 0
+
+@media (min-width: 540px) and (max-width: 767px)
+  .container
+    padding: 50px 50px 0px 50px !important
+    .heading
+      h1
+        font-size: 36px
+      p
+        font-size: 20px
+  .im_banner
+    @apply flex-col
+  .groupButton
+    max-width: 500px
+    margin-top: 20px
+    button
+      font-size: 18px
+  .content_glass
+    width: 100%
+    min-width: 100%
+  .content_glass:after
+    display: none
+  .block_total
+    justify-content: center
+    padding-right: 0
+
+
+@media (min-width: 0px) and (max-width: 539px)
+  .container
+    padding: 20px 20px 0px 20px !important
+    .heading
+      h1
+        font-size: 32px
+      p
+        font-size: 14px
+  .im_banner
+    @apply flex-col
+  .groupButton
+    max-width: 500px
+    margin-top: 20px
+    button
+      font-size: 12px
+      min-width: 50%
+      padding: 8px 0px
+  .content_glass
+    width: 100%
+    min-width: 100%
+  .content_glass:after
+    display: none
+  .block_total
+    justify-content: center
+    padding-right: 0

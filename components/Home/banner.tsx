@@ -15,18 +15,24 @@ function Banner(props: Props) {
             and metaverse
           </p>
           <div className={s.groupButton}>
-            <button>Become our Investor</button>
+            <button className={s.btn_investor}>Become our Investor</button>
             <button className={s.btn_Scholar}>Become our Scholar</button>
           </div>
         </div>
-        <img src="/assets/Banner/vr-glass.png" alt="" />
+        <div className={s.content_glass}>
+          <img src="/assets/Banner/vr-glass.png" alt="" />  
+        </div>
       </div>
 
 
 
       {/* Total */}
-
-      <TotalBanner title='Total Investors' titleNumber='10+' />
+      <div className={s.block_total}>
+        <TotalBanner title='Total Investors' titleNumber='10+' /> 
+        <TotalBanner title='Total Scholars' titleNumber='100+' /> 
+        <TotalBanner title='Total Games' titleNumber='18+' /> 
+        <TotalBanner title='Monthly Revenue' titleNumber='$100k+' /> 
+      </div>
     </section>
   );
 }

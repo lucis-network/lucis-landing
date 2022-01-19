@@ -1,16 +1,33 @@
 @import "styles/common"
 
 .total_content
-  background: linear-gradient(224.82deg, rgba(255, 255, 255, 0.5) -6.39%, rgba(255, 255, 255, 0) 119.72%)
-  backdrop-filter: blur(20px)
+  background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%)
+  backdrop-filter: blur(6px)
+  min-width: 270px
   max-width: 270px
   min-height: 220px
   border-radius: 20px
-  @apply flex flex-col items-center justify-center text-white
+  padding: 0px 45px
+  margin-bottom: 12px
+  @apply flex flex-col items-center justify-center text-white text-center
 
   h1
     @apply text-total
     @include my-text(32px, 36px, 400)
   h2
     @include my-text(68px, 56px, 700)
+    padding-top: 12px
     font-family: 'MyFont'
+
+// reponsive
+
+@media (min-width: 1025px) and (max-width: 1400px)
+  .total_content
+    min-width: 250px
+    max-width: 250px
+    margin-right: 40px
+
+    h1
+      font-size: 28px
+    h2
+      font-size: 48px

@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@400;900&display=swap');
+
 @font-face{
   font-family: 'MyFont';
   src: url(../public/font/SVN-Transformer.ttf)
@@ -25,6 +26,7 @@ html {
 
 body {
   background-color: transparent !important;
+  overflow-x: hidden;
 }
 
 body .ant-Layout {

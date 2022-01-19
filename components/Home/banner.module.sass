@@ -2,28 +2,103 @@
 
 .container
   @include container
-
+  padding: 0px 0px 0px 100px !important
   // background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),          linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)
 
 .im_banner
   @include flex-rear
+  img
+    width: 100%
 
 .heading
+  position: relative
+  z-index: 2
   h1
     @apply text-white
     @include my-text(62px, 58px, 700)
     font-family: 'MyFont'
+    z-index: 2
   p
     @apply text-white
-    @include my-text(32px, 36px, 400)
+    @include my-text(28px, 36px, 400)
+    font-weight: 400
+    padding-top: 10px
 
 .groupButton
   margin-top: 70px
   button
     min-width: 268px
-    background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
     border-radius: 16px
     padding: 16px 0px
+    margin-bottom: 12px
     @include my-text(24px, 28px, 500)
     @apply text-white
-    border: 1px solid transparent
+    cursor: pointer
+    transition: 0.3s
+    font-weight: 400
+  button:hover
+    transform: scale(1.06) translateY(-10px)
+
+  .btn_investor
+    margin-right: 12px
+    background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
+  .btn_Scholar
+    position: relative
+  .btn_Scholar::before
+    content:""
+    position: absolute
+    top:0
+    left:0
+    right:0
+    bottom:0
+    border-radius: 16px 
+    padding: 2px 
+    background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude 
+
+
+
+
+
+
+.content_glass
+  min-width: 745px
+  position: relative
+.content_glass:after
+  content: ''
+  height: 130% 
+  width: 130%
+  @apply absolute
+  border-radius: 100%
+  border: 2px solid transparent
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+  -webkit-mask-composite: xor
+  mask-composite: exclude
+  background: linear-gradient(0deg, #AE5FA6 0%, #A85CA4 0.59%, #8D509D 3.58%, #764697 6.9%, #613F93 10.53%, #503990 14.57%, #42358E 19.21%, #36338C 24.8%, #30328B 32.31%, #2E318B 50%, #30328B 67.69%, #36338C 75.2%, #42358E 80.79%, #503990 85.43%, #613F93 89.47%, #764697 93.1%, #8D509D 96.42%, #A85CA4 99.41%, #AE5FA6 100%)
+  top: -100px
+  left: -100px
+  z-index: 1
+
+.block_total
+  @apply flex flex-row items-center justify-between flex-wrap relative
+  padding-right: 100px
+  z-index: 2
+
+
+@media (min-width: 1025px) and (max-width: 1400px)
+  .container
+    .heading
+      h1
+        font-size: 48px
+      p
+        font-size: 28px
+    .groupButton
+      button
+        font-size: 18px
+    .content_glass
+      min-width: 600px
+    .block_total
+      justify-content: center
+      margin-top: 40px

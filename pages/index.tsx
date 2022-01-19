@@ -10,6 +10,9 @@ import * as SectionFlexSnapService from 'services/SectionFlexSnap'
 
 import styles from '../styles/Home.module.css'
 import Banner from "components/Home/banner";
+import Stats from "components/Home/Stats";
+import HotGame from "components/Games";
+import Features from "components/Features";
 
 const isClient = typeof window !== 'undefined';
 
@@ -47,6 +50,9 @@ const Home: NextPage = () => {
       </Head>
 
       <Banner />
+      <Stats />
+      <HotGame />
+      <Features />
     </div>
   )
 }

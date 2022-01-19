@@ -5,19 +5,20 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'white': '#FFF',
+      'white': '#FFFFFF',
       'emerald' : '#B1FFF8',
+      'total' : '#B1FFF8'
     },
     fontFamily: {
      'transformer': ['SVN-Transformer Bold'],
      'sofia': ['Sofia Sans'],
     },
     fontSize: {
-      '24px': '24px',
-      '32px': '32px',
-      '36px': '36px',
-      '48px': '48px',
-      '68px': '68px',
+      '24': '24px',
+      '32': '32px',
+      '36': '36px',
+      '48': '48px',
+      '68': '68px',
     },
     lineHeight: {
       '28px': '28px',

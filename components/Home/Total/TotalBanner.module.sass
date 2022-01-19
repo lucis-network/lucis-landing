@@ -1,0 +1,16 @@
+@import "styles/common"
+
+.total_content
+  background: linear-gradient(224.82deg, rgba(255, 255, 255, 0.5) -6.39%, rgba(255, 255, 255, 0) 119.72%)
+  backdrop-filter: blur(20px)
+  max-width: 270px
+  min-height: 220px
+  border-radius: 20px
+  @apply flex flex-col items-center justify-center text-white
+
+  h1
+    @apply text-total
+    @include my-text(32px, 36px, 400)
+  h2
+    @include my-text(68px, 56px, 700)
+    font-family: 'MyFont'

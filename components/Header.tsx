@@ -4,6 +4,8 @@ type Props = {};
 export default function Header(props: Props) {
 
   return (
-   <h1>Header</h1>
+   <div className={s.container}>
+     
+   </div>
   );
 }

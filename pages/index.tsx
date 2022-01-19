@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -13,6 +13,7 @@ import Banner from "components/Home/banner";
 import Stats from "components/Home/Stats";
 import HotGame from "components/Games";
 import Features from "components/Features";
+import Community from "components/Community";
 
 const isClient = typeof window !== 'undefined';
 
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
 
       <Banner />
       <Stats />
+      <Community />
       <HotGame />
       <Features />
     </div>

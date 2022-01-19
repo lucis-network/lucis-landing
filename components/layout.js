@@ -1,9 +1,10 @@
 // components/layout.js
-import React from "react";
+import React, {useState} from "react";
 
 import AppHeader from "./Header";
 import AppFooter from "./Footer";
 export default class AppLayout extends React.Component {
+  
   render() {
     const { children } = this.props;
     return (

@@ -11,7 +11,7 @@ export default function Header(props: Props) {
   const [width, height] = useWindowSize();
   if (width > 1024) {
     return (
-      <div className="container mx-auto px-4 py-20px flex justify-between items-center">
+      <div className="container py-20px flex justify-between items-center">
         <div className="logo w-80px">
           <Image src={Logo} alt='logo'></Image>
         </div>

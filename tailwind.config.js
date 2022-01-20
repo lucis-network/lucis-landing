@@ -6,15 +6,18 @@ module.exports = {
   theme: {
     colors: {
       'white': '#FFFFFF',
-      'emerald' : '#B1FFF8',
+      'emerald': '#B1FFF8',
+      'emerald-2': '#0BEBD6',
       'total' : '#B1FFF8'
     },
     fontFamily: {
      'transformer': ['SVN-Transformer Bold'],
      'sofia': ['Sofia Sans'],
+     'saira': ['Saira'],
     },
     fontSize: {
       '24px': '24px',
+      '28px': '28px',
       '32px': '32px',
       '36px': '36px',
       '48px': '48px',
@@ -40,9 +43,35 @@ module.exports = {
       spacing: {
         '10px': '10px',
         '15px': '15px',
+        '16px': '16px',
         '20px': '20px',
+        '28px': '28px',
+        '30px': '30px',
+        '32px': '32px',
+        '100px': '100px',
+        '150px': '150px',
+        '180px': '180px',
+        '250px': '250px',
+        '300px': '300px',
+        '500px': '500px',
       }
     },
+    container: {
+       padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '100px',
+      },
+      center: true,
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1440px',
+      },
+    }
   },
-  plugins: [],
 }

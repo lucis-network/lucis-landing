@@ -15,6 +15,8 @@ import HotGame from "components/Games";
 import Community from "components/Community";
 import HowWeWork from "components/HowWeWork";
 import Features from "components/Features";
+import Investor from "components/Investor";
+import Scholar from "components/Scholar";
 
 const isClient = typeof window !== 'undefined';
 
@@ -57,7 +59,8 @@ const Home: NextPage = () => {
       <HotGame />
       <Features />
       <HowWeWork />
-
+      <Investor />
+      <Scholar />
     </div>
   )
 }

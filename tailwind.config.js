@@ -8,7 +8,8 @@ module.exports = {
       'white': '#FFFFFF',
       'emerald': '#B1FFF8',
       'emerald-2': '#0BEBD6',
-      'total' : '#B1FFF8'
+      'total' : '#B1FFF8',
+      'card': '#9854fe33',
     },
     fontFamily: {
      'transformer': ['SVN-Transformer'],
@@ -18,6 +19,7 @@ module.exports = {
     fontSize: {
       '24px': '24px',
       '28px': '28px',
+      '30px': '30px',
       '32px': '32px',
       '36px': '36px',
       '45px': '45px',
@@ -34,11 +36,13 @@ module.exports = {
     },
     backgroundImage: {
       'gradient-1': 'linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)',
-      'game-card': 'linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)'
+      'game-card' : 'linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);',
+      'player': 'linear-gradient(176.17deg, rgba(205, 40, 232, 0.3) 31.31%, rgba(11, 235, 214, 0.3) 96.4%)',
     },
     borderRadius: {
       '8px' : '8px',
       '16px' : '16px',
+      '20px' : '20px',
     },
     extend: {
       width: {
@@ -52,6 +56,7 @@ module.exports = {
         '28px': '28px',
         '30px': '30px',
         '32px': '32px',
+        '60px': '60px',
         '100px': '100px',
         '150px': '150px',
         '180px': '180px',
@@ -59,6 +64,9 @@ module.exports = {
         '250px': '250px',
         '300px': '300px',
         '500px': '500px',
+      },
+      boxShadow: {
+        'player': 'inset 0px 98px 100px -48px rgba(0, 161, 253, 0.3), inset 0px 4px 18px rgba(8, 59, 88, 0.3)',
       }
     },
     container: {

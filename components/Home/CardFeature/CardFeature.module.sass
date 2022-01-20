@@ -1,0 +1,44 @@
+
+@import "styles/common"
+
+.content_card
+  background: linear-gradient(203deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%)
+  backdrop-filter: blur(6px)
+  border: 1px solid rgba(152, 84, 254, 0.2)
+  min-width: 300px
+  max-width: 394px
+  min-height: 282px
+  border-radius: 16px
+  margin: 14px 0px
+  @apply relative overflow-hidden
+
+  .bg_glass
+    @apply absolute -top-11 -right-11
+    z-index: -1
+    img
+      @apply w-full
+      opacity: 0.1
+  
+  .heading_card
+    @apply text-white
+    padding: 29px 24px 36px 24px
+    .hello
+      border-radius: 50%
+    .next
+      border-radius: 0px
+    .logo_card
+      @apply overflow-hidden relative flex flex-row items-center justify-center
+      width: 80px
+      height: 80px
+      .bg_icon
+        filter: blur(3px)
+        background: linear-gradient(99.92deg, rgba(205, 40, 232, 0.4) 0%, rgba(11, 235, 214, 0.4) 100%)
+        @apply w-full h-full
+      img
+        @apply absolute
+    h2
+      @include my-text(32px, 28px, 700)
+      padding: 20px 0px
+      font-family: 'MyFont'
+    p
+      @include my-text(24px, 28px, 400)

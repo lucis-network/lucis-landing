@@ -5,7 +5,7 @@ type Props = {};
 
 function Banner(props: Props) {
   return (
-    <section className={`${s.container}`}>
+    <section className={`${s.container_banner}`}>
       <div className="stars-bg"></div>
       <div className={s.im_banner}>
         <div className={s.heading}>

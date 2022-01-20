@@ -1,5 +1,81 @@
 @import "styles/common"
+.heading_feature
+  @apply flex flex-row items-center justify-between
+  padding-bottom: 60px
+  h1
+    @include my-text(72px, 82px, 700)
+    @apply text-white
+    font-family: 'MyFont'
+  .group_btn
+    @apply flex flex-row items-center justify-center
+    button
+      background: rgba(232, 231, 255, 0.2)
+      margin: 0px 8px
+      width: 68px
+      height: 68px
+      border-radius: 4px
+      @apply flex flex-row items-center justify-center
 
 .block_item
   @apply flex-row items-center justify-between flex-wrap
   display: flex !important
+
+
+@media (min-width: 540px) and (max-width: 639px)
+  .block_item
+    justify-content: center
+
+@media (min-width: 1025px) and (max-width: 1400px)
+  .heading_feature
+    h1
+      font-size: 62px
+      line-height: 82px
+
+@media (min-width: 992px) and (max-width: 1024px)
+  .heading_feature
+    h1
+      font-size: 62px
+      line-height: 82px
+@media (min-width: 769px) and (max-width: 991px)
+  .heading_feature
+    h1
+      font-size: 62px
+      line-height: 82px
+@media (min-width: 640px) and (max-width: 768px)
+  .heading_feature
+    h1
+      font-size: 36px
+      line-height: 58px
+    .group_btn
+      button
+        width: 46px
+        height: 46px
+
+@media (min-width: 540px) and (max-width: 639px)
+  .heading_feature
+    h1
+      font-size: 36px
+      line-height: 58px
+    .group_btn
+      button
+        width: 46px
+        height: 46px
+@media (min-width: 414px) and (max-width: 539px)
+  .heading_feature
+    h1
+      font-size: 36px
+      line-height: 58px
+    .group_btn
+      button
+        width: 46px
+        height: 46px
+
+@media (min-width: 0px) and (max-width: 413px)
+  .heading_feature
+    h1
+      font-size: 32px
+      line-height: 36px
+    .group_btn
+      button
+        width: 46px
+        height: 46px

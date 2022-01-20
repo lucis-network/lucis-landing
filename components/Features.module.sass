@@ -4,8 +4,32 @@
   @include container
   margin-top: 200px
 
-  .heading_feature
-    @include my-text(72px, 82px, 700)
-    @apply text-white
-    font-family: 'MyFont'
-    padding-bottom: 60px
+@media (min-width: 1025px) and (max-width: 1400px)
+  .container
+    max-width: 1025px
+
+@media (min-width: 992px) and (max-width: 1024px)
+  .container
+    max-width: 992px
+@media (min-width: 769px) and (max-width: 991px)
+  .container
+    max-width: 992px
+    padding: 0px 150px
+@media (min-width: 640px) and (max-width: 768px)
+  .container
+    max-width: 640px
+    padding: 0
+
+@media (min-width: 540px) and (max-width: 639px)
+  .container
+    max-width: 540px
+    padding: 0
+@media (min-width: 414px) and (max-width: 539px)
+  .container
+    max-width: 414px
+    padding: 0
+
+@media (min-width: 0px) and (max-width: 413px)
+  .container
+    max-width: 360px
+    padding: 0

@@ -1,6 +1,6 @@
 @import "styles/common"
 
-.container
+.container_banner
   @include container
   padding: 0px 0px 0px 100px !important
   // background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),          linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)
@@ -44,6 +44,7 @@
     background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
   .btn_Scholar
     position: relative
+    backdrop-filter: blur(3px)
   .btn_Scholar::before
     content:""
     position: absolute
@@ -88,7 +89,7 @@
 
 
 @media (min-width: 1025px) and (max-width: 1400px)
-  .container
+  .container_banner
     .heading
       h1
         font-size: 48px
@@ -103,7 +104,7 @@
       justify-content: center
       margin-top: 40px
 @media (min-width: 992px) and (max-width: 1024px)
-  .container
+  .container_banner
     .heading
       h1
         font-size: 40px
@@ -119,8 +120,9 @@
       margin-top: 40px
 
 @media (min-width: 768px) and (max-width: 991px)
-  .container
+  .container_banner
     padding: 50px 50px 0px 50px !important
+    max-width: 768px
   .im_banner
     @apply flex-col
   .groupButton
@@ -137,23 +139,28 @@
     padding-right: 0
 
 @media (min-width: 540px) and (max-width: 767px)
-  .container
+  .container_banner
     padding: 50px 50px 0px 50px !important
+    max-width: 540px
     .heading
       h1
         font-size: 36px
       p
         font-size: 20px
   .im_banner
-    @apply flex-col
+    @apply flex-col 
   .groupButton
     max-width: 500px
     margin-top: 20px
+    @apply flex flex-row items-center justify-between
     button
       font-size: 18px
+      width: 48%
+      min-width: auto
   .content_glass
     width: 100%
     min-width: 100%
+    order: -1
   .content_glass:after
     display: none
   .block_total
@@ -162,7 +169,8 @@
 
 
 @media (min-width: 0px) and (max-width: 539px)
-  .container
+  .container_banner
+    max-width: 375px
     padding: 20px 20px 0px 20px !important
     .heading
       h1
@@ -176,11 +184,12 @@
     margin-top: 20px
     button
       font-size: 12px
-      min-width: 50%
+      min-width: 48%
       padding: 8px 0px
   .content_glass
     width: 100%
     min-width: 100%
+    order: -1
   .content_glass:after
     display: none
   .block_total

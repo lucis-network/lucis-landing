@@ -13,9 +13,12 @@ import styles from "../styles/Home.module.css";
 import Banner from "components/Home/banner";
 import Stats from "components/Home/Stats";
 import HotGame from "components/Games";
-import Features from "components/Features";
 import Community from "components/Community";
 import SlideGame from "components/SlideGame";
+import HowWeWork from "components/HowWeWork";
+import Features from "components/Features";
+import Investor from "components/Investor";
+import Scholar from "components/Scholar";
 
 const isClient = typeof window !== "undefined";
 
@@ -61,6 +64,9 @@ const Home: NextPage = () => {
       <SlideGame />
       <HotGame />
       <Features />
+      <HowWeWork />
+      <Investor />
+      <Scholar />
     </div>
   );
 };

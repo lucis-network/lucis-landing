@@ -5,12 +5,13 @@
   background: linear-gradient(203deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%)
   backdrop-filter: blur(6px)
   border: 1px solid rgba(152, 84, 254, 0.2)
-  min-width: 300px
   max-width: 394px
   min-height: 282px
+  max-height: 282px
   border-radius: 16px
   margin: 14px 0px
-  @apply relative overflow-hidden
+  width: 32%
+  @apply relative overflow-hidden h-full
 
   .bg_glass
     @apply absolute -top-11 -right-11
@@ -36,9 +37,61 @@
         @apply w-full h-full
       img
         @apply absolute
+        width: 85%
     h2
       @include my-text(32px, 28px, 700)
-      padding: 20px 0px
+      padding: 20px 0px 12px 0px
       font-family: 'MyFont'
     p
       @include my-text(24px, 28px, 400)
+
+
+@media (min-width: 1025px) and (max-width: 1400px)
+  .content_card
+    h2
+      font-size: 24px !important
+      padding: 10px 0px 0px 0px !important
+    p
+      font-size: 18px !important
+@media (min-width: 992px) and (max-width: 1024px)
+  .content_card
+    width: 48%
+    h2
+      font-size: 24px !important
+      padding: 10px 0px 0px 0px !important
+    p
+      font-size: 18px !important
+
+@media (min-width: 640px) and (max-width: 991px)
+  .content_card
+    width: 48%
+    h2
+      font-size: 24px !important
+      padding: 10px 0px 0px 0px !important
+    p
+      font-size: 18px !important
+@media (min-width: 540px) and (max-width: 639px)
+  .content_card
+    width: 45%
+    margin: 12px 8px
+    .heading_card
+      padding: 12px
+    h2
+      font-size: 24px !important
+      padding: 10px 0px 0px 0px !important
+    p
+      font-size: 18px !important
+
+@media (min-width: 0px) and (max-width: 539px)
+  .content_card
+    width: 100%
+    margin: 12px 8px
+    max-height: 230px
+    min-height: 200px
+    .heading_card
+      padding: 12px
+    h2
+      font-size: 20px !important
+      padding: 10px 0px 0px 0px !important
+    p
+      font-size: 16px !important

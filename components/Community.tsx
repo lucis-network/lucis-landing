@@ -27,26 +27,26 @@ export default function Community(props: Props) {
         <h5 className='text-emerald text-32px leading-37px'>Hot game</h5>
       </div>
       <div className='grid grid-cols-3 gap-10'>
-        <div className='bg-game-card rounded-16px'>
+        <div className='bg-game-card rounded-16px backdrop-blur-lg p-5 text-center'>
           <div className='-translate-y-40'>
-            <Image src={game1} width={894} height={753} layout='responsive' alt="#"></Image>
+            <Image src={game1} width={894} height={894} layout='responsive' alt="#"></Image>
           </div>
-          <h5>Lorem ipsum dolor sit</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid dignissimos voluptatum iusto inventore excepturi harum saepe minima similique veniam perspiciatis.</p>
+          <h5 className='text-white'>Lorem ipsum dolor sit</h5>
+          <p className='text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid dignissimos voluptatum iusto inventore excepturi harum saepe minima similique veniam perspiciatis.</p>
         </div>
-        <div className='bg-game-card rounded-16px'>
+        <div className='bg-game-card rounded-16px backdrop-blur-lg p-5 text-center'>
           <div className='-translate-y-40'>
-            <Image src={game2} width={1548} height={1319} layout='responsive' alt="#"></Image>
+            <Image src={game2} width={894} height={894} layout='responsive' alt="#"></Image>
           </div>
-          <h5>Lorem ipsum dolor sit</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid dignissimos voluptatum iusto inventore excepturi harum saepe minima similique veniam perspiciatis.</p>
+          <h5 className='text-white'>Lorem ipsum dolor sit</h5>
+          <p className='text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid dignissimos voluptatum iusto inventore excepturi harum saepe minima similique veniam perspiciatis.</p>
         </div>
-        <div className='bg-game-card rounded-16px'>
+        <div className='bg-game-card rounded-16px backdrop-blur-lg p-5 text-center'>
           <div className='-translate-y-40'>
-            <Image src={game3} width={1426} height={1018} layout='responsive' alt="#"></Image>
+            <Image src={game3} width={894} height={894} layout='responsive' alt="#"></Image>
           </div>
-          <h5>Lorem ipsum dolor sit</h5>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid dignissimos voluptatum iusto inventore excepturi harum saepe minima similique veniam perspiciatis.</p>
+          <h5 className='text-white'>Lorem ipsum dolor sit</h5>
+          <p className='text-white'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid dignissimos voluptatum iusto inventore excepturi harum saepe minima similique veniam perspiciatis.</p>
         </div>
       </div>
     </div>

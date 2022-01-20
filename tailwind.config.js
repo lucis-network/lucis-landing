@@ -27,7 +27,7 @@ module.exports = {
     },
     backgroundImage: {
       'gradient-1': 'linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)',
-      'game-card': 'linear-gradient(#FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(#9854FE 0%, rgba(152, 84, 254, 0) 100%), linear-gradient(#151515 0%, rgba(21, 21, 21, 0) 100%)'
+      'game-card': 'linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)'
     },
     borderRadius: {
       '8px' : '8px',

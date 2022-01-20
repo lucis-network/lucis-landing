@@ -1,12 +1,12 @@
-// import "./button_3d.css";
+// import "./button.module.css";
 import { Suspense, useState } from "react";
 import { motion, MotionConfig, useMotionValue } from "framer-motion";
 import { Shapes } from "./Shapes";
 import { transition } from "./settings";
 import useMeasure from "react-use-measure";
-import styles from "./button_3d.css";
+// import styles from "./button.module.css";
 
-export default function Button3D({ title }: { title: string }) {
+export default function Button3D_BAK({ title }: { title: string }) {
   const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);
@@ -22,14 +22,16 @@ export default function Button3D({ title }: { title: string }) {
     <div>
       <MotionConfig transition={transition}>
         <motion.button
+          // className={styles.button_3d}
+          // className="button_3d"
           ref={ref}
           initial={false}
           animate={isHover ? "hover" : "rest"}
           whileTap="press"
           variants={{
             rest: { scale: 1 },
-            hover: { scale: 1.5 },
-            press: { scale: 1.4 },
+            hover: { scale: 1.1 },
+            press: { scale: 1.1 },
           }}
           onHoverStart={() => {
             resetMousePosition();
@@ -48,24 +50,25 @@ export default function Button3D({ title }: { title: string }) {
           }}
         >
           <motion.div
-            className={styles.shapes}
-            // style={{
-            //   position: "absolute",
-            //   top: "-1px",
-            //   left: "-1px",
-            //   right: "-1px",
-            //   bottom: "-1px",
-            //   borderRadius: "60px",
-            //   background: "linear-gradient(99.92deg, #cd28e8 0%, #0bebd6 100%)",
-            // }}
+            className="shapes"
+            // className={styles.shapes}
             variants={{
               rest: { opacity: 0 },
               hover: { opacity: 1 },
             }}
           >
-            <div className="pink blush" />
-            <div className="blue blush" />
-            <div className="container">
+            <div
+              className="pink blush"
+              // className={[styles.pink, styles.blush].join(" ")}
+            />
+            <div
+              className="blue blush"
+              // className={[styles.blue, styles.blush].join(" ")}
+            />
+            <div
+              className="container"
+              // className={styles.container}
+            >
               <Shapes
                 isHover={isHover}
                 isPress={isPress}
@@ -76,14 +79,8 @@ export default function Button3D({ title }: { title: string }) {
           </motion.div>
           <motion.div
             variants={{ hover: { scale: 1 }, press: { scale: 1.1 } }}
-            // className="label"
-            style={{
-              width: "180px",
-              padding: "20px 0",
-              transform: "translateZ(0)",
-              fontWeight: "700",
-              zIndex: "1",
-            }}
+            className="label"
+            // className={styles.label}
           >
             {title}
           </motion.div>

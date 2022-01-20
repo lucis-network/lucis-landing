@@ -144,7 +144,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0, 0.9);
+    /* background-color: rgba(255,255,255); */
     z-index: 99;
     transition: all ease-in-out 0.4s;
     display: none;
@@ -165,7 +165,8 @@ body {
   }
   
   .nav-logo {
-    width: 80px;
+    width: 86px;
+    margin-left: -6px;
   }
   .background {
     position: absolute;
@@ -173,11 +174,9 @@ body {
     right: 0;
     bottom: 0;
     width: 300px;
-    background: url('../assets/img/glass.png'), rgba(255, 255, 255, 0.2);
-    background-blend-mode: soft-light, normal;
+    background: rgba(255, 255, 255, 0.15);
     box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.2), inset 0px -4px 2px rgba(0, 0, 0, 0.2), inset 0px 4px 2px rgba(255, 255, 255, 0.12), inset 4px 4px 26px rgba(255, 255, 255, 0.12);
-    opacity: 0.8;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
   }
   /* .background:after {
     position: absolute;
@@ -218,7 +217,13 @@ body {
   .nav-list li {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+  }
+  .nav-list li:first-child {
+    margin-bottom: 12px;
+  }
+  .nav-list li:last-child {
+    margin-top: 12px;
   }
   
   .icon-placeholder {
@@ -250,4 +255,7 @@ body {
     align-items: center;
     cursor: pointer;
   }
+}
+.bg-glass {
+  background-image: url('../assets/img/glass.png');
 }

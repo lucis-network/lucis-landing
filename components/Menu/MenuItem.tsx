@@ -69,7 +69,7 @@ export const MenuItem = ({ i }) => {
       whileTap={{ scale: 0.95 }}
     >
       {/* <div className="icon-placeholder" style={style} /> */}
-      <div className="text-placeholder"> {data[i].text}</div>
+      <div className="text-placeholder font-sofia text-white text-24px leading-28px p-15px"> {data[i].text}</div>
     </motion.li>
   );
 };

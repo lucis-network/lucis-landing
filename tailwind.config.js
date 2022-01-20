@@ -11,7 +11,7 @@ module.exports = {
       'total' : '#B1FFF8'
     },
     fontFamily: {
-     'transformer': ['SVN-Transformer Bold'],
+     'transformer': ['SVN-Transformer'],
      'sofia': ['Sofia Sans'],
      'saira': ['Saira'],
     },
@@ -20,12 +20,16 @@ module.exports = {
       '28px': '28px',
       '32px': '32px',
       '36px': '36px',
+      '45px': '45px',
       '48px': '48px',
       '68px': '68px',
+      '72px': '72px',
     },
     lineHeight: {
       '28px': '28px',
       '37px': '37px',
+      '40px': '40px',
+      '50px': '50px',
       '55px': '55px',
     },
     backgroundImage: {
@@ -51,6 +55,7 @@ module.exports = {
         '100px': '100px',
         '150px': '150px',
         '180px': '180px',
+        '200px': '200px',
         '250px': '250px',
         '300px': '300px',
         '500px': '500px',

@@ -1,11 +1,3 @@
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import SwiperCore, { Pagination, Navigation } from "swiper";
-// SwiperCore.use([Pagination, Navigation]);
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-
-import ic_left from '../assets/icon/icon_left.svg';
 import ic_game_community from '../assets/icon/icon_game_community.svg';
 import Image from './Image';
 import game1 from '../assets/img/game/game1.png';
@@ -17,7 +9,7 @@ export default function Community(props: Props) {
   return (
     <div className="container">
       <div className="flex justify-between items-center mb-5">
-        <h3 className="font-transformer text-white lg:text-48px text-32px leading-55px 2xl:w-1/3 lg:w-1/2">Gaming community and partners</h3>
+        <h3 className="font-transformer text-white lg:text-72px text-32px leading-55px 2xl:w-1/3 lg:w-1/2">Gaming community and partners</h3>
       </div>
       <div className='flex items-center mb-250px'>
         <div className='w-16px md:w-32px mr-4'>  

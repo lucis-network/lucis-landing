@@ -14,6 +14,7 @@ import Stats from "components/Home/Stats";
 import HotGame from "components/Games";
 import Features from "components/Features";
 import Community from "components/Community";
+import HowWeWork from "components/HowWeWork";
 
 const isClient = typeof window !== 'undefined';
 
@@ -55,6 +56,8 @@ const Home: NextPage = () => {
       <Community />
       <HotGame />
       <Features />
+      <HowWeWork />
+
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { motion, MotionConfig, useMotionValue } from "framer-motion";
 import { Shapes } from "./Shapes";
 import { transition } from "./settings";
 import useMeasure from "react-use-measure";
+import styles from "./button_3d.css";
 
 export default function Button3D({ title }: { title: string }) {
   const [ref, bounds] = useMeasure({ scroll: false });
@@ -47,16 +48,16 @@ export default function Button3D({ title }: { title: string }) {
           }}
         >
           <motion.div
-            // className={styles.shapes}
-            style={{
-              position: "absolute",
-              top: "-1px",
-              left: "-1px",
-              right: "-1px",
-              bottom: "-1px",
-              borderRadius: "60px",
-              background: "linear-gradient(99.92deg, #cd28e8 0%, #0bebd6 100%)",
-            }}
+            className={styles.shapes}
+            // style={{
+            //   position: "absolute",
+            //   top: "-1px",
+            //   left: "-1px",
+            //   right: "-1px",
+            //   bottom: "-1px",
+            //   borderRadius: "60px",
+            //   background: "linear-gradient(99.92deg, #cd28e8 0%, #0bebd6 100%)",
+            // }}
             variants={{
               rest: { opacity: 0 },
               hover: { opacity: 1 },

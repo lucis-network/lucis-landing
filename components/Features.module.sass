@@ -1,5 +1,11 @@
 @import "styles/common"
 
 .container
-  height: 10000px
   @include container
+  margin-top: 200px
+
+  .heading_feature
+    @include my-text(72px, 82px, 700)
+    @apply text-white
+    font-family: 'MyFont'
+    padding-bottom: 60px

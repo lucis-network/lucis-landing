@@ -1,0 +1,51 @@
+@import "styles/common"
+
+.containerTeam
+  @apply flex flex-col items-center
+  min-width: 282px
+  min-height: 282px
+  margin: 24px 8px
+  .content_im
+    @apply w-full h-full relative
+    .im_team
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 259px
+      border-radius: 100%
+      overflow: hidden
+      padding-top: 15px
+    .bg_team
+      position: absolute
+      top: 0
+      left: 0
+    .im_team1
+      padding-left: 12px
+      padding-top: 15px
+  .heading_team
+    padding-top: 20px
+    text-align: center
+    p
+      @include my-text(24px, 28px, 700)
+      color: #00CDFC
+      font-family: 'MyFont'
+    span
+      @include my-text(24px, 28px, 400)
+      color: #FFFFFF
+
+
+
+@media (min-width: 540px) and (max-width: 639px)
+  .containerTeam
+    min-width: 220px
+    max-width: 220px
+    .content_im
+      .im_team
+        width: 206px
+        margin-left: 3px
+        padding-top: 13px
+      .im_team1
+        padding-left: 14px
+        padding-top: 8px
+@media (min-width: 414px) and (max-width: 539px)
+@media (min-width: 0px) and (max-width: 413px)

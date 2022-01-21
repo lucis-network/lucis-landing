@@ -20,6 +20,7 @@ import Features from "components/Features";
 import Investor from "components/Investor";
 import Scholar from "components/Scholar";
 import OurEcosystem from "components/Home/OurEcosystem";
+import Roadmap from "components/Home/Roadmap";
 
 const isClient = typeof window !== "undefined";
 
@@ -69,6 +70,7 @@ const Home: NextPage = () => {
       <Investor />
       <Scholar />
       <OurEcosystem />
+      <Roadmap />
     </div>
   );
 };

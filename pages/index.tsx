@@ -27,9 +27,8 @@ import Backer from "components/Home/Backers";
 const isClient = typeof window !== "undefined";
 
 const Home: NextPage = () => {
-  const title = "Xenowars - The battle of lords";
-  const desc =
-    "Xenowars is a real-time strategy Play-to-earn Video Game, next development vision is becoming Metaverse of lords. Let's start your adventure, get your lands, build your own country and become the KING of Xenowars!";
+  const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";
+  const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
   const thumb = "/assets/img/logo-547x200.png";
 
   return (
@@ -51,7 +50,7 @@ const Home: NextPage = () => {
 
         <meta name="apple-mobile-web-app-title" content={title} />
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="application-name" content="Xenowars" />
+        <meta name="application-name" content="Lucis Gaming Guild" />
 
         <meta property="og:title" content={title} />
         <meta data-hid="description" name="description" content={desc} />

@@ -5,7 +5,7 @@
 # Eg: ./deploy-on-caddy.sh ~/caddy/site/
 #
 
-XENO_SERVER_ROOT=$1
+PROJ_SERVER_ROOT=$1
 PROD_FLAG=$2
 
 if [ -z "$1" ]
@@ -18,9 +18,9 @@ if [ -z "$1" ]
 fi
 
 if [ "prod" == "$2" ]; then
-    XENO_WEB_ROOT=$XENO_SERVER_ROOT/prod-xeno-landing-out
+    PROJ_WEB_ROOT=$PROJ_SERVER_ROOT/prod-lucis-landing-out
 else
-    XENO_WEB_ROOT=$XENO_SERVER_ROOT/xeno-landing-out
+    PROJ_WEB_ROOT=$PROJ_SERVER_ROOT/lucis-landing-out
 fi
 
 git pull
@@ -28,15 +28,15 @@ yarn
 yarn build && yarn export-static
 
 
-mkdir -p $XENO_WEB_ROOT
+mkdir -p $PROJ_WEB_ROOT
 
-echo "remove ${XENO_WEB_ROOT}_bak"
-rm -rf $XENO_WEB_ROOT"_bak"
+echo "remove ${PROJ_WEB_ROOT}_bak"
+rm -rf $PROJ_WEB_ROOT"_bak"
 
-echo "move $XENO_WEB_ROOT ${XENO_WEB_ROOT}_bak"
-mv $XENO_WEB_ROOT $XENO_WEB_ROOT"_bak"
+echo "move $PROJ_WEB_ROOT ${PROJ_WEB_ROOT}_bak"
+mv $PROJ_WEB_ROOT $PROJ_WEB_ROOT"_bak"
 
-echo "copy /out to $XENO_WEB_ROOT"
-cp -r out/ $XENO_WEB_ROOT
+echo "copy /out to $PROJ_WEB_ROOT"
+cp -r out/ $PROJ_WEB_ROOT
 
 echo "🚀 All done !!"

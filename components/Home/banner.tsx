@@ -15,12 +15,20 @@ function Banner(props: Props) {
             We connect investors and players in the world of play to earn gaming
             and metaverse
           </p>
-          <div className={s.groupButton}>
+          <div
+            style={{
+              marginTop: "70px",
+              display: "flex",
+              flexWrap: "wrap",
+            }}
+          >
             <Button3D title="Become our Investor" />
-            <Button3D title="Become our Scholar" />
-            {/* <button className={s.btn_investor}>Become our Investor</button>
-            <button className={s.btn_Scholar}>Become our Scholar</button> */}
+            <Button3D title="Become our Scholar" normal />
           </div>
+          {/* <div className={s.groupButton}>
+            <button className={s.btn_investor}>Become our Investor</button>
+            <button className={s.btn_Scholar}>Become our Scholar</button>
+          </div> */}
         </div>
         <div className={s.content_glass}>
           <img src="/assets/Banner/vr-glass.png" alt="" />

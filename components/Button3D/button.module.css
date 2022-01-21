@@ -1,27 +1,68 @@
 .button_3d {
-  --purple: #db07d1;
-  --pink: #f2056f;
-  --blue: #61dafb;
-
   appearance: none;
   border: none;
-  cursor: pointer;
   background: linear-gradient(99.92deg, #cd28e8 0%, #0bebd6 100%);
+
+  font-family: "Saira";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 18px;
   color: #fff;
-  border-radius: 60px;
+
   outline: none;
-  margin: 0;
-  padding: 12px 25px;
-  font-family: "Poppins";
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -1px;
+  position: relative;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  min-width: 258px;
+  border-radius: 16px;
+  padding: 20px 0px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  
+  overflow: inherit;
+  margin-right: 24px;
+}
+.button_3d:hover {
+  z-index: 99999;
+}
+
+.button_3d_normal {
+  font-family: "Saira";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #fff;
+
   position: relative;
   text-align: center;
   display: flex;
-  align-items: center;
-  /* overflow: hidden; */
+  justify-content: center;
+
+  min-width: 258px;
+  border-radius: 16px;
+  padding: 20px 0px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-weight: 400;
+  overflow: inherit;
+}
+
+.button_3d_normal::before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .shapes {
@@ -30,25 +71,27 @@
   left: -1px;
   right: -1px;
   bottom: -1px;
-  border-radius: 60px;
-  background: linear-gradient(99.92deg, #cd28e8 0%, #0bebd6 100%);
+  border-radius: 16px;
+  /* background: linear-gradient(99.92deg, #cd28e8 0%, #0bebd6 100%); */
 }
 .blush {
   position: absolute;
   bottom: -15px;
-  width: 100px;
-  height: 30px;
+  width: 80px;
+  height: 10px;
   filter: blur(20px);
 }
 
 .blush.pink {
   right: 20px;
   background: var(--purple);
+  z-index: 99999;
 }
 
 .blush.blue {
   left: 20px;
   background: var(--blue);
+  z-index: 99999;
 }
 
 .shapes .container {
@@ -59,20 +102,19 @@
   right: -100px;
   width: calc(100% + 200px);
   pointer-events: none;
+  z-index: 99999;
 }
 
 .shapes canvas {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 99999;
 }
 
 .label {
   text-align: center;
-  width: 90%;
-  padding: 20px 0;
   transform: translateZ(0);
-  font-weight: 700;
   z-index: 1;
 }
 

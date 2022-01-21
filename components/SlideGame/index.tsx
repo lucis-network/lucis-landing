@@ -26,12 +26,10 @@ const img_game_death_road = "/assets/slide_marquee/img_game_death_road.png";
 
 interface SlideItemProps {
   src: string;
-  width: any;
-  height: any;
+  width: number | string;
+  height: number | string;
 }
 function SlideItem(props: SlideItemProps) {
-  // let width = 0.2 * (window?.screen.width ?? 1504);
-  // let height = width * 0.67;
   return (
     <img
       src={props.src}
@@ -45,7 +43,7 @@ function SlideItem(props: SlideItemProps) {
 
 export default function SlideGame() {
   const size = useWindowSize();
-  const widthImg = 0.2 * size[0];
+  const widthImg = Math.min(Math.max(0.2 * size[0], 160), 303);
   const heightImg = widthImg * 0.67;
 
   return (

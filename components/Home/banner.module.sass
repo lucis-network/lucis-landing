@@ -26,7 +26,9 @@
 
 .groupButton
   margin-top: 70px
+  @apply flex flex-row items-center justify-between flex-wrap
   button
+    overflow: inherit
     min-width: 268px
     border-radius: 16px
     padding: 16px 0px
@@ -153,9 +155,11 @@
     max-width: 500px
     margin-top: 20px
     @apply flex flex-row items-center justify-between
+  .groupButton > div
+    width: 48%
     button
       font-size: 18px
-      width: 48%
+      width: 100%
       min-width: auto
   .content_glass
     width: 100%
@@ -182,9 +186,11 @@
   .groupButton
     max-width: 500px
     margin-top: 20px
+  .groupButton > div
+    width: 48%
     button
       font-size: 12px
-      min-width: 48%
+      min-width: 100%
       padding: 8px 0px
   .content_glass
     width: 100%

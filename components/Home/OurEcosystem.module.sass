@@ -1,0 +1,90 @@
+@import "styles/common"
+
+.container
+  @include container
+  margin-top: 180px
+  .content_video
+    max-width: 918px
+    height: 516px
+    margin: 0 auto
+    margin-top: 100px
+    padding: 4px
+    @apply relative
+  iframe
+    @apply w-full h-full relative
+    border-radius: 16px 
+  .content_video::before
+    content:""
+    position: absolute
+    top:0
+    left:0
+    right:0
+    bottom:0
+    border-radius: 16px 
+    padding: 3px 
+    background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude 
+
+  .group_ic
+    @apply flex flex-row items-center justify-between flex-wrap
+    margin-top: 100px
+    .ic_item
+      width: 136px
+      height: 136px
+      box-shadow: (0px 2px 40px rgba(255, 255, 255, 0.3))
+      background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+      border-radius: 100%
+      margin: 12px
+      transition: 0.3s
+      @apply overflow-hidden flex flex-row items-center justify-center cursor-pointer
+    .ic_item:hover
+      box-shadow: (0px 2px 40px rgba(255, 255, 255, 0.5))
+
+
+
+@media (min-width: 1025px) and (max-width: 1400px)
+  .container
+    max-width: 1025px
+
+@media (min-width: 992px) and (max-width: 1024px)
+  .container
+    max-width: 992px
+@media (min-width: 769px) and (max-width: 991px)
+  .container
+    padding: 0px 150px
+@media (min-width: 640px) and (max-width: 768px)
+  .container
+    max-width: 640px
+    padding: 0px 2rem
+    .content_video
+      margin-top: 40px
+    .group_ic
+      justify-content: center
+
+@media (min-width: 540px) and (max-width: 639px)
+  .container
+    padding: 0px 2rem
+    .content_video
+      margin-top: 40px
+    .group_ic
+      justify-content: center
+@media (min-width: 414px) and (max-width: 539px)
+  .container
+    padding: 0px 2rem
+    .content_video
+      margin-top: 40px
+    .group_ic
+      justify-content: center
+
+@media (min-width: 0px) and (max-width: 413px)
+  .container
+    padding: 0px 2rem
+    .content_video
+      margin-top: 40px
+    .group_ic
+      margin-top: 20px
+      .ic_item
+        margin: 12px 0px
+        width: 46%

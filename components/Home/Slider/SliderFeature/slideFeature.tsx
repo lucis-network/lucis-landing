@@ -31,10 +31,10 @@ export default class SlideFeature extends Component {
         <div className={s.heading_feature}>
           <h1>LuciS Guild key features</h1>
           <div className={s.group_btn}>
-            <button className={s.btn_left} onClick={this.next}>
+            <button className={s.btn_left} onClick={this.previous}>
               <img src="/assets/Feature/ic_left.svg" alt="" />
             </button>
-            <button className={s.btn_right} onClick={this.previous}>
+            <button className={s.btn_right} onClick={this.next}>
               <img src="/assets/Feature/ic_right.svg" alt="" />
             </button>
           </div>

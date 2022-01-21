@@ -19,6 +19,7 @@ import HowWeWork from "components/HowWeWork";
 import Features from "components/Features";
 import Investor from "components/Investor";
 import Scholar from "components/Scholar";
+import OurEcosystem from "components/Home/OurEcosystem";
 
 const isClient = typeof window !== "undefined";
 
@@ -67,6 +68,7 @@ const Home: NextPage = () => {
       <HowWeWork />
       <Investor />
       <Scholar />
+      <OurEcosystem />
     </div>
   );
 };

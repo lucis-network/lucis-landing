@@ -1,7 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "antd/lib/style/themes/default.less";
-import "antd/dist/antd.less";
+// import "antd/dist/antd.less";
 import "../styles/globals.css";
 import "../components/Button3D/styles.css";
 

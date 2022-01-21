@@ -4,6 +4,7 @@ import game1 from '../assets/img/game/game1.png';
 import game2 from '../assets/img/game/game2.png';
 import game3 from '../assets/img/game/game3.png';
 import CommunityCard from './Card/CommunityCard';
+import Title from 'components/Home/TitleSection/TitleName';
 type Props = {}
 export default function Community(props: Props) {
   const gameCommunityData = [
@@ -30,7 +31,9 @@ export default function Community(props: Props) {
   return (
     <div className="container">
       <div className="flex justify-between items-center mb-5">
-        <h3 className="font-transformer text-white lg:text-72px text-32px leading-55px lg:w-1/2">Gaming community and partners</h3>
+        <div className="mb-60px">
+          <Title titleName='Gaming community and partners'></Title>
+        </div>
       </div>
       <div className='flex items-center mb-250px'>
         <div className='w-16px md:w-32px mr-4'>
@@ -38,7 +41,7 @@ export default function Community(props: Props) {
         </div>
         <h5 className='text-emerald lg:text-32px md:text-28px text-24px leading-37px'>Hot game</h5>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-6 lg:gap-10 font-saira'>
+      <div className='grid grid-cols-1 md:grid-cols-3  gap-250px md:gap-4 lg:gap-10 font-saira'>
         {
           gameCommunityData.map((item, index) => 
             (

@@ -4,12 +4,25 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '400px',
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+      '2xl': '1536px',
+    },
     colors: {
       'white': '#FFFFFF',
       'emerald': '#B1FFF8',
       'emerald-2': '#0BEBD6',
       'total' : '#B1FFF8',
       'card': '#9854fe33',
+      'nav': 'rgba(40, 38, 54, 0.2)',
     },
     fontFamily: {
      'transformer': ['SVN-Transformer'],
@@ -52,15 +65,19 @@ module.exports = {
         '10px': '10px',
         '15px': '15px',
         '16px': '16px',
+        '18px': '18px',
         '20px': '20px',
         '28px': '28px',
         '30px': '30px',
         '32px': '32px',
+        '40px': '40px',
         '60px': '60px',
         '100px': '100px',
+        '140px': '140px',
         '150px': '150px',
         '180px': '180px',
         '200px': '200px',
+        '220px': '220px',
         '250px': '250px',
         '300px': '300px',
         '500px': '500px',
@@ -71,7 +88,7 @@ module.exports = {
     },
     container: {
        padding: {
-        DEFAULT: '2rem',
+        DEFAULT: '1rem',
         sm: '2rem',
         lg: '4rem',
         xl: '5rem',
@@ -79,12 +96,14 @@ module.exports = {
       },
       center: true,
       screens: {
-        sm: '640px',
+        xs: '400px',
+        sm: '600px',
         md: '768px',
         lg: '1024px',
         xl: '1280px',
         '2xl': '1440px',
       },
-    }
+    },
+  
   },
 }

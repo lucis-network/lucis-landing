@@ -21,6 +21,9 @@ import Investor from "components/Investor";
 import Scholar from "components/Scholar";
 import OurEcosystem from "components/Home/OurEcosystem";
 import Roadmap from "components/Home/Roadmap";
+import Team from "components/Home/Team";
+import Advisor from "components/Home/Advisor";
+import Backer from "components/Home/Backers";
 
 const isClient = typeof window !== "undefined";
 
@@ -71,6 +74,9 @@ const Home: NextPage = () => {
       <Scholar />
       <OurEcosystem />
       <Roadmap />
+      <Team />
+      <Advisor />
+      <Backer />
     </div>
   );
 };

@@ -122,15 +122,14 @@ body {
     -49vw 48vh 0px 2px #fff, -36vw 14vh 1px 2px #fff;
   animation: zoom 20s alternate infinite;
 }
-@keyframes zoom {
+/* @keyframes zoom {
     0% {
       transform: scale(1);
     }
     100% {
       transform: scale(1.2);
-    /* background: rgba(0, 36, 84); */
   }
-}
+} */
 @media  (max-width: 1024px) {
   body {
     padding: 0;

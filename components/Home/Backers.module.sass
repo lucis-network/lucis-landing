@@ -2,7 +2,17 @@
 
 .container
   @include container
-  margin-top: 200px
+  margin-top: 120px
+  .block_item
+    @apply flex flex-row items-center justify-between flex-wrap
+    margin-top: 60px
+    .item_backer
+      margin-bottom: 40px
+      width: 32%
+      img
+        margin: 0 auto
+
+
 
 @media (min-width: 1025px) and (max-width: 1400px)
   .container
@@ -18,18 +28,26 @@
 @media (min-width: 640px) and (max-width: 768px)
   .container
     max-width: 640px
-    padding: 0
+    padding: 0px 20px
+    .item_backer
+      width: 48% !important
 
 @media (min-width: 540px) and (max-width: 639px)
   .container
     max-width: 540px
     padding: 0px 20px
+    .item_backer
+      width: 48% !important
 @media (min-width: 414px) and (max-width: 539px)
   .container
     max-width: 414px
-    padding: 0
+    padding: 0px 20px
+    .item_backer
+      width: 45% !important
 
 @media (min-width: 0px) and (max-width: 413px)
   .container
     max-width: 360px
-    padding: 0
+    padding: 0px 20px
+    .item_backer
+      width: 100% !important

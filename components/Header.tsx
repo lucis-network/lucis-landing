@@ -11,25 +11,27 @@ export default function Header(props: Props) {
   const [width, height] = useWindowSize();
   if (width > 1024) {
     return (
-      <div className="container py-20px flex justify-between items-center">
-        <div className="logo w-80px">
-          <Image src={Logo} alt='logo'></Image>
+      <div className='bg-nav'>
+        <div className="container py-20px flex justify-between items-center relative z-10">
+          <div className="logo w-80px">
+            <Image src={Logo} alt='logo'></Image>
+          </div>
+          <nav>
+            <ul className="flex justify-between items-center">
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Home</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Features</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Investors</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Scholars</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Roadmap</a></li>
+              <li> <GradientButton type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px">JOIN US</GradientButton> </li>
+            </ul>
+          </nav>
         </div>
-        <nav>
-          <ul className="flex justify-between items-center">
-            <li><a href="#" className='font-sofia text-white text-24px leading-28px p-15px'>Home</a></li>
-            <li><a href="#" className='font-sofia text-white text-24px leading-28px p-15px'>Features</a></li>
-            <li><a href="#" className='font-sofia text-white text-24px leading-28px p-15px'>Investors</a></li>
-            <li><a href="#" className='font-sofia text-white text-24px leading-28px p-15px'>Scholars</a></li>
-            <li><a href="#" className='font-sofia text-white text-24px leading-28px p-15px'>Roadmap</a></li>
-            <li> <GradientButton type={1} className="text-white font-sofia text-24px leading-28px">JOIN US</GradientButton> </li>
-          </ul>
-        </nav>
       </div>
     );
   } else {
     return (
-      <MenuMobile />
+        <MenuMobile />
     )
   }
 }

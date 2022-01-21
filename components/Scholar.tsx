@@ -3,6 +3,7 @@ import scholar1 from 'assets/img/scholar/1.png';
 import scholar2 from 'assets/img/scholar/2.png';
 import scholar3 from 'assets/img/scholar/3.png';
 import scholar4 from 'assets/img/scholar/4.png';
+import Title from 'components/Home/TitleSection/TitleName';
 type Props = {};
 const scholarData = [
 	{
@@ -11,7 +12,7 @@ const scholarData = [
 	},
 	{
 		image: scholar2,
-		content: 'Startup không cần vốn, nhận lương và hoa hồng, ',
+		content: 'Startup không cần vốn, nhận lương và hoa hồng,',
 	},
 	{
 		image: scholar3,
@@ -24,11 +25,13 @@ const scholarData = [
 ]
 export default function scholar(props: Props) {
 	return (
-		<div className="container text-white mt-200px">
-			<h3 className='font-transformer text-white lg:text-72px text-32px leading-55px mb-60px'>FOR SCHOLAR</h3>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-150px md:gap-10">
+		<div className="container text-white mt-140px">
+            <div className='mb-60px'>
+			    <Title titleName='FOR SCHOLARS'></Title>
+            </div>
+			<div className="grid grid-cols-1 xs:grid-cols-2 xs:gap-4 md:grid-cols-4 gap-60px md:gap-6 lg:gap-10">
 				{
-					scholarData.map((item, index) => (<PlayerCard image={item.image} content={item.content} key={index}></PlayerCard>))
+					scholarData.map((item, index) => (<PlayerCard type='scholar' image={item.image} content={item.content} key={index}></PlayerCard>))
 				}
 			</div>
 		</div>

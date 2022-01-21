@@ -24,20 +24,6 @@ const variants = {
 const data = [
   {
     color: "#FF008C",
-    text: (
-      <div className="nav-logo">
-        <Image
-          src={Logo}
-          alt="logo"
-          width={82}
-          height={88}
-          layout="responsive"
-        ></Image>
-      </div>
-    ),
-  },
-  {
-    color: "#FF008C",
     text: "Home",
   },
   {
@@ -70,7 +56,6 @@ const data = [
 ];
 
 export const MenuItem = ({ i }: { i: number }) => {
-  const style = { border: `2px solid ${data[i].color}` };
   return (
     <motion.li
       variants={variants}
@@ -79,7 +64,6 @@ export const MenuItem = ({ i }: { i: number }) => {
     >
       {/* <div className="icon-placeholder" style={style} /> */}
       <div className="text-placeholder font-sofia text-white text-24px leading-28px p-15px">
-        {" "}
         {data[i].text}
       </div>
     </motion.li>

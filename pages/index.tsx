@@ -9,7 +9,6 @@ import { Empty } from "antd";
 import * as SectionFlexSnapService from "services/SectionFlexSnap";
 
 import styles from "../styles/Home.module.css";
-// import styles from "component/Button3D/button_3d.css";
 import Banner from "components/Home/banner";
 import Stats from "components/Home/Stats";
 import HotGame from "components/Games";

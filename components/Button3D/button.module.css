@@ -136,17 +136,17 @@
   top: 1px;
   bottom: 1px;
   width: 1px;
-  background-color: #35373f;
+  /* background-color: #35373f; */
 }
 
 .current {
-  color: #8a8d9b;
+  /* color: #8a8d9b; */
   opacity: 1;
   display: block;
 }
 
 .new {
-  color: #fbfaaa;
+  /* color: #fbfaaa; */
   position: absolute;
   top: 20px;
   left: 0;
@@ -162,6 +162,6 @@
   opacity: 0;
   transform: translateY(38px);
   pointer-events: none;
-  color: #d0d0db;
+  /* color: #d0d0db; */
   display: block;
 }

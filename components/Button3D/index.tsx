@@ -61,14 +61,7 @@ export default function Button3D({
             hover: { opacity: 1 },
           }}
         >
-          <div
-            // className="pink blush"
-            className={[styles.pink, styles.blush].join(" ")}
-          />
-          <div
-            // className="blue blush"
-            className={[styles.blue, styles.blush].join(" ")}
-          />
+          
           <div
             // className="container"
             className={styles.container}

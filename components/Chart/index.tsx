@@ -1,34 +1,27 @@
-// import { ApexOptions } from "apexcharts";
-import React, { Component, useLayoutEffect, useState } from "react";
-// import Chart from "react-apexcharts";
+import React, { useLayoutEffect } from "react";
 import Highcharts from "highcharts";
 import style from "./chart.module.css";
 import highcharts3d from "highcharts/highcharts-3d";
 import { Options } from "highcharts";
 import { useWindowSize } from "hooks/useWindowSize";
-// const addFunnel = require('highcharts/modules/funnel');
 
 export default function PieChart() {
-  
-
   const size = useWindowSize();
-  //   const [imgWidth, setImgWidth] = useState(0.42*size[0])
 
   const windowWidth = size[0];
-//   let imgWidth = 0.42 * windowWidth;
-    let normalWidth = (windowWidth - 216) / 2
-  let chartWidth = normalWidth // >= 424
-  let imgWidth = normalWidth
-  let chartFontSize = '16px'
+  let normalWidth = (windowWidth - 216) / 2;
+  let chartWidth = normalWidth; // >= 424
+  let imgWidth = normalWidth;
+  let chartFontSize = "16px";
 
   if (windowWidth < 1024) {
     imgWidth = Math.min(windowWidth - 100, 610);
-    chartWidth = windowWidth - 100
-    chartFontSize = '13px'
+    chartWidth = windowWidth - 100;
+    chartFontSize = "13px";
   }
-  console.log("windowWidth: ", windowWidth);
-  console.log("chartWidth: ", chartWidth);
-  console.log("imgidth: ", imgWidth);
+  //   console.log("windowWidth: ", windowWidth);
+  //   console.log("chartWidth: ", chartWidth);
+  //   console.log("imgidth: ", imgWidth);
 
   useLayoutEffect(() => {
     setTimeout(() => {
@@ -54,7 +47,8 @@ export default function PieChart() {
           },
         },
         tooltip: {
-          pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+          pointFormat: "",
+          //   pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
         },
         plotOptions: {
           pie: {
@@ -73,45 +67,44 @@ export default function PieChart() {
             type: "pie",
             name: "Share",
             data: [
-                {
-                    name: "Private sale",
-                    y: 12.8,
-                    // value: 12.8,
-                    sliced: true,
-                    // selected: true,
-                    color: "#EB5757",
-                    // connectorColor: "#ffffff",
-                  },
-                  {
-                    name: "Lucis team",
-                    y: 12.8,
-                    sliced: true,
-                    color: "#5780EB",
-                  },
-                  {
-                    name: "Advisor",
-                    y: 12.8,
-                    sliced: true,
-                    color: "#434348",
-                  },
-                  {
-                    name: "Ecosystem development",
-                    y: 12.8,
-                    sliced: true,
-                    color: "#22D3FD",
-                  },
-                  {
-                    name: "Game reward/ play to earn",
-                    y: 12.8,
-                    sliced: true,
-                    color: "#562CA2",
-                  },
-                  {
-                    name: "Liquidity/ staking reward",
-                    y: 12.8,
-                    sliced: true,
-                    color: "#0D1841",
-                  }
+              {
+                name: "16% Private sale",
+                y: 16,
+                sliced: true,
+                // selected: true,
+                color: "#EB5757",
+                // connectorColor: "#ffffff",
+              },
+              {
+                name: "16% Lucis team",
+                y: 16,
+                sliced: true,
+                color: "#5780EB",
+              },
+              {
+                name: "16% Advisor",
+                y: 16,
+                sliced: true,
+                color: "#434348",
+              },
+              {
+                name: "16% Ecosystem development",
+                y: 16,
+                sliced: true,
+                color: "#22D3FD",
+              },
+              {
+                name: "16% Game reward/ play to earn",
+                y: 16,
+                sliced: true,
+                color: "#562CA2",
+              },
+              {
+                name: "20% Liquidity/ staking reward",
+                y: 20,
+                sliced: true,
+                color: "#0D1841",
+              },
             ],
           },
         ],

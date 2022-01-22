@@ -17,7 +17,8 @@ import Roadmap from "components/Home/Roadmap";
 import Team from "components/Home/Team";
 import Advisor from "components/Home/Advisor";
 import Backer from "components/Home/Backers";
-import TokenAllocation from 'components/TokenAllocation';
+import TokenAllocation from "components/TokenAllocation";
+import AnimWhenVisible from "components/Anim";
 
 // import {isClient} from "../utils/DOM";
 
@@ -56,21 +57,53 @@ const Home: NextPage = () => {
         <meta property="og:locale" content="en_US" />
       </Head>
 
-
-      <Banner />
-      <Community />
-      <SlideGame />
-      <HotGame />
-      <Features />
-      <HowWeWork />
-      <Investor />
-      <Scholar />
-      <OurEcosystem />
-      <TokenAllocation/>
-      <Roadmap />
-      <Team />
-      <Advisor />
-      <Backer />
+      <AnimWhenVisible
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+      >
+        <Banner />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Community />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <SlideGame />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <HotGame />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Features />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <HowWeWork />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Investor />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Scholar />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <OurEcosystem />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <TokenAllocation />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Roadmap />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Team />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Advisor />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Backer />
+      </AnimWhenVisible>
     </div>
   );
 };

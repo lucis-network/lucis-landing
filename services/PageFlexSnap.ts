@@ -177,5 +177,5 @@ function _onElementDisappear(el: Element, direction: ScrollDirection) {
 
 function _scrollToNextScreen() {
   console.log('{_scrollToNextScreen._scrollToNextScreen} : ', );
-  scrollBy(window.visualViewport.height)
+  scrollBy(window?.visualViewport.height ?? 0)
 }

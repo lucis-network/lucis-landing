@@ -23,6 +23,7 @@ import Roadmap from "components/Home/Roadmap";
 import Team from "components/Home/Team";
 import Advisor from "components/Home/Advisor";
 import Backer from "components/Home/Backers";
+import TokenAllocation from 'components/TokenAllocation';
 
 const isClient = typeof window !== "undefined";
 
@@ -61,7 +62,6 @@ const Home: NextPage = () => {
         <meta data-hid="og:image" property="og:image" content={thumb} />
         <meta property="og:locale" content="en_US" />
       </Head>
-
       <Banner />
       <Stats />
       <Community />
@@ -72,6 +72,7 @@ const Home: NextPage = () => {
       <Investor />
       <Scholar />
       <OurEcosystem />
+      <TokenAllocation/>
       <Roadmap />
       <Team />
       <Advisor />

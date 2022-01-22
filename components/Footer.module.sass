@@ -4,10 +4,15 @@
   @include container
   margin-top: 160px
   .heading_footer
+    @media (min-width: 1025px)
+      padding-left: 50px
+      padding-right: 50px
     @apply flex flex-row items-start justify-between flex-wrap
     .group_ic
       @apply flex flex-row items-center justify-between flex-wrap
       margin: 100px auto 0px auto
+      @media (min-width: 1025px)
+        margin-top: 0
       .ic_item
         cursor: pointer
         margin-bottom: 12px
@@ -34,10 +39,11 @@
     //     box-shadow: (0px 2px 40px rgba(255, 255, 255, 0.5))
 .logo
   img
-    margin-top: 16px
     width: 305px
-// .r
-//   padding-left: 50px
+    margin-top: 0
+  .r
+    padding-left: 20px
+
 .emailForm
   color: white
   font-size: 36px
@@ -145,6 +151,13 @@
       .group_ic
         margin-top: 20px
         justify-content: space-between
+
+@media (min-width: 540px) and (max-width: 1024px)
+  .logo
+    margin-bottom: 50px
+  .emailForm .title
+    margin-top: 80px
+
 @media (min-width: 414px) and (max-width: 539px)
   .container
     max-width: 414px
@@ -156,10 +169,14 @@
         margin-top: 20px
         justify-content: space-between
         .ic_item
-          width: 33%
+          width: 15%
+          & > div
+            width: auto
+            margin: 0 5px
   .logo
-    img
-      width: 200px
+    display: none
+  //img
+  //  width: 200px
   .emailForm
     font-size: 20px
     .inputC
@@ -181,10 +198,14 @@
         margin-top: 20px
         justify-content: space-between
         .ic_item
-          width: 33%
+          width: 15%
+          & > div
+            width: auto
+            margin: 0 5px
   .logo
-    img
-      width: 200px
+    display: none
+    //img
+    //  width: 200px
   .emailForm
     font-size: 18px
     .inputC

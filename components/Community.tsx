@@ -5,7 +5,9 @@ import game2 from '../assets/img/game/game2.png';
 import game3 from '../assets/img/game/game3.png';
 import CommunityCard from './Card/CommunityCard';
 import Title from 'components/Home/TitleSection/TitleName';
+
 type Props = {}
+
 export default function Community(props: Props) {
   const gameCommunityData = [
     {

@@ -23,13 +23,14 @@ import Roadmap from "components/Home/Roadmap";
 import Team from "components/Home/Team";
 import Advisor from "components/Home/Advisor";
 import Backer from "components/Home/Backers";
-import TokenAllocation from 'components/TokenAllocation';
-
+import TokenAllocation from "components/TokenAllocation";
+import AnimWhenVisible from "components/Anim";
 const isClient = typeof window !== "undefined";
 
 const Home: NextPage = () => {
   const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";
-  const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
+  const desc =
+    'One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of "Play to Earn" gaming and metaverse.';
   const thumb = "/assets/img/logo-547x200.png";
 
   return (
@@ -61,20 +62,56 @@ const Home: NextPage = () => {
         <meta data-hid="og:image" property="og:image" content={thumb} />
         <meta property="og:locale" content="en_US" />
       </Head>
-      <Banner />
-      <Community />
-      <SlideGame />
-      <HotGame />
-      <Features />
-      <HowWeWork />
-      <Investor />
-      <Scholar />
-      <OurEcosystem />
-      <TokenAllocation/>
-      <Roadmap />
-      <Team />
-      <Advisor />
-      <Backer />
+
+      <AnimWhenVisible
+        variants={{
+          visible: { opacity: 1 },
+          hidden: { opacity: 0 },
+        }}
+      >
+        <Banner />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Community />
+      </AnimWhenVisible>
+      {/* <Banner /> */}
+      {/* <Community /> */}
+      <AnimWhenVisible>
+        <SlideGame />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <HotGame />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Features />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <HowWeWork />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Investor />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Scholar />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <OurEcosystem />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <TokenAllocation />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Roadmap />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Team />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Advisor />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Backer />
+      </AnimWhenVisible>
     </div>
   );
 };

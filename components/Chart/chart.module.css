@@ -9,7 +9,7 @@
   margin-top: 158px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap-reverse;
+  /* flex-wrap: wrap-reverse; */
   /* min-width: 310px; */
   /* max-width: 600px; */
   /* margin: 1em auto; */
@@ -50,3 +50,40 @@
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
+
+
+@media (min-width: 0px) and (max-width: 991px){
+  .highchartsFigure,
+  .highcharts-data-table table{
+    flex-direction: column;
+    max-width: 100% !important;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .highchartsFigure img{
+    max-width: 100% !important
+  }
+}
+
+/* @media (min-width: 540px) and (max-width: 639px){
+
+}
+  .container{
+    max-width: 540px;
+    padding: 0px 1rem;
+
+  }
+@media (min-width: 414px) and (max-width: 539px){
+
+}
+  .container{
+    max-width: 414px;
+    padding: 0px 1rem;
+
+  }
+
+@media (min-width: 0px) and (max-width: 413px){
+  .container{
+    padding: 0px 1rem; 
+  }
+} */

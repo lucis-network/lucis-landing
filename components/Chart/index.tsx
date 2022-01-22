@@ -116,7 +116,7 @@ export default function PieChart() {
 
   //@ts-ignore
   return (
-    <div className={style.highchartsFigure}>
+    <div className={`${style.highchartsFigure} ${style.container}`}>
       <img
         src="/assets/token_allocation/img_token_allocation.png"
         style={{ maxWidth: imgWidth }}

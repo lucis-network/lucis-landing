@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { Empty } from "antd";
-
-// import * as PanelSnapService from 'services/PanelSnap'
-// import * as PanelFlexSnapService from 'services/PageFlexSnap'
-import * as SectionFlexSnapService from "services/SectionFlexSnap";
 
 import styles from "../styles/Home.module.css";
 import Banner from "components/Home/banner";
@@ -25,12 +19,12 @@ import Advisor from "components/Home/Advisor";
 import Backer from "components/Home/Backers";
 import TokenAllocation from 'components/TokenAllocation';
 
-const isClient = typeof window !== "undefined";
+// import {isClient} from "../utils/DOM";
 
 const Home: NextPage = () => {
   const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";
   const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
-  const thumb = "/assets/img/logo-547x200.png";
+  const thumb = "/assets/img/howwework.png";
 
   return (
     <div className={styles.pageContainer}>
@@ -61,6 +55,8 @@ const Home: NextPage = () => {
         <meta data-hid="og:image" property="og:image" content={thumb} />
         <meta property="og:locale" content="en_US" />
       </Head>
+
+
       <Banner />
       <Community />
       <SlideGame />

@@ -109,7 +109,7 @@ export default function Header(props: Props) {
               url={url}
               render={({ subscribe, status, message }: any) => (
                 <>
-                  <p className={s.title}>SUBSCRIBE TO NEWSLETTER</p>
+                  <p className={s.title}>SUBSCRIBE TO OUR NEWSLETTER</p>
                   <div className={s.form}>
                     <div className={s.inputC}>
                       <input

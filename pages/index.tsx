@@ -63,7 +63,6 @@ const Home: NextPage = () => {
       </Head>
 
       <Banner />
-      <Stats />
       <Community />
       <SlideGame />
       <HotGame />

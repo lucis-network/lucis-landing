@@ -1,19 +1,24 @@
 import Image from '../Image';
+import s from './CommunityCard.module.sass'
 type Props = {
     image: StaticImageData,
     title: String,
     genre: String,
     content: String,
+    srcReadMore: string
 }
 export default function PlayerCard(props: Props) {
     return (
-        <div className='bg-game-card rounded-16px border border-card backdrop-blur-lg pt-180px md:pt-100px lg:pt-200px pb-30px pl-30px pr-30px relative min-h-[320px] lg:min-h-[560px]'>
-            <div className='absolute w-300px md:w-full -top-180px left-1/2 -translate-x-1/2 md:-top-150px xl:-top-220px'>
+        <div className={s.content_heading}>
+            <div className={s.im_community}>
                 <Image src={props.image} width={894} height={894} layout='responsive' alt="#"></Image>
             </div>
-            <h3 className='text-white text-24px md:text-28px lg:text-36px mb-4'>{props.title}</h3>
-            <h5 className='text-emerald-2 text-16px lg:text-24px mb-2'>{props.genre}</h5>
-            <p className='text-white text-16px lg:text-24px'>{props.content}</p>
+            <div className={s.text}>
+                <h3 className={s.title_game}>{props.title}</h3>
+                <h5>{props.genre}</h5>
+                <p>{props.content}</p>
+                <a href={props.srcReadMore}>read more >></a>
+            </div>
         </div>
     )
 }

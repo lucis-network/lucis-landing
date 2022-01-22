@@ -1,4 +1,5 @@
 import Image from './Image';
+import s from './Header.module.sass'
 import Logo from '../assets/img/logo.png';
 import GradientButton from './Button/GradientButton';
 import { useWindowSize } from '../hooks/useWindowSize';
@@ -12,7 +13,7 @@ export default function Header(props: Props) {
   if (width > 1024) {
     return (
       <div className='bg-nav'>
-        <div className="container py-20px flex justify-between items-center relative z-10">
+        <div className={`container py-20px flex justify-between items-center relative z-10 ${s.container}`}>
           <div className="logo w-80px">
             <Image src={Logo} alt='logo'></Image>
           </div>

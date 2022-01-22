@@ -1,4 +1,5 @@
 import ic_game_community from '../assets/icon/icon_game_community.svg';
+import s from './Community.module.sass'
 import Image from './Image';
 import game1 from '../assets/img/game/game1.png';
 import game2 from '../assets/img/game/game2.png';
@@ -13,28 +14,28 @@ export default function Community(props: Props) {
     {
       image: game1,
       title: 'THETAN ARENA',
-      genre: 'Play to Earn',
-      content: 'Challenge yourself with a wide variety of game modes:MOBA & Battle Royale, coming with monthly updates and attractive rewards.',
+      genre: 'MOBA E-Sport',
+      content: 'Challenge yourself with a wide variety of game modes:MOBA & Battle Royale, coming with monthly updates and attractive rewards,...',
       src: '#'
     },
     {
       image: game2,
       title: 'SPACE SIP',
-      genre: 'Play to Earn',
-      content: 'Space Sip is built to allow player PLAY-to-EARN with an EASY-to-PLAY gameplay and still provides an addictive experience.',
+      genre: 'Battle',
+      content: 'Space Sip is built to allow player PLAY-to-EARN with an EASY-to-PLAY gameplay and still provides an addictive experience,...',
       src: '#'
     },
     {
       image: game3,
       title: 'AXIE INFINITY',
-      genre: 'Play to Earn',
-      content: 'Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players.',
+      genre: 'Trading and Battle',
+      content: 'Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players,...',
       src: '#'
     },
   ]
 
   return (
-    <div className="container mt-32">
+    <div className={`container mt-32 ${s.container}`}>
       <div className="flex justify-between items-center mb-5">
         <div>
           <Title titleName='Gaming community and partners'></Title>

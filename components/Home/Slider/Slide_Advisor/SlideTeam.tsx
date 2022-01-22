@@ -32,14 +32,14 @@ export default class SimpleSliderAdvisor extends Component {
       <div>
         <div className={s.heading_feature}>
           <TitleName titleName='Advisor' />
-          <div className={s.group_btn}>
+          {/* <div className={s.group_btn}>
             <button className={s.btn_left} onClick={this.previous}>
               <img src="/assets/Feature/ic_left.svg" alt="" />
             </button>
             <button className={s.btn_right} onClick={this.next}>
               <img src="/assets/Feature/ic_right.svg" alt="" />
             </button>
-          </div>
+          </div> */}
         </div>
 
       {/* @ts-ignore*/}
@@ -54,7 +54,7 @@ export default class SimpleSliderAdvisor extends Component {
             <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
           </div>
-          <div className={s.block_team}>
+          {/* <div className={s.block_team}>
           <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
@@ -73,7 +73,7 @@ export default class SimpleSliderAdvisor extends Component {
             <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-          </div>
+          </div> */}
         </Slider>
       </div>
     );

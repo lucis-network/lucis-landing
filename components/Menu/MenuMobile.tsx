@@ -1,4 +1,5 @@
 import * as React from "react";
+import s from './MenuMobile.module.sass'
 import { useRef, useEffect } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./useDimensions";
@@ -75,7 +76,7 @@ export const MenuMobile = (props: any) => {
       <motion.div
         initial={false}
         animate={isOpen ? "open" : "closed"} className="fixed top-0 left-0 right-0 z-[101] bg-nav backdrop-blur-sm">
-          <div className="container flex justify-between items-center py-4">
+          <div className={`container flex justify-between items-center py-4 ${s.container}`}>
             <div className="w-40px">
               <Image src={Logo} width={82} height={86} alt="logo" layout="responsive"></Image>
             </div>

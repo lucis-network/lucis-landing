@@ -19,6 +19,7 @@ import Advisor from "components/Home/Advisor";
 import Backer from "components/Home/Backers";
 import TokenAllocation from "components/TokenAllocation";
 import AnimWhenVisible from "components/Anim";
+import Marketplace from "components/Home/Marketplace";
 
 // import {isClient} from "../utils/DOM";
 
@@ -87,6 +88,9 @@ const Home: NextPage = () => {
         <Scholar />
       </AnimWhenVisible>
       <AnimWhenVisible>
+        <Marketplace />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
         <OurEcosystem />
       </AnimWhenVisible>
       <AnimWhenVisible>
@@ -104,6 +108,22 @@ const Home: NextPage = () => {
       <AnimWhenVisible>
         <Backer />
       </AnimWhenVisible>
+
+      {/* <Banner />
+      <Community />
+      <SlideGame />
+      <HotGame />
+      <Features />
+      <HowWeWork />
+      <Investor />
+      <Scholar />
+      <Marketplace />
+      <OurEcosystem />
+      <TokenAllocation/>
+      <Roadmap />
+      <Team />
+      <Advisor />
+      <Backer /> */}
     </div>
   );
 };

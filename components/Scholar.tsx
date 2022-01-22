@@ -23,7 +23,7 @@ const scholarData = [
 ]
 export default function scholar(props: Props) {
 	return (
-		<div className="container text-white mt-140px">
+		<div className={`container text-white mt-140px ${s.container}`}>
             <div className='mb-60px'>
 			    <Title titleName='FOR SCHOLARS'></Title>
             </div>

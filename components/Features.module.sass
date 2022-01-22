@@ -3,22 +3,28 @@
 .container
   @include container
   margin-top: 200px
-
-@media (min-width: 1025px) and (max-width: 1400px)
+  
+@media (min-width: 1280px) and (max-width: 1439px)
+  .container
+    max-width: 1280px
+    padding: 0px 5rem
+@media (min-width: 1025px) and (max-width: 1279px)
   .container
     max-width: 1025px
+    padding: 0px 4rem
 
 @media (min-width: 992px) and (max-width: 1024px)
   .container
     max-width: 992px
+    padding: 0px 3rem
 @media (min-width: 769px) and (max-width: 991px)
   .container
-    max-width: 992px
-    padding: 0px 150px
+    max-width: 769px
+    padding: 0px 2rem
 @media (min-width: 640px) and (max-width: 768px)
   .container
     max-width: 640px
-    padding: 0
+    padding: 0px 2rem
 
 @media (min-width: 540px) and (max-width: 639px)
   .container

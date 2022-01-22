@@ -6,21 +6,24 @@
   .block_item
     @apply flex flex-row items-center justify-between flex-wrap
     margin-top: 60px
-    .item_backer
-      margin-bottom: 40px
-      width: 32%
-      img
-        margin: 0 auto
+    img
+      margin: 20px 30px
+      height: 40px
 
 
-
-@media (min-width: 1025px) and (max-width: 1400px)
+@media (min-width: 1280px) and (max-width: 1439px)
+  .container
+    max-width: 1280px
+    padding: 0 5rem
+@media (min-width: 1025px) and (max-width: 1279px)
   .container
     max-width: 1025px
+    padding: 0 4rem
 
 @media (min-width: 992px) and (max-width: 1024px)
   .container
     max-width: 992px
+    padding: 0 3rem
 @media (min-width: 769px) and (max-width: 991px)
   .container
     max-width: 992px
@@ -28,7 +31,7 @@
 @media (min-width: 640px) and (max-width: 768px)
   .container
     max-width: 640px
-    padding: 0px 20px
+    padding: 0px 2rem
     .item_backer
       width: 48% !important
 

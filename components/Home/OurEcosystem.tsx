@@ -14,19 +14,34 @@ export default function OurEcosystem(props: Props){
 
       <div className={s.group_ic}>
         <div className={s.ic_item}>
-          <img src="/assets/OurEcosystem/TikTok.png" alt="" />
+          <div>
+            <img src="/assets/OurEcosystem/tiktok.svg" alt="" />
+          </div>
         </div>
         <div className={s.ic_item}>
-          <img src="/assets/OurEcosystem/fb.png" alt="" />
+          <div>
+            <img src="/assets/OurEcosystem/fb.svg" alt="" />
+          </div>
         </div>
         <div className={s.ic_item}>
-          <img src="/assets/OurEcosystem/ytb.png" alt="" />
+          <div>
+            <img src="/assets/OurEcosystem/ytb.svg" alt="" />
+          </div>
         </div>
         <div className={s.ic_item}>
-          <img src="/assets/OurEcosystem/tele.png" alt="" />
+          <div>
+            <img src="/assets/OurEcosystem/tele.svg" alt="" />
+          </div>
         </div>
         <div className={s.ic_item}>
-          <img src="/assets/footer/dis.png" alt="" />
+          <div>
+            <img src="/assets/OurEcosystem/tw.svg" alt="" />
+          </div>
+        </div>
+        <div className={s.ic_item}>
+          <div>
+            <img src="/assets/OurEcosystem/dis.svg" alt="" />
+          </div>
         </div>
       </div>
     </section>

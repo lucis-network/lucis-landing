@@ -4,7 +4,7 @@ import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 import s from './Footer.module.sass'
 
-type Props = {}
+type Props = {};
 export default function Header(props: Props) {
   const [msg, setMsg] = useState('');
   const [email, setEmail] = useState('');
@@ -28,10 +28,10 @@ export default function Header(props: Props) {
     subscribe({EMAIL: email})
 
     setTimeout(() => {
-      setMsg('Thank you for subscribing!')
+      setMsg("Thank you for subscribing!");
       setTimeout(() => {
-        setMsg('')
-      }, 10000)
+        setMsg("");
+      }, 10000);
     }, 2000);
   }, [email, hasError]);
 
@@ -85,22 +85,34 @@ export default function Header(props: Props) {
         <div className={s.r}>
           <div className={s.group_ic}>
             <div className={s.ic_item}>
-              <img src="/assets/OurEcosystem/TikTok.png" alt="" />
+              <div>
+                <img src="/assets/OurEcosystem/tiktok.svg" alt="" />
+              </div>
             </div>
             <div className={s.ic_item}>
-              <img src="/assets/footer/fb.png" alt="" />
+              <div>
+                <img src="/assets/OurEcosystem/fb.svg" alt="" />
+              </div>
             </div>
             <div className={s.ic_item}>
-              <img src="/assets/footer/ytb.png" alt="" />
+              <div>
+                <img src="/assets/OurEcosystem/ytb.svg" alt="" />
+              </div>
             </div>
             <div className={s.ic_item}>
-              <img src="/assets/OurEcosystem/tele.png" alt="" />
+              <div>
+                <img src="/assets/OurEcosystem/tele.svg" alt="" />
+              </div>
             </div>
             <div className={s.ic_item}>
-              <img src="/assets/footer/dis.png" alt="" />
+              <div>
+                <img src="/assets/OurEcosystem/tw.svg" alt="" />
+              </div>
             </div>
             <div className={s.ic_item}>
-              <img src="/assets/footer/Twitter.png" alt="" />
+              <div>
+                <img src="/assets/OurEcosystem/dis.svg" alt="" />
+              </div>
             </div>
           </div>
 
@@ -136,5 +148,5 @@ export default function Header(props: Props) {
         <img src="/assets/footer/footer.png" alt="" />
       </div>
     </section>
-  )
+  );
 }

@@ -1,9 +1,16 @@
 .block_item
   @apply flex flex-row items-center justify-between
-@media (min-width: 993px) and (max-width: 1279px)
-  .block_item
-    @apply justify-center flex-wrap
-@media (min-width: 769px) and (max-width: 992px)
+
+
+@media (min-width: 1025px) and (max-width: 1279px)
+
+@media (min-width: 992px) and (max-width: 1024px)
+  .container
+    max-width: 992px
+    padding: 0px 3rem
+    .block_item
+      @apply justify-between flex-wrap
+@media (min-width: 769px) and (max-width: 991px)
   .block_item
     @apply justify-between flex-wrap
 @media (min-width: 640px) and (max-width: 768px)

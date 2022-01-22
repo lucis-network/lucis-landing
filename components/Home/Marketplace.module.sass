@@ -1,0 +1,155 @@
+@import "styles/common"
+
+.container
+  @include container
+  margin-top: 200px
+  .Marketplace
+    @apply flex flex-row items-center justify-between relative
+    .block_item
+      @apply h-full flex flex-col justify-between absolute
+      padding: 100px 0px
+      z-index: 1
+      .item
+        background: linear-gradient(63deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+        backdrop-filter: blur(42px)
+        border-radius: 16px
+        @apply text-white flex flex-row items-center
+        @include my-text(34px, 40px, 600)
+        width: 560px
+        border: 1px solid rgba(152, 84, 254, 0.2)
+        padding: 35px 0px 35px 30px
+        min-height: 198px
+        p
+          max-width: 300px
+          span
+            font-size: 64px
+            color: #43E0F7
+
+    .item_left
+      width: 400px
+    .bg_marketplace
+      @apply relative
+      max-width: 1090px
+      z-index: 2
+      img
+        margin-top: 30px
+  
+@media (min-width: 1280px) and (max-width: 1439px)
+  .container
+    max-width: 1280px
+    padding: 0px 5rem
+    .Marketplace
+      .block_item
+        .item
+          width: 490px
+          min-height: 160px
+          font-size: 28px
+          line-height: 32px
+          p
+            max-width: 300px
+            span
+              font-size: 48px
+@media (min-width: 1025px) and (max-width: 1279px)
+  .container
+    max-width: 1025px
+    padding: 0px 4rem
+    .Marketplace
+      .block_item
+        padding: 80px 0px
+        .item
+          width: 400px
+          min-height: 140px
+          font-size: 24px
+          line-height: 32px
+          p
+            max-width: 220px
+            span
+              font-size: 48px
+
+@media (min-width: 992px) and (max-width: 1024px)
+  .container
+    max-width: 992px
+    padding: 0px 3rem
+    .Marketplace
+      .block_item
+        padding: 80px 0px
+        .item
+          width: 400px
+          min-height: 140px
+          font-size: 24px
+          line-height: 32px
+          p
+            max-width: 220px
+            span
+              font-size: 48px
+@media (min-width: 769px) and (max-width: 991px)
+  .container
+    max-width: 769px
+    padding: 0px 2rem
+    .Marketplace
+      .block_item
+        padding: 50px 0px
+        .item
+          width: 320px
+          min-height: 140px
+          font-size: 20px
+          line-height: 28px
+          padding: 20px 0px 20px 20px
+          p
+            max-width: 150px
+            span
+              font-size: 36px
+@media (min-width: 640px) and (max-width: 768px)
+  .container
+    max-width: 640px
+    padding: 0px 2rem
+    .Marketplace
+      .block_item
+        padding: 40px 0px
+        .item
+          width: 250px
+          min-height: 120px
+          font-size: 18px
+          line-height: 28px
+          padding: 12px 0px 12px 12px
+          p
+            max-width: 160px
+            span
+              font-size: 28px
+
+@media (min-width: 540px) and (max-width: 639px)
+  .container
+    max-width: 540px
+    padding: 0px 20px
+    .Marketplace
+      .block_item
+        padding: 40px 0px
+        .item
+          width: 230px
+          min-height: 120px
+          font-size: 16px
+          line-height: 28px
+          padding: 12px 0px 12px 12px
+          p
+            max-width: 160px
+            span
+              font-size: 24px
+
+@media (min-width: 0px) and (max-width: 539px)
+  .container
+    padding: 0 1rem
+    .Marketplace
+      .block_item
+        padding: 20px 0px
+        .item
+          width: 180px
+          min-height: 80px
+          font-size: 13px
+          line-height: 16px
+          padding: 4px 0px 4px 6px
+          p
+            max-width: 100px
+            span
+              font-size: 18px
+      .item_left
+        width: 340px

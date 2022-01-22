@@ -1,20 +1,25 @@
 import Image from '../Image';
+import s from './PlayerCard.module.sass'
 type Props = {
-	image: StaticImageData,
+	image: string,
 	content: String,
 	type: String,
+	statusHeight: boolean,
 }
 export default function PlayerCard(props: Props) {
+	const customHeight = props.statusHeight == false? s.content_card1
+	:s.content_card2
+
 	return (
-		<div className="bg-player shadow-player rounded-20px">
-			<div className={props.type == 'investor' ? '-m-20px' : '-m-10px' }>
-				<Image src={props.image} alt=""/>
+		<div className={`${s.content_investor} ${customHeight}`}>
+			<div className={s.im_investor}>
+				<img src={props.image} alt="" />
 			</div>
-				<div className="px-6 py-4 md:min-h-[200px] min-h-[150px]">
-					<p className="text-white text-16px lg:text-24px font-sophia text-center">
-						{props.content}
-					</p>
-				</div>
+			<div className={s.heading_investor}>
+				<p>
+					{props.content}
+				</p>
+			</div>
 		</div>
 	)
 }

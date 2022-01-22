@@ -6,19 +6,19 @@ localhost:2016 {
   respond "Goodbye, world!"
 }
 
-api.xenowars.com {
+api.lucis.com {
   # node-app:4000 is the docker container running the Node.js application
   # in our case it's exposed on port 4000
-  reverse_proxy localhost:5010 {
+  reverse_proxy localhost:6010 {
     header_down Strict-Transport-Security max-age=31536000;
   }
 }
 
-beta.xenowars.com {
+beta.lucis.com {
   # tls {
   #     email hostmaster@example.com
   # }
-  root * /srv/xeno-landing-out
+  root * /srv/lucis-landing-out
   encode gzip
   file_server
   header / {
@@ -33,11 +33,11 @@ beta.xenowars.com {
   }
 }
 
-xenowars.com {
+lucis.com {
   # tls {
   #     email hostmaster@example.com
   # }
-  root * /srv/prod-xeno-landing-out
+  root * /srv/prod-lucis-landing-out
   encode gzip
   file_server
   header / {

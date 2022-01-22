@@ -2,7 +2,7 @@
 
 @font-face{
   font-family: 'MyFont';
-  src: url(../public/font/SVN-Transformer.ttf)
+  src: url(/font/SVN-Transformer.ttf)
 }
 
 @tailwind base;

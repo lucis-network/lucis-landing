@@ -6,7 +6,7 @@ localhost:2016 {
   respond "Goodbye, world!"
 }
 
-api.lucis.com {
+api.lucis.network {
   # node-app:4000 is the docker container running the Node.js application
   # in our case it's exposed on port 4000
   reverse_proxy localhost:6010 {
@@ -14,7 +14,7 @@ api.lucis.com {
   }
 }
 
-beta.lucis.com {
+beta.lucis.network {
   # tls {
   #     email hostmaster@example.com
   # }
@@ -33,7 +33,7 @@ beta.lucis.com {
   }
 }
 
-lucis.com {
+lucis.network {
   # tls {
   #     email hostmaster@example.com
   # }

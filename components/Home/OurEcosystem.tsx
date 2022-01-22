@@ -9,7 +9,7 @@ export default function OurEcosystem(props: Props){
       <TitleName titleName='Our ecosystem' />
 
       <div className={s.content_video}>
-        <iframe src="https://www.youtube.com/embed/e6Qkthx7kho?=1&showinfo=0&modestbranding=1&rel=0&mute=1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameBorder="0"></iframe>
+        <iframe src="https://www.youtube.com/embed/eIz-E4Jbsg8?=1&showinfo=0&modestbranding=1&rel=0&mute=1" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameBorder="0"></iframe>
       </div>
 
       <div className={s.group_ic}>

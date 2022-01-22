@@ -123,7 +123,7 @@
 
 @media (min-width: 768px) and (max-width: 991px)
   .container_banner
-    padding: 50px 50px 0px 50px !important
+    padding: 100px 50px 0px 50px !important
     max-width: 768px
   .im_banner
     @apply flex-col
@@ -133,7 +133,7 @@
   .content_glass
     width: 100%
     min-width: 100%
-    transform: translate(154px, -230px)
+    transform: translate(154px, -130px)
   .content_glass:after
     display: none
   .block_total
@@ -155,12 +155,11 @@
     max-width: 500px
     margin-top: 20px
     @apply flex flex-row items-center justify-between
-  .groupButton > div
-    width: 48%
     button
       font-size: 18px
-      width: 100%
+      width: 48%
       min-width: auto
+      margin-right: 0
   .content_glass
     width: 100%
     min-width: 100%
@@ -168,30 +167,32 @@
   .content_glass:after
     display: none
   .block_total
-    justify-content: center
+    justify-content: space-between
     padding-right: 0
 
 
 @media (min-width: 0px) and (max-width: 539px)
   .container_banner
     max-width: 375px
-    padding: 20px 20px 0px 20px !important
+    padding: 100px 20px 0px 20px !important
     .heading
       h1
         font-size: 32px
+        line-height: 36px
       p
-        font-size: 14px
+        font-size: 16px
+        line-height: 26px
   .im_banner
     @apply flex-col
   .groupButton
     max-width: 500px
-    margin-top: 20px
-  .groupButton > div
-    width: 48%
+    margin-top: 30px
+  .groupButton
     button
       font-size: 12px
-      min-width: 100%
+      min-width: 48%
       padding: 8px 0px
+      margin-right: 0px
   .content_glass
     width: 100%
     min-width: 100%
@@ -199,5 +200,5 @@
   .content_glass:after
     display: none
   .block_total
-    justify-content: center
     padding-right: 0
+    justify-content: space-between

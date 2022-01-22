@@ -1,0 +1,70 @@
+@import "styles/common"
+  
+.content_investor
+  max-width: 284px
+  background: linear-gradient(86deg, rgba(205, 40, 232, 0.5) 31.31%, rgba(11, 235, 214, 0.5) 96.4%)
+  box-shadow: inset 0px 98px 100px -48px rgba(0, 161, 253, 0.3), inset 0px 4px 18px rgba(8, 59, 88, 0.3)
+  backdrop-filter: blur(10px)
+  border-radius: 30px
+  margin-bottom: 30px
+  .im_investor
+    box-shadow: 0px 0px 9px 8px rgba(155, 251, 242, 0.37)
+    border-radius: 16px
+    min-height: 148px
+  .heading_investor
+    padding: 12px 24px
+    text-align: center
+    p
+      @include my-text(24px, 36px, 300)
+
+.content_card1
+  min-height: 340px
+.content_card2
+  min-height: 414px !important
+  
+
+
+@media (min-width: 1280px) and (max-width: 1439px)
+  .content_investor
+    max-width: 260px
+@media (min-width: 993px) and (max-width: 1279px)
+  .content_investor
+    max-width: 260px
+    margin: 0px 12px 30px 12px
+  .content_card1
+    min-height: 350px
+
+@media (min-width: 769px) and (max-width: 992px)
+  .content_investor
+    max-width: 284px
+  .content_card1
+    min-height: 350px
+@media (min-width: 640px) and (max-width: 768px)
+  .content_investor
+    min-width: 240px
+    width: 48%
+    .heading_investor
+      font-size: 20px
+      line-height: 24px
+
+  .content_card1
+    min-height: 300px
+@media (min-width: 415px) and (max-width: 639px)
+  .content_investor
+    min-height: 235px
+    max-width: 230px
+    width: 47%
+    .heading_investor
+      font-size: 15px
+      line-height: 24px
+  .content_card1
+    min-height: 235px
+@media (min-width: 0px) and (max-width: 414px)
+  .content_investor
+    min-height: 240px
+    width: 100%
+    .heading_investor
+      font-size: 16px
+      line-height: 24px
+  .content_card1
+    min-height: 240px

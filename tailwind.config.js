@@ -99,7 +99,7 @@ module.exports = {
       },
       center: true,
       screens: {
-        xs: '400px',
+        xs: '540px',
         sm: '600px',
         md: '768px',
         lg: '1024px',

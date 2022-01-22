@@ -1,0 +1,22 @@
+.block_item
+  @apply flex flex-row items-center justify-between
+
+@media (min-width: 993px) and (max-width: 1279px)
+  .block_item
+    @apply justify-center flex-wrap
+@media (min-width: 769px) and (max-width: 992px)
+  .block_item
+    @apply justify-between flex-wrap
+@media (min-width: 640px) and (max-width: 768px)
+  .block_item
+    @apply justify-between flex-wrap
+@media (min-width: 540px) and (max-width: 639px)
+  .block_item
+    @apply justify-between flex-wrap
+
+@media (min-width: 415px) and (max-width: 539px)
+  .block_item
+    @apply justify-between flex-wrap
+@media (min-width: 0px) and (max-width: 414px)
+  .block_item
+    @apply justify-center flex-wrap

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { MenuItem } from "./MenuItem";
+import {MenuItem, MenuItemType} from "./MenuItem";
+import GradientButton from "../Button/GradientButton";
 
 const variants = {
   open: {
@@ -11,13 +12,46 @@ const variants = {
   },
 };
 
+
+const menuItems: MenuItemType[] = [
+  // {
+  //   color: "#FF008C",
+  //   text: "Home",
+  // },
+  {
+    color: "#FF008C",
+    text: "Ecosystem",
+  },
+  {
+    color: "#FF008C",
+    text: "Investors",
+  },
+  {
+    color: "#FF008C",
+    text: "Scholars",
+  },
+  {
+    color: "#FF008C",
+    text: "Marketplace",
+  },
+  {
+    color: "#FF008C",
+    text: (
+      <GradientButton
+        type={1}
+        className="text-white font-sofia text-24px leading-28px"
+      >
+        Join us
+      </GradientButton>
+    ),
+  },
+];
+
 export const Navigation = () => (
   <motion.ul className="nav-list" variants={variants}>
-    {itemIds.map((i) => (
-      //@ts-ignore
-      <MenuItem className="nav-item" i={i} key={i} />
+    {menuItems.map((i, idx) => (
+      <MenuItem item={i} key={idx} />
     ))}
   </motion.ul>
 );
 
-const itemIds = [0, 1, 2, 3, 4, 5];

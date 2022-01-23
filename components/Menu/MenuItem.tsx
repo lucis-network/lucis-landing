@@ -1,4 +1,6 @@
 import * as React from "react";
+import {ReactElement} from "react";
+
 import { motion } from "framer-motion";
 import Logo from "../../assets/img/logo.png";
 import GradientButton from "../Button/GradientButton";
@@ -21,41 +23,12 @@ const variants = {
   },
 };
 
-const data = [
-  {
-    color: "#FF008C",
-    text: "Home",
-  },
-  {
-    color: "#FF008C",
-    text: "Features",
-  },
-  {
-    color: "#FF008C",
-    text: "Investors",
-  },
-  {
-    color: "#FF008C",
-    text: "Scholars",
-  },
-  {
-    color: "#FF008C",
-    text: "Roadmap",
-  },
-  {
-    color: "#FF008C",
-    text: (
-      <GradientButton
-        type={1}
-        className="text-white font-sofia text-24px leading-28px"
-      >
-        JOIN US
-      </GradientButton>
-    ),
-  },
-];
+export type MenuItemType = {
+  color: string,
+  text: string | ReactElement,
+}
 
-export const MenuItem = ({ i }: { i: number }) => {
+export const MenuItem = (props: {item: MenuItemType}) => {
   return (
     <motion.li
       variants={variants}
@@ -64,7 +37,7 @@ export const MenuItem = ({ i }: { i: number }) => {
     >
       {/* <div className="icon-placeholder" style={style} /> */}
       <div className="text-placeholder font-sofia text-white text-24px leading-28px p-15px">
-        {data[i].text}
+        {props.item.text}
       </div>
     </motion.li>
   );

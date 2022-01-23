@@ -60,29 +60,34 @@ export const MenuMobile = (props: any) => {
 
   return (
     <>
+      <motion.div
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+        className={`${s.mobileMenu} fixed top-0 left-0 right-0 z-[101] bg-nav backdrop-blur-sm`}
+      >
+        <div className={`${s.container} container flex justify-between items-center py-4`}>
+          <div className="w-40px">
+            <Image src={Logo} width={82} height={86} alt="logo" layout="responsive"></Image>
+          </div>
+          <MenuToggle toggle={() => toggleOpen()} />
+        </div>
+      </motion.div>
+
       <motion.nav
         initial={false}
         animate={isOpen ? "open" : "closed"}
         custom={height}
         ref={containerRef}
         variants={nav}
-        className="mobile-nav"
+        className="mobile-nav z-[101]"
       >
         <motion.div className="background" variants={sidebar}>
           <div className="bg-glass w-full h-full opacity-[0.15]"></div>
         </motion.div>
+
         <Navigation />
       </motion.nav>
-      <motion.div
-        initial={false}
-        animate={isOpen ? "open" : "closed"} className="fixed top-0 left-0 right-0 z-[101] bg-nav backdrop-blur-sm">
-          <div className={`container flex justify-between items-center py-4 ${s.container}`}>
-            <div className="w-40px">
-              <Image src={Logo} width={82} height={86} alt="logo" layout="responsive"></Image>
-            </div>
-              <MenuToggle toggle={() => toggleOpen()} />
-          </div>
-      </motion.div>
+
       <div className="overlay" onClick={() => toggleOpen()}></div>
     </>
   );

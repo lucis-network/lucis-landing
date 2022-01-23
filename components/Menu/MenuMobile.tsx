@@ -10,7 +10,7 @@ import Logo from '../../assets/img/logo.png';
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height + 200}px at 30px 30px)`,
+    clipPath: `circle(${height + 200}px at 262px 30px)`,
     transition: {
       type: "spring",
       stiffness: 40,

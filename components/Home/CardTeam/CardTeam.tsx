@@ -7,10 +7,10 @@ type Props = {
 }
 
 export default function CardTeam(props: Props) {
-  const bg_Team = props.statusCard == 1?'/assets/Team/bg_team1.png'
-  : props.statusCard == 2? '/assets/Team/bg_team2.png'
-  : props.statusCard == 3? '/assets/Team/bg_team3.png'
-  : '/assets/Team/bg_team4.png'
+  const bg_Team = props.statusCard == 1?'/assets/Team/bg_1.svg'
+  : props.statusCard == 2? '/assets/Team/bg_2.svg'
+  : props.statusCard == 3? '/assets/Team/bg_3.svg'
+  : '/assets/Team/bg_4.svg'
 
   const im_team = props.statusCard == 1? s.im_team1
   :s.im_team

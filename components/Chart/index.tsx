@@ -9,7 +9,7 @@ export default function PieChart() {
   const size = useWindowSize();
 
   const windowWidth = size[0];
-  let normalWidth = (windowWidth - 216) / 2;
+  let normalWidth = (windowWidth - 120) / 2;
   let chartWidth = normalWidth; // >= 424
   let imgWidth = normalWidth;
   let chartFontSize = "16px";
@@ -116,12 +116,15 @@ export default function PieChart() {
 
   //@ts-ignore
   return (
-    <div className={style.highchartsFigure}>
-      <img
-        src="/assets/token_allocation/img_token_allocation.png"
-        style={{ maxWidth: imgWidth }}
-      />
-      <div id="container" style={{ maxWidth: chartWidth }}></div>
+    <div className={`${style.highchartsFigure} ${style.container_chart}`}>
+      <div className={style.im_token}>
+        <img
+          src="/assets/token_allocation/img_token_allocation.png"
+          // style={{ maxWidth: imgWidth }}
+        />
+      </div>
+      <div id="container" style={{ maxWidth: chartWidth }} ></div>
     </div>
   );
 }
+// style={{ maxWidth: chartWidth }}

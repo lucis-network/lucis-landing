@@ -2,19 +2,26 @@
 #container {
   height: 400px;
   background-color: transparent;
+  max-width: 1440px !important;
 }
+/* .container_chart{
+} */
+
 
 .highchartsFigure,
 .highcharts-data-table table {
   margin-top: 158px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap-reverse;
+  align-items: center;
+  /* flex-wrap: wrap-reverse; */
   /* min-width: 310px; */
-  /* max-width: 600px; */
+  /* max-width: 1440px !important; */
   /* margin: 1em auto; */
 }
-
+.im_token{
+  flex: 400px 0;
+}
 .highcharts-data-table table {
   font-family: Verdana, sans-serif;
   border-collapse: collapse;
@@ -50,3 +57,52 @@
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
 }
+@media (min-width: 992px) and (max-width: 1439px){
+  .highchartsFigure,
+  .highcharts-data-table table{
+    margin-top: 50px;
+  }
+  .im_token{
+    flex: 300px 0;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 991px){
+  .highchartsFigure,
+  .highcharts-data-table table{
+    flex-direction: column;
+    max-width: 100% !important;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .highchartsFigure img{
+    max-width: 100% !important
+  }
+}
+@media (min-width: 0px) and (max-width: 540px){
+  .im_token{
+    flex: 0 0;
+  }
+}
+/* @media (min-width: 540px) and (max-width: 639px){
+
+}
+  .container{
+    max-width: 540px;
+    padding: 0px 1rem;
+
+  }
+@media (min-width: 414px) and (max-width: 539px){
+
+}
+  .container{
+    max-width: 414px;
+    padding: 0px 1rem;
+
+  }
+
+@media (min-width: 0px) and (max-width: 413px){
+  .container{
+    padding: 0px 1rem; 
+  }
+} */

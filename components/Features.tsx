@@ -5,7 +5,7 @@ type Props = {}
 
 export default function Features(props: Props) {
   return(
-    <section className={s.container}>
+    <section className={s.container} id="EcoSystem">
         <SimpleSlider />
     </section>
   )

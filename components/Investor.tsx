@@ -24,7 +24,7 @@ const investorData = [
 ]
 export default function Investor(props: Props) {
 	return (
-		<div className={`container text-white mt-140px ${s.container}`}>
+		<div id="Investors" className={`container text-white mt-140px ${s.container}`}>
 			<div className="mb-60px">
 				<Title titleName='FOR INVESTOR'></Title>
 			</div>

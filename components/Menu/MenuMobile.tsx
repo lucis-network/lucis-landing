@@ -7,6 +7,7 @@ import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 import Image from '../Image';
 import Logo from '../../assets/img/logo_hoz@2x.png';
+import {AppEmitter} from "../../services/emitter";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -57,6 +58,15 @@ export const MenuMobile = (props: any) => {
       document.body.classList.remove("nav-open");
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    const subscription = AppEmitter.addListener('setMbMenuVisible', (visible: boolean) => {
+      toggleOpen(visible ? 1 : 0)
+    });
+    return () => {
+      subscription.remove();
+    }
+  }, [])
 
   return (
     <>

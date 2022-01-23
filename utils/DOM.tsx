@@ -38,7 +38,7 @@ export function setBodyScroll(enable: boolean) {
   }
 }
 
-export function scrollToSection(selector: string, top: boolean = true) {
+export function scrollToSection(selector: string, top: boolean = true, offset: number = 0) {
   const GotoDiv = document.querySelector(selector);
   if (!GotoDiv) {
     console.warn('{scrollToSection} el not found, selector: ', selector);
@@ -48,10 +48,10 @@ export function scrollToSection(selector: string, top: boolean = true) {
   // GotoDiv?.scrollIntoView({ behavior: "smooth", block: "start" }); // Not stable in target scrolling position
   if (top) {
     // @ts-ignore
-    scrollHeight(GotoDiv.offsetTop); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
+    scrollHeight(offset + GotoDiv.offsetTop); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
   } else {
     // @ts-ignore
-    scrollHeight(GotoDiv.offsetTop + GotoDiv.offsetHeight - window.visualViewport.height); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
+    scrollHeight(offset + GotoDiv.offsetTop + GotoDiv.offsetHeight - window.visualViewport.height); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
   }
 }
 

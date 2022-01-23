@@ -5,7 +5,7 @@ type Props ={}
 
 export default function OurEcosystem(props: Props){
   return(
-    <section className={s.container}>
+    <section id="Medias" className={s.container}>
       <TitleName titleName='Our ecosystem' />
 
       <div className={s.content_video}>

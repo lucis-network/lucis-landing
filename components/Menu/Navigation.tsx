@@ -21,18 +21,22 @@ const menuItems: MenuItemType[] = [
   {
     color: "#FF008C",
     text: "Ecosystem",
+    scrollTarget: "#EcoSystem",
   },
   {
     color: "#FF008C",
     text: "Investors",
+    scrollTarget: "#Investors",
   },
   {
     color: "#FF008C",
     text: "Scholars",
+    scrollTarget: "#Scholars",
   },
   {
     color: "#FF008C",
     text: "Marketplace",
+    scrollTarget: "#Marketplace",
   },
   {
     color: "#FF008C",
@@ -45,6 +49,7 @@ const menuItems: MenuItemType[] = [
         Join us
       </GradientButton>
     ),
+    scrollTarget: "#Medias",
   },
 ];
 

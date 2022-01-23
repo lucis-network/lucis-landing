@@ -46,32 +46,32 @@ export default class SimpleSliderTeam extends Component {
         <Slider ref={c => (this.slider = c)} {...settings}>
           <div className={s.block_team}>
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
           </div>
           <div className={s.block_team}>
           <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
           </div>
           <div className={s.block_team}>
           <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
           </div>
         </Slider>

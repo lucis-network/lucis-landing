@@ -1,5 +1,5 @@
 import { useWindowSize } from "hooks/useWindowSize";
-import React, { Component, useLayoutEffect, useState } from "react";
+import React from "react";
 import Marquee from "react-fast-marquee";
 
 const img_game_green_beli = "/assets/slide_marquee/img_game_green_beli.png";
@@ -49,7 +49,7 @@ export default function SlideGame() {
   return (
     <div style={{ width: "100%", marginTop: "97px" }}>
       <div style={{ width: "100%" }}>
-        <Marquee speed={100} gradient={false}>
+        <Marquee speed={90} gradient={false}>
           <SlideItem
             src={img_game_green_beli}
             width={widthImg}
@@ -86,7 +86,7 @@ export default function SlideGame() {
         </Marquee>
       </div>
       <div style={{ width: "100%", marginTop: "27px" }}>
-        <Marquee speed={100} gradient={false} direction="right">
+        <Marquee speed={50} gradient={false} direction="right">
           <SlideItem src={img_game_itam} width={widthImg} height={heightImg} />
           <SlideItem
             src={img_game_warena}

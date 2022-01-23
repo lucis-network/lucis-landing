@@ -108,22 +108,6 @@ const Home: NextPage = () => {
       <AnimWhenVisible>
         <Backer />
       </AnimWhenVisible>
-
-      {/* <Banner />
-      <Community />
-      <SlideGame />
-      <HotGame />
-      <Features />
-      <HowWeWork />
-      <Investor />
-      <Scholar />
-      <Marketplace />
-      <OurEcosystem />
-      <TokenAllocation/>
-      <Roadmap />
-      <Team />
-      <Advisor />
-      <Backer /> */}
     </div>
   );
 };

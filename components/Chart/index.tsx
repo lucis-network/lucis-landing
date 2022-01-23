@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import Highcharts from "highcharts";
+import Highcharts, { Chart } from "highcharts";
 import style from "./chart.module.css";
 import highcharts3d from "highcharts/highcharts-3d";
 import { Options } from "highcharts";
@@ -55,10 +55,34 @@ export default function PieChart() {
             allowPointSelect: true,
             cursor: "pointer",
             depth: 35,
+            shadow: true,
             dataLabels: {
               enabled: true,
               format: "{point.name}",
               style: { fontSize: chartFontSize, color: "white" },
+            },
+            point: {
+              events: {
+                mouseOver: function () {
+                  this.select(true);
+                },
+                mouseOut: function () {
+                  this.select(false);
+                },
+              },
+            },
+          },
+          series: {
+            states: {
+              hover: {
+                opacity: 1,
+                brightness: 0,
+              },
+              inactive: {
+                opacity: 1,
+                animation: {},
+              },
+              select: {},
             },
           },
         },
@@ -70,40 +94,45 @@ export default function PieChart() {
               {
                 name: "16% Private sale",
                 y: 16,
-                sliced: true,
-                // selected: true,
+                sliced: false,
                 color: "#EB5757",
+                selected: false,
                 // connectorColor: "#ffffff",
               },
               {
                 name: "16% Lucis team",
                 y: 16,
-                sliced: true,
+                sliced: false,
                 color: "#5780EB",
+                selected: false,
               },
               {
                 name: "16% Advisor",
                 y: 16,
-                sliced: true,
+                sliced: false,
                 color: "#434348",
+                selected: false,
               },
               {
                 name: "16% Ecosystem development",
                 y: 16,
-                sliced: true,
+                sliced: false,
                 color: "#22D3FD",
+                selected: false,
               },
               {
                 name: "16% Game reward/ play to earn",
                 y: 16,
-                sliced: true,
+                sliced: false,
                 color: "#562CA2",
+                selected: false,
               },
               {
                 name: "20% Liquidity/ staking reward",
                 y: 20,
-                sliced: true,
+                sliced: false,
                 color: "#0D1841",
+                selected: false,
               },
             ],
           },
@@ -113,6 +142,14 @@ export default function PieChart() {
       Highcharts.chart("container", options);
     }, 200);
   });
+  function findCenter() {
+    // var plot = this.plotBox;
+    // centerStyle.textContent =
+    // `.highcharts-point, .highcharts-halo {
+    //    transform-origin: ${plot.width/2}px ${plot.height/2}px;
+    //  }`;
+    // console.log(centerStyle.textContent);
+  }
 
   //@ts-ignore
   return (

@@ -15,7 +15,7 @@ export default function AnimWhenVisible(props: Props) {
     if (inView) {
       controls.start("visible");
     } else {
-      controls.start("hidden");
+    //   controls.start("hidden");
     }
   }, [controls, inView]);
 
@@ -25,10 +25,10 @@ export default function AnimWhenVisible(props: Props) {
       animate={controls}
       initial="hidden"
       viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.6 }}
       variants={props.variants ?? {
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 20 },
       }}
     >
       {props.children}

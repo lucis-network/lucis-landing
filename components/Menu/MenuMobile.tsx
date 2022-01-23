@@ -10,17 +10,17 @@ import Logo from '../../assets/img/logo.png';
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height + 200}px at 30px 30px)`,
     transition: {
       type: "spring",
-      stiffness: 20,
+      stiffness: 40,
       restDelta: 2,
     },
   }),
   closed: {
-    clipPath: "circle(1px at 300px 0px)",
+    clipPath: "circle(1px at 262px 30px)",
     transition: {
-      delay: 0.5,
+      delay: 0.5, // delay before hide to wait menu item hidden first
       type: "spring",
       stiffness: 400,
       damping: 40,
@@ -66,7 +66,7 @@ export const MenuMobile = (props: any) => {
       <div
         className={`${s.mobileMenu} fixed top-0 left-0 right-0 z-[101] bg-nav backdrop-blur-sm`}
       >
-        <div className={`${s.container} container flex justify-between items-center`}>
+        <div className={`${s.container} flex justify-between items-center`}>
           <div className="w-40px">
             <Image src={Logo} width={82} height={86} alt="logo" layout="responsive"></Image>
           </div>

@@ -66,7 +66,7 @@ export default function Backer(props: Props) {
           <div className={s.item_backer}>
             <img src="/assets/backer/tomo.png" alt="" />
           </div>
-          <div className={s.item}>
+          <div className={s.item_backer}>
             <img src="/assets/backer/au21.png" alt="" />
           </div>
       </div>

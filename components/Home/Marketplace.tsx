@@ -14,7 +14,7 @@ export default function Marketplace(props: Props) {
               <p><span>INO</span> Launchpad for game publisher</p>
             </div>
             <div className={s.item}>
-              <p>Buy and Sell NFT items</p>
+              <p>Buy and Sell<br/> NFT items</p>
             </div>
         </div>
         <div className={s.item_left}></div>

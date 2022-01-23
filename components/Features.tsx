@@ -9,11 +9,11 @@ type Props = {}
 export default function Features(props: Props) {
   return(
     <section className={s.container} id="EcoSystem">
-        <SimpleSlider />
+      <SimpleSlider />
 
-        <div className="mt-10">
-                <Image src={Howework} alt='' width={1463} height={670} layout='responsive' priority></Image>
-            </div>
+      <div style={{marginTop: 160}}>
+        <Image src={Howework} alt='' width={1463} height={670} layout='responsive' priority></Image>
+      </div>
     </section>
   )
 }

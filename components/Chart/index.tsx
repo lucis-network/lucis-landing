@@ -13,11 +13,14 @@ export default function PieChart() {
   let chartWidth = normalWidth; // >= 424
   let imgWidth = normalWidth;
   let chartFontSize = "16px";
-
+  let chartDepth = 35
   if (windowWidth < 1024) {
     imgWidth = Math.min(windowWidth - 100, 610);
     chartWidth = windowWidth - 100;
     chartFontSize = "13px";
+  }
+  if(windowWidth < 768) {
+    chartDepth = 15
   }
   //   console.log("windowWidth: ", windowWidth);
   //   console.log("chartWidth: ", chartWidth);
@@ -54,7 +57,7 @@ export default function PieChart() {
           pie: {
             allowPointSelect: true,
             cursor: "pointer",
-            depth: 35,
+            depth: chartDepth,
             shadow: true,
             dataLabels: {
               enabled: true,
@@ -95,7 +98,7 @@ export default function PieChart() {
                 name: "16% Private sale",
                 y: 16,
                 sliced: false,
-                color: "#EB5757",
+                color: "#67b7dc",
                 selected: false,
                 // connectorColor: "#ffffff",
               },
@@ -103,35 +106,35 @@ export default function PieChart() {
                 name: "16% Lucis team",
                 y: 16,
                 sliced: false,
-                color: "#5780EB",
+                color: "#8067dc",
                 selected: false,
               },
               {
                 name: "16% Advisor",
                 y: 16,
                 sliced: false,
-                color: "#434348",
+                color: "#dc67ce",
                 selected: false,
               },
               {
                 name: "16% Ecosystem development",
                 y: 16,
                 sliced: false,
-                color: "#22D3FD",
+                color: "#dc6967",
                 selected: false,
               },
               {
                 name: "16% Game reward/ play to earn",
                 y: 16,
                 sliced: false,
-                color: "#562CA2",
+                color: "#dcd267",
                 selected: false,
               },
               {
                 name: "20% Liquidity/ staking reward",
                 y: 20,
                 sliced: false,
-                color: "#0D1841",
+                color: "#7ddc67",
                 selected: false,
               },
             ],

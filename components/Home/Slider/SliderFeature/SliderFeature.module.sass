@@ -5,6 +5,7 @@
   h1
     @include my-text(72px, 82px, 700)
     @apply text-white
+    max-width: 900px
     font-family: 'MyFont'
   .group_btn
     @apply flex flex-row items-center justify-center
@@ -80,3 +81,13 @@
         width: 46px
         height: 46px
         padding: 0
+
+@media (min-width: 0px) and (max-width: 639px)
+  .heading_feature
+    h1
+      max-width: 200px
+
+@media (min-width: 769px) and (max-width: 991px)
+  .heading_feature
+    h1
+      max-width: 350px

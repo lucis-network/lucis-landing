@@ -8,7 +8,6 @@ import Stats from "components/Home/Stats";
 import HotGame from "components/Games";
 import Community from "components/Community";
 import SlideGame from "components/SlideGame";
-import HowWeWork from "components/HowWeWork";
 import Features from "components/Features";
 import Investor from "components/Investor";
 import Scholar from "components/Scholar";
@@ -31,7 +30,7 @@ const Home: NextPage = () => {
   return (
     <div className={styles.pageContainer}>
       <Head>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/assets/favicon.png" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -77,9 +76,6 @@ const Home: NextPage = () => {
       </AnimWhenVisible>
       <AnimWhenVisible>
         <Features />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <HowWeWork />
       </AnimWhenVisible>
       <AnimWhenVisible>
         <Investor />

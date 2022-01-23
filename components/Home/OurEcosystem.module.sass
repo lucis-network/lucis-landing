@@ -5,11 +5,17 @@
   margin-top: 180px
   .content_video
     max-width: 920px
-    height: 516px
+    height: 520px
     margin: 0 auto
     margin-top: 100px
-    padding: 4px
+    padding: 10px
     @apply relative
+  .bg_video
+    @apply absolute h-full cursor-pointer
+    top: 6px
+    left: 7px
+    img
+      width: 99%
   iframe
     @apply w-full h-full relative
     border-radius: 16px 
@@ -21,12 +27,11 @@
     right:0
     bottom:0
     border-radius: 16px 
-    padding: 4px 
+    padding: 10px 
     background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
     -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0)
     -webkit-mask-composite: xor
     mask-composite: exclude 
-
   .group_ic
     @apply flex flex-row items-center justify-between flex-wrap
     max-width: 920px
@@ -48,21 +53,28 @@
   .container
     max-width: 1025px
     padding: 0px 4rem
+    .content_video
+      height: 508px
 
 @media (min-width: 992px) and (max-width: 1024px)
   .container
     max-width: 992px
     padding: 0px 3rem
+    .content_video
+      height: 508px
 @media (min-width: 769px) and (max-width: 991px)
   .container
     max-width: 769px
     padding: 0px 2rem
+    .content_video
+      height: 400px
 @media (min-width: 640px) and (max-width: 768px)
   .container
     max-width: 640px
     padding: 0px 2rem
     .content_video
       margin-top: 40px
+      height: 328px
     .group_ic
       justify-content: center
       .ic_item
@@ -73,7 +85,9 @@
   .container
     padding: 0px 1rem
     .content_video
+      max-width: 508px
       margin-top: 40px
+      height: 290px
     .group_ic
       justify-content: center
       .ic_item
@@ -83,7 +97,9 @@
     margin-top: 60px
     padding: 0px 1rem
     .content_video
+      max-width: 382px
       margin-top: 40px
+      height: 222px
     .group_ic
       justify-content: space-between
       .ic_item
@@ -95,6 +111,7 @@
     padding: 0px 1rem
     .content_video
       margin-top: 40px
+      height: 222px
     .group_ic
       margin-top: 20px
       .ic_item

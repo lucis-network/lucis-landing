@@ -6,19 +6,19 @@ type Props = {};
 const scholarData = [
 	{
 		image: '/assets/Scholar/scholar1.png',
-		content: 'Join scholar program to have training',
+		content: 'Gain significant incomes with zero investments',
 	},
 	{
 		image: '/assets/Scholar/scholar2.png',
-		content: 'Startup không cần vốn, nhận lương và hoa hồng,',
+		content: 'Play multilple NFT games for free',
 	},
 	{
 		image: '/assets/Scholar/scholar3.png',
-		content: 'GAME THỦ: Chơi nhiều game cùng lúc trên hệ thống',
+		content: 'Join Lucis Academy to get free courses / tutorials / tips to improve skills',
 	},
     {
 		image: '/assets/Scholar/scholar4.png',
-		content: 'Đua top trong guild',
+		content: 'Join other Guilds to earn more Guild benefitsa',
 	},
 ]
 export default function scholar(props: Props) {

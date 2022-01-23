@@ -7,19 +7,19 @@ type Props = {};
 const investorData = [
 	{
 		image: '/assets/investor/investor1.png',
-		content: 'Cho thuê NFT rảnh rỗi',
+		content: 'Lend or Swap NFTs easily to maximize ROI',
 	},
 	{
 		image: '/assets/investor/investor2.png',
-		content: 'Cộng tác & đầu tư tiền vào game thủ chuyên nghiệp',
+		content: "Early access to many games' INO to buy NFT Boxes",
 	},
 	{
 		image: '/assets/investor/investor3.png',
-		content: 'Quản lý game thủ ngay trên hệ thống',
+		content: "Access to Lucis's Private Investment Packages",
 	},
 	{
 		image: '/assets/investor/investor1.png',
-		content: 'Cho thuê NFT rảnh rỗi',
+		content: 'Access to many Tools to automate / manage their assets / investments',
 	},
 ]
 export default function Investor(props: Props) {

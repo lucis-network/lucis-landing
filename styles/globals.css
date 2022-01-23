@@ -45,8 +45,8 @@ body {
   background:
   radial-gradient(1200px 1800px at calc(100vw/2 + 400px) 750px,#05056c 0%, transparent),
   radial-gradient(1200px 1800px at calc(100vw/2 + 750px) 750px,#0000ff -150%, transparent)
-  
-  
+
+
   ,radial-gradient(1200px 1800px at calc(100vw/2 - 400px) 4850px,#05056c 0%, transparent)
   ,radial-gradient(1200px 1800px at calc(100vw/2 - 400px) 7000px,#05056c 0%, transparent)
   ,radial-gradient(1200px 1800px at calc(100vw/2 + 400px) 9550px,#05056c 0%, transparent)
@@ -155,11 +155,10 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
     transition: all ease-in-out 0.4s;
     display: none;
-    z-index: 99;
-  } 
+    z-index: 101;
+  }
 
   body.nav-open .overlay {
     display: block;
@@ -172,9 +171,9 @@ body {
     right: 0;
     bottom: 0;
     width: 300px;
-    z-index: 100;
+    z-index: 101;
   }
-  
+
   .nav-logo {
     width: 86px;
     margin-left: -6px;
@@ -200,7 +199,7 @@ body {
     background: transparent;
     padding: 0;
     display: inline-block;
-    z-index: 101;
+    z-index: 102;
   }
 
   .humburger-menu svg {
@@ -215,7 +214,7 @@ body {
     width: 100%;
     margin-top: 82px;
   }
-  
+
   .nav-list li {
     display: flex;
     align-items: center;
@@ -227,7 +226,7 @@ body {
   .nav-list li:last-child {
     margin-top: 12px;
   }
-  
+
   .icon-placeholder {
     width: 40px;
     height: 40px;
@@ -236,13 +235,13 @@ body {
     margin-right: 20px;
 
   }
-  
+
   .text-placeholder {
     width: 200px;
     flex: 1;
     color: #fff;
   }
-  
+
   .refresh {
     padding: 10px;
     position: absolute;

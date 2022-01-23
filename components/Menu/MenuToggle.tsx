@@ -1,4 +1,5 @@
 import * as React from "react";
+import {DetailedHTMLProps} from "react";
 import { motion } from "framer-motion";
 
 const Path = (props: any) => (
@@ -11,8 +12,15 @@ const Path = (props: any) => (
   />
 );
 
-export const MenuToggle = ({ toggle }: { toggle: any }) => (
-    <button className="humburger-menu" onClick={toggle}>
+type Props = DetailedHTMLProps<any, any> & {
+  toggle: any,
+}
+
+export const MenuToggle = (props: Props) => {
+  const { toggle, className, ...rest } = props;
+
+  return (
+    <button className={`humburger-menu ${className}`} onClick={toggle} {...rest}>
       <svg width="23" height="23" viewBox="0 0 23 23">
         <Path
           variants={{
@@ -30,12 +38,11 @@ export const MenuToggle = ({ toggle }: { toggle: any }) => (
         />
         <Path
           variants={{
-            closed: { d: "M 2 16.346 L 20 16.346" 
-          
-          },
-            open: { d: "M 3 2.5 L 17 16.346" },
+            closed: {d: "M 2 16.346 L 20 16.346"},
+            open: {d: "M 3 2.5 L 17 16.346"},
           }}
         />
       </svg>
     </button>
-);
+  )
+};

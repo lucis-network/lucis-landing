@@ -6,11 +6,11 @@ import { useDimensions } from "./useDimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 import Image from '../Image';
-import Logo from '../../assets/img/logo.png';
+import Logo from '../../assets/img/logo_hoz@2x.png';
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height + 200}px at 262px 30px)`,
+    clipPath: `circle(${height + 200}px at 262px 33px)`,
     transition: {
       type: "spring",
       stiffness: 40,
@@ -18,7 +18,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(1px at 262px 30px)",
+    clipPath: "circle(1px at 262px 33px)",
     transition: {
       delay: 0.5, // delay before hide to wait menu item hidden first
       type: "spring",
@@ -67,8 +67,8 @@ export const MenuMobile = (props: any) => {
         className={`${s.mobileMenu} fixed top-0 left-0 right-0 z-[101] bg-nav backdrop-blur-sm`}
       >
         <div className={`${s.container} flex justify-between items-center`}>
-          <div className="w-40px">
-            <Image src={Logo} width={82} height={86} alt="logo" layout="responsive"></Image>
+          <div style={{width: 150, height: 42, padding: "3px 0"}}>
+            <Image src={Logo} width={150} height={42} alt="logo" layout="responsive"></Image>
           </div>
 
           <motion.div

@@ -39,7 +39,8 @@ const menuItems: MenuItemType[] = [
     text: (
       <GradientButton
         type={1}
-        className="text-white font-sofia text-24px leading-28px"
+        className="text-white font-sofia text-24px leading-28px nw"
+        style={{whiteSpace: 'nowrap'}}
       >
         Join us
       </GradientButton>

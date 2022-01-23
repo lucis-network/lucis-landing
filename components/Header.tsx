@@ -1,6 +1,6 @@
 import Image from './Image';
 import s from './Header.module.sass'
-import Logo from '../assets/img/logo.png';
+import Logo from '../assets/img/logo_hoz@2x.png';
 import GradientButton from './Button/GradientButton';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { MenuMobile } from './Menu/MenuMobile';
@@ -14,7 +14,7 @@ export default function Header(props: Props) {
     return (
       <div className={`${s.pcMenu} bg-nav`}>
         <div className={`container py-20px flex justify-between items-center relative z-10 ${s.container}`}>
-          <div className="logo w-80px">
+          <div className={s.logo}>
             <Image src={Logo} alt='logo'></Image>
           </div>
           <nav>
@@ -25,7 +25,7 @@ export default function Header(props: Props) {
               <li><a href="#" className='text-white text-24px leading-28px p-15px'>Scholars</a></li>
               <li><a href="#" className='text-white text-24px leading-28px p-15px'>Marketplace</a></li>
               {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Roadmap</a></li>*/}
-              <li> <GradientButton type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px">JOIN US</GradientButton> </li>
+              <li> <GradientButton type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap'}}>JOIN US</GradientButton> </li>
             </ul>
           </nav>
         </div>

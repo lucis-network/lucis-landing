@@ -19,6 +19,7 @@ import Backer from "components/Home/Backers";
 import TokenAllocation from "components/TokenAllocation";
 import AnimWhenVisible from "components/Anim";
 import Marketplace from "components/Home/Marketplace";
+import useScroll from 'hooks/useScroll';
 
 // import {isClient} from "../utils/DOM";
 
@@ -26,6 +27,8 @@ const Home: NextPage = () => {
   const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";
   const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
   const thumb = "/assets/img/howwework.png";
+
+  useScroll()
 
   return (
     <div className={styles.pageContainer}>

@@ -49,10 +49,10 @@ export function scrollToSection(selector: string, top: boolean = true, offset: n
   const rect = GotoDiv.getBoundingClientRect()
   if (top) {
     // @ts-ignore
-    scrollHeight(offset + rect.top); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
+    scrollHeight(offset + window.scrollY + rect.top); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
   } else {
     // @ts-ignore
-    scrollHeight(offset + rect.top + rect.height - window.visualViewport.height); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
+    scrollHeight(offset + window.scrollY + rect.top + rect.height - window.visualViewport.height); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
   }
 }
 

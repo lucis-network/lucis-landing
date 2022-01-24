@@ -46,12 +46,13 @@ export function scrollToSection(selector: string, top: boolean = true, offset: n
   }
   // console.log('{scrollToSection} GotoDiv : ', GotoDiv);
   // GotoDiv?.scrollIntoView({ behavior: "smooth", block: "start" }); // Not stable in target scrolling position
+  const rect = GotoDiv.getBoundingClientRect()
   if (top) {
     // @ts-ignore
-    scrollHeight(offset + GotoDiv.offsetTop); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
+    scrollHeight(offset + rect.top); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
   } else {
     // @ts-ignore
-    scrollHeight(offset + GotoDiv.offsetTop + GotoDiv.offsetHeight - window.visualViewport.height); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
+    scrollHeight(offset + rect.top + rect.height - window.visualViewport.height); // NOTE: offsetTop is the number of pixels from the top of the closest relatively positioned parent element.
   }
 }
 

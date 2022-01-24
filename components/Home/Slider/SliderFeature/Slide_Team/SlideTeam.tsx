@@ -31,150 +31,79 @@ export default class SimpleSliderTeam extends Component {
     return (
       <div>
         <AnimWhenVisible>
-        <div className={s.heading_feature}>
-          <TitleName titleName="Team" />
+          <div className={s.heading_feature}>
+            <TitleName titleName="Team" />
 
-          <div className={s.group_btn}>
-            <button className={s.btn_left} onClick={this.previous}>
-              <img src="/assets/Feature/ic_left.svg" alt="" />
-            </button>
-            <button className={s.btn_right} onClick={this.next}>
-              <img src="/assets/Feature/ic_right.svg" alt="" />
-            </button>
+            <div className={s.group_btn}>
+              <button className={s.btn_left} onClick={this.previous}>
+                <img src="/assets/Feature/ic_left.svg" alt="" />
+              </button>
+              <button className={s.btn_right} onClick={this.next}>
+                <img src="/assets/Feature/ic_right.svg" alt="" />
+              </button>
+            </div>
           </div>
-        </div>
-          </AnimWhenVisible>
-        
+        </AnimWhenVisible>
 
-        {/* @ts-ignore*/}
-        <Slider ref={(c) => (this.slider = c)} {...settings}>
-          <div className={s.block_team}>
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-          </div>
-          <div className={s.block_team}>
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-          </div>
-          <div className={s.block_team}>
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-            <CardTeam
-              statusCard={1}
-              nameTeam="Oanh nguyen"
-              serviceTeam="Desginer"
-            />
-          </div>
-        </Slider>
+        <AnimWhenVisible>
+          {/* @ts-ignore*/}
+          <Slider ref={(c) => (this.slider = c)} {...settings}>
+            {[0, 1, 2].map((idx) => {
+              return (
+                <div key={idx} className={s.block_team}>
+                  <CardTeam
+                    statusCard={1}
+                    nameTeam="Oanh nguyen"
+                    serviceTeam="Desginer"
+                    enableAnim={false}
+                  />
+                  <CardTeam
+                    statusCard={1}
+                    nameTeam="Oanh nguyen"
+                    serviceTeam="Desginer"
+                    enableAnim={false}
+                  />
+                  <CardTeam
+                    statusCard={1}
+                    nameTeam="Oanh nguyen"
+                    serviceTeam="Desginer"
+                    enableAnim={false}
+                  />
+                  <CardTeam
+                    statusCard={1}
+                    nameTeam="Oanh nguyen"
+                    serviceTeam="Desginer"
+                    enableAnim={false}
+                  />
+                  <CardTeam
+                    statusCard={1}
+                    nameTeam="Oanh nguyen"
+                    serviceTeam="Desginer"
+                    enableAnim={false}
+                  />
+                  <CardTeam
+                    statusCard={1}
+                    nameTeam="Oanh nguyen"
+                    serviceTeam="Desginer"
+                    enableAnim={false}
+                  />
+                  <CardTeam
+                    statusCard={1}
+                    nameTeam="Oanh nguyen"
+                    serviceTeam="Desginer"
+                    enableAnim={false}
+                  />
+                  <CardTeam
+                    statusCard={1}
+                    nameTeam="Oanh nguyen"
+                    serviceTeam="Desginer"
+                    enableAnim={false}
+                  />
+                </div>
+              );
+            })}
+          </Slider>
+        </AnimWhenVisible>
       </div>
     );
   }

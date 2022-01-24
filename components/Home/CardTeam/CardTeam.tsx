@@ -5,6 +5,7 @@ type Props = {
   statusCard: number;
   nameTeam: string;
   serviceTeam: string;
+  enableAnim?: boolean
 };
 
 export default function CardTeam(props: Props) {
@@ -28,6 +29,7 @@ export default function CardTeam(props: Props) {
               visible: { opacity: 1 },
               hidden: { opacity: 0 },
             }}
+            enable={props.enableAnim}
           >
             <img src="assets/Team/Group 152.png" alt="" />
           </AnimWhenVisible>
@@ -35,7 +37,7 @@ export default function CardTeam(props: Props) {
         <img className={s.bg_team} src={bg_Team} alt="" />
       </div>
       <div className={s.heading_team}>
-        <AnimWhenVisible>
+        <AnimWhenVisible enable={props.enableAnim}>
           <p>{props.nameTeam}</p>
           <span>{props.serviceTeam}</span>
         </AnimWhenVisible>

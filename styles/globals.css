@@ -325,3 +325,8 @@ body .ant-modal-close{
   padding: 5px 20px;
   z-index: 1000;
 }
+
+/*// tmp fix tailwind bug */
+body .backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}

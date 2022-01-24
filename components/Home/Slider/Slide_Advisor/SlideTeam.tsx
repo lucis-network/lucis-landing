@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import CardTeam from 'components/Home/CardTeam/CardTeam';
 import TitleName from 'components/Home/TitleSection/TitleName';
+import AnimWhenVisible from 'components/Anim';
 
 export default class SimpleSliderAdvisor extends Component {
   constructor(props:any) {
@@ -31,7 +32,9 @@ export default class SimpleSliderAdvisor extends Component {
     return (
       <div>
         <div className={s.heading_feature}>
+          <AnimWhenVisible>
           <TitleName titleName='Advisor' />
+          </AnimWhenVisible>
           {/* <div className={s.group_btn}>
             <button className={s.btn_left} onClick={this.previous}>
               <img src="/assets/Feature/ic_left.svg" alt="" />

@@ -82,10 +82,10 @@ export const MenuMobile = (props: any) => {
           </div>
           <motion.div
             initial={false}
+            animate={"closed"}
           >
             <MenuToggle toggle={() => toggleOpen()} />
           </motion.div>
-          {/* <MenuToggle toggle={() => toggleOpen()} /> */}
         </div>
       </div>
 

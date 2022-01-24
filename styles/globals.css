@@ -308,8 +308,8 @@ body .ant-modal-close{
 }
 .btn-scrollTop {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 1rem;
+  right: 1rem;
   color: #FFF;
   font-size: 30px;
   background: rgba( 255, 255, 255, 0.25 );

@@ -30,34 +30,34 @@ export default function OurEcosystem(props: Props){
 
       <div className={s.group_ic}>
         <div className={s.ic_item}>
-          <div>
+          <a href="https://www.tiktok.com/@lucistvv" target='_blank' rel="noopener noreferrer">
             <img src="/assets/OurEcosystem/tiktok.svg" alt="" />
-          </div>
+          </a>
         </div>
         <div className={s.ic_item}>
-          <div>
-            <img src="/assets/OurEcosystem/fb.svg" alt="" />
-          </div>
+          <a href="https://www.facebook.com/lucistv.news" target='_blank' rel="noopener noreferrer">
+              <img src="/assets/OurEcosystem/fb.svg" alt="" />
+          </a>
         </div>
         <div className={s.ic_item}>
-          <div>
+          <a href="https://www.youtube.com/c/LucisTVGaming" target='_blank' rel="noopener noreferrer">
             <img src="/assets/OurEcosystem/ytb.svg" alt="" />
-          </div>
+          </a>
         </div>
         <div className={s.ic_item}>
-          <div>
+          <a href="https://t.me/sankeonft" target='_blank' rel="noopener noreferrer">
             <img src="/assets/OurEcosystem/tele.svg" alt="" />
-          </div>
+          </a>
         </div>
         <div className={s.ic_item}>
-          <div>
+          <a href="https://twitter.com/Lucis_TV" target='_blank' rel="noopener noreferrer">
             <img src="/assets/OurEcosystem/tw.svg" alt="" />
-          </div>
+          </a>
         </div>
         <div className={s.ic_item}>
-          <div>
+          <a href="https://discord.com/channels/911921072830574603/926398655093702666" target='_blank' rel="noopener noreferrer">
             <img src="/assets/OurEcosystem/dis.svg" alt="" />
-          </div>
+          </a>
         </div>
       </div>
     </section>

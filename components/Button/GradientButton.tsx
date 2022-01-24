@@ -4,7 +4,7 @@ type Props = DetailedHTMLProps<any, any> & {
 }
   export default function SciButton(props: Props) {
     const btnType = props.type == 1
-      ? 'bg-gradient-1 p-15px rounded-8px'
+      ? 'bg-gradient-1 p-15px rounded-8px font-saira'
       : '';
     const {
     className,

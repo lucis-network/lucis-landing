@@ -47,7 +47,7 @@ export const MenuItem = (props: {item: MenuItemType}) => {
       onClick={scrollAndCloseMenu}
     >
       {/* <div className="icon-placeholder" style={style} /> */}
-      <div className="text-placeholder font-sofia text-white text-24px leading-28px p-15px">
+      <div className="text-placeholder font-saira text-white text-24px leading-28px p-15px">
         {props.item.text}
       </div>
     </motion.li>

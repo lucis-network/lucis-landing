@@ -1,10 +1,10 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import {MenuItem, MenuItemType} from "./MenuItem";
+import { MenuItem, MenuItemType } from "./MenuItem";
 import GradientButton from "../Button/GradientButton";
 import { useState } from "react";
 
-import { Modal, Button } from 'antd';
+import { Modal, Button } from "antd";
 
 const variants = {
   open: {
@@ -15,55 +15,57 @@ const variants = {
   },
 };
 export const Navigation = () => {
-const [isModalVisible, setIsModalVisible] = useState(false);
-const handleOk = () => {
-  setIsModalVisible(false);
-};
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
 
-const handleCancel = () => {
-  setIsModalVisible(false);
-};
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
 
-const menuItems: MenuItemType[] = [
-  // {
-  //   color: "#FF008C",
-  //   text: "Home",
-  // },
-  {
-    color: "#FF008C",
-    text: "Ecosystem",
-    scrollTarget: "#EcoSystem",
-  },
-  {
-    color: "#FF008C",
-    text: "Investors",
-    scrollTarget: "#Investors",
-  },
-  {
-    color: "#FF008C",
-    text: "Scholars",
-    scrollTarget: "#Scholars",
-  },
-  {
-    color: "#FF008C",
-    text: "Marketplace",
-    scrollTarget: "#Marketplace",
-  },
-  {
-    color: "#FF008C",
-    text: (
-      <GradientButton
-        onClick={() =>{setIsModalVisible(true)}}
-        type={1}
-        className="text-white font-sofia text-24px leading-28px nw"
-        style={{whiteSpace: 'nowrap'}}
-      >
-        Join us
-      </GradientButton>
-    ),
-    scrollTarget: null,
-  },
-];
+  const menuItems: MenuItemType[] = [
+    // {
+    //   color: "#FF008C",
+    //   text: "Home",
+    // },
+    {
+      color: "#FF008C",
+      text: "Ecosystem",
+      scrollTarget: "#EcoSystem",
+    },
+    {
+      color: "#FF008C",
+      text: "Investors",
+      scrollTarget: "#Investors",
+    },
+    {
+      color: "#FF008C",
+      text: "Scholars",
+      scrollTarget: "#Scholars",
+    },
+    {
+      color: "#FF008C",
+      text: "Marketplace",
+      scrollTarget: "#Marketplace",
+    },
+    {
+      color: "#FF008C",
+      text: (
+        <GradientButton
+          onClick={() => {
+            setIsModalVisible(true);
+          }}
+          type={1}
+          className="text-white font-saira text-24px leading-28px nw"
+          style={{ whiteSpace: "nowrap" }}
+        >
+          Join us
+        </GradientButton>
+      ),
+      scrollTarget: null,
+    },
+  ];
 
   return (
     <div>
@@ -71,20 +73,67 @@ const menuItems: MenuItemType[] = [
         {menuItems.map((i, idx) => (
           <MenuItem item={i} key={idx} />
         ))}
-    
       </motion.ul>
 
-      <Modal title="Contact us" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-            <p>Some contents...</p>
-            <div id="content_btn">
-              <div id="btn_Chat">
-                <a href="https://t.me/sankeonft" target="_blank" rel="noreferrer">Chat with us</a>
-              </div>
-            </div>
-          </Modal>
+      <Modal
+        title="Contact us"
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <div>
+          <p>
+            Feel free to discuss more with us, just leave your content here and
+            we'll reach you soon.
+          </p>
+          <p>We're mainly opening for Investors, scholars.</p>
+          <p>
+            We also open to discuss with every who wanna become developer and
+            ambassadors, or be a part of our team.
+          </p>
 
+          <p>
+            Please send us the content in Telegram by clicking the bellow
+            button.
+          </p>
+          <p>The content might follow this template:</p>
+
+          <div
+            style={{
+              color: "#FFF",
+              background: "rgba(63, 183, 219,0.5)",
+              padding: "30px",
+              borderRadius: "40px 40px 40px 0",
+              fontSize: "smaller",
+            }}
+          >
+            From: Alexander Geogre
+            <br />
+            Proposal: Become an Investor
+            <br />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
+            quam id libero pulvinar accumsan at eu est. Nulla faucibus nisi eget
+            mattis cursus.
+            <br />
+          </div>
+          <br />
+          <p style={{ color: "#00c4ff" }}>
+            Note: Lucis network will never dm you first.
+          </p>
+        </div>
+        <div id="content_btn">
+          <div id="btn_Chat">
+            <a
+              href="https://t.me/lucis_network_application_form"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Chat with us
+            </a>
+            <img src="/assets/Banner/teleChat.svg" alt="" />
+          </div>
+        </div>
+      </Modal>
     </div>
-    
   );
-}
-
+};

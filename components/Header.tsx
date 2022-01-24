@@ -52,12 +52,36 @@ export default function Header(props: Props) {
 
 
           <Modal title="Contact us" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-            <p>Some contents...</p>
+            <div>          
+              <p>Feel free to discuss more with us, just leave your content here and we'll reach you soon.</p>
+              <p>We're mainly opening for Investors, scholars.</p>
+              <p>We also open to discuss with every who wanna become developer and ambassadors, or be a part of our team.</p>
+              
+              <p>Please send us the content in Telegram by clicking the bellow button.</p>
+              <p>The content might follow this template:</p>
+              
+              <div 
+              style={{
+                color:'#FFF',
+                background: 'rgba(63, 183, 219,0.5)',
+                padding: '30px',
+                borderRadius: '40px 40px 40px 0',
+                fontSize: 'smaller'
+              }}
+              >
+                From: Alexander Geogre<br/>
+                Proposal: Become an Investor<br/>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non quam id libero pulvinar accumsan at eu est. Nulla faucibus nisi eget mattis cursus.<br/>
+              </div>
+              <br/>
+              <p style={{color:'#00c4ff'}}>Note: Lucis network will never dm you first.</p>
+            </div>
             <div id="content_btn">
               <div id="btn_Chat">
-                <a href="https://t.me/sankeonft" target="_blank" rel="noreferrer">Chat with us</a>
-              </div>
+                <a href="https://t.me/lucis_network_application_form" target="_blank" rel="noreferrer">Chat with us</a>
+                <img src="/assets/Banner/teleChat.svg" alt="" />
             </div>
+          </div>
           </Modal>
         </div>
       </div>

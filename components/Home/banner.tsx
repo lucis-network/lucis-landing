@@ -2,9 +2,26 @@ import Button3D from "components/Button3D";
 import s from "./banner.module.sass";
 import TotalBanner from "./Total/TotalBanner";
 
+import { Modal, Button } from 'antd';
+import { useState } from "react";
+
+
 type Props = {};
 
 function Banner(props: Props) {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
   return (
     <section className={`${s.container_banner}`}>
       <div className="stars-bg"></div>
@@ -16,13 +33,28 @@ function Banner(props: Props) {
             and metaverse
           </p>
           <div className={s.groupButton}>
-            <Button3D title="Become our Investor" />
-            <Button3D title="Become our Scholar" normal />
+            <div onClick={showModal}>
+              <Button3D title="Become our Investor" />
+            </div>
+            <div onClick={showModal}>
+              <Button3D title="Become our Scholar" normal />
+            </div>
           </div>
         </div>
         <div className={s.content_glass}>
           <img src="/assets/Banner/vr-glass.png" alt="" />
         </div>
+
+
+
+        <Modal title="Contact us" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+        <p>Some contents...</p>
+        <div id="content_btn">
+          <div id="btn_Chat">
+            <a href="https://t.me/sankeonft" target="_blank" rel="noreferrer">Chat with us</a>
+          </div>
+        </div>
+      </Modal>
       </div>
 
       {/* Total */}

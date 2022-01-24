@@ -22,10 +22,10 @@ export default function Community(props: Props) {
     },
     {
       image: game2,
-      title: "SPACE SIP",
+      title: "STAR SHARKS",
       genre: "Battle",
       content:
-        "Space Sip is built to allow player PLAY-to-EARN with an EASY-to-PLAY gameplay and still provides an addictive experience,...",
+        "StarSharks is a NFT-GameFi ecosystem based on the BSC chain developed by game players,...",
       src: "#",
     },
     {

@@ -28,12 +28,14 @@ const variants = {
 export type MenuItemType = {
   color: string,
   text: string | ReactElement,
-  scrollTarget?: string, // CSS selector of target scroll
+  scrollTarget?: string | null, // CSS selector of target scroll
 }
 
 export const MenuItem = (props: {item: MenuItemType}) => {
   const scrollAndCloseMenu = useCallback(() => {
-    scrollToSection(props.item.scrollTarget ?? '', true, -90)
+    if (props.item.scrollTarget) {
+      scrollToSection(props.item.scrollTarget ?? '', true, -90)
+    }
     AppEmitter.emit("setMbMenuVisible", false)
   }, [])
 

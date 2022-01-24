@@ -1,27 +1,54 @@
-import RoadmapItem from './CardRoadmap/RoadmapItem'
-import s from './Roadmap.module.sass'
-import TitleName from './TitleSection/TitleName'
+import AnimWhenVisible from "components/Anim";
+import RoadmapItem from "./CardRoadmap/RoadmapItem";
+import s from "./Roadmap.module.sass";
+import TitleName from "./TitleSection/TitleName";
 
-type Props = {}
+type Props = {};
 
 export default function Roadmap(props: Props) {
-  return(
+  return (
     <section className={s.container}>
-      <TitleName titleName='Roadmap' />
+      <AnimWhenVisible>
+        <TitleName titleName="Roadmap" />
+      </AnimWhenVisible>
       <div className={s.block_roadmap}>
         <div className={s.item_roadmap}>
-          <RoadmapItem titleYear='Q3/2021' titleContent='Architecture design UI/Ux prototype Architecture design UI/Ux prototype' />
-          <RoadmapItem titleYear='Q3/2021' titleContent='Architecture design UI/Ux prototype Architecture design UI/Ux prototype' />
-          <RoadmapItem titleYear='Q3/2021' titleContent='Architecture design UI/Ux prototype Architecture design UI/Ux prototype' />
-          <RoadmapItem titleYear='Q3/2021' titleContent='Architecture design UI/Ux prototype Architecture design UI/Ux prototype' />
+          <RoadmapItem
+            titleYear="Q3/2021"
+            titleContent="Architecture design UI/Ux prototype Architecture design UI/Ux prototype"
+          />
+          <RoadmapItem
+            titleYear="Q3/2021"
+            titleContent="Architecture design UI/Ux prototype Architecture design UI/Ux prototype"
+          />
+          <RoadmapItem
+            titleYear="Q3/2021"
+            titleContent="Architecture design UI/Ux prototype Architecture design UI/Ux prototype"
+          />
+          <RoadmapItem
+            titleYear="Q3/2021"
+            titleContent="Architecture design UI/Ux prototype Architecture design UI/Ux prototype"
+          />
         </div>
         <div className={s.item_roadmap}>
-          <RoadmapItem titleYear='Q3/2021' titleContent='Architecture design UI/Ux prototype Architecture design UI/Ux prototype' />
-          <RoadmapItem titleYear='Q3/2021' titleContent='Architecture design UI/Ux prototype Architecture design UI/Ux prototype' />
-          <RoadmapItem titleYear='Q3/2021' titleContent='Architecture design UI/Ux prototype Architecture design UI/Ux prototype' />
-          <RoadmapItem titleYear='Q3/2021' titleContent='Architecture design UI/Ux prototype Architecture design UI/Ux prototype' />
+          <RoadmapItem
+            titleYear="Q3/2021"
+            titleContent="Architecture design UI/Ux prototype Architecture design UI/Ux prototype"
+          />
+          <RoadmapItem
+            titleYear="Q3/2021"
+            titleContent="Architecture design UI/Ux prototype Architecture design UI/Ux prototype"
+          />
+          <RoadmapItem
+            titleYear="Q3/2021"
+            titleContent="Architecture design UI/Ux prototype Architecture design UI/Ux prototype"
+          />
+          <RoadmapItem
+            titleYear="Q3/2021"
+            titleContent="Architecture design UI/Ux prototype Architecture design UI/Ux prototype"
+          />
         </div>
       </div>
     </section>
-  )
+  );
 }

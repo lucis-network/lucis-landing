@@ -1,6 +1,6 @@
 import Image from './Image';
 import s from './Header.module.sass'
-import Logo from '../assets/img/logo_hoz@2x.png';
+import Logo from '../assets/img/logo_hoz@2x_2.png';
 import GradientButton from './Button/GradientButton';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { MenuMobile } from './Menu/MenuMobile';

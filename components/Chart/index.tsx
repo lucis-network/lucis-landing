@@ -41,6 +41,18 @@ export default function PieChart() {
             beta: 0,
           },
         },
+        legend: {
+          itemStyle: {
+             fontFamily: 'Saira',
+             color: '#FFF'
+          },
+          itemHoverStyle: {
+             color: '#FFF'
+          },
+          itemHiddenStyle: {
+             color: '#444'
+            }
+        },
         title: {
           text: "",
         },
@@ -140,6 +152,25 @@ export default function PieChart() {
             ],
           },
         ],
+        responsive: {
+          rules: [{
+            condition: {
+              maxWidth: 400
+            },
+            chartOptions: {
+              plotOptions: {
+                pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  dataLabels: {
+                    enabled: false,
+                  },
+                  showInLegend: true,
+                }
+              }
+            },
+          }]
+        }
       };
 
       Highcharts.chart("container", options);

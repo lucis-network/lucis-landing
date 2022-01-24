@@ -1,10 +1,11 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion, Transition, useAnimation, Variants } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 interface Props {
     children: any,
-    variants?: any
+    variants?: Variants
+    transition?: Transition
 }
 export default function AnimWhenVisible(props: Props) {
   const controls = useAnimation();
@@ -15,7 +16,7 @@ export default function AnimWhenVisible(props: Props) {
     if (inView) {
       controls.start("visible");
     } else {
-    //   controls.start("hidden");
+      // controls.start("hidden");
     }
   }, [controls, inView]);
 
@@ -25,7 +26,7 @@ export default function AnimWhenVisible(props: Props) {
       animate={controls}
       initial="hidden"
       viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      transition={props.transition ?? { duration: 0.6 }}
       variants={props.variants ?? {
         visible: { opacity: 1, y: 0 },
         hidden: { opacity: 0, y: 20 },

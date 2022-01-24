@@ -65,42 +65,24 @@ const Home: NextPage = () => {
       >
         <Banner />
       </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Community />
-      </AnimWhenVisible>
+      <Community />
       <AnimWhenVisible>
         <SlideGame />
       </AnimWhenVisible>
-      <AnimWhenVisible>
-        <HotGame />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Features />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Investor />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Scholar />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Marketplace />
-      </AnimWhenVisible>
+      <HotGame />
+      <Features />
+      <Investor />
+      <Scholar />
+      <Marketplace />
       <AnimWhenVisible>
         <OurEcosystem />
       </AnimWhenVisible>
       <AnimWhenVisible>
         <TokenAllocation />
       </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Roadmap />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Team />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Advisor />
-      </AnimWhenVisible>
+      <Roadmap />
+      <Team />
+      <Advisor />
       <AnimWhenVisible>
         <Backer />
       </AnimWhenVisible>

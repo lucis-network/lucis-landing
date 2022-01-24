@@ -6,7 +6,7 @@ import { useDimensions } from "./useDimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 import Image from '../Image';
-import Logo from '../../assets/img/logo_hoz@2x.png';
+import Logo from '../../assets/img/logo_hoz@2x_2.png';
 import {AppEmitter} from "../../services/emitter";
 
 const sidebar = {

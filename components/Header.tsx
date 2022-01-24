@@ -39,7 +39,7 @@ export default function Header(props: Props) {
             <Image src={Logo} alt='logo' />
           </div>
           <nav>
-            <ul className="flex justify-between items-center">
+            <ul className="flex justify-between items-center m-0">
               {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Home</a></li>*/}
               <li><a href="#" onClick={() => scrollAndCloseMenu('#EcoSystem')} className='text-white text-24px leading-28px p-15px'>Ecosystem</a></li>
               <li><a href="#" onClick={() => scrollAndCloseMenu('#Investors')} className='text-white text-24px leading-28px p-15px'>Investors</a></li>

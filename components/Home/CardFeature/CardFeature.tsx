@@ -1,4 +1,3 @@
-import AnimWhenVisible from "components/Anim";
 import s from "./CardFeature.module.sass";
 
 type Props = {
@@ -20,10 +19,8 @@ export default function CardFeature(props: Props) {
           <div className={s.bg_icon}></div>
           <img src={props.linkImg} alt="" />
         </div>
-        <AnimWhenVisible>
-          <h2>{props.titleCard}</h2>
-          <p>{props.contentCard}</p>
-        </AnimWhenVisible>
+        <h2>{props.titleCard}</h2>
+        <p>{props.contentCard}</p>
       </div>
     </div>
   );

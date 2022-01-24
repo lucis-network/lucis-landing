@@ -80,8 +80,12 @@ export const MenuMobile = (props: any) => {
           <div style={{width: 150, height: 42, padding: "3px 0"}}>
             <Image src={Logo} width={150} height={42} alt="logo" layout="responsive"></Image>
           </div>
-
-          <MenuToggle toggle={() => toggleOpen()} />
+          <motion.div
+            initial={false}
+            animate={"closed"}
+          >
+            <MenuToggle toggle={() => toggleOpen()} />
+          </motion.div>
         </div>
       </div>
 

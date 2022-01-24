@@ -21,14 +21,28 @@ import AnimWhenVisible from "components/Anim";
 import Marketplace from "components/Home/Marketplace";
 import useScroll from 'hooks/useScroll';
 
-// import {isClient} from "../utils/DOM";
-
 const Home: NextPage = () => {
   const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";
   const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
   const thumb = "/assets/img/howwework.png";
-
   useScroll()
+  const [showButton, setShowButton] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className={styles.pageContainer}>
@@ -89,6 +103,11 @@ const Home: NextPage = () => {
       <AnimWhenVisible>
         <Backer />
       </AnimWhenVisible>
+      {showButton && (
+        <button onClick={scrollToTop} className="btn-scrollTop">
+          &#8679;
+        </button>
+      )}
     </div>
   );
 };

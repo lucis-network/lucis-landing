@@ -25,8 +25,6 @@ module.exports = {
       'nav': 'rgba(40, 38, 54, 0.2)',
     },
     fontFamily: {
-     'transformer': ['SVN-Transformer'],
-     'sofia': ['Sofia Sans'],
      'saira': ['Saira'],
     },
     fontSize: {

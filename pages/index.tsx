@@ -20,10 +20,6 @@ import TokenAllocation from "components/TokenAllocation";
 import AnimWhenVisible from "components/Anim";
 import Marketplace from "components/Home/Marketplace";
 import useScroll from 'hooks/useScroll';
-import HowWeWork from "components/HowWeWork";
-
-// import smoothscroll from 'smoothscroll-polyfill';
-// import {isClient} from "../utils/DOM";
 
 const Home: NextPage = () => {
   const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";

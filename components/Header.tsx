@@ -4,13 +4,27 @@ import Logo from '../assets/img/logo_hoz@2x_2.png';
 import GradientButton from './Button/GradientButton';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { MenuMobile } from './Menu/MenuMobile';
-import {useCallback} from "react";
+import {useCallback, useState} from "react";
 import {scrollToSection} from "../utils/DOM";
 
+import { Modal, Button } from 'antd';
 type Props = {
   handleMenuOpen: Function,
 };
 export default function Header(props: Props) {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
   const [width, height] = useWindowSize();
 
   const scrollAndCloseMenu = useCallback((selector: string) => {
@@ -32,9 +46,19 @@ export default function Header(props: Props) {
               <li><a href="#" onClick={() => scrollAndCloseMenu('#Scholars')} className='text-white text-24px leading-28px p-15px'>Scholars</a></li>
               <li><a href="#" onClick={() => scrollAndCloseMenu('#Marketplace')} className='text-white text-24px leading-28px p-15px'>Marketplace</a></li>
               {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Roadmap</a></li>*/}
-              <li> <GradientButton onClick={() => scrollAndCloseMenu('#Medias')} type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap'}}>JOIN US</GradientButton> </li>
+              <li> <GradientButton onClick={showModal} type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap'}}>JOIN US</GradientButton> </li>
             </ul>
           </nav>
+
+
+          <Modal title="Contact us" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <p>Some contents...</p>
+            <div id="content_btn">
+              <div id="btn_Chat">
+                <a href="https://t.me/sankeonft" target="_blank" rel="noreferrer">Chat with us</a>
+              </div>
+            </div>
+          </Modal>
         </div>
       </div>
     );

@@ -10,7 +10,7 @@ type Props = {
 export default function CardTeam(props: Props) {
   const bg_Team =
     props.statusCard == 1
-      ? "/assets/Team/bg_1.svg"
+      ? "/assets/Team/vector_team.svg"
       : props.statusCard == 2
       ? "/assets/Team/bg_2.svg"
       : props.statusCard == 3

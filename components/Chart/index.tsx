@@ -6,33 +6,32 @@ import { Options } from "highcharts";
 import { useWindowSize } from "hooks/useWindowSize";
 
 export default function PieChart() {
-  const size = useWindowSize();
+  // const size = useWindowSize();
 
-  const windowWidth = size[0];
-  let normalWidth = (windowWidth - 120) / 2;
-  let chartWidth = normalWidth; // >= 424
-  let imgWidth = normalWidth;
-  let chartFontSize = "16px";
-  let chartDepth = 35
-  if (windowWidth < 1024) {
-    imgWidth = Math.min(windowWidth - 100, 610);
-    chartWidth = windowWidth - 100;
-    chartFontSize = "13px";
-  }
-  if(windowWidth < 768) {
-    chartDepth = 15
-  }
-  //   console.log("windowWidth: ", windowWidth);
-  //   console.log("chartWidth: ", chartWidth);
-  //   console.log("imgidth: ", imgWidth);
+  // const windowWidth = size[0];
+  // let normalWidth = (windowWidth - 120) / 2;
+  // let chartWidth = normalWidth; // >= 424
+  // let imgWidth = normalWidth;
+  // let chartFontSize = "16px";
+  // let chartDepth = 35
+  // if (windowWidth < 1024) {
+  //   imgWidth = Math.min(windowWidth - 100, 610);
+  //   chartWidth = windowWidth - 100;
+  //   chartFontSize = "13px";
+  // }
+  // if(windowWidth < 768) {
+  //   chartDepth = 15
+  // }
+
+ 
 
   useLayoutEffect(() => {
     setTimeout(() => {
-      highcharts3d(Highcharts);
+      highcharts3d(Highcharts); // loi dong nay a???
       const options: Options = {
         chart: {
           backgroundColor: "transparent",
-          width: chartWidth,
+          // width: chartWidth,
           polar: true,
           type: "pie",
           options3d: {
@@ -69,12 +68,12 @@ export default function PieChart() {
           pie: {
             allowPointSelect: true,
             cursor: "pointer",
-            depth: chartDepth,
+            depth: 35,
             shadow: true,
             dataLabels: {
               enabled: true,
               format: "{point.name}",
-              style: { fontSize: chartFontSize, color: "white" },
+              style: { fontSize: "16px", color: "white" },
             },
             point: {
               events: {
@@ -155,7 +154,7 @@ export default function PieChart() {
         responsive: {
           rules: [{
             condition: {
-              maxWidth: 400
+              maxWidth: 500
             },
             chartOptions: {
               plotOptions: {
@@ -166,14 +165,21 @@ export default function PieChart() {
                     enabled: false,
                   },
                   showInLegend: true,
+                  point: {
+                    events: {
+                      legendItemClick: function() {
+                        return false;
+                      }
+                    }
+                  }            
                 }
               }
             },
           }]
         }
       };
-
-      Highcharts.chart("container", options);
+      const pieChart = Highcharts.chart("chart-container", options);
+      pieChart.reflow();
     }, 200);
   });
   function findCenter() {
@@ -187,14 +193,14 @@ export default function PieChart() {
 
   //@ts-ignore
   return (
-    <div className={`${style.highchartsFigure} ${style.container_chart}`}>
+    <div className={`${style.highchartsFigure}`}>
       <div className={style.im_token}>
         <img
           src="/assets/token_allocation/img_token_allocation.png"
           // style={{ maxWidth: imgWidth }}
         />
       </div>
-      <div id="container" style={{ maxWidth: chartWidth }} ></div>
+      <div id="chart-container" className={style.chartContainer} ></div>
     </div>
   );
 }

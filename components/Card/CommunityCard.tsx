@@ -19,6 +19,7 @@ export default function PlayerCard(props: Props) {
             height={894}
             layout="responsive"
             alt="#"
+            priority
           ></Image>
         </AnimWhenVisible>
       </div>

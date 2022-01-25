@@ -1,9 +1,10 @@
 import AnimWhenVisible from "components/Anim";
+import { ReactElement } from "react";
 import s from "./RoadmapItem.module.sass";
 
 type Props = {
   titleYear: string;
-  titleContent: string;
+  titleContent: string | ReactElement;
 };
 
 export default function RoadmapItem(props: Props) {

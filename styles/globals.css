@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;600;900&display=swap');
 
 @font-face{
-  font-family: 'MyFont';
+  font-family: 'Transformer';
   src: url(/font/SVN-Transformer.ttf)
 }
 
@@ -320,7 +320,7 @@ body .ant-modal-close{
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 5.5px );
   -webkit-backdrop-filter: blur( 5.5px );
-  border-radius: 10px;
+  border-radius: 16px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
   padding: 5px 20px;
   z-index: 1000;

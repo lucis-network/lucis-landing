@@ -36,7 +36,7 @@ export default function Header(props: Props) {
       <div className={`${s.pcMenu} bg-nav`}>
         <div className={`container py-20px flex justify-between items-center relative z-10 ${s.container}`}>
           <div className={s.logo}>
-            <Image src={Logo} alt='logo' />
+            <Image src={Logo} alt='logo' priority />
           </div>
           <nav>
             <ul className="flex justify-between items-center m-0">

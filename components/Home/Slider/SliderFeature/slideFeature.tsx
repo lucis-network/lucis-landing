@@ -68,19 +68,19 @@ export default class SlideFeature extends Component {
                 linkImg="/assets/Feature/glass4.png"
                 status={false}
                 titleCard="Lucis DeFi Services"
-                contentCard="Leverage all DeFi Services to gain more profit / benefit for investors / scholarsa"
+                contentCard="Leverage all DeFi Services to gain more profit / Benefit for investors / Scholarsa"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass5.png"
                 status={true}
                 titleCard="Lucis Media"
-                contentCard="All up-to-date news / information / hidden gems ... about GameFi Industry"
+                contentCard="All up-to-date news, information, hidden gems, etc in GameFi Industry"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass6.png"
                 status={false}
                 titleCard="Lucis Academy"
-                contentCard="Many free courses / tutorial / tips for scholars to gain more benefits / in-game performance"
+                contentCard="Many free courses, tutorial, tips for scholars to gain more benefits & in-game performance"
               />
             </div>
             <div className={s.block_item}>
@@ -88,37 +88,37 @@ export default class SlideFeature extends Component {
                 linkImg="/assets/Feature/glass_feature.png"
                 status={true}
                 titleCard="DAO management"
-                contentCard="Voting for Investors and scholars in choosing new game, the tournament rules.Game Guild ranking .."
+                contentCard="Voting for Investors and scholars in choosing new game, the tournament rules.Game Guild ranking"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass2.png"
                 status={false}
                 titleCard="CRM"
-                contentCard="A seamlessly dashboard experience to manage your partners, assets ..."
+                contentCard="A seamlessly dashboard experience to manage your partners, assets"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass3.png"
                 status={true}
-                titleCard="Performance Tracking With Ranking & Insight system"
-                contentCard="Track your gamer earning performance, ranking,We use some data analysis model to calculate ranking for scholar and investor"
+                titleCard="Performance, Ranking, Insight system"
+                contentCard="Track the scholar earning performance, ranking. We use some data analysis model to calculate ranking"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass4.png"
                 status={false}
-                titleCard="Accounting & Financial management"
-                contentCard="Cash in, cash out, Investment tools for Investors"
+                titleCard="Accounting, Financial"
+                contentCard="Cash in, cash out, investment tools for Investors"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass5.png"
                 status={true}
                 titleCard="Assets management"
-                contentCard="Manage your NFT, game account, with e2e encryption NFT lending/borrowing"
+                contentCard="Manage your NFT, game account, with e2e encryption NFT lending/ Borrowing"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass6.png"
                 status={false}
                 titleCard="Tournaments"
-                contentCard="Contact to game for server test (people and guild).."
+                contentCard="Contact to game for server test (people and guild)"
               />
             </div>
           </Slider>

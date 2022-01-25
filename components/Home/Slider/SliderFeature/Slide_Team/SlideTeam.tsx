@@ -65,7 +65,7 @@ export default class SimpleSliderTeam extends Component {
                   />
                   <CardTeam
                     statusCard={1}
-                    nameTeam="Oanh nguyen"
+                    nameTeam="Oanh nguyen oanh"
                     serviceTeam="Desginer"
                     enableAnim={false}
                   />

@@ -22,7 +22,7 @@
   
   .heading_card
     @apply text-white
-    padding: 29px 24px 36px 24px
+    padding: 29px 12px 36px 12px
     .hello
       border-radius: 50%
     .next
@@ -43,45 +43,105 @@
       padding: 20px 0px 12px 0px
       font-family: 'Transformer'
       color: #FFFFFF
+      margin: 0
     p
-      @include my-text(22px, 28px, 400)
+      @include my-text(20px, 28px, 400)
 
-
-@media (min-width: 1025px) and (max-width: 1400px)
+@media (min-width: 1280px) and (max-width: 1439px)
   .content_card
+    max-height: 262px
+    min-height: 262px
+    .heading_card
+      padding: 12px 12px
+      .logo_card
+        width: 70px
+        height: 70px
     h2
       font-size: 24px !important
       padding: 10px 0px 0px 0px !important
     p
       font-size: 18px !important
+      line-height: 22px !important
+@media (min-width: 1025px) and (max-width: 1279px)
+  .content_card
+    max-height: 272px
+    min-height: 272px
+    .heading_card
+      padding: 12px 12px
+      .logo_card
+        width: 60px
+        height: 60px
+    h2
+      font-size: 24px !important
+      padding: 10px 0px 0px 0px !important
+    p
+      font-size: 16px !important
+      line-height: 22px !important
+      margin-top: 12px
 @media (min-width: 992px) and (max-width: 1024px)
   .content_card
     width: 48%
+    .heading_card
+      padding: 12px 12px
     h2
       font-size: 24px !important
       padding: 10px 0px 0px 0px !important
     p
       font-size: 18px !important
-
-@media (min-width: 640px) and (max-width: 991px)
+      margin-top: 12px
+@media (min-width: 769px) and (max-width: 991px)
   .content_card
     width: 48%
+    .heading_card
+      padding: 12px 12px
+      .logo_card
+        width: 70px
+        height: 70px
     h2
       font-size: 24px !important
       padding: 10px 0px 0px 0px !important
     p
       font-size: 18px !important
+      line-height: 22px !important
+      margin-top: 12px
+
+@media (min-width: 640px) and (max-width: 768px)
+  .content_card
+    width: 48%
+    min-height: 300px
+    max-height: 300px
+    .heading_card
+      padding: 12px 12px
+      .logo_card
+        width: 70px
+        height: 70px
+    h2
+      font-size: 24px !important
+      padding: 10px 0px 0px 0px !important
+    p
+      font-size: 20px !important
+      line-height: 28px !important
+      margin-top: 12px
+
 @media (min-width: 540px) and (max-width: 639px)
   .content_card
-    width: 45%
-    margin: 12px 8px
+    width: 48%
+    margin: 12px 0px
+    min-height: 320px
+    max-height: 320px
     .heading_card
       padding: 12px
+      .logo_card
+        width: 60px
+        height: 60px
     h2
       font-size: 24px !important
       padding: 10px 0px 0px 0px !important
+      line-height: 24px !important
     p
-      font-size: 18px !important
+      font-size: 20px !important
+      line-height: 28px !important
+      margin-top: 12px
 
 @media (min-width: 0px) and (max-width: 539px)
   .content_card
@@ -91,8 +151,17 @@
     min-height: 200px
     .heading_card
       padding: 12px
+      .logo_card
+        width: 50px
+        height: 50px
     h2
       font-size: 20px !important
       padding: 10px 0px 0px 0px !important
+      margin: 0px
     p
       font-size: 16px !important
+      line-height: 20px !important
+      margin-top: 8px
+      
+
+      

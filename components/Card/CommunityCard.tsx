@@ -19,6 +19,7 @@ export default function PlayerCard(props: Props) {
             height={894}
             layout="responsive"
             alt="#"
+            priority
           ></Image>
         </AnimWhenVisible>
       </div>
@@ -27,7 +28,7 @@ export default function PlayerCard(props: Props) {
           <h3 className={s.title_game}>{props.title}</h3>
           <h5>{props.genre}</h5>
           <p>{props.content}</p>
-          <a href={props.srcReadMore}>{"read more >>"}</a>
+          <a href={props.srcReadMore} target={"_blank"}>{"read more >>"}</a>
         </div>
       </AnimWhenVisible>
     </div>

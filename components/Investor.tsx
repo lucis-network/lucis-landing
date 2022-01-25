@@ -21,7 +21,7 @@ const investorData = [
   {
     image: "/assets/investor/investor1.png",
     content:
-      "Access to many Tools to automate / manage their assets / investments",
+      "Access to many Tools to automate, manage their assets, investments",
   },
 ];
 export default function Investor(props: Props) {

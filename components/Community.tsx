@@ -18,7 +18,7 @@ export default function Community(props: Props) {
       genre: "MOBA E-Sport",
       content:
         "Challenge yourself with a wide variety of game modes:MOBA & Battle Royale, coming with monthly updates and attractive rewards,...",
-      src: "#",
+      src: "https://thetanarena.com",
     },
     {
       image: game2,
@@ -26,7 +26,7 @@ export default function Community(props: Props) {
       genre: "Battle",
       content:
         "StarSharks is a NFT-GameFi ecosystem based on the BSC chain developed by game players,...",
-      src: "#",
+      src: "https://starsharks.com/",
     },
     {
       image: game3,
@@ -34,7 +34,7 @@ export default function Community(props: Props) {
       genre: "Trading and Battle",
       content:
         "Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players,...",
-      src: "#",
+      src: "https://axieinfinity.com/",
     },
   ];
 

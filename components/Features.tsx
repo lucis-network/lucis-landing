@@ -12,7 +12,7 @@ export default function Features(props: Props) {
       <SimpleSlider />
 
       <AnimWhenVisible>
-        <div style={{ marginTop: 160 }}>
+        <div className={s.img} style={{ marginTop: 160 }}>
           <Image
             src={Howework}
             alt=""

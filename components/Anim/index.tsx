@@ -7,6 +7,7 @@ interface Props {
   children: any;
   variants?: Variants;
   transition?: Transition;
+  enable?: boolean;
 }
 export default function AnimWhenVisible(props: Props) {
   const controls = useAnimation();
@@ -14,18 +15,21 @@ export default function AnimWhenVisible(props: Props) {
   const isScrollDown = useScrollDirection();
 
   useEffect(() => {
+    if (props.enable === false) {
+      return;
+    }
     if (inView) {
       controls.start("visible");
     } else if (!isScrollDown) {
       controls.start("hidden");
     }
-  }, [controls, inView, isScrollDown]);
+  }, [controls, inView, isScrollDown, props.enable]);
 
   return (
     <motion.div
       ref={ref}
       animate={controls}
-      initial="hidden"
+      initial={props.enable === false ? "visible" : "hidden"}
       viewport={{ once: true }}
       transition={props.transition ?? { duration: 0.6 }}
       variants={

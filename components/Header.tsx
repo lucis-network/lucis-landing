@@ -36,7 +36,7 @@ export default function Header(props: Props) {
       <div className={`${s.pcMenu} bg-nav`}>
         <div className={`container py-20px flex justify-between items-center relative z-10 ${s.container}`}>
           <div className={s.logo}>
-            <Image src={Logo} alt='logo' />
+            <Image src={Logo} alt='logo' priority />
           </div>
           <nav>
             <ul className="flex justify-between items-center m-0">
@@ -46,7 +46,7 @@ export default function Header(props: Props) {
               <li><a href="#" onClick={() => scrollAndCloseMenu('#Scholars')} className='text-white text-24px leading-28px p-15px'>Scholars</a></li>
               <li><a href="#" onClick={() => scrollAndCloseMenu('#Marketplace')} className='text-white text-24px leading-28px p-15px'>Marketplace</a></li>
               {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Roadmap</a></li>*/}
-              <li> <GradientButton onClick={showModal} type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap'}}>JOIN US</GradientButton> </li>
+              <li> <GradientButton onClick={showModal} type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap',fontWeight: '600'}}>JOIN US</GradientButton> </li>
             </ul>
           </nav>
 

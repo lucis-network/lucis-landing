@@ -31,12 +31,13 @@
         left: 8px
         filter: drop-shadow(0px 0px 8px rgba(155, 251, 242, 0.37))
   .heading_team
-    padding-top: 20px
+    padding-top: 12px
     text-align: center
     p
       @include my-text(24px, 28px, 700)
       color: #00CDFC
-      font-family: 'MyFont'
+      font-family: 'Transformer'
+      margin-bottom: 0 !important
     span
       @include my-text(24px, 28px, 400)
       color: #FFFFFF
@@ -52,8 +53,8 @@
       min-height: 200px
 @media (min-width: 992px) and (max-width: 1439px)
   .containerTeam
-    min-width: 24%
-    max-width: 24%
+    min-width: 25%
+    max-width: 25%
     margin: 12px 0px
     .content_im
       .im_team
@@ -64,11 +65,17 @@
         width: 94%
         padding: 11px 0px 0px 10px !important
 
-@media (min-width: 540px) and (max-width: 639px)
+    .heading_team
+      p
+        font-size: 20px
+      span
+        font-size: 20px
+
+@media (min-width: 541px) and (max-width: 639px)
   .containerTeam
-    min-width: 220px
     max-width: 220px
-    margin: 12px 0px
+    min-width: 48%
+    margin: 20px 0px
     .content_im
       width: 200px
       min-height: 200px
@@ -83,6 +90,11 @@
           filter: drop-shadow(0px 0px 7px rgba(155, 251, 242, 0.37))
           top: -4px
           left: 3px
+    .heading_team
+      p
+        font-size: 20px !important
+      span
+        font-size: 20px
 @media (min-width: 0px) and (max-width: 540px)
   .containerTeam
     min-width: 47%

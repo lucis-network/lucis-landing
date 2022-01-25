@@ -1,0 +1,51 @@
+.content_box
+    @apply flex flex-col items-center
+    .img
+        width: 198px
+    p
+        @apply text-white text-36px leading-40px
+        font-weight: 600
+        margin: 0
+
+@media (min-width: 1025px) and (max-width: 1279px)
+    .content_box
+        p
+            font-size: 28px
+@media (min-width: 992px) and (max-width: 1024px)
+    .content_box
+        p
+            font-size: 26px
+@media (min-width: 769px) and (max-width: 991px)
+    .content_box
+        p
+            font-size: 22px
+        .img
+            width: 150px
+@media (min-width: 640px) and (max-width: 768px)
+    .content_box
+        p
+            font-size: 20px
+        .img
+            width: 120px
+@media (min-width: 540px) and (max-width: 639px)
+    .content_box
+        p
+            font-size: 18px
+        .img
+            width: 100px
+@media (min-width: 414px) and (max-width: 539px)
+    .content_box
+        p
+            font-size: 11px
+            line-height: 24px
+            text-align: center
+        .img
+            width: 80px
+@media (min-width: 0px) and (max-width: 413px)
+    .content_box
+        p
+            font-size: 10px
+            line-height: 16px
+            text-align: center
+        .img
+            width: 80px

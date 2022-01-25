@@ -1,12 +1,14 @@
 
-#container {
+.chartContainer {
   height: 400px;
   background-color: transparent;
   max-width: 1440px !important;
 }
 /* .container_chart{
 } */
-
+.chartContainer {
+  width: 50%;
+}
 
 .highchartsFigure,
 .highcharts-data-table table {
@@ -20,7 +22,10 @@
   /* margin: 1em auto; */
 }
 .im_token{
-  flex: 400px 0;
+  width: 50%;
+}
+.im_token img {
+  width: 100%;
 }
 .highcharts-data-table table {
   font-family: Verdana, sans-serif;
@@ -62,9 +67,9 @@
   .highcharts-data-table table{
     margin-top: 50px;
   }
-  .im_token{
+  /* .im_token{
     flex: 300px 0;
-  }
+  } */
 }
 
 @media (min-width: 0px) and (max-width: 991px){
@@ -78,10 +83,16 @@
   .highchartsFigure img{
     max-width: 100% !important
   }
+  .im_token {
+    width: 100%;
+  }
+  .chartContainer {
+    width: 100%;
+  }
 }
 
-@media (min-width: 0px) and (max-width: 540px){
+/* @media (min-width: 0px) and (max-width: 540px){
   .im_token{
     flex: 0 0;
   }
-}
+} */

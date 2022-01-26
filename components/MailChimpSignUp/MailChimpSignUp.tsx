@@ -3,20 +3,37 @@ import { useCallback, useState } from "react";
 // @ts-ignore
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import AnimWhenVisible from "../Anim";
-import s from "../Footer.module.sass";
+import s from "./MailChimpSignUp.module.sass";
+
+type AppMailChimpPayload = {
+  EMAIL: string,
+  INVESTOR?: number,
+  SCHOLAR?: number,
+}
+
+export enum AppMailChimpFormSize {
+  sm = 'sm',
+  md = 'md',
+  lg = 'lg',
+}
 
 type Props = DetailedHTMLProps<any, any> & {
+  size?: AppMailChimpFormSize,
   isInvestor?: boolean,
   isScholar?: boolean,
 }
 export default function MailChimpSignUp(props: Props) {
-  const {
+  let {
     isInvestor,
     isScholar,
+    size,
     ...restProps
   } = props;
 
   const url = process.env.NEXT_PUBLIC_MAILCHIMP_URL;
+  if (!size) {
+    size = AppMailChimpFormSize.lg
+  }
 
   const [msg, setMsg] = useState("");
   const [email, setEmail] = useState("");
@@ -38,20 +55,29 @@ export default function MailChimpSignUp(props: Props) {
       }
 
       setMsg("Subscribing ...");
-      subscribe({
-        EMAIL: email,
-        INVESTOR: isInvestor ? 1 : 0,
-        SCHOLAR: isScholar ? 1 : 0,
-      });
+
+      const payload: AppMailChimpPayload = {EMAIL: email}
+      if (isInvestor) {
+        payload.INVESTOR = 1;
+      }
+      if (isScholar) {
+        payload.SCHOLAR = 1;
+      }
+
+      subscribe(payload);
 
       setTimeout(() => {
-        setMsg("Thank you for subscribing!");
+        setMsg("Successfully subscribed, thanks you!");
         setTimeout(() => {
           setMsg("");
         }, 10000);
       }, 2000);
     },
-    [email, hasError]
+    [
+      email, hasError,
+      isInvestor,
+      isScholar,
+    ]
   );
 
   const validateEmail = (email: string): boolean => {
@@ -96,7 +122,7 @@ export default function MailChimpSignUp(props: Props) {
   };
 
   return (
-    <div {...restProps}>
+    <div className={`mc_${size} ${s.emailForm}`} {...restProps}>
       <MailchimpSubscribe
         url={url}
         render={({ subscribe, status, message }: any) => (

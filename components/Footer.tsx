@@ -52,11 +52,9 @@ export default function Header(props: Props) {
               </a>
             </div>
           </div>
-          <div className={s.emailForm}>
 
-            <MailChimpSignUp />
+          <MailChimpSignUp />
 
-          </div>
         </div>
       </div>
 

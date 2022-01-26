@@ -2,9 +2,10 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem, MenuItemType } from "./MenuItem";
 import GradientButton from "../Button/GradientButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Modal, Button } from "antd";
+import { AppEmitter } from "../../services/emitter";
 
 const variants = {
   open: {
@@ -66,6 +67,15 @@ export const Navigation = () => {
       scrollTarget: null,
     },
   ];
+
+  useEffect(() => {
+    const subscription = AppEmitter.addListener('setJoinUsVisible', (visible: boolean) => {
+      setIsModalVisible(visible)
+    });
+    return () => {
+      subscription.remove();
+    }
+  }, [])
 
   return (
     <div>

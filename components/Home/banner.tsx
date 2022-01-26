@@ -4,19 +4,39 @@ import TotalBanner from "./Total/TotalBanner";
 
 import { Modal, Button } from 'antd';
 import { useState } from "react";
+import MailChimpSignUp, { AppMailChimpFormSize } from "../MailChimpSignUp/MailChimpSignUp";
+import { AppEmitter } from "../../services/emitter";
 
 
+enum TargetList {
+  None = "None",
+  Investor = "Investor",
+  Scholar = "Scholar",
+  // Ambassador,
+}
 type Props = {};
 
 function Banner(props: Props) {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [targetList, setTargetList] = useState<TargetList>(TargetList.None);
 
-  const showModal = () => {
+  const showScholarModal = () => {
+    setTargetList(TargetList.Scholar);
+    setIsModalVisible(true);
+  };
+
+  const showInvestorModal = () => {
+    setTargetList(TargetList.Investor);
     setIsModalVisible(true);
   };
 
   const handleOk = () => {
     setIsModalVisible(false);
+  };
+
+  const joinUs = (e: any) => {
+    e.preventDefault();
+    AppEmitter.emit('setJoinUsVisible', true);
   };
 
   const handleCancel = () => {
@@ -33,11 +53,11 @@ function Banner(props: Props) {
             and metaverse
           </p>
           <div className={s.groupButton}>
-            <div onClick={showModal} className={s.item_btn}>
-              <Button3D title="Become our Investor" />
+            <div onClick={showInvestorModal} className={s.item_btn}>
+              <Button3D title="Follow our Investor" />
             </div>
-            <div onClick={showModal} className={s.item_btn}>
-              <Button3D title="Become our Scholar" normal />
+            <div onClick={showScholarModal} className={s.item_btn}>
+              <Button3D title="Follow our Scholar" normal />
             </div>
           </div>
         </div>
@@ -46,35 +66,22 @@ function Banner(props: Props) {
         </div>
 
 
-        <Modal title="Contact us" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+        <Modal title={`Subscribe to ${targetList} Newsletter`} visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
           <div>
-            <p>Feel free to discuss more with us, just leave your content here and we'll reach you soon.</p>
-            <p>We're mainly opening for Investors, scholars.</p>
-            <p>We also open to discuss with every who wanna become developer and ambassadors, or be a part of our team.</p>
-
-            <p>Please send us the content in Telegram by clicking the bellow button.</p>
-            <p>The content might follow this template:</p>
-
-            <div
-              style={{
-                color: '#FFF',
-                background: 'rgba(63, 183, 219,0.5)',
-                padding: '30px',
-                borderRadius: '40px 40px 40px 0',
-                fontSize: 'smaller'
-              }}
-            >
-              From: Alexander Geogre<br />
-              Proposal: Become an Investor<br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non quam id libero pulvinar accumsan at eu est. Nulla faucibus nisi eget mattis cursus.<br/>
-            </div>
-            <br />
-            <p style={{color: '#00c4ff'}}>Note: Lucis network will never dm you first.</p>
+            <p>1. Get up to date information about our {targetList} program</p>
+            <MailChimpSignUp
+              size={AppMailChimpFormSize.sm}
+              isInvestor={targetList === TargetList.Investor}
+              isScholar={targetList === TargetList.Scholar}
+              style={{paddingLeft: 20}}
+            />
           </div>
-          <div id="content_btn">
-            <div id="btn_Chat">
-              <a href="https://t.me/lucis_network_application_form" target="_blank" rel="noreferrer">Chat with us</a>
-              <img src="/assets/Banner/teleChat.svg" alt="" />
+
+
+          <div id="content_btn_2" style={{marginTop: 50}}>
+            <p>2. Or to join {targetList} program right now:</p>
+            <div id="btn_Chat" style={{minWidth: 0, width: 90, marginLeft: 20}}>
+              <a href="#" target="_blank" onClick={joinUs}>Join us</a>
             </div>
           </div>
         </Modal>

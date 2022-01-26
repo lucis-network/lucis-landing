@@ -17,7 +17,7 @@ export default function Marketplace(props: Props) {
           <AnimWhenVisible>
             <div className={s.box}>
               <BoxMarket srcBox="/assets/Marketplace/box_thetan.png" titleBox="Thetan boxes" />
-              <BoxMarket srcBox="/assets/Marketplace/box3.png" titleBox="Axie Infinity boxes" />
+              <BoxMarket srcBox="/assets/Marketplace/box3.png" titleBox="HeroesTD boxes" />
             </div>
           </ AnimWhenVisible>
           <AnimWhenVisible>
@@ -25,13 +25,13 @@ export default function Marketplace(props: Props) {
               <div className={s.heading}>
                 <p><span>INO</span> Launchpad for game publishers</p>
               </div>
-              <BoxMarket srcBox="/assets/Marketplace/box4.png" titleBox="Axie Infinity boxes" />
+              <BoxMarket srcBox="/assets/Marketplace/box4.png" titleBox="Elemon boxes" />
             </div>
           </AnimWhenVisible>
           <AnimWhenVisible>
             <div className={s.box}>
               <BoxMarket srcBox="/assets/Marketplace/box2.png" titleBox="Axie Infinity boxes" />
-              <BoxMarket srcBox="/assets/Marketplace/box5.png" titleBox="Axie Infinity boxes" />
+              <BoxMarket srcBox="/assets/Marketplace/box5.png" titleBox="StarSharks boxes" />
             </div>
           </AnimWhenVisible>
         </div>

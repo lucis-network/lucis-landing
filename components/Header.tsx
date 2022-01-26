@@ -4,10 +4,11 @@ import Logo from '../assets/img/logo_hoz@2x_2.png';
 import GradientButton from './Button/GradientButton';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { MenuMobile } from './Menu/MenuMobile';
-import {useCallback, useState} from "react";
+import { useCallback, useEffect, useState } from "react";
 import {scrollToSection} from "../utils/DOM";
 
 import { Modal, Button } from 'antd';
+import { AppEmitter } from "../services/emitter";
 type Props = {
   handleMenuOpen: Function,
 };
@@ -29,6 +30,15 @@ export default function Header(props: Props) {
 
   const scrollAndCloseMenu = useCallback((selector: string) => {
     scrollToSection(selector ?? '', true, -90)
+  }, [])
+
+  useEffect(() => {
+    const subscription = AppEmitter.addListener('setJoinUsVisible', (visible: boolean) => {
+      setIsModalVisible(visible)
+    });
+    return () => {
+      subscription.remove();
+    }
   }, [])
 
   if (width > 1024) {

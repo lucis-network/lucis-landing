@@ -19,7 +19,7 @@ const investorData = [
     content: "Access to Lucis's Private Investment Packages",
   },
   {
-    image: "/assets/investor/investor1.png",
+    image: "/assets/investor/investor4.png",
     content:
       "Access to many Tools to automate, manage their assets, investments",
   },

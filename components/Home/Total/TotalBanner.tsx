@@ -7,7 +7,7 @@ type Props = {
 export default function TotalBanner(props: Props){
   return(
     <div className={s.total_content}>
-      <h1>{props.title}</h1>
+      <h1 className='uppercase'>{props.title}</h1>
       <h2>{props.titleNumber}</h2>
     </div>
   )

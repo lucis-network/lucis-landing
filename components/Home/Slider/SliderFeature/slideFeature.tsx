@@ -68,11 +68,11 @@ export default class SlideFeature extends Component {
                 linkImg="/assets/Feature/glass4.png"
                 status={false}
                 titleCard="Lucis DeFi Services"
-                contentCard="Leverage all DeFi Services to gain more profit / Benefit for investors / Scholarsa"
+                contentCard="Leverage all DeFi services to gain more profit / benefits for investors / scholars"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass5.png"
-                status={true}
+                status={true} 
                 titleCard="Lucis Media"
                 contentCard="All up-to-date news, information, hidden gems, etc in GameFi Industry"
               />
@@ -80,7 +80,7 @@ export default class SlideFeature extends Component {
                 linkImg="/assets/Feature/glass6.png"
                 status={false}
                 titleCard="Lucis Academy"
-                contentCard="Many free courses, tutorial, tips for scholars to gain more benefits & in-game performance"
+                contentCard="Many free courses, tutorials, tips for scholars to gain more benefits & in-game performance"
               />
             </div>
             <div className={s.block_item}>
@@ -88,7 +88,7 @@ export default class SlideFeature extends Component {
                 linkImg="/assets/Feature/glass_feature.png"
                 status={true}
                 titleCard="DAO management"
-                contentCard="Voting for Investors and scholars in choosing new game, the tournament rules.Game Guild ranking"
+                contentCard="Voting for Investors and scholars in choosing new game, the tournament rules, game Guild ranking"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass2.png"
@@ -112,7 +112,7 @@ export default class SlideFeature extends Component {
                 linkImg="/assets/Feature/glass5.png"
                 status={true}
                 titleCard="Assets management"
-                contentCard="Manage your NFT, game account, with e2e encryption NFT lending/ Borrowing"
+                contentCard="Manage your NFT, game account, with E2E encryption NFT lending/ borrowing"
               />
               <CardFeature
                 linkImg="/assets/Feature/glass6.png"

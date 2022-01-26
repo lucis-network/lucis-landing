@@ -8,7 +8,7 @@ type Props = {
   content: String;
   srcReadMore: string;
 };
-export default function PlayerCard(props: Props) {
+export default function ComminutyCard(props: Props) {
   return (
     <div className={s.content_heading}>
       <div className={s.im_community}>

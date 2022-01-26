@@ -47,7 +47,7 @@ export default function SlideGame() {
   const heightImg = widthImg * 0.67;
 
   return (
-    <div style={{ width: "100%", marginTop: "97px" }}>
+    <div className="w-full mt-60px md:mt-97px">
       <div style={{ width: "100%" }}>
         <Marquee speed={90} gradient={false}>
           <SlideItem

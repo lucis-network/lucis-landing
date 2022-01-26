@@ -20,7 +20,7 @@ const scholarData = [
   },
   {
     image: "/assets/Scholar/scholar4.png",
-    content: "Join other Guilds to earn more Guild benefitsa",
+    content: "Join other Guilds to earn more Guild benefits",
   },
 ];
 export default function scholar(props: Props) {

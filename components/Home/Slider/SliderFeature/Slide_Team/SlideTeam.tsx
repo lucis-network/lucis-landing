@@ -17,7 +17,7 @@ const GROUPS = [
     {
       name: "Luat NGUYEN",
       position: "CTO",
-      img:"/assets/Team/luat.png",
+      img:"/assets/Team/Luat.png",
       linkIn:"https://www.linkedin.com/in/luat-dinh-nguyen/"
     },
     {

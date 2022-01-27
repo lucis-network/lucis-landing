@@ -28,6 +28,53 @@ export default function PieChart() {
   useLayoutEffect(() => {
     setTimeout(() => {
       highcharts3d(Highcharts); // loi dong nay a???
+
+      const data = [
+        {
+          name: "20% Lucis Team",
+          y: 20,
+          sliced: false,
+          color: "#67b7dc",
+          selected: false,
+          // connectorColor: "#ffffff",
+        },
+        {
+          name: "7% <br/>Public Sale",
+          y: 7,
+          sliced: false,
+          color: "#8067dc",
+          selected: false,
+        },
+        {
+          name: "40% Community",
+          y: 40,
+          sliced: false,
+          color: "#dc67ce",
+          selected: false,
+        },
+        {
+          name: "20% Advisor<br/>& Backers",
+          y: 20,
+          sliced: false,
+          color: "#dc6967",
+          selected: false,
+        },
+        {
+          name: "13% Liquidity",
+          y: 13,
+          sliced: false,
+          color: "#dcd267",
+          selected: false,
+        },
+        // {
+        //   name: "20% Liquidity/ staking reward",
+        //   y: 20,
+        //   sliced: false,
+        //   color: "#7ddc67",
+        //   selected: false,
+        // },
+      ];
+
       const options: Options = {
         chart: {
           backgroundColor: "transparent",
@@ -104,51 +151,7 @@ export default function PieChart() {
           {
             type: "pie",
             name: "Share",
-            data: [
-              {
-                name: "16% Private sale",
-                y: 16,
-                sliced: false,
-                color: "#67b7dc",
-                selected: false,
-                // connectorColor: "#ffffff",
-              },
-              {
-                name: "16% Lucis team",
-                y: 16,
-                sliced: false,
-                color: "#8067dc",
-                selected: false,
-              },
-              {
-                name: "16% Advisor",
-                y: 16,
-                sliced: false,
-                color: "#dc67ce",
-                selected: false,
-              },
-              {
-                name: "16% Ecosystem development",
-                y: 16,
-                sliced: false,
-                color: "#dc6967",
-                selected: false,
-              },
-              {
-                name: "16% Game reward/ play to earn",
-                y: 16,
-                sliced: false,
-                color: "#dcd267",
-                selected: false,
-              },
-              {
-                name: "20% Liquidity/ staking reward",
-                y: 20,
-                sliced: false,
-                color: "#7ddc67",
-                selected: false,
-              },
-            ],
+            data: data,
           },
         ],
         responsive: {

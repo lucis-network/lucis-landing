@@ -99,10 +99,10 @@ const Home: NextPage = () => {
       </AnimWhenVisible>
       <Roadmap />
       <Team />
-      <Advisor />
-      <AnimWhenVisible>
-        <Backer />
-      </AnimWhenVisible>
+      {/*<Advisor />*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <Backer />*/}
+      {/*</AnimWhenVisible>*/}
       {showButton && (
         <button onClick={scrollToTop} className="btn-scrollTop">
           &#8679;

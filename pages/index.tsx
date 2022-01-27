@@ -4,8 +4,7 @@ import Head from "next/head";
 
 import styles from "../styles/Home.module.css";
 import Banner from "components/Home/banner";
-import Stats from "components/Home/Stats";
-import HotGame from "components/Games";
+// import HotGame from "components/Games";
 import Community from "components/Community";
 import SlideGame from "components/SlideGame";
 import Features from "components/Features";
@@ -86,7 +85,7 @@ const Home: NextPage = () => {
       <AnimWhenVisible>
         <SlideGame />
       </AnimWhenVisible>
-      <HotGame />
+      {/* <HotGame /> */}
       <Features />
       <Investor />
       <Scholar />

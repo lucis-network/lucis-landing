@@ -5,10 +5,10 @@ type Props = {}
 
 export default function Backer(props: Props) {
   return(
-    <section className={s.container}>
+    <section className="lucis-container">
       <TitleName titleName='Backers' />
 
-      <div className={s.block_item}>
+      <div className={`${s.block_item} section-content`}>
           <div className={s.item_backer}>
             <img src="/assets/backer/au21.png" alt="" />
           </div>

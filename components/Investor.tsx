@@ -35,14 +35,12 @@ export default function Investor(props: Props) {
   return (
     <div
       id="Investors"
-      className={`container text-white mt-140px ${s.container}`}
+      className="lucis-container text-white"
     >
-      <div className="mb-60px">
         <AnimWhenVisible>
           <Title titleName="FOR INVESTOR"></Title>
         </AnimWhenVisible>
-      </div>
-      <div className={s.block_item}>
+      <div className={`grid grid-cols-2 lg:grid-cols-4 gap-30px lg:gap-40px section-content mb-40px`}>
         {investorData.map((item, index) => (
           <PlayerCard
             statusHeight={false}

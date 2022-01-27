@@ -1,43 +1,36 @@
 @import "styles/common"
-
-.container
-  @include container
-  margin-top: 160px
-  .heading_footer
-    @media (min-width: 1025px) and (max-width: 1279px)
-      padding-left: 50px
-      padding-right: 50px
-    @apply flex flex-row items-start justify-between flex-wrap
-    .group_ic
-      @apply flex flex-row items-center justify-between flex-wrap
-      margin: 100px auto 0px auto
-      @media (min-width: 1025px)
-        margin-top: 0
-      .ic_item
-        cursor: pointer
-        margin-bottom: 12px
-      .ic_item > a
-        display: block
-        border-radius: 100%
-        max-width: 100px
-        box-shadow: 0px 2px 40px rgba(255, 255, 255, 0.3)
-        margin: 0 auto
-        width: 70px
-    // .group_ic
-    //   @apply flex flex-row items-center justify-between flex-wrap
-    //   max-width: 720px
-    //   .ic_item
-    //     width: 78px
-    //     height: 78px
-    //     box-shadow: (0px 2px 40px rgba(255, 255, 255, 0.3))
-    //     background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
-    //     border-radius: 100%
-    //     transition: 0.3s
-    //     padding: 12px
-    //     margin: 12px 20px
-    //     @apply overflow-hidden flex flex-row items-center justify-center cursor-pointer
-    //   .ic_item:hover
-    //     box-shadow: (0px 2px 40px rgba(255, 255, 255, 0.5))
+.heading_footer
+  @apply flex flex-row items-start justify-between flex-wrap
+  .group_ic
+    @apply flex flex-row items-center justify-between flex-wrap
+    margin: 100px auto 0px auto
+    @media (min-width: 1025px)
+      margin-top: 0
+    .ic_item
+      cursor: pointer
+      margin-bottom: 12px
+    .ic_item > a
+      display: block
+      border-radius: 100%
+      max-width: 100px
+      box-shadow: 0px 2px 40px rgba(255, 255, 255, 0.3)
+      margin: 0 auto
+      width: 70px
+  // .group_ic
+  //   @apply flex flex-row items-center justify-between flex-wrap
+  //   max-width: 720px
+  //   .ic_item
+  //     width: 78px
+  //     height: 78px
+  //     box-shadow: (0px 2px 40px rgba(255, 255, 255, 0.3))
+  //     background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+  //     border-radius: 100%
+  //     transition: 0.3s
+  //     padding: 12px
+  //     margin: 12px 20px
+  //     @apply overflow-hidden flex flex-row items-center justify-center cursor-pointer
+  //   .ic_item:hover
+  //     box-shadow: (0px 2px 40px rgba(255, 255, 255, 0.5))
 .logo
   img
     width: 305px
@@ -45,56 +38,97 @@
   .r
     padding-left: 20px
 
+.emailForm
+  color: white
+  font-size: 36px
+  .title
+    margin: 52px 0 22px 0
+    font-weight: 600
+  .msg
+    font-weight: 400
+    margin-top: 36px
+    height: 58px
+    &.hasError
+      color: darkred
+  .form
+    display: flex
+    flex-flow: row nowrap
+    flex-grow: 1
 
-@media (min-width: 1280px) and (max-width: 1439px)
-  .container
-    max-width: 1280px
-    padding: 0 5rem
+  .inputC
+    position: relative
+    display: inline-block
+    height: 76px
+    background: linear-gradient(62.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+    border-radius: 16px 0 0 16px
+    flex-grow: 1
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: -1
+      border-radius: 16px 0 0 16px
+      padding: 1px
+      background: linear-gradient(99.92deg, #003833 0%, #661673 100%)
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)
+      -webkit-mask-composite: xor
+      mask-composite: exclude
+    .input
+      width: 100%
+      height: 100%
+      background: transparent
+      outline: none
+      font-size: 26px
+      font-weight: 400
+      padding: 0 29px
 
-@media (min-width: 1025px) and (max-width: 1279px)
-  .container
-    max-width: 1025px
-    padding: 0
+  .btn
+    flex-basis: 242px
+    flex-grow: 0
+    height: 76px
+    background: linear-gradient(83.51deg, #CD28E8 3.41%, #0BEBD6 106.98%)
+    border-radius: 0 16px 16px 0
+    font-weight: 500
+    &:hover
+      background: linear-gradient(83.51deg, #b62fcc 3.41%, #02af9e 106.98%)
+    &:active
+      background: linear-gradient(83.51deg, #8f20a1 3.41%, #09887c 106.98%)
+    &:disabled
+      cursor: not-allowed
+      color: #e7e7e7!important
+      background: linear-gradient(83.51deg, #b62fcc 3.41%, #02af9e 106.98%)!important
 
 @media (min-width: 992px) and (max-width: 1024px)
-  .container
-    max-width: 992px
-    .heading_footer
-      flex-direction: column
-      align-items: center
-      .group_ic
-        margin-top: 20px
+  .heading_footer
+    flex-direction: column
+    align-items: center
+    .group_ic
+      margin-top: 20px
 @media (min-width: 769px) and (max-width: 991px)
-  .container
-    max-width: 769px
-    padding: 0px 50px
-    .heading_footer
-      flex-direction: column
-      align-items: center
-      .group_ic
-        margin-top: 20px
-        justify-content: space-between
+  .heading_footer
+    flex-direction: column
+    align-items: center
+    .group_ic
+      margin-top: 20px
+      justify-content: space-between
 @media (min-width: 640px) and (max-width: 768px)
-  .container
-    max-width: 640px
-    padding: 0px 20px
-    .heading_footer
-      flex-direction: column
-      align-items: center
-      .group_ic
-        margin-top: 20px
-        justify-content: space-between
+  .heading_footer
+    flex-direction: column
+    align-items: center
+    .group_ic
+      margin-top: 20px
+      justify-content: space-between
 
 @media (min-width: 540px) and (max-width: 639px)
-  .container
-    max-width: 540px
-    padding: 0px 20px
-    .heading_footer
-      flex-direction: column
-      align-items: center
-      .group_ic
-        margin-top: 20px
-        justify-content: space-between
+  .heading_footer
+    flex-direction: column
+    align-items: center
+    .group_ic
+      margin-top: 20px
+      justify-content: space-between
 
 @media (min-width: 540px) and (max-width: 1024px)
   .logo
@@ -103,21 +137,18 @@
     margin-top: 80px
 
 @media (min-width: 414px) and (max-width: 539px)
-  .container
-    max-width: 414px
-    padding: 0px 12px
-    .heading_footer
-      flex-direction: column
-      align-items: center
-      .group_ic
-        margin-top: 20px
-        justify-content: space-between
-        .ic_item
-          width: 15%
-          & > a
-            display: block
-            width: auto
-            margin: 0 5px
+  .heading_footer
+    flex-direction: column
+    align-items: center
+    .group_ic
+      margin-top: 20px
+      justify-content: space-between
+      .ic_item
+        width: 15%
+        & > a
+          display: block
+          width: auto
+          margin: 0 5px
   .logo
     display: none
   //img
@@ -133,21 +164,18 @@
       height: 54px
       flex-basis: 100px
 @media (min-width: 0px) and (max-width: 413px)
-  .container
-    max-width: 360px
-    padding: 0px 12px
-    .heading_footer
-      flex-direction: column
-      align-items: center
-      .group_ic
-        margin-top: 20px
-        justify-content: space-between
-        .ic_item
-          width: 15%
-          & > a
-            display: block
-            width: auto
-            margin: 0 5px
+  .heading_footer
+    flex-direction: column
+    align-items: center
+    .group_ic
+      margin-top: 20px
+      justify-content: space-between
+      .ic_item
+        width: 15%
+        & > a
+          display: block
+          width: auto
+          margin: 0 5px
   .logo
     display: none
     //img

@@ -4,9 +4,11 @@ import s from "./TokenAllocation.module.sass";
 
 export default function TokenAllocation() {
   return (
-    <section className={s.container}>
+    <section className="lucis-container">
       <TitleName titleName="TOKEN ALLOCATION" />
-      <PieChart />
+      <div className="section-content">
+        <PieChart />
+      </div>
     </section>
   );
 }

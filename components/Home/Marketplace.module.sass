@@ -1,103 +1,96 @@
 @import "styles/common"
-
-.container
-  @include container
-  margin-top: 200px
-
-  .content
-    max-width: 1148px
-    margin: 0 auto
-    .conatainer_box
-      margin-top: 130px
-      @apply flex flex-row items-center justify-between
-      .box
-        @apply flex flex-col items-center justify-between
-        min-height: 461px
-    .conatainer_box,
-    .conatainer_box2
-      .heading
-        background: linear-gradient(63deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
-        backdrop-filter: blur(42px)
-        border-radius: 16px
-        max-width: 462px
-        width: 100%
-        padding: 30px 52px
-        border: 1px solid rgba(152, 84, 254, 0.2)
-        text-align: center
-        p
+.content
+  // max-width: 1148px
+  .conatainer_box
+    @apply flex flex-row items-center justify-between
+    .box
+      @apply flex flex-col items-center justify-between
+      min-height: 461px
+  .conatainer_box,
+  .conatainer_box2
+    .heading
+      background: linear-gradient(63deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)
+      backdrop-filter: blur(42px)
+      border-radius: 16px
+      max-width: 462px
+      width: 100%
+      padding: 30px 52px
+      border: 1px solid rgba(152, 84, 254, 0.2)
+      text-align: center
+      p
+        margin: 0
+        @apply text-white text-36px
+        font-weight: 600
+        line-height: 52px
+        span
           margin: 0
-          @apply text-white text-36px
           font-weight: 600
-          line-height: 52px
-          span
-            margin: 0
-            font-weight: 600
-            font-size: 64px
-            color: #43E0F7
+          font-size: 64px
+          color: #43E0F7
 
-    .conatainer_box2
-      margin-top: 130px
-      @apply flex flex-col items-center justify-between relative
-      img
-        @apply relative
-        z-index: 1
-      .heading
-        @apply absolute left-0 bottom-20 text-left
-        max-width: 500px
-        z-index: 0
+  .conatainer_box2
+    margin-top: 130px
+    @apply flex flex-col items-center justify-between relative
+    img
+      @apply relative
+      z-index: 1
+    .heading
+      @apply absolute left-0 bottom-20 text-left
+      max-width: 500px
+      z-index: 0
+
   .item_btn
     @apply flex flex-row items-center justify-end
     button
       margin: 34px 0px 0px 0px
 
 
-@media (min-width: 1280px) and (max-width: 1439px)
-  .container
-    max-width: 1280px
-    padding: 0 5rem
 @media (min-width: 992px) and (max-width: 1279px)
-  .container
-    max-width: 1025px
-    padding: 0 4rem
-    .box
-      min-height: 440px !important
-    .heading
-      max-width: 380px !important
-      padding: 20px 32px !important
-      p
-        font-size: 28px !important
-        line-height: 42px !important
-      span
-        font-size: 42px !important
+  .box
+    min-height: 440px !important
+  .heading
+    max-width: 380px !important
+    padding: 20px 32px !important
+    p
+      font-size: 28px !important
+      line-height: 42px !important
+    span
+      font-size: 42px !important
 
-    .conatainer_box2
-      .heading
-        bottom: 40px !important
+  .conatainer_box2
+    .heading
+      bottom: 40px !important
 
 @media (min-width: 769px) and (max-width: 991px)
-  .container
-    padding: 0px 150px
-    .box
-      min-height: 360px !important
-    .heading
-      max-width: 300px !important
-      padding: 20px 32px !important
-      p
-        font-size: 24px !important
-        line-height: 36px !important
-      span
-        font-size: 36px !important
+  .box
+    min-height: 360px !important
+  .heading
+    max-width: 300px !important
+    padding: 20px 32px !important
+    p
+      font-size: 24px !important
+      line-height: 36px !important
+    span
+      font-size: 36px !important
 
-    .conatainer_box2
-      .heading
-        bottom: 30px !important
+  .conatainer_box2
+    .heading
+      bottom: 30px !important
 
 @media (min-width: 640px) and (max-width: 768px)
-  .container
-    max-width: 640px
-    padding: 0px 2rem
-    .box
-      min-height: 280px !important
+  .box
+    min-height: 280px !important
+  .heading
+    max-width: 210px !important
+    padding: 10px !important
+    p
+      font-size: 20px !important
+      line-height: 28px !important
+    span
+      font-size: 28px !important
+
+  .conatainer_box2
+    margin-top: 60px !important
     .heading
       max-width: 210px !important
       padding: 10px !important
@@ -125,11 +118,19 @@
       font-size: 16px
       width: 100%
 @media (min-width: 540px) and (max-width: 639px)
-  .container
-    max-width: 540px
-    padding: 0px 1rem
-    .box
-      min-height: 280px !important
+  .box
+    min-height: 280px !important
+  .heading
+    max-width: 180px !important
+    padding: 10px !important
+    p
+      font-size: 16px !important
+      line-height: 28px !important
+    span
+      font-size: 24px !important
+
+  .conatainer_box2
+    margin-top: 60px !important
     .heading
       max-width: 180px !important
       padding: 10px !important
@@ -151,49 +152,41 @@
       padding: 14px 0px
       font-size: 20px
 @media (min-width: 414px) and (max-width: 539px)
-  .container
-    margin-top: 60px
-    max-width: 414px
-    padding: 0px 1rem
-    .conatainer_box 
-      margin-top: 40px !important
-    .box
-      min-height: 200px !important
-    .heading
-      max-width: 180px !important
-      padding: 8px !important
-      p
-        font-size: 14px !important
-        line-height: 28px !important
-      span
-        font-size: 20px !important
+  .conatainer_box 
+    margin-top: 40px !important
+  .box
+    min-height: 200px !important
+  .heading
+    max-width: 180px !important
+    padding: 8px !important
+    p
+      font-size: 14px !important
+      line-height: 28px !important
+    span
+      font-size: 20px !important
 
-    .conatainer_box2
-      margin-top: 60px !important
-      .heading
-        bottom: 10px !important
-        min-width: 200px
-        padding: 4px 20px !important
+  .conatainer_box2
+    margin-top: 60px !important
+    .heading
+      bottom: 10px !important
+      min-width: 200px
+      padding: 4px 20px !important
 @media (min-width: 0px) and (max-width: 413px)
-  .container
-    margin-top: 60px
-    padding: 0px 1rem
-    .conatainer_box 
-      margin-top: 40px !important
-    .box
-      min-height: 200px !important
+  .conatainer_box 
+    margin-top: 40px !important
+  .box
+    min-height: 200px !important
+  .heading
+    max-width: 140px !important
+    padding: 8px !important
+    p
+      font-size: 12px !important
+      line-height: 28px !important
+    span
+      font-size: 16px !important
+  .conatainer_box2
+    margin-top: 60px !important
     .heading
-      max-width: 140px !important
-      padding: 8px !important
-      p
-        font-size: 12px !important
-        line-height: 28px !important
-      span
-        font-size: 16px !important
-
-    .conatainer_box2
-      margin-top: 60px !important
-      .heading
-        bottom: 0px !important
-        min-width: 180px
-        padding: 4px 20px !important
+      bottom: 0px !important
+      min-width: 180px
+      padding: 4px 20px !important

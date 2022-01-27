@@ -44,7 +44,7 @@ export default function Header(props: Props) {
   if (width > 1024) {
     return (
       <div className={`${s.pcMenu} bg-nav`}>
-        <div className={`container py-20px flex justify-between items-center relative z-10 ${s.container}`}>
+        <div className="container py-20px flex justify-between items-center relative z-10`">
           <div className={s.logo}>
             <Image src={Logo} alt='logo' priority />
           </div>

@@ -11,13 +11,13 @@ const GROUPS = [
     {
       name: "Anh Tran",
       position: "CEO",
-      img:"/assets/Team/TuA.png",
+      img:"/assets/Team/tu_anh.png",
       linkIn:"https://vn.linkedin.com/in/tuanhbeu"
     },
     {
       name: "Luat NGUYEN",
       position: "CTO",
-      img:"/assets/Team/Luat.png",
+      img:"/assets/Team/luat.png",
       linkIn:"https://www.linkedin.com/in/luat-dinh-nguyen/"
     },
     {

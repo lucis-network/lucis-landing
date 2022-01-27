@@ -13,6 +13,14 @@ type Props = {};
 export default function Community(props: Props) {
   const gameCommunityData = [
     {
+      image: game3,
+      title: "AXIE INFINITY",
+      genre: "Trading and Battle",
+      content:
+        "Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players,...",
+      src: "https://axieinfinity.com/",
+    },
+    {
       image: game1,
       title: "THETAN ARENA",
       genre: "MOBA E-Sport",
@@ -28,14 +36,6 @@ export default function Community(props: Props) {
         "StarSharks is a NFT-GameFi ecosystem based on the BSC chain developed by game players,...",
       src: "https://starsharks.com/",
     },
-    {
-      image: game3,
-      title: "AXIE INFINITY",
-      genre: "Trading and Battle",
-      content:
-        "Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players,...",
-      src: "https://axieinfinity.com/",
-    },
   ];
 
   return (
@@ -45,7 +45,7 @@ export default function Community(props: Props) {
           <Title titleName="Gaming community and partners"></Title>
         </AnimWhenVisible>
       </div>
-      <div className="flex items-center  mb-180px md:mb-120px lg:mb-180px">
+      <div className="flex items-center">
         <div className="w-16px md:w-32px mr-4">
           <Image
             src={ic_game_community}
@@ -59,7 +59,7 @@ export default function Community(props: Props) {
           Hot game
         </h5>
       </div>
-      <div className="section-content grid grid-cols-1 lg:grid-cols-3 gap-250px lg:gap-10 font-saira">
+      <div className="xl:mt-300px mt-150px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10 font-saira">
         {gameCommunityData.map((item, index) => (
           <CommunityCard
             image={item.image}

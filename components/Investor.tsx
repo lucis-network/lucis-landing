@@ -40,7 +40,7 @@ export default function Investor(props: Props) {
         <AnimWhenVisible>
           <Title titleName="FOR INVESTOR"></Title>
         </AnimWhenVisible>
-      <div className={`grid grid-cols-2 lg:grid-cols-4 gap-30px lg:gap-40px section-content mb-40px`}>
+      <div className={`${s.block_item} section-content`}>
         {investorData.map((item, index) => (
           <PlayerCard
             statusHeight={false}

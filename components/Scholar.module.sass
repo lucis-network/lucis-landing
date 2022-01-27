@@ -1,8 +1,18 @@
 .block_item
   @apply flex flex-row items-center justify-between
 
-@media (min-width: 1025px) and (max-width: 1279px)
+.text
+  @apply text-24px text-center 
+  font-weight: 300
+.item_btn
+  @apply flex flex-row items-center justify-end
+  button
+    margin: 34px 0px 0px 0px
 
+
+@media (min-width: 1025px) and (max-width: 1279px)
+  .text
+    @apply text-16px 
 @media (min-width: 992px) and (max-width: 1024px)
   .container
     max-width: 992px
@@ -10,23 +20,56 @@
     .block_item
       @apply justify-between flex-wrap
 
+    .text
+      @apply text-16px 
+
 @media (min-width: 769px) and (max-width: 991px)
   .block_item
     @apply justify-between flex-wrap
+
+  .text
+    font-size: 22px
 @media (min-width: 640px) and (max-width: 768px)
   .block_item
     @apply justify-between flex-wrap
+  .text
+    font-size: 20px
+  .item_btn
+    button
+      font-size: 20px
+      padding: 14px 0px
 @media (min-width: 540px) and (max-width: 639px)
   .block_item
     @apply justify-between flex-wrap
-
+  .text
+    font-size: 15px
+  .item_btn
+    button
+      font-size: 16px
+      padding: 14px 0px
+      width: 100%
 @media (min-width: 415px) and (max-width: 539px)
   .container
     margin-top: 60px
     .block_item
       @apply justify-between flex-wrap
+    .text
+      font-size: 15px
+    .item_btn
+      button
+        font-size: 16px
+        padding: 14px 0px
+        width: 100%
 @media (min-width: 0px) and (max-width: 414px)
   .container
     margin-top: 60px
     .block_item
       @apply justify-between flex-wrap
+
+    .text
+      font-size: 14px
+    .item_btn
+      button
+        font-size: 16px
+        padding: 14px 0px
+        width: 100%

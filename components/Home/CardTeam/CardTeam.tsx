@@ -5,6 +5,8 @@ type Props = {
   statusCard: number;
   nameTeam: string;
   serviceTeam: string;
+  srcImg: string | undefined;
+  srcLinkedIn:string | undefined;
   enableAnim?: boolean
 };
 
@@ -31,14 +33,17 @@ export default function CardTeam(props: Props) {
             }}
             enable={props.enableAnim}
           >
-            <img src="assets/Team/Group 152.png" alt="" />
+            <img src={props.srcImg} alt="" />
           </AnimWhenVisible>
         </div>
         <img className={s.bg_team} src={bg_Team} alt="" />
       </div>
       <div className={s.heading_team}>
         <AnimWhenVisible enable={props.enableAnim}>
-          <p>{props.nameTeam}</p>
+          <div className={s.blockName}>
+            <img src="/assets/Team/in.svg" alt="" />
+            <a href={props.srcLinkedIn} target='_blank' rel="noopener noreferrer">{props.nameTeam}</a>
+          </div>
           <span>{props.serviceTeam}</span>
         </AnimWhenVisible>
       </div>

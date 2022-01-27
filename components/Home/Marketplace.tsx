@@ -1,5 +1,6 @@
 import AnimWhenVisible from "components/Anim";
 import BoxMarket from "components/box/BoxMarket";
+import Button3D from "components/Button3D";
 import s from "./Marketplace.module.sass";
 import TitleName from "./TitleSection/TitleName";
 
@@ -44,6 +45,10 @@ export default function Marketplace(props: Props) {
           </div>
         </div>
         </AnimWhenVisible>
+
+        <div className={s.item_btn}>
+          <Button3D title="Coming soon..." />
+        </div>
       </div>
 
 

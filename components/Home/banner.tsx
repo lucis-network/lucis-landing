@@ -3,7 +3,7 @@ import s from "./banner.module.sass";
 import TotalBanner from "./Total/TotalBanner";
 
 import { Modal, Button } from 'antd';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MailChimpSignUp, { AppMailChimpFormSize } from "../MailChimpSignUp/MailChimpSignUp";
 import { AppEmitter } from "../../services/emitter";
 
@@ -42,6 +42,19 @@ function Banner(props: Props) {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+
+  useEffect(() => {
+    const subscription = AppEmitter.addListener('setModalSubscript', (caseModal: boolean):void => {
+      if (!caseModal) {
+        showInvestorModal()
+      }else{
+        showScholarModal()
+      }
+    });
+    return () => {
+      subscription.remove();
+    }
+  }, [])
   return (
     <section className={`${s.container_banner}`}>
       <div className="stars-bg"></div>

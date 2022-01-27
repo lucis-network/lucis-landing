@@ -45,8 +45,10 @@
         @apply absolute left-0 bottom-20 text-left
         max-width: 500px
         z-index: 0
-
-
+  .item_btn
+    @apply flex flex-row items-center justify-end
+    button
+      margin: 34px 0px 0px 0px
 
 
 @media (min-width: 1280px) and (max-width: 1439px)
@@ -111,7 +113,17 @@
         bottom: 30px !important
         min-width: 300px
         padding: 10px 20px !important
+  .item_btn
+    button
+      padding: 14px 0px
+      font-size: 20px
 
+@media (min-width: 0px) and (max-width: 639px)
+  .item_btn
+    button
+      padding: 14px 0px
+      font-size: 16px
+      width: 100%
 @media (min-width: 540px) and (max-width: 639px)
   .container
     max-width: 540px
@@ -133,6 +145,11 @@
         bottom: 30px !important
         min-width: 300px
         padding: 10px 20px !important
+
+  .item_btn
+    button
+      padding: 14px 0px
+      font-size: 20px
 @media (min-width: 414px) and (max-width: 539px)
   .container
     margin-top: 60px

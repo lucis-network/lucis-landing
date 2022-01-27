@@ -3,6 +3,9 @@ import s from "./investor.module.sass";
 import PlayerCard from "./Card/PlayerCard";
 import Title from "components/Home/TitleSection/TitleName";
 import AnimWhenVisible from "./Anim";
+import Button3D from "./Button3D";
+import { AppEmitter } from "services/emitter";
+
 
 type Props = {};
 const investorData = [
@@ -25,6 +28,10 @@ const investorData = [
   },
 ];
 export default function Investor(props: Props) {
+  const setIsModalInvestor = () => {
+    AppEmitter.emit('setModalSubscript', false)
+  };
+
   return (
     <div
       id="Investors"
@@ -46,6 +53,12 @@ export default function Investor(props: Props) {
           ></PlayerCard>
         ))}
       </div>
+
+      <div className={s.text}>If you have any unused NFT game items or want to make a smart investment into our well-trained scholars</div>
+      <div onClick={setIsModalInvestor} className={s.item_btn}>
+        <Button3D title="Become our Investor" />
+      </div>
     </div>
+
   );
 }

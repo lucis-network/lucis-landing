@@ -3,6 +3,9 @@ import s from "./Scholar.module.sass";
 import PlayerCard from "./Card/PlayerCard";
 import Title from "components/Home/TitleSection/TitleName";
 import AnimWhenVisible from "./Anim";
+import Button3D from "./Button3D";
+import { AppEmitter } from "services/emitter";
+
 type Props = {};
 const scholarData = [
   {
@@ -24,6 +27,9 @@ const scholarData = [
   },
 ];
 export default function scholar(props: Props) {
+  const setModalScholar = () => {
+    AppEmitter.emit('setModalSubscript', true)
+  };
   return (
     <div
       id="Scholars"
@@ -44,6 +50,11 @@ export default function scholar(props: Props) {
             key={index}
           ></PlayerCard>
         ))}
+      </div>
+
+      <div className={s.text}>Join our scholar community to have formal training, funding, playing games, and get profit-sharing</div>
+      <div onClick={setModalScholar} className={s.item_btn}>
+        <Button3D title="Become our Scholar" />
       </div>
     </div>
   );

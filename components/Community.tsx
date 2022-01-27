@@ -41,9 +41,9 @@ export default function Community(props: Props) {
 
   return (
     <div className="lucis-container community-container">
-      <div className="flex justify-between items-center mb-40px md:mb-60px xl:mb-100px">
+      <div className="flex justify-between items-center mb-40px lg:mb-60px">
         <AnimWhenVisible>
-          <Title titleName={<span>Gaming community <br/>and partners</span>}></Title>
+          <Title titleName={<span>Gaming community <br/>and partners</span>}/>
         </AnimWhenVisible>
       </div>
       <div className="flex items-center">
@@ -57,10 +57,10 @@ export default function Community(props: Props) {
           ></Image>
         </div>
         <h5 className="text-emerald lg:text-32px md:text-28px text-24px leading-37px">
-          Hot game
+          HOT GAME
         </h5>
       </div>
-      <div className="xl:mt-300px mt-150px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10 font-saira">
+      <div className="xl:mt-300px lg:mt-200px md:mt-180px mt-180px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10">
         {gameCommunityData.map((item, index) => (
           <CommunityCard
             image={item.image}

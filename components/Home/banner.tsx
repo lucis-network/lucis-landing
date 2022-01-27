@@ -86,14 +86,13 @@ function Banner(props: Props) {
               size={AppMailChimpFormSize.sm}
               isInvestor={targetList === TargetList.Investor}
               isScholar={targetList === TargetList.Scholar}
-              style={{paddingLeft: 20}}
             />
           </div>
 
 
           <div id="content_btn_2" style={{marginTop: 50}}>
             <p>2. Or to join {targetList} program right now:</p>
-            <div id="btn_Chat" style={{minWidth: 0, width: 90, marginLeft: 20}}>
+            <div id="btn_Chat" style={{minWidth: 0, width: 90}}>
               <a href="#" target="_blank" onClick={joinUs}>Join us</a>
             </div>
           </div>

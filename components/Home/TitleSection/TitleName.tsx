@@ -1,7 +1,8 @@
 import s from './TitleName.module.sass'
+import {ReactElement} from "react";
 
 type Props = {
-  titleName: string
+  titleName: string | ReactElement
 }
 
 export default function TitleName(props: Props) {

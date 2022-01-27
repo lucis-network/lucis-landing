@@ -38,7 +38,7 @@ export default function scholar(props: Props) {
       <AnimWhenVisible>
         <Title titleName="FOR SCHOLARS"></Title>
       </AnimWhenVisible>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-30px lg:gap-40px section-content mb-40px">
+      <div className={`${s.block_item} section-content`}>
         {scholarData.map((item, index) => (
           <PlayerCard
             statusHeight={true}

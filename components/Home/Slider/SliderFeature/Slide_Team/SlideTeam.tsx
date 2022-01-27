@@ -6,6 +6,76 @@ import CardTeam from "components/Home/CardTeam/CardTeam";
 import TitleName from "components/Home/TitleSection/TitleName";
 import AnimWhenVisible from "components/Anim";
 
+const GROUPS = [
+  [
+    {
+      name: "Oanh",
+      position: "Designer",
+    },
+    {
+      name: "Lợi",
+      position: "Dev",
+    },
+    {
+      name: "Oanh",
+      position: "Designer",
+    },
+    {
+      name: "Lợi",
+      position: "Dev",
+    },
+    {
+      name: "Oanh",
+      position: "Designer",
+    },
+    {
+      name: "Lợi",
+      position: "Dev",
+    },
+    {
+      name: "Oanh",
+      position: "Designer",
+    },
+    {
+      name: "Lợi",
+      position: "Dev",
+    },
+  ],
+  [
+    {
+      name: "Thế",
+      position: "Designer",
+    },
+    {
+      name: "Thư",
+      position: "Dev",
+    },
+    {
+      name: "Oanh",
+      position: "Designer",
+    },
+    {
+      name: "Lợi",
+      position: "Dev",
+    },
+    {
+      name: "Oanh",
+      position: "Designer",
+    },
+    {
+      name: "Lợi",
+      position: "Dev",
+    },
+    {
+      name: "Oanh",
+      position: "Designer",
+    },
+    {
+      name: "Lợi",
+      position: "Dev",
+    },
+  ],
+];
 export default class SimpleSliderTeam extends Component {
   constructor(props: any) {
     super(props);
@@ -48,57 +118,18 @@ export default class SimpleSliderTeam extends Component {
         <AnimWhenVisible>
           {/* @ts-ignore*/}
           <Slider ref={(c) => (this.slider = c)} {...settings}>
-            {[0, 1, 2].map((idx) => {
+            {GROUPS.map((mems, idx) => {
               return (
                 <div key={idx} className={s.block_team}>
-                  <CardTeam
-                    statusCard={1}
-                    nameTeam="Oanh nguyen"
-                    serviceTeam="Desginer"
-                    enableAnim={false}
-                  />
-                  <CardTeam
-                    statusCard={1}
-                    nameTeam="Oanh nguyen"
-                    serviceTeam="Desginer"
-                    enableAnim={false}
-                  />
-                  <CardTeam
-                    statusCard={1}
-                    nameTeam="Oanh nguyen oanh"
-                    serviceTeam="Desginer"
-                    enableAnim={false}
-                  />
-                  <CardTeam
-                    statusCard={1}
-                    nameTeam="Oanh nguyen"
-                    serviceTeam="Desginer"
-                    enableAnim={false}
-                  />
-                  <CardTeam
-                    statusCard={1}
-                    nameTeam="Oanh nguyen"
-                    serviceTeam="Desginer"
-                    enableAnim={false}
-                  />
-                  <CardTeam
-                    statusCard={1}
-                    nameTeam="Oanh nguyen"
-                    serviceTeam="Desginer"
-                    enableAnim={false}
-                  />
-                  <CardTeam
-                    statusCard={1}
-                    nameTeam="Oanh nguyen"
-                    serviceTeam="Desginer"
-                    enableAnim={false}
-                  />
-                  <CardTeam
-                    statusCard={1}
-                    nameTeam="Oanh nguyen"
-                    serviceTeam="Desginer"
-                    enableAnim={false}
-                  />
+                  {mems.map((item, mIdx) => (
+                    <CardTeam
+                      key={item.name + mIdx}
+                      statusCard={1}
+                      nameTeam={item.name}
+                      serviceTeam={item.position}
+                      enableAnim={false}
+                    />
+                  ))}
                 </div>
               );
             })}

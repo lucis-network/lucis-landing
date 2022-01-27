@@ -5,8 +5,8 @@ type Props = {
   statusCard: number;
   nameTeam: string;
   serviceTeam: string;
-  srcImg: string | undefined;
-  srcLinkedIn:string | undefined;
+  srcImg?: string;
+  srcLinkedIn?: string;
   enableAnim?: boolean
 };
 

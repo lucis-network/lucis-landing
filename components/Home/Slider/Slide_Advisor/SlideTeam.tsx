@@ -47,6 +47,7 @@ export default class SimpleSliderAdvisor extends Component {
 
       {/* @ts-ignore*/}
       <div className="section-content">
+        {/* @ts-ignore*/}
         <Slider ref={c => (this.slider = c)} {...settings}>
           <div className={s.block_team}>
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />

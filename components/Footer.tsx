@@ -8,6 +8,7 @@ export default function Header(props: Props) {
   return (
     <section className="lucis-container">
       <div className={`${s.heading_footer} section-content`}>
+
         <div className={s.logo}>
           <AnimWhenVisible
             variants={{
@@ -19,8 +20,9 @@ export default function Header(props: Props) {
             <img src="/assets/logo369-np.png" alt="" />
           </AnimWhenVisible>
         </div>
+
         <div className={s.r}>
-        <div className={s.group_ic}>
+          <div className={s.group_ic}>
             <div className={s.ic_item}>
               <a href="https://www.tiktok.com/@lucistvv" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/tiktok.svg" alt="" />
@@ -51,6 +53,12 @@ export default function Header(props: Props) {
                 <img src="/assets/OurEcosystem/dis.svg" alt="" />
               </a>
             </div>
+          </div>
+
+          <div className={s.links}>
+            <span>Useful links: </span>
+            <a href="https://docsend.com/view/zk99fbvxprwa75ik" target="_blank" rel="noopener noreferrer">Whitepaper</a>
+            {/*<a href="#">Pitch Deck</a>*/}
           </div>
 
           <MailChimpSignUp />

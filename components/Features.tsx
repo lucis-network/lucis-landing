@@ -8,11 +8,10 @@ type Props = {};
 
 export default function Features(props: Props) {
   return (
-    <section className={s.container} id="EcoSystem">
+    <section className="lucis-container" id="EcoSystem">
       <SimpleSlider />
-
       <AnimWhenVisible>
-        <div className={s.img} style={{ marginTop: 160 }}>
+        <div className={s.img}>
           <Image
             src={Howework}
             alt=""

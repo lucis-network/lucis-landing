@@ -8,12 +8,12 @@ type Props = {};
 
 export default function Marketplace(props: Props) {
   return (
-    <section id="Marketplace" className={s.container}>
+    <section id="Marketplace" className="lucis-container">
       <AnimWhenVisible>
         <TitleName titleName="Marketplace" />
       </AnimWhenVisible>
 
-      <div className={s.content}>
+      <div className={`${s.content} section-content`}>
         <div className={s.conatainer_box}>
           <AnimWhenVisible>
             <div className={s.box}>

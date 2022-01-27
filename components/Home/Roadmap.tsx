@@ -86,11 +86,11 @@ const roadmapData = [
 ]
 export default function Roadmap(props: Props) {
   return (
-    <section className={s.container}>
+    <section className="lucis-container">
       <AnimWhenVisible>
         <TitleName titleName="Roadmap" />
       </AnimWhenVisible>
-      <div className={s.block_roadmap}>
+      <div className={`${s.block_roadmap} section-content`}>
         <div className={s.item_roadmap}>
           {
             roadmapData.map((item, index) => {

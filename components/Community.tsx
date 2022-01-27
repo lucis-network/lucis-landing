@@ -39,13 +39,13 @@ export default function Community(props: Props) {
   ];
 
   return (
-    <div className={`container mt-32 ${s.container}`}>
-      <div className="flex justify-between items-center mb-5">
+    <div className="lucis-container">
+      <div className="flex justify-between items-center">
         <AnimWhenVisible>
           <Title titleName="Gaming community and partners"></Title>
         </AnimWhenVisible>
       </div>
-      <div className="flex items-center lg: mb-180px xl:mb-250px">
+      <div className="flex items-center  mb-180px md:mb-120px lg:mb-180px">
         <div className="w-16px md:w-32px mr-4">
           <Image
             src={ic_game_community}
@@ -59,7 +59,7 @@ export default function Community(props: Props) {
           Hot game
         </h5>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10 font-saira">
+      <div className="section-content grid grid-cols-1 lg:grid-cols-3 gap-250px lg:gap-10 font-saira">
         {gameCommunityData.map((item, index) => (
           <CommunityCard
             image={item.image}

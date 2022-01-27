@@ -6,7 +6,7 @@ type Props = {}
 
 export default function Team(props: Props){
   return(
-    <section className={s.container}>
+    <section className="lucis-container">
       <SimpleSliderTeam />
     </section>
   )

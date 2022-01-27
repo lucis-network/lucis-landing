@@ -6,8 +6,8 @@ import MailChimpSignUp from "./MailChimpSignUp/MailChimpSignUp";
 type Props = {};
 export default function Header(props: Props) {
   return (
-    <section className={s.container}>
-      <div className={s.heading_footer}>
+    <section className="lucis-container">
+      <div className={`${s.heading_footer} section-content`}>
         <div className={s.logo}>
           <AnimWhenVisible
             variants={{
@@ -57,7 +57,6 @@ export default function Header(props: Props) {
 
         </div>
       </div>
-
       <div>
         <img src="/assets/footer/footer.png" alt="" />
       </div>

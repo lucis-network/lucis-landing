@@ -46,6 +46,7 @@ export default class SimpleSliderAdvisor extends Component {
         </div>
 
       {/* @ts-ignore*/}
+      <div className="section-content">
         <Slider ref={c => (this.slider = c)} {...settings}>
           <div className={s.block_team}>
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
@@ -78,6 +79,7 @@ export default class SimpleSliderAdvisor extends Component {
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
           </div> */}
         </Slider>
+      </div>
       </div>
     );
   }

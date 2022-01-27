@@ -1,12 +1,11 @@
 @import "styles/common"
   
 .content_investor
-  max-width: 284px
+  width: 100%
   background: linear-gradient(86deg, rgba(205, 40, 232, 0.5) 31.31%, rgba(11, 235, 214, 0.5) 96.4%)
   box-shadow: inset 0px 98px 100px -48px rgba(0, 161, 253, 0.3), inset 0px 4px 18px rgba(8, 59, 88, 0.3)
   backdrop-filter: blur(10px)
   border-radius: 20px
-  margin-bottom: 30px
   .im_investor
     box-shadow: 0px 0px 9px 8px rgba(155, 251, 242, 0.37)
     border-radius: 16px
@@ -14,6 +13,7 @@
   .heading_investor
     padding: 12px 24px
     text-align: center
+    min-height: 150px
     @include my-text(22px, 32px, 300)
     margin-bottom: 0
 
@@ -28,10 +28,8 @@
 
 @media (min-width: 1280px) and (max-width: 1439px)
   .content_investor
-    max-width: 260px
 @media (min-width: 992px) and (max-width: 1279px)
   .content_investor
-    width: 24%
     border-radius: 16px
     .heading_investor
       padding: 12px 8px
@@ -44,25 +42,18 @@
     min-height: 330px !important
 
 @media (min-width: 769px) and (max-width: 991px)
-  .content_investor
-    max-width: 284px
   .content_card1
     min-height: 360px
 @media (min-width: 640px) and (max-width: 768px)
-  .content_investor
-    min-width: 240px
-    width: 48%
-    .heading_investor
-      font-size: 20px
-      line-height: 24px
+  .heading_investor
+    font-size: 20px
+    line-height: 24px
 
   .content_card1
     min-height: 300px
 @media (min-width: 415px) and (max-width: 639px)
   .content_investor
     min-height: 235px
-    max-width: 230px
-    width: 47%
     .heading_investor
       font-size: 15px
       line-height: 20px
@@ -73,7 +64,6 @@
     min-height: 320px !important
 @media (min-width: 0px) and (max-width: 414px)
   .content_investor
-    width: 47%
     border-radius: 16px
     .heading_investor
       padding: 12px 4px

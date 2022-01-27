@@ -27,7 +27,7 @@ export default class SlideFeature extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div>
+      <>
         <AnimWhenVisible>
           <div className={s.heading_feature}>
             <h1>Ecosystem & Features</h1>
@@ -41,89 +41,90 @@ export default class SlideFeature extends Component {
             </div>
           </div>
         </AnimWhenVisible>
-
-        <AnimWhenVisible>
-          {/* @ts-ignore*/}
-          <Slider ref={(c) => (this.slider = c)} {...settings}>
-            <div className={s.block_item}>
-              <CardFeature
-                linkImg="/assets/Feature/glass_feature.png"
-                status={true}
-                titleCard="Lucis Scholarships Platform"
-                contentCard="A platform to connect Investors and Gamers through scholarships"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass2.png"
-                status={false}
-                titleCard="Lucis NFT Mistery Box Launchpad (INO)"
-                contentCard="A platform to sell mistery boxes from our well-selected games"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass3.png"
-                status={true}
-                titleCard="Lucis NFT Marketplacea"
-                contentCard="Trading NFTs for Tokens or OTHER GAME'S NFTs"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass4.png"
-                status={false}
-                titleCard="Lucis DeFi Services"
-                contentCard="Leverage all DeFi services to gain more profit / benefits for investors / scholars"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass5.png"
-                status={true} 
-                titleCard="Lucis Media"
-                contentCard="All up-to-date news, information, hidden gems, etc in GameFi Industry"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass6.png"
-                status={false}
-                titleCard="Lucis Academy"
-                contentCard="Many free courses, tutorials, tips for scholars to gain more benefits & in-game performance"
-              />
-            </div>
-            <div className={s.block_item}>
-              <CardFeature
-                linkImg="/assets/Feature/glass_feature.png"
-                status={true}
-                titleCard="DAO management"
-                contentCard="Voting for Investors and scholars in choosing new game, the tournament rules, game Guild ranking"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass2.png"
-                status={false}
-                titleCard="CRM"
-                contentCard="A seamlessly dashboard experience to manage your partners, assets"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass3.png"
-                status={true}
-                titleCard="Performance, Ranking, Insight system"
-                contentCard="Track the scholar earning performance, ranking. We use some data analysis model to calculate ranking"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass4.png"
-                status={false}
-                titleCard="Accounting, Financial"
-                contentCard="Cash in, cash out, investment tools for Investors"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass5.png"
-                status={true}
-                titleCard="Assets management"
-                contentCard="Manage your NFT, game account, with E2E encryption NFT lending/ borrowing"
-              />
-              <CardFeature
-                linkImg="/assets/Feature/glass6.png"
-                status={false}
-                titleCard="Tournaments"
-                contentCard="Contact to game for server test (people and guild)"
-              />
-            </div>
-          </Slider>
-        </AnimWhenVisible>
-      </div>
+        <div className="section-content">
+          <AnimWhenVisible>
+            {/* @ts-ignore*/}
+            <Slider ref={(c) => (this.slider = c)} {...settings}>
+              <div className={s.block_item}>
+                <CardFeature
+                  linkImg="/assets/Feature/glass_feature.png"
+                  status={true}
+                  titleCard="Lucis Scholarships Platform"
+                  contentCard="A platform to connect Investors and Gamers through scholarships"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass2.png"
+                  status={false}
+                  titleCard="Lucis NFT Mistery Box Launchpad (INO)"
+                  contentCard="A platform to sell mistery boxes from our well-selected games"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass3.png"
+                  status={true}
+                  titleCard="Lucis NFT Marketplacea"
+                  contentCard="Trading NFTs for Tokens or OTHER GAME'S NFTs"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass4.png"
+                  status={false}
+                  titleCard="Lucis DeFi Services"
+                  contentCard="Leverage all DeFi services to gain more profit / benefits for investors / scholars"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass5.png"
+                  status={true} 
+                  titleCard="Lucis Media"
+                  contentCard="All up-to-date news, information, hidden gems, etc in GameFi Industry"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass6.png"
+                  status={false}
+                  titleCard="Lucis Academy"
+                  contentCard="Many free courses, tutorials, tips for scholars to gain more benefits & in-game performance"
+                />
+              </div>
+              <div className={s.block_item}>
+                <CardFeature
+                  linkImg="/assets/Feature/glass_feature.png"
+                  status={true}
+                  titleCard="DAO management"
+                  contentCard="Voting for Investors and scholars in choosing new game, the tournament rules, game Guild ranking"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass2.png"
+                  status={false}
+                  titleCard="CRM"
+                  contentCard="A seamlessly dashboard experience to manage your partners, assets"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass3.png"
+                  status={true}
+                  titleCard="Performance, Ranking, Insight system"
+                  contentCard="Track the scholar earning performance, ranking. We use some data analysis model to calculate ranking"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass4.png"
+                  status={false}
+                  titleCard="Accounting, Financial"
+                  contentCard="Cash in, cash out, investment tools for Investors"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass5.png"
+                  status={true}
+                  titleCard="Assets management"
+                  contentCard="Manage your NFT, game account, with E2E encryption NFT lending/ borrowing"
+                />
+                <CardFeature
+                  linkImg="/assets/Feature/glass6.png"
+                  status={false}
+                  titleCard="Tournaments"
+                  contentCard="Contact to game for server test (people and guild)"
+                />
+              </div>
+            </Slider>
+          </AnimWhenVisible>
+        </div>
+      </>
     );
   }
 }

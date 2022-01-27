@@ -135,7 +135,6 @@ export default class SimpleSliderTeam extends Component {
         <AnimWhenVisible>
           <div className={s.heading_feature}>
             <TitleName titleName="Team" />
-
             <div className={s.group_btn}>
               <button className={s.btn_left} onClick={this.previous}>
                 <img src="/assets/Feature/ic_left.svg" alt="" />
@@ -146,29 +145,30 @@ export default class SimpleSliderTeam extends Component {
             </div>
           </div>
         </AnimWhenVisible>
-
-        <AnimWhenVisible>
-          {/* @ts-ignore*/}
-          <Slider ref={(c) => (this.slider = c)} {...settings}>
-            {GROUPS.map((mems, idx) => {
-              return (
-                <div key={idx} className={s.block_team}>
-                  {mems.map((item, mIdx) => (
-                    <CardTeam
-                      key={item.name + mIdx}
-                      statusCard={1}
-                      srcImg={item.img}
-                      srcLinkedIn={item.linkIn}
-                      nameTeam={item.name}
-                      serviceTeam={item.position}
-                      enableAnim={false}
-                    />
-                  ))}
-                </div>
-              );
-            })}
-          </Slider>
-        </AnimWhenVisible>
+        <div className="section-content">
+          <AnimWhenVisible>
+            {/* @ts-ignore*/}
+            <Slider ref={(c) => (this.slider = c)} {...settings}>
+              {GROUPS.map((mems, idx) => {
+                return (
+                  <div key={idx} className={s.block_team}>
+                    {mems.map((item, mIdx) => (
+                      <CardTeam
+                        key={item.name + mIdx}
+                        statusCard={1}
+                        srcImg={item.img}
+                        srcLinkedIn={item.linkIn}
+                        nameTeam={item.name}
+                        serviceTeam={item.position}
+                        enableAnim={false}
+                      />
+                    ))}
+                  </div>
+                );
+              })}
+            </Slider>
+          </AnimWhenVisible>
+        </div>
       </div>
     );
   }

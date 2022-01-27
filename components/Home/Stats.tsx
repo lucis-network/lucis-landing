@@ -4,7 +4,7 @@ type Props = {}
 
 export default function Stats(props: Props) {
   return(
-    <section className={s.container}>
+    <section className="lucis-container">
     </section>
   )
 }

@@ -33,14 +33,12 @@ export default function scholar(props: Props) {
   return (
     <div
       id="Scholars"
-      className={`container text-white mt-140px ${s.container}`}
+      className="lucis-container text-white"
     >
-      <div className="mb-60px">
-        <AnimWhenVisible>
-          <Title titleName="FOR SCHOLARS"></Title>
-        </AnimWhenVisible>
-      </div>
-      <div className={s.block_item}>
+      <AnimWhenVisible>
+        <Title titleName="FOR SCHOLARS"></Title>
+      </AnimWhenVisible>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-30px lg:gap-40px section-content mb-40px">
         {scholarData.map((item, index) => (
           <PlayerCard
             statusHeight={true}

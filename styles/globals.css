@@ -361,7 +361,7 @@ body .ant-modal-close{
     padding: 0 3rem;
   }
 }
-    
+
 @media (min-width: 769px) and (max-width: 992px) {
   .lucis-container {
     margin-top: 90px;
@@ -420,4 +420,10 @@ body .ant-modal-close{
   .section-content {
     margin-top: 40px;
   }
+}
+
+
+/*// tmp fix tailwind bug */
+body .backdrop-blur-sm {
+  backdrop-filter: blur(4px);
 }

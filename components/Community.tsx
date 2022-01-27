@@ -7,6 +7,7 @@ import game3 from "../assets/img/game/game3.png";
 import CommunityCard from "./Card/CommunityCard";
 import Title from "components/Home/TitleSection/TitleName";
 import AnimWhenVisible from "./Anim";
+import { spawn } from "child_process";
 
 type Props = {};
 
@@ -39,10 +40,10 @@ export default function Community(props: Props) {
   ];
 
   return (
-    <div className="lucis-container">
-      <div className="flex justify-between items-center">
+    <div className="lucis-container community-container">
+      <div className="flex justify-between items-center mb-40px md:mb-60px xl:mb-100px">
         <AnimWhenVisible>
-          <Title titleName="Gaming community and partners"></Title>
+          <Title titleName={<span>Gaming community <br/>and partners</span>}></Title>
         </AnimWhenVisible>
       </div>
       <div className="flex items-center">

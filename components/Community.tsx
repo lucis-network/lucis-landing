@@ -13,6 +13,14 @@ type Props = {};
 export default function Community(props: Props) {
   const gameCommunityData = [
     {
+      image: game3,
+      title: "AXIE INFINITY",
+      genre: "Trading and Battle",
+      content:
+        "Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players,...",
+      src: "https://axieinfinity.com/",
+    },
+    {
       image: game1,
       title: "THETAN ARENA",
       genre: "MOBA E-Sport",
@@ -27,14 +35,6 @@ export default function Community(props: Props) {
       content:
         "StarSharks is a NFT-GameFi ecosystem based on the BSC chain developed by game players,...",
       src: "https://starsharks.com/",
-    },
-    {
-      image: game3,
-      title: "AXIE INFINITY",
-      genre: "Trading and Battle",
-      content:
-        "Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players,...",
-      src: "https://axieinfinity.com/",
     },
   ];
 
@@ -59,7 +59,7 @@ export default function Community(props: Props) {
           Hot game
         </h5>
       </div>
-      <div className="section-content grid grid-cols-1 lg:grid-cols-3 gap-250px lg:gap-10 font-saira">
+      <div className=" mt-220px lg:mt-200px xl:mt-300px grid grid-cols-1 lg:grid-cols-3 gap-200px lg:gap-10 font-saira">
         {gameCommunityData.map((item, index) => (
           <CommunityCard
             image={item.image}

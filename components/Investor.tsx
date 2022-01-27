@@ -54,7 +54,7 @@ export default function Investor(props: Props) {
         ))}
       </div>
 
-      <div className={s.text}>If you have any unused NFT game items or want to make a smart investment into our well-trained scholars</div>
+      <div className={s.text}>If you have any unused NFT game items or want to make a smart investment into our well-trained scholars ...</div>
       <div onClick={setIsModalInvestor} className={s.item_btn}>
         <Button3D title="Become our Investor" />
       </div>

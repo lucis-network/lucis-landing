@@ -52,7 +52,7 @@ export default function scholar(props: Props) {
         ))}
       </div>
 
-      <div className={s.text}>Join our scholar community to have formal training, funding, playing games, and get profit-sharing</div>
+      <div className={s.text}>Join our scholar community to have formal training, funding, playing games, and get profit-sharing ...</div>
       <div onClick={setModalScholar} className={s.item_btn}>
         <Button3D title="Become our Scholar" />
       </div>

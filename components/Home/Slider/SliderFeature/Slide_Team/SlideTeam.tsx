@@ -11,7 +11,7 @@ const GROUPS = [
     {
       name: "Anh Tran",
       position: "CEO",
-      img:"/assets/Team/tuA.png",
+      img:"/assets/Team/TuA.png",
       linkIn:"https://vn.linkedin.com/in/tuanhbeu"
     },
     {
@@ -23,7 +23,7 @@ const GROUPS = [
     {
       name: "Loi nguyen",
       position: "Development Lead",
-      img:"/assets/Team/loi.png",
+      img:"/assets/Team/Loi.png",
       linkIn:"https://www.linkedin.com/in/loi-nguyen-249a07144/"
     },
     {
@@ -46,13 +46,13 @@ const GROUPS = [
     },
     {
       name: "Long NGUYEN",
-      position: "Leader Axie Infinity",
+      position: "Axie Infinity Lead",
       img:"/assets/Team/long.png",
       linkIn:"https://www.linkedin.com/in/long-nguyen-51ba1622b/"
     },
     {
       name: "Viet NGUYEN",
-      position: "Leader Thetan",
+      position: "Thetan Lead",
       img:"/assets/Team/viet.png",
       linkIn:"https://www.linkedin.com/in/viet-nguyen-24b029196/"
     },
@@ -81,30 +81,6 @@ const GROUPS = [
       position: "HR",
       img:"/assets/Team/linh.png",
       linkIn:"https://www.linkedin.com/in/linh-nguyen-84a8441b4/"
-    },
-    {
-      name: "...",
-      position: "...",
-      img:"",
-      linkIn:"#"
-    },
-    {
-      name: "...",
-      position: "...",
-      img:"",
-      linkIn:"#"
-    },
-    {
-      name: "...",
-      position: "...",
-      img:"",
-      linkIn:"#"
-    },
-    {
-      name: "...",
-      position: "...",
-      img:"",
-      linkIn:"#"
     },
   ],
 ];

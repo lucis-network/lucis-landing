@@ -23,7 +23,7 @@ import useScroll from 'hooks/useScroll';
 const Home: NextPage = () => {
   const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";
   const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
-  const thumb = "https://lucis.network/assets/lucis_preview_169.webp";
+  const thumb = "https://lucis.network/assets/lucis_preview_169.jpg";
   useScroll()
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {

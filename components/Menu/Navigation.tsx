@@ -26,10 +26,6 @@ export const Navigation = () => {
   };
 
   const menuItems: MenuItemType[] = [
-    // {
-    //   color: "#FF008C",
-    //   text: "Home",
-    // },
     {
       color: "#FF008C",
       text: "Ecosystem",
@@ -52,6 +48,14 @@ export const Navigation = () => {
     },
     {
       color: "#FF008C",
+      text: (<a href="https://docsend.com/view/4mdgmehdtxrerwt6" target="_blank" rel="noopener noreferrer">Whitepaper</a>),
+    },
+    {
+      color: "#FF008C",
+      text: (<a href="https://docsend.com/view/ck8dg35rkwqqjtf8" target="_blank" rel="noopener noreferrer">Pitch Deck</a>),
+    },
+    {
+      color: "#FF008C",
       text: (
         <GradientButton
           onClick={() => {
@@ -64,7 +68,6 @@ export const Navigation = () => {
           Join us
         </GradientButton>
       ),
-      scrollTarget: null,
     },
   ];
 

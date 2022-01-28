@@ -28,14 +28,19 @@ const variants = {
 export type MenuItemType = {
   color: string,
   text: string | ReactElement,
-  scrollTarget?: string | null, // CSS selector of target scroll
+  scrollTarget?: string, // CSS selector of target scroll
+  onClick?: () => void,
 }
 
 export const MenuItem = (props: {item: MenuItemType}) => {
-  const scrollAndCloseMenu = useCallback(() => {
+  const click = useCallback(() => {
     if (props.item.scrollTarget) {
       scrollToSection(props.item.scrollTarget ?? '', true, -90)
     }
+    if (props.item.onClick) {
+      props.item.onClick()
+    }
+
     AppEmitter.emit("setMbMenuVisible", false)
   }, [])
 
@@ -44,7 +49,7 @@ export const MenuItem = (props: {item: MenuItemType}) => {
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
-      onClick={scrollAndCloseMenu}
+      onClick={click}
     >
       {/* <div className="icon-placeholder" style={style} /> */}
       <div className="text-placeholder font-saira text-white text-24px leading-28px p-15px">

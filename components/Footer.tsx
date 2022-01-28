@@ -57,8 +57,8 @@ export default function Header(props: Props) {
 
           <div className={s.links}>
             <span>Useful links: </span>
-            <a href="https://docsend.com/view/zk99fbvxprwa75ik" target="_blank" rel="noopener noreferrer">Whitepaper</a>
-            {/*<a href="#">Pitch Deck</a>*/}
+            <a href="https://docsend.com/view/4mdgmehdtxrerwt6" target="_blank" rel="noopener noreferrer">Whitepaper</a>
+            <a href="https://docsend.com/view/ck8dg35rkwqqjtf8" target="_blank" rel="noopener noreferrer">Pitch Deck</a>
           </div>
 
           <MailChimpSignUp />

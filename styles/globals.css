@@ -290,10 +290,17 @@ body .ant-modal-close{
 
   }
 
-  .text-placeholder {
+  .text-placeholder,
+  .text-placeholder a
+  {
     width: 200px;
     flex: 1;
     color: #fff;
+    cursor: pointer;
+  }
+
+  .text-placeholder a:hover {
+    color: white;
   }
 
   .refresh {

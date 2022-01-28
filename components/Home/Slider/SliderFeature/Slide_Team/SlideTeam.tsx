@@ -12,7 +12,13 @@ const GROUPS = [
       name: "Anh Tran",
       position: "CEO",
       img:"/assets/Team/tu_anh.png",
-      linkIn:"https://vn.linkedin.com/in/tuanhbeu"
+      linkIn:"https://www.linkedin.com/in/tuanhbeu"
+    },
+    {
+      name: "Hoa Phung",
+      position: "COO",
+      img:"/assets/Team/hoa.png",
+      linkIn:"https://www.linkedin.com/in/tuanhbeu"
     },
     {
       name: "Luat NGUYEN",
@@ -25,12 +31,6 @@ const GROUPS = [
       position: "Development Lead",
       img:"/assets/Team/Loi.png",
       linkIn:"https://www.linkedin.com/in/loi-nguyen-249a07144/"
-    },
-    {
-      name: "Viet The",
-      position: "Frontend Developer",
-      img:"/assets/Team/the.png",
-      linkIn:"https://www.linkedin.com/in/%C4%91%C3%A0o-vi%E1%BB%87t-th%E1%BA%BF-951b4922b/"
     },
     {
       name: "Hung nguyen",
@@ -58,6 +58,12 @@ const GROUPS = [
     },
   ],
   [
+    {
+      name: "Viet The",
+      position: "Frontend Developer",
+      img:"/assets/Team/the.png",
+      linkIn:"https://www.linkedin.com/in/dao-the-951b4922b/"
+    },
     {
       name: "Oanh nguyen",
       position: "UX/UI Designer",

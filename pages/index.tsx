@@ -98,7 +98,7 @@ const Home: NextPage = () => {
       </AnimWhenVisible>
       <Roadmap />
       <Team />
-      {/*<Advisor />*/}
+      <Advisor />
       {/*<AnimWhenVisible>*/}
       {/*  <Backer />*/}
       {/*</AnimWhenVisible>*/}

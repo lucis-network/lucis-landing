@@ -55,26 +55,24 @@ const Home: NextPage = () => {
 
         <title>{title}</title>
         <meta name="description" content={desc} />
-
-        <meta data-hid="og:title" name="og:title" content={title} />
-        <meta data-hid="og:description" name="og:description" content={desc} />
-        <meta data-hid="og:type" property="og:type" content="website" />
+        <meta data-hid="image" itemProp="image" content={thumb} />
 
         <meta name="apple-mobile-web-app-title" content={title} />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="application-name" content="Lucis Gaming Guild" />
 
         <meta property="og:title" content={title} />
-        <meta data-hid="description" name="description" content={desc} />
         <meta property="og:description" content={desc} />
-
-        <meta data-hid="image" itemProp="image" content={thumb} />
-        <meta data-hid="og:image" property="og:image" content={thumb} />
+        <meta property="og:image" content={thumb} />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="773" />
         <meta property="og:image:height" content="435" />
         <meta property="og:image:alt" content="Lucis: How we work model" />
+        <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content="https://lucis.network/" />
+
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <AnimWhenVisible

@@ -70,6 +70,10 @@ const Home: NextPage = () => {
 
         <meta data-hid="image" itemProp="image" content={thumb} />
         <meta data-hid="og:image" property="og:image" content={thumb} />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="773" />
+        <meta property="og:image:height" content="435" />
+        <meta property="og:image:alt" content="Lucis: How we work model" />
         <meta property="og:locale" content="en_US" />
       </Head>
 

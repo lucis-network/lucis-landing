@@ -2,10 +2,11 @@
   @apply flex flex-row items-center justify-between
 
 .text
-  @apply text-24px text-center
+  @apply text-24px text-right
   font-weight: 300
 .item_btn
-  @apply flex flex-row items-center justify-end
+  @apply flex flex-row items-center justify-end relative
+  z-index: 0
   button
     margin: 34px 0px 0px 0px
 
@@ -31,6 +32,7 @@
     @apply justify-between flex-wrap
   .text
     font-size: 20px
+    text-align: center
   .item_btn
     button
       font-size: 20px
@@ -40,6 +42,7 @@
     @apply justify-between flex-wrap
   .text
     font-size: 15px
+    text-align: center
   .item_btn
     button
       font-size: 16px
@@ -50,6 +53,7 @@
     @apply justify-between flex-wrap
   .text
     font-size: 15px
+    text-align: center
   .item_btn
     button
       font-size: 16px
@@ -61,6 +65,7 @@
 
   .text
     font-size: 14px
+    text-align: center
   .item_btn
     button
       font-size: 16px

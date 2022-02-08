@@ -36,7 +36,7 @@ export default function scholar(props: Props) {
       className="lucis-container text-white"
     >
       <AnimWhenVisible>
-        <Title titleName="FOR SCHOLARS"></Title>
+        <Title titleName="FOR SCHOLAR"></Title>
       </AnimWhenVisible>
       <div className={`${s.block_item} section-content`}>
         {scholarData.map((item, index) => (

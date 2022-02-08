@@ -26,7 +26,7 @@ export default function Community(props: Props) {
       title: "THETAN ARENA",
       genre: "MOBA E-Sport",
       content:
-        "Challenge yourself with a wide variety of game modes:MOBA & Battle Royale, coming with monthly updates and attractive rewards,...",
+        "Challenge yourself with a wide variety of game modes: MOBA & Battle Royale, coming with monthly updates and attractive rewards,...",
       src: "https://thetanarena.com",
     },
     {

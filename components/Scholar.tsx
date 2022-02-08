@@ -19,7 +19,7 @@ const scholarData = [
   {
     image: "/assets/Scholar/scholar3.png",
     content:
-      "Join Lucis Academy to get free courses / tutorials / tips to improve skills",
+      "Join Lucis Academy to get free courses, tutorials, tips to improve skills",
   },
   {
     image: "/assets/Scholar/scholar4.png",

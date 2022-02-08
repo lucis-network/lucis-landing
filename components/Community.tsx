@@ -60,7 +60,7 @@ export default function Community(props: Props) {
           Hot game
         </h5>
       </div>
-      <div className="xl:mt-300px mt-150px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10 font-saira">
+      <div className="xl:mt-300px mt-180px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10 font-saira">
         {gameCommunityData.map((item, index) => (
           <CommunityCard
             image={item.image}

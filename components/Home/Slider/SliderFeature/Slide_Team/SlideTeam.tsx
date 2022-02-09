@@ -17,8 +17,8 @@ const GROUPS = [
     {
       name: "Hoa Phung",
       position: "COO",
-      img:"/assets/Team/hoa.png",
-      linkIn:"https://www.linkedin.com/in/tuanhbeu"
+      img:"/assets/Team/hoa.png",   
+      linkIn:"#"
     },
     {
       name: "Luat NGUYEN",
@@ -36,7 +36,7 @@ const GROUPS = [
       name: "Hung nguyen",
       position: "Community Leader",
       img:"/assets/Team/hunng.png",
-      linkIn:"#"
+      linkIn:"https://www.linkedin.com/in/hwngbob/"
     },
     {
       name: "Tan NGUYEN",

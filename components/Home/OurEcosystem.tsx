@@ -11,8 +11,10 @@ export default function OurEcosystem(props: Props){
   function playVideo(){
     setContentRef(false)
     const Video = document.getElementById('Content_video')
-    //@ts-ignore
-    Video.src+='?autoplay=1&showinfo=0&modestbranding=1&rel=0&mute=1'
+    setTimeout(() => {
+      //@ts-ignore
+      Video.src+='?autoplay=1&showinfo=0&modestbranding=1&rel=0&mute=1'
+    }, 1000);
 
   }
   return(

@@ -18,7 +18,7 @@ export default function Community(props: Props) {
       title: "AXIE INFINITY",
       genre: "Trading and Battle",
       content:
-        "Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players,...",
+        "Build up a collection and use them across an ever expanding universe of games! Axie Infinity uses cutting edge technology called Blockchain to reward players",
       src: "https://axieinfinity.com/",
     },
     {
@@ -26,7 +26,7 @@ export default function Community(props: Props) {
       title: "THETAN ARENA",
       genre: "MOBA E-Sport",
       content:
-        "Challenge yourself with a wide variety of game modes:MOBA & Battle Royale, coming with monthly updates and attractive rewards,...",
+        "Challenge yourself with a wide variety of game modes: MOBA & Battle Royale, coming with monthly updates and attractive rewards",
       src: "https://thetanarena.com",
     },
     {
@@ -34,7 +34,7 @@ export default function Community(props: Props) {
       title: "STAR SHARKS",
       genre: "Battle",
       content:
-        "StarSharks is a NFT-GameFi ecosystem based on the BSC chain developed by game players,...",
+        "StarSharks is a NFT-GameFi ecosystem based on the BSC chain developed by game players",
       src: "https://starsharks.com/",
     },
   ];
@@ -60,7 +60,7 @@ export default function Community(props: Props) {
           HOT GAME
         </h5>
       </div>
-      <div className="xl:mt-300px lg:mt-200px md:mt-180px mt-180px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10">
+      <div className="xl:mt-300px lg:mt-200px md:mt-180px mt-180px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10 font-saira">
         {gameCommunityData.map((item, index) => (
           <CommunityCard
             image={item.image}

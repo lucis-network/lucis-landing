@@ -1,6 +1,6 @@
 @import "styles/common"
 .content_video
-  max-width: 920px
+  max-width: 910px
   height: 520px
   margin: 0 auto
   padding: 10px
@@ -10,8 +10,8 @@
     border-radius: 16px 
 .bg_video
   @apply absolute h-full cursor-pointer
-  top: 6px
-  left: 7px
+  top: 10px
+  left: 9px
   img
     width: 99%
 .content_video::before
@@ -21,12 +21,12 @@
   left:0
   right:0
   bottom:0
-  border-radius: 16px 
+  border-radius: 12px 
   padding: 10px 
   background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
   -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0)
-  -webkit-mask-composite: xor
-  mask-composite: exclude 
+  // -webkit-mask-composite: xor
+  // mask-composite: exclude
 .group_ic
   @apply flex flex-row items-center justify-between flex-wrap
   max-width: 920px
@@ -40,21 +40,36 @@
     max-width: 100px
     box-shadow: 0px 2px 40px rgba(255, 255, 255, 0.3)
     margin: 0 auto
+@media (min-width: 1280px)
+  .content_video
+    .bg_video
+      top: 9px
+      left: 9px
 
 @media (min-width: 1025px) and (max-width: 1279px)
   .content_video
     height: 508px
+    max-width: 886px
 
 @media (min-width: 992px) and (max-width: 1024px)
   .content_video
+    max-width: 886px
     height: 508px
 @media (min-width: 769px) and (max-width: 991px)
   .content_video
-    height: 400px
+    height: 398px
+    max-width: 690px
+    .bg_video
+      top: 9px
+      left: 8px
 @media (min-width: 640px) and (max-width: 768px)
   .content_video
+    max-width: 560px
     margin-top: 40px
-    height: 328px
+    height: 324px
+    .bg_video
+      top: 9px
+      left: 8px
   .group_ic
     justify-content: space-between
     .ic_item
@@ -66,15 +81,21 @@
     max-width: 508px
     margin-top: 40px
     height: 290px
+    .bg_video
+      top: 7px
+      left: 6px
   .group_ic
     justify-content: space-between
     .ic_item
       width: 14%
 @media (min-width: 415px) and (max-width: 539px)
   .content_video
-    max-width: 382px
+    max-width: 368px
     margin-top: 40px
-    height: 222px
+    height: 214px
+    .bg_video
+      top: 6px
+      left: 5px
   .group_ic
     justify-content: space-between
     .ic_item
@@ -82,9 +103,13 @@
 
 @media (min-width: 0px) and (max-width: 414px)
   .content_video
+    padding: 4px
     max-width: 360px !important
     margin-top: 40px
-    height: 190px
+    height: 188px
+    .bg_video
+      top: 4px
+      left: 4px
   .group_ic
     margin-top: 20px
     .ic_item

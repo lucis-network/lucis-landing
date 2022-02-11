@@ -19,7 +19,7 @@ const scholarData = [
   {
     image: "/assets/Scholar/scholar3.png",
     content:
-      "Join Lucis Academy to get free courses / tutorials / tips to improve skills",
+      "Join Lucis Academy to get free courses, tutorials, tips to improve skills",
   },
   {
     image: "/assets/Scholar/scholar4.png",
@@ -36,7 +36,7 @@ export default function scholar(props: Props) {
       className="lucis-container text-white"
     >
       <AnimWhenVisible>
-        <Title titleName="FOR SCHOLARS"></Title>
+        <Title titleName="FOR SCHOLAR"></Title>
       </AnimWhenVisible>
       <div className={`${s.block_item} section-content`}>
         {scholarData.map((item, index) => (

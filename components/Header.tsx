@@ -1,4 +1,5 @@
 import Image from './Image';
+import Link from 'next/link';
 import s from './Header.module.sass'
 import Logo from '../assets/img/logo_hoz@2x_2.png';
 import GradientButton from './Button/GradientButton';
@@ -46,7 +47,9 @@ export default function Header(props: Props) {
       <div className={`${s.pcMenu} bg-nav`}>
         <div className="container py-20px flex justify-between items-center relative z-10`">
           <div className={s.logo}>
-            <Image src={Logo} alt='logo' priority />
+            <Link href="/">
+              <Image src={Logo} alt='logo' priority />
+            </Link>
           </div>
           <nav>
             <ul className="flex justify-between items-center m-0">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import AnimWhenVisible from "./Anim";
 
 import s from "./Footer.module.sass";
@@ -59,6 +60,7 @@ export default function Header(props: Props) {
             <span>Useful links: </span>
             <a href="https://docsend.com/view/4mdgmehdtxrerwt6" target="_blank" rel="noopener noreferrer">Whitepaper</a>
             <a href="https://docsend.com/view/ck8dg35rkwqqjtf8" target="_blank" rel="noopener noreferrer">Pitch Deck</a>
+            <Link href="/career">Careers</Link>
           </div>
 
           <MailChimpSignUp />

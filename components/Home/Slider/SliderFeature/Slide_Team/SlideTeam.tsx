@@ -12,48 +12,56 @@ const GROUPS = [
       name: "Anh Tran",
       position: "CEO",
       img:"/assets/Team/tu_anh.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/tuanhbeu"
     },
     {
       name: "Hoa Phung",
       position: "COO",
       img:"/assets/Team/hoa.png",   
+      status: false,
       linkIn:"#"
     },
     {
       name: "Luat NGUYEN",
       position: "CTO",
       img:"/assets/Team/Luat.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/luat-dinh-nguyen/"
     },
     {
       name: "Loi nguyen",
       position: "Development Lead",
       img:"/assets/Team/Loi.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/loi-nguyen-249a07144/"
     },
     {
       name: "Hung nguyen",
       position: "Community Leader",
       img:"/assets/Team/hunng.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/hwngbob/"
     },
     {
       name: "Tan NGUYEN",
       position: "Research Leader",
       img:"/assets/Team/tan.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/nguyen-tan-4447b122b/?fbclid=IwAR2iXun7oqawXVSUZ81n5FQptkQZK9KZQfWNtpyLVD7FMtqYE7kRkDR5sUw"
     },
     {
       name: "Long NGUYEN",
       position: "Axie Infinity Lead",
       img:"/assets/Team/long.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/long-nguyen-51ba1622b/"
     },
     {
       name: "Viet NGUYEN",
       position: "Thetan Lead",
       img:"/assets/Team/viet.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/viet-nguyen-24b029196/"
     },
   ],
@@ -62,30 +70,35 @@ const GROUPS = [
       name: "Viet The",
       position: "Frontend Developer",
       img:"/assets/Team/the.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/dao-the-951b4922b/"
     },
     {
       name: "Oanh nguyen",
       position: "UX/UI Designer",
       img:"/assets/Team/oanh.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/oanh-oanh-795077148/"
     },
     {
       name: "Huyen nguyen",
       position: "QA Manager",
       img:"/assets/Team/huyen.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/huyen-nguyen-42b83822b/"
     },
     {
       name: "Huong do",
       position: "UX/UI Designer",
       img:"/assets/Team/huong.png",
+      status: true,
       linkIn:"http://linkedin.com/in/dawn-humo-330241187"
     },
     {
       name: "Linh NGUYEN",
       position: "HR",
       img:"/assets/Team/linh.png",
+      status: true,
       linkIn:"https://www.linkedin.com/in/linh-nguyen-84a8441b4/"
     },
   ],
@@ -143,6 +156,7 @@ export default class SimpleSliderTeam extends Component {
                       srcLinkedIn={item.linkIn}
                       nameTeam={item.name}
                       serviceTeam={item.position}
+                      setLinkin={item.status}
                       enableAnim={false}
                     />
                   ))}

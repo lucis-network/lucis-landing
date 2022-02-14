@@ -7,7 +7,8 @@ type Props = {
   serviceTeam: string;
   srcImg?: string;
   srcLinkedIn?: string;
-  enableAnim?: boolean
+  enableAnim?: boolean;
+  setLinkin?: boolean;
 };
 
 export default function CardTeam(props: Props) {
@@ -19,7 +20,7 @@ export default function CardTeam(props: Props) {
       : props.statusCard == 3
       ? "/assets/Team/bg_3.svg"
       : "/assets/Team/bg_4.svg";
-
+  const styleLinkIn = props.setLinkin == true ? {display:'block'} :{display:'none'}
   const im_team = props.statusCard == 1 ? s.im_team1 : s.im_team;
 
   return (
@@ -41,7 +42,7 @@ export default function CardTeam(props: Props) {
       <div className={s.heading_team}>
         <AnimWhenVisible enable={props.enableAnim}>
           <div className={s.blockName}>
-            <a className={s.ico} href={props.srcLinkedIn} target='_blank' rel="noopener noreferrer">
+            <a className={s.ico} style={styleLinkIn} href={props.srcLinkedIn} target='_blank' rel="noopener noreferrer">
               <img src="/assets/Team/in.svg" alt="" />
             </a>
             <span className={s.name}>{props.nameTeam}</span>

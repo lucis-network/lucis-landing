@@ -5,6 +5,7 @@ import Title from "components/Home/TitleSection/TitleName";
 import AnimWhenVisible from "./Anim";
 import Button3D from "./Button3D";
 import { AppEmitter } from "services/emitter";
+import Link from "next/link";
 
 
 type Props = {};
@@ -53,8 +54,13 @@ export default function Investor(props: Props) {
       </div>
 
       <div className={s.text}>If you have any unused NFT game items or want to make a smart investment into our well-trained scholars ...</div>
-      <div onClick={setIsModalInvestor} className={s.item_btn}>
-        <Button3D title="Follow our Investor" />
+      <div className={s.groupBtn}>
+        <Link href="/investorPakeages">
+            View investor packages
+        </Link>
+        <div onClick={setIsModalInvestor} className={s.item_btn}>
+          <Button3D title="Follow our Investor" />
+        </div>
       </div>
     </div>
 

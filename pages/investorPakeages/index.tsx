@@ -30,7 +30,7 @@ const Career: NextPage = () => {
         </div>
       
         <div className={s.ReadOur}>
-          <a href="https://docsend.com/view/4f86mptn2x8iwuf6" target="_blank">Read our docs online</a>
+          <a href="https://docsend.com/view/4f86mptn2x8iwuf6" target="_blank" rel="noreferrer">Read our docs online</a>
         </div>
       </div>
     </section>

@@ -55,7 +55,7 @@ export default function Investor(props: Props) {
 
       <div className={s.text}>If you have any unused NFT game items or want to make a smart investment into our well-trained scholars ...</div>
       <div className={s.groupBtn}>
-        <Link href="/investorPakeages">
+        <Link href="/investor-packages">
             View investor packages
         </Link>
         <div onClick={setIsModalInvestor} className={s.item_btn}>

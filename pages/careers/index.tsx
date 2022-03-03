@@ -20,6 +20,7 @@ const Career: NextPage = () => {
               <li><a href="/career/Lucis-JD-FE.html" target="_blank">Frontend Engineer</a></li>
               <li><a href="#">Technical Talent Acquisition & Recruiting Specialist</a></li>
               <li><a href="#">NEAR (Rust) & BSC (Solidity) Developer</a></li>
+              <li><a href="/career/Lucis-JD-QA.html" target="_blank">Tester / QA</a></li>
             </ul>
             <p>Contact Email: <i>huyennp@lucis.network</i></p>
           </div>

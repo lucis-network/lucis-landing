@@ -5,12 +5,29 @@ import DocHead from '../../components/DocHead'
 
 
 const Career: NextPage = () => {
+  const [showButton, setShowButton] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    });
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
   return (
     <section className="lucis-container">
       <DocHead title="Career"/>
 
       <div className={`${s.container} section-content`}>
-        <h1>Lucis View investor packages</h1>
+        <h1>For Investors</h1>
 
         <div>
           <img src="/assets/investorPakeages/baogia1.png" alt="" />
@@ -32,7 +49,12 @@ const Career: NextPage = () => {
         <div className={s.ReadOur}>
           <a href="https://docsend.com/view/4f86mptn2x8iwuf6" target="_blank" rel="noreferrer">Read our docs online</a>
         </div>
-      </div>
+      </div>      
+      {showButton && (
+        <button onClick={scrollToTop} className="btn-scrollTop">
+          &#8679;
+        </button>
+      )}
     </section>
   );
 };

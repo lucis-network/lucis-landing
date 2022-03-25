@@ -1,6 +1,7 @@
 import AnimWhenVisible from "components/Anim";
 import BoxMarket from "components/box/BoxMarket";
 import Button3D from "components/Button3D";
+import Link from "next/link";
 import s from "./Marketplace.module.sass";
 import TitleName from "./TitleSection/TitleName";
 
@@ -47,9 +48,15 @@ export default function Marketplace(props: Props) {
         </AnimWhenVisible>
 
         <div className={s.item_btn}>
-          <Button3D title="Coming soon..." />
-        </div>
+          <Link href="https://testnet.lucis.pro/">
+              Marketplace (TestNet)
+          </Link>
+
+          <Link href="https://launchpad-testnet.lucis.network/">
+            Launchpad (TestNet)
+          </Link>
       </div>
+    </div>
 
 
 

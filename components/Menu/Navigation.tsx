@@ -106,7 +106,7 @@ export const Navigation = () => {
           </p>
 
           <p>
-            Please send us the content in Telegram by clicking the bellow
+            Please send us the content in Telegram by clicking the below
             button.
           </p>
           <p>The content might follow this template:</p>
@@ -120,7 +120,7 @@ export const Navigation = () => {
               fontSize: "smaller",
             }}
           >
-            From: Alexander Geogre
+            From: Alexander George
             <br />
             Proposal: Become an Investor
             <br />

@@ -101,10 +101,10 @@ function Banner(props: Props) {
 
       {/* Total */}
       <div className={s.block_total}>
-        <TotalBanner title="Total Investors" titleNumber="10+" />
-        <TotalBanner title="Total Scholars" titleNumber="100+" />
+        <TotalBanner title="Total Investors" titleNumber="100+" />
+        <TotalBanner title="Total Scholars" titleNumber="1000+" />
         <TotalBanner title="Total Games" titleNumber="18+" />
-        <TotalBanner title="Monthly Revenue" titleNumber="$100k+" />
+        <TotalBanner title="Monthly Revenue" titleNumber="$200k+" />
       </div>
     </section>
   );

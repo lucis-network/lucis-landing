@@ -54,10 +54,11 @@ export default function Header(props: Props) {
           <nav>
             <ul className="flex justify-between items-center m-0">
               {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Home</a></li>*/}
-              <li><a href="#" onClick={() => scrollAndCloseMenu('#EcoSystem')} className='text-white text-24px leading-28px p-15px'>Ecosystem</a></li>
-              <li><a href="#" onClick={() => scrollAndCloseMenu('#Investors')} className='text-white text-24px leading-28px p-15px'>Investors</a></li>
-              <li><a href="#" onClick={() => scrollAndCloseMenu('#Scholars')} className='text-white text-24px leading-28px p-15px'>Scholars</a></li>
-              <li><a href="#" onClick={() => scrollAndCloseMenu('#Marketplace')} className='text-white text-24px leading-28px p-15px'>Marketplace</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>SocialFi</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Guid</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Marketplace</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Lucis Insight</a></li>
+              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Docs</a></li>
               {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Roadmap</a></li>*/}
               <li> <GradientButton onClick={showModal} type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap',fontWeight: '600'}}>JOIN US</GradientButton> </li>
             </ul>

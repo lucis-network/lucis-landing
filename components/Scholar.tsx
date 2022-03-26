@@ -28,7 +28,7 @@ const scholarData = [
 ];
 export default function scholar(props: Props) {
   const setModalScholar = () => {
-    AppEmitter.emit('setModalSubscript', true)
+    AppEmitter.emit('setModalSubscript', 'Scholar')
   };
   return (
     <div

@@ -30,7 +30,7 @@ const investorData = [
 ];
 export default function Investor(props: Props) {
   const setIsModalInvestor = () => {
-    AppEmitter.emit('setModalSubscript', false)
+    AppEmitter.emit('setModalSubscript', 'Investor')
   };
 
   return (

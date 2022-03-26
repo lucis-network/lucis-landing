@@ -28,32 +28,37 @@ export const Navigation = () => {
   const menuItems: MenuItemType[] = [
     {
       color: "#FF008C",
-      text: "Ecosystem",
-      scrollTarget: "#EcoSystem",
+      text: "SocialFi",
+      scrollTarget: "",
     },
     {
       color: "#FF008C",
-      text: "Investors",
-      scrollTarget: "#Investors",
-    },
-    {
-      color: "#FF008C",
-      text: "Scholars",
-      scrollTarget: "#Scholars",
+      text: "Guid",
+      scrollTarget: "",
     },
     {
       color: "#FF008C",
       text: "Marketplace",
-      scrollTarget: "#Marketplace",
+      scrollTarget: "",
     },
     {
       color: "#FF008C",
-      text: (<a href="https://docsend.com/view/4mdgmehdtxrerwt6" target="_blank" rel="noopener noreferrer">Whitepaper</a>),
+      text: "Lucis Insight",
+      scrollTarget: "",
     },
     {
       color: "#FF008C",
-      text: (<a href="https://docsend.com/view/ck8dg35rkwqqjtf8" target="_blank" rel="noopener noreferrer">Pitch Deck</a>),
+      text: "Docs",
+      scrollTarget: "",
     },
+    // {
+    //   color: "#FF008C",
+    //   text: (<a href="https://docsend.com/view/4mdgmehdtxrerwt6" target="_blank" rel="noopener noreferrer">Whitepaper</a>),
+    // },
+    // {
+    //   color: "#FF008C",
+    //   text: (<a href="https://docsend.com/view/ck8dg35rkwqqjtf8" target="_blank" rel="noopener noreferrer">Pitch Deck</a>),
+    // },
     {
       color: "#FF008C",
       text: (

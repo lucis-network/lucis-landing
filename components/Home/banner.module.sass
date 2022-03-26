@@ -13,6 +13,12 @@
 .heading
   position: relative
   z-index: 2
+  max-width: 100%
+  @media ( min-width: 1024px )
+    max-width: 46%
+  @media ( min-width: 1280px )
+    max-width: 42%
+    
   h1
     @apply text-white
     @include my-text(62px, 58px, 700)
@@ -87,10 +93,37 @@
   transform: translate(-50%, -50%)
   z-index: 1
 
+.titleTotal
+  display: flex
+  align-items: end
+  justify-content: start
+  font-family: 'Transformer'
+  color: #FFF
+  @media (max-width: 767px)
+    margin-top: 60px
+  .ic_stats
+    @media (max-width: 767px)
+      width: 45px
+  p
+    margin: 0px
+    padding-left: 20px
+    font-size: 22px
+    line-height: 32px
+    @media ( min-width: 540px )
+      font-size: 26px
+      line-height: 32px
+    @media ( min-width: 768px )
+      font-size: 32px
+      line-height: 36px
+    @media ( min-width: 992px )
+      font-size: 40px
+      line-height: 46px
+      
 .block_total
   @apply flex flex-row items-center justify-between flex-wrap relative
   padding-right: 100px
   z-index: 2
+  margin-top: 32px
 
 @media (min-width: 1280px) and (max-width: 1439px)
   .container_banner
@@ -110,7 +143,6 @@
       min-width: 500px
     .block_total
       justify-content: space-between
-      margin-top: 40px
 @media (min-width: 1024px) and (max-width: 1279px)
   .container_banner
     padding: 100px 0px 0px 4rem !important
@@ -129,7 +161,6 @@
       min-width: 500px
     .block_total
       justify-content: space-between
-      margin-top: 40px
 @media (min-width: 992px) and (max-width: 1023px)
   .container_banner
     max-width: 992px
@@ -148,7 +179,6 @@
     .block_total
       padding: 0
       justify-content: space-between
-      margin-top: 40px
 
   .im_banner
     padding-top: 100px
@@ -277,7 +307,3 @@
 @media (min-width: 0px) and (max-width: 414px)
   .container_banner
     max-width: 360px
-@media (min-width: 0px) and (max-width: 992px)
-
-  .block_total
-    margin-top: 60px

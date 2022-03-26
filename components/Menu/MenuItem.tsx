@@ -34,9 +34,9 @@ export type MenuItemType = {
 
 export const MenuItem = (props: {item: MenuItemType}) => {
   const click = useCallback(() => {
-    if (props.item.scrollTarget) {
-      scrollToSection(props.item.scrollTarget ?? '', true, -90)
-    }
+    // if (props.item.scrollTarget) {
+    //   scrollToSection(props.item.scrollTarget ?? '', true, -90)
+    // }
     if (props.item.onClick) {
       props.item.onClick()
     }

@@ -7,10 +7,12 @@ import styles from "./button.module.css";
 
 export default function Button3D({
   title,
+  onClick,
   normal = false,
 }: {
   title: string;
   normal?: boolean;
+  onClick?: ()=>void
 }) {
   const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
@@ -52,6 +54,7 @@ export default function Button3D({
           mouseX.set(e.clientX - bounds.x - bounds.width / 2);
           mouseY.set(e.clientY - bounds.y - bounds.height / 2);
         }}
+        onClick={()=>{onClick && onClick()}}
       >
         <motion.div
           // className="shapes"

@@ -5,11 +5,14 @@ import Howework from "assets/img/howwework.png";
 import AnimWhenVisible from "./Anim";
 import Link from "next/link";
 import TitleName from "./Home/TitleSection/TitleName";
+import Button3D from "./Button3D";
+import { useRouter } from "next/router";
 
 type Props = {};
 
 
 export default function Features(props: Props) {
+  const router = useRouter()
   return (
     <section className="lucis-container" id="EcoSystem">
       <TitleName titleName="Ecosystem" />
@@ -30,7 +33,15 @@ export default function Features(props: Props) {
               <br/>
               For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.
             </p>
-            <Link href="/social-fi">More detal</Link>
+              <div>
+                <Button3D 
+                title="More Detail" 
+                normal 
+                onClick={() => {
+                  router.push('/social-fi')
+                }} 
+              />
+              </div>
           </div>
           <div className={s.im_Block}>
             <img src="/assets/Feature/social-fi.png" alt="" />
@@ -45,7 +56,15 @@ export default function Features(props: Props) {
               <br/>
               <b>Team</b> will get more popular and big prizes, big donation amount from Lucis Tournament platform
             </p>
-            <Link href="/tournaments">More detal</Link>
+            <div>
+              <Button3D 
+                title="More Detail" 
+                normal 
+                onClick={() => {
+                  router.push('/tournaments')
+                }} 
+              />
+            </div>
           </div>
           <div className={s.im_Block}>
             <img src="/assets/Feature/tournaments.png" alt="" />
@@ -65,7 +84,15 @@ export default function Features(props: Props) {
               <br/>
               We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.
             </p>
-            <Link href="/ranking">More detal</Link>
+            <div>
+              <Button3D 
+                title="More Detail" 
+                normal 
+                onClick={() => {
+                  router.push('/ranking')
+                }} 
+              />
+            </div>
           </div>
           <div className={s.im_Block}>
             <img src="/assets/Feature/insight.png" alt="" />
@@ -82,7 +109,15 @@ export default function Features(props: Props) {
               <br />
               will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets
             </p>
-            <Link href="/media">More detal</Link>
+            <div>
+              <Button3D 
+                title="More Detail" 
+                normal 
+                onClick={() => {
+                  router.push('/media')
+                }} 
+              />
+            </div>
           </div>
           <div className={s.im_Block}>
             <img src="/assets/Feature/media.png" alt="" />
@@ -98,7 +133,15 @@ export default function Features(props: Props) {
             <br />
             <b>Sell</b> NFT boxes or NFT collection on Lucis marketplace
             </p>
-            <Link href="/launchpad">More detal</Link>
+            <div>
+              <Button3D 
+                title="More Detail" 
+                normal 
+                onClick={() => {
+                  router.push('/launchpad')
+                }} 
+              />
+            </div>
           </div>
           <div className={s.im_Block}>
             <img src="/assets/Feature/launchpad.png" alt="" />
@@ -120,7 +163,15 @@ export default function Features(props: Props) {
               <br />
               We provide training and experience in Play 2 Earn field, to ensure our Scholars skill & quality
             </p>
-            <Link href="/lucis-gaming-guild">More detal</Link>
+            <div>
+              <Button3D 
+                title="More Detail" 
+                normal 
+                onClick={() => {
+                  router.push('/lucis-gaming-guild')
+                }} 
+              />
+            </div>
           </div>
           <div className={s.im_Block}>
             <img src="/assets/Feature/social-fi.png" alt="" />
@@ -133,7 +184,15 @@ export default function Features(props: Props) {
             <p>
               All the best automation and handy tools for our scholars, gamers, and investors
             </p>
-            <Link href="/">More detal</Link>
+            <div>
+              <Button3D 
+                title="More Detail" 
+                normal 
+                onClick={() => {
+                  router.push('/')
+                }} 
+              />
+            </div>
           </div>
           <div className={s.im_Block}>
             <img src="/assets/Feature/insight.png" alt="" />

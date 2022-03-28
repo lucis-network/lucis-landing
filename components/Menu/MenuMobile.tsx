@@ -9,6 +9,7 @@ import Image from '../Image';
 import Logo from '../../assets/img/logo_hoz@2x_2.png';
 import {AppEmitter} from "../../services/emitter";
 import { useWindowSize } from "hooks/useWindowSize";
+import Link from "next/link";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -79,8 +80,11 @@ export const MenuMobile = (props: any) => {
       >
         <div className={`${s.menuMobile} flex justify-between items-center`}>
           <div style={{width: 150, height: 42, padding: "3px 0"}}>
-            <Image src={Logo} width={150} height={42} alt="logo" layout="responsive"></Image>
+            <Link href="/">
+              <Image src={Logo} width={150} height={42} alt="logo" layout="responsive"></Image>
+            </Link>
           </div>
+          
           <motion.div
             initial={false}
             animate={"closed"}

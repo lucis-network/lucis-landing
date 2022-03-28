@@ -34,7 +34,7 @@
 .groupButton
   margin-top: 70px
   @apply flex flex-row items-center justify-start flex-wrap
-  div
+  .item_btn
     button
       overflow: inherit
       min-width: 268px
@@ -285,7 +285,7 @@
     justify-content: space-between
     .item_btn
       width: 48%
-    div button
+    .item_btn button
       font-size: 16px !important
       min-width: 100% !important
       padding: 8px 0px
@@ -304,6 +304,9 @@
     padding-right: 0
     justify-content: space-between
 
-@media (min-width: 0px) and (max-width: 414px)
+@media (min-width: 0px) and (max-width: 413px)
   .container_banner
     max-width: 360px
+@media (min-width: 414px) and (max-width: 539px)
+  .container_banner
+    max-width: 414px

@@ -26,14 +26,14 @@ const scholarData = [
     content: "Join other Guilds to earn more Guild benefits",
   },
 ];
-export default function scholar(props: Props) {
+export default function Scholar(props: Props) {
   const setModalScholar = () => {
     AppEmitter.emit('setModalSubscript', 'Scholar')
   };
   return (
     <div
       id="Scholars"
-      className="lucis-container text-white"
+      className="text-white"
     >
       <AnimWhenVisible>
         <Title titleName="FOR SCHOLAR"></Title>

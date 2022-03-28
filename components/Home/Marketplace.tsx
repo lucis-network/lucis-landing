@@ -9,7 +9,7 @@ type Props = {};
 
 export default function Marketplace(props: Props) {
   return (
-    <section id="Marketplace" className="lucis-container">
+    <section id="Marketplace">
       <AnimWhenVisible>
         <TitleName titleName="Marketplace" />
       </AnimWhenVisible>
@@ -49,11 +49,11 @@ export default function Marketplace(props: Props) {
 
         <div className={s.item_btn}>
           <Link href="https://testnet.lucis.pro/">
-              Marketplace (TestNet)
+              Marketplace (DevNet)
           </Link>
 
           <Link href="https://launchpad-testnet.lucis.network/">
-            Launchpad (TestNet)
+            Launchpad (DevNet)
           </Link>
       </div>
     </div>

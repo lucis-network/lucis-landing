@@ -62,7 +62,7 @@ export default function Header(props: Props) {
         </div>
       </div>
           <div className={s.links}>
-            <a href="https://docsend.com/view/iwrwsmiy3eaphwkw" target="_blank" rel="noopener noreferrer">Litepaper</a>
+            <Link href="/docs">Litepaper</Link>
             <Link href="/careers">Careers</Link>
             <Link href="/investor-packages">For Investors</Link>
           </div>

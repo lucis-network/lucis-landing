@@ -7,6 +7,7 @@ import GradientButton from "../Button/GradientButton";
 import Image from "../Image";
 import {scrollToSection} from "../../utils/DOM";
 import {AppEmitter} from "../../services/emitter";
+import Link from "next/link";
 
 const variants = {
   open: {
@@ -27,6 +28,7 @@ const variants = {
 
 export type MenuItemType = {
   color: string,
+  src: string,
   text: string | ReactElement,
   scrollTarget?: string, // CSS selector of target scroll
   onClick?: () => void,
@@ -53,7 +55,7 @@ export const MenuItem = (props: {item: MenuItemType}) => {
     >
       {/* <div className="icon-placeholder" style={style} /> */}
       <div className="text-placeholder font-saira text-white text-24px leading-28px p-15px">
-        {props.item.text}
+        <Link href={props.item.src}>{props.item.text}</Link>
       </div>
     </motion.li>
   );

@@ -12,11 +12,13 @@
     border-radius: 16px
     // min-height: 148px
   .heading_investor
-    padding: 12px 24px
-    text-align: center
-    min-height: 150px
-    @include my-text(22px, 32px, 300)
-    margin-bottom: 0
+    p
+      padding: 12px 24px
+      text-align: center
+      min-height: 150px
+      margin-bottom: 0
+      @include my-text(22px, 32px, 300)
+      
 
 .content_card1
   min-height: 340px
@@ -34,9 +36,10 @@
     width: 24%
     border-radius: 16px
     .heading_investor
-      padding: 12px 8px
-      font-size: 16px
-      line-height: 24px
+      p
+        padding: 12px 8px
+        font-size: 16px
+        line-height: 24px
       
   .content_card1
     min-height: 260px
@@ -53,38 +56,36 @@
     min-width: 240px
     width: 48%
     .heading_investor
-      font-size: 20px
-      line-height: 24px
+      p
+        font-size: 20px
+        line-height: 24px
 
     .content_card1
       min-height: 300px
 @media (min-width: 415px) and (max-width: 639px)
   .content_investor
     min-height: 235px
-    max-width: 230px
     width: 47%
     .heading_investor
-      font-size: 15px
-      line-height: 20px
-      padding: 12px 8px
+      p
+        font-size: 15px
+        line-height: 20px
+        padding: 12px 8px
   .content_card1
     min-height: 240px
-    max-height: 240px
   .content_card2
     min-height: 320px !important
-    max-height: 320px
 @media (min-width: 0px) and (max-width: 414px)
   .content_investor
     width: 47%
     border-radius: 16px
     .heading_investor
-      padding: 12px 4px
-      font-size: 14px
-      line-height: 20px
+      p
+        padding: 12px 4px
+        font-size: 14px
+        line-height: 20px
       
   .content_card1
     min-height: 200px
-    max-height: 200px
   .content_card2
     min-height: 250px !important
-    max-height: 250px !important

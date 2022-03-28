@@ -30,35 +30,32 @@ export const Navigation = () => {
       color: "#FF008C",
       text: "SocialFi",
       scrollTarget: "",
+      src: "/social-fi"
     },
     {
       color: "#FF008C",
       text: "Guid",
       scrollTarget: "",
+      src: "/lucis-gaming-guild"
     },
     {
       color: "#FF008C",
       text: "Marketplace",
       scrollTarget: "",
+      src: "/launchpad"
     },
     {
       color: "#FF008C",
-      text: "Lucis Insight",
+      text: "Insight",
       scrollTarget: "",
+      src: "/ranking"
     },
     {
       color: "#FF008C",
       text: "Docs",
       scrollTarget: "",
+      src: "/docs"
     },
-    // {
-    //   color: "#FF008C",
-    //   text: (<a href="https://docsend.com/view/4mdgmehdtxrerwt6" target="_blank" rel="noopener noreferrer">Whitepaper</a>),
-    // },
-    // {
-    //   color: "#FF008C",
-    //   text: (<a href="https://docsend.com/view/ck8dg35rkwqqjtf8" target="_blank" rel="noopener noreferrer">Pitch Deck</a>),
-    // },
     {
       color: "#FF008C",
       text: (
@@ -73,6 +70,7 @@ export const Navigation = () => {
           Join us
         </GradientButton>
       ),
+      src:""
     },
   ];
 

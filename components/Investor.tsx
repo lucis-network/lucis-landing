@@ -36,7 +36,7 @@ export default function Investor(props: Props) {
   return (
     <div
       id="Investors"
-      className="lucis-container text-white"
+      className="text-white"
     >
         <AnimWhenVisible>
           <Title titleName="FOR INVESTOR"></Title>

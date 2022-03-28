@@ -1,0 +1,133 @@
+@import "styles/common"
+.container
+  color: white
+  margin-bottom: 200px
+  a
+    font-weight: 700
+    font-size: 24px
+    line-height: 29px
+    color: #FFFFFF
+    text-transform: capitalize
+    background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
+    box-shadow: 0px 6px 18px #7353CD
+    border-radius: 45px
+    padding: 20px 85px
+  
+
+
+
+
+.container_guild
+  // @media (min-width: 1024px)    
+  // @media (min-width: 1280px)    
+  margin-top: 120px !important
+  p
+    font-style: normal
+    font-weight: 400
+    text-transform: capitalize
+    color: #FFFFFF
+    @media (max-width: 0px)
+      font-size: 16px
+      line-height: 24px
+    @media (min-width: 640px)
+      font-size: 20px
+      line-height: 26px
+    @media (min-width: 992px)
+      font-size: 24px
+      line-height: 32px
+
+.content_guild
+  margin-top: 60px
+
+.titleTotal
+  display: flex
+  align-items: end
+  justify-content: start
+  font-family: 'Transformer'
+  color: #FFF
+  margin-top: 80px
+  @media (max-width: 767px)
+    margin-top: 60px
+  .ic_stats
+    @media (max-width: 767px)
+      width: 45px
+  p
+    margin: 0px
+    padding-left: 20px
+    font-size: 22px
+    line-height: 32px
+    @media ( min-width: 540px )
+      font-size: 26px
+      line-height: 32px
+    @media ( min-width: 768px )
+      font-size: 32px
+      line-height: 36px
+    @media ( min-width: 992px )
+      font-size: 40px
+      line-height: 46px
+      
+.block_total
+  @apply flex flex-row items-center justify-between flex-wrap relative
+  z-index: 2
+  margin-top: 32px
+
+@media (min-width: 1280px) and (max-width: 1439px)
+  .container_banner
+    padding: 0px 0px 0px 5rem !important
+    max-width: 1280px
+    .block_total
+      justify-content: space-between
+@media (min-width: 1024px) and (max-width: 1279px)
+  .container_banner
+    padding: 100px 0px 0px 4rem !important
+    max-width: 1024px
+    .block_total
+      justify-content: space-between
+@media (min-width: 992px) and (max-width: 1023px)
+  .container_banner
+    max-width: 992px
+    padding: 0px 3rem !important
+    .block_total
+      padding: 0
+      justify-content: space-between
+
+  .im_banner
+    padding-top: 100px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .container_banner
+    padding: 100px 2rem 0px 2rem !important
+    max-width: 768px
+  .block_total
+    justify-content: space-between
+    padding-right: 0
+
+@media (min-width: 640px) and (max-width: 767px)
+  .container_banner
+    padding: 50px 2rem 0px 2rem !important
+    max-width: 640px
+  .block_total
+    justify-content: space-between
+    padding-right: 0
+
+@media (min-width: 540px) and (max-width: 639px)
+  .container_banner
+    padding: 50px 1rem 0px 1rem !important
+    max-width: 540px
+  .block_total
+    justify-content: space-between
+    padding-right: 0
+
+
+@media (min-width: 0px) and (max-width: 539px)
+  .container_banner
+    padding: 100px 1rem 0px 1rem !important
+  .block_total
+    padding-right: 0
+    justify-content: space-between
+
+@media (min-width: 0px) and (max-width: 414px)
+  .container_banner
+    max-width: 360px
+
+

@@ -10,12 +10,10 @@ import TotalBanner from "./Total/TotalBanner";
 type Props = {};
 
 function Banner(props: Props) {
-  const showModalComingSoon = () =>{
-    AppEmitter.emit('setModalSubscript', '')
-  }
   const HandleScrollToElement = useCallback((selector: string) => {
     scrollToSection(selector ?? '', true, -90)
   }, [])
+  const href = '/social-fi'
 
 
 
@@ -29,9 +27,9 @@ function Banner(props: Props) {
             Unite Gamers Across The Globe With The Power of Decentralize Finance
           </p>
           <div className={s.groupButton}>
-            <div onClick={showModalComingSoon} className={s.item_btn}>
+            <a href={href} className={s.item_btn}>
               <Button3D title="Explore" />
-            </div>
+            </a>
             <div onClick={() => HandleScrollToElement('#EcoSystem')} className={s.item_btn}>
               <Button3D title="Ecosystem" normal />
             </div>

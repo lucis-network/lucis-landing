@@ -1,6 +1,6 @@
 import * as React from "react";
 import s from './MenuMobile.module.sass'
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./useDimensions";
 import { MenuToggle } from "./MenuToggle";
@@ -8,10 +8,11 @@ import { Navigation } from "./Navigation";
 import Image from '../Image';
 import Logo from '../../assets/img/logo_hoz@2x_2.png';
 import {AppEmitter} from "../../services/emitter";
+import { useWindowSize } from "hooks/useWindowSize";
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height + 200}px at 262px 33px)`,
+    clipPath: `circle(${height + 200}px at 280px 33px)`,
     transition: {
       type: "spring",
       stiffness: 40,
@@ -19,7 +20,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(1px at 262px 33px)",
+    clipPath: "circle(1px at 280px 30px)",
     transition: {
       delay: 0.5, // delay before hide to wait menu item hidden first
       type: "spring",
@@ -76,7 +77,7 @@ export const MenuMobile = (props: any) => {
       <div
         className={`${s.mobileMenu} fixed top-0 left-0 right-0 z-[101] bg-nav backdrop-blur-sm`}
       >
-        <div className={`${s.container} flex justify-between items-center`}>
+        <div className={`${s.menuMobile} flex justify-between items-center`}>
           <div style={{width: 150, height: 42, padding: "3px 0"}}>
             <Image src={Logo} width={150} height={42} alt="logo" layout="responsive"></Image>
           </div>

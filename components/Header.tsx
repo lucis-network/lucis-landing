@@ -51,14 +51,14 @@ export default function Header(props: Props) {
               <Image src={Logo} alt='logo' priority />
             </Link>
           </div>
-          <nav>
+          <nav className={s.menu}>
             <ul className="flex justify-between items-center m-0">
               {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Home</a></li>*/}
-              <li><a href="#" className='text-white text-24px leading-28px p-15px'>SocialFi</a></li>
-              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Guid</a></li>
-              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Marketplace</a></li>
-              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Lucis Insight</a></li>
-              <li><a href="#" className='text-white text-24px leading-28px p-15px'>Docs</a></li>
+              <li><Link href="/social-fi">SocialFi</Link></li>
+              <li><Link href="/lucis-gaming-guild">Guid</Link></li>
+              <li><Link href="/launchpad">Marketplace</Link></li>
+              <li><Link href="/ranking">Insight</Link></li>
+              <li><Link href="/docs">Docs</Link></li>
               {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Roadmap</a></li>*/}
               <li> <GradientButton onClick={showModal} type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap',fontWeight: '600'}}>JOIN US</GradientButton> </li>
             </ul>

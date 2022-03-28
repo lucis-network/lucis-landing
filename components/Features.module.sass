@@ -1,13 +1,108 @@
-@import "styles/common"
-.img
-  width: 115%
-  margin-left: -7.5%
-  margin-top: 100px
+.itemEcosystem
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-bottom: 60px
+  @media ( max-width: 767px )
+    flex-direction: column
+    align-items: start
+    padding-bottom: 40px
+  .heading
+    @media ( max-width: 767px )
+    max-width: 100%
+    padding-top: 40px
+    @media ( min-width: 768px )
+      max-width: 56%
+      padding-top: 40px
+      padding-right: 20px
+    @media ( min-width: 992px )
+      padding-top: 84px
+      padding-right: 60px
+    h1
+      font-weight: 700
+      text-transform: uppercase
+      color: #FFFFFF
+      @media ( min-width: 0px )
+        font-size: 20px
+        line-height: 32px
+      @media ( min-width: 768px )
+        font-size: 24px
+        line-height: 32px
+      @media ( min-width: 992px )
+        font-size: 28px
+        line-height: 32px
+      @media ( min-width: 1280px )
+        font-size: 32px
+        line-height: 38px
+        
+    h2
+      font-weight: 300
+      text-transform: capitalize
+      color: #FFFFFF
+      padding: 26px 0px
+      @media ( min-width: 0px )
+        font-size: 20px
+        line-height: 32px
+      @media ( min-width: 768px )
+        font-size: 24px
+        line-height: 32px
+      @media ( min-width: 992px )
+        font-size: 28px
+        line-height: 32px
+      @media ( min-width: 1280px )
+        font-size: 32px
+        line-height: 38px
+    p
+      font-style: normal
+      font-weight: 500
+      text-transform: capitalize
+      color: #FFFFFF
+      padding-bottom: 66px
+      @media ( min-width: 0px )
+        font-size: 16px
+        line-height: 24px
+      @media ( min-width: 992px )
+        font-size: 20px
+        line-height: 28px
+      @media ( min-width: 1280px )
+        font-size: 24px
+        line-height: 34px
+    a
+      font-weight: 700
+      color: #FFFFFF
+      text-transform: capitalize
+      background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
+      box-shadow: 0px 6px 18px #7353CD
+      border-radius: 16px
+      @media ( min-width: 0px )
+        font-size: 20px
+        line-height: 29px
+        text-align: center
+        margin-bottom: 60px
+        padding: 8px 52px
+        display: inherit
+      @media ( min-width: 640px )
+        padding: 12px 52px
+        font-size: 20px
+        line-height: 29px
+        display: inline-flex
+        margin-bottom: 80px
+      @media ( min-width: 992px )
+        padding: 12px 85px
+        font-size: 24px
+        line-height: 29px
+      
+  .im_Block
+    @media ( max-width: 767px )
+      margin-bottom: 10px
+      margin-top: 60px
+      order: -1
 
-@media (min-width: 0px) and (max-width: 413px)
-  .img
-    margin-top: 30px 
 
-@media (min-width: 0px) and (max-width: 540px)
-  .img
-    margin-top: 40px 
+.itemEcosystem:nth-child(even)
+  .heading
+    order: 1
+    padding-left: 60px
+    @media ( max-width: 767px )
+      order: 0
+      padding-left: 0px

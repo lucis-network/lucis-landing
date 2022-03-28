@@ -29,6 +29,23 @@
 .im_token img {
   width: 100%;
 }
+@media (min-width: 0px){
+  .chartContainer{
+    width: 100%;
+  }
+  .im_token {
+    width: 100%;
+  }
+}
+@media (min-width: 768px){
+  .chartContainer{
+    flex: 46%;
+  }
+  .im_token {
+    flex: 46%;
+  }
+}
+
 .highcharts-data-table table {
   font-family: Verdana, sans-serif;
   border-collapse: collapse;
@@ -83,13 +100,6 @@
   }
   .highchartsFigure img{
     max-width: 100% !important
-  }
-  .im_token {
-    width: 100%;
-    margin-right: 0;
-  }
-  .chartContainer {
-    width: 100%;
   }
 }
 

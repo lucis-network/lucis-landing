@@ -8,16 +8,11 @@ import Banner from "components/Home/banner";
 import Community from "components/Community";
 import SlideGame from "components/SlideGame";
 import Features from "components/Features";
-import Investor from "components/Investor";
-import Scholar from "components/Scholar";
-import OurEcosystem from "components/Home/OurEcosystem";
 import Roadmap from "components/Home/Roadmap";
 import Team from "components/Home/Team";
 import Advisor from "components/Home/Advisor";
-import Backer from "components/Home/Backers";
 import TokenAllocation from "components/TokenAllocation";
 import AnimWhenVisible from "components/Anim";
-import Marketplace from "components/Home/Marketplace";
 import useScroll from 'hooks/useScroll';
 
 const Home: NextPage = () => {
@@ -87,23 +82,13 @@ const Home: NextPage = () => {
       <AnimWhenVisible>
         <SlideGame />
       </AnimWhenVisible>
-      {/* <HotGame /> */}
       <Features />
-      <Investor />
-      <Scholar />
-      <Marketplace />
-      <AnimWhenVisible>
-        <OurEcosystem />
-      </AnimWhenVisible>
       <AnimWhenVisible>
         <TokenAllocation />
       </AnimWhenVisible>
       <Roadmap />
       <Team />
       <Advisor />
-      {/*<AnimWhenVisible>*/}
-      {/*  <Backer />*/}
-      {/*</AnimWhenVisible>*/}
       {showButton && (
         <button onClick={scrollToTop} className="btn-scrollTop">
           &#8679;

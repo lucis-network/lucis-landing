@@ -18,7 +18,7 @@ export default function OurEcosystem(props: Props){
 
   }
   return(
-    <section id="Medias" className="lucis-container">
+    <section id="Medias">
       <TitleName titleName='Lucis Media' />
       <div className="section-content">
         <div className={s.content_video}>
@@ -61,6 +61,13 @@ export default function OurEcosystem(props: Props){
             </a>
           </div>
         </div>
+
+
+        <p>
+          • Lucis TV <br />
+          • Lucis blog <br />
+          Will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets
+        </p>
       </div>
     </section>
   )

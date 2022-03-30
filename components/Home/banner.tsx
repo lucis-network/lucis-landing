@@ -1,5 +1,6 @@
 import Button3D from "components/Button3D";
 import PopupJoinUs from "components/PopUp/PopupJoinUs";
+import { useRouter } from "next/router";
 import { useCallback, useState } from "react";
 import { AppEmitter } from "services/emitter";
 import { scrollToSection } from "utils/DOM";
@@ -10,12 +11,10 @@ import TotalBanner from "./Total/TotalBanner";
 type Props = {};
 
 function Banner(props: Props) {
+  const router = useRouter()
   const HandleScrollToElement = useCallback((selector: string) => {
     scrollToSection(selector ?? '', true, -90)
   }, [])
-  const href = '/social-fi'
-
-
 
   return (
     <section className={`${s.container_banner}`}>
@@ -27,9 +26,13 @@ function Banner(props: Props) {
             Unite Gamers Across The Globe With The Power of Decentralize Finance
           </p>
           <div className={s.groupButton}>
-            <a href={href} className={s.item_btn}>
-              <Button3D title="Explore" />
-            </a>
+            <div className={s.item_btn}>
+              <Button3D                 
+                onClick={() => {
+                  router.push('/social-fi')
+                }}  
+                title="Explore" />
+            </div>
             <div onClick={() => HandleScrollToElement('#EcoSystem')} className={s.item_btn}>
               <Button3D title="Ecosystem" normal />
             </div>
@@ -39,7 +42,6 @@ function Banner(props: Props) {
           <img src="/assets/Banner/vr-glass.png" alt="" />
         </div>
       </div>
-      <PopupJoinUs />
       {/* Total */}
 
 

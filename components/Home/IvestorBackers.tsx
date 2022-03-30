@@ -3,10 +3,10 @@ import TitleName from './TitleSection/TitleName'
 
 type Props = {}
 
-export default function PartnersStrategic(props: Props) {
+export default function IvestorBackers(props: Props) {
   return(
     <section className="lucis-container">
-      <TitleName titleName='Strategic & Community partners' />
+      <TitleName titleName='Investors & Backers' />
 
       {/* <div className={`${s.block_item} section-content`}>
           <div className={s.item_backer}>

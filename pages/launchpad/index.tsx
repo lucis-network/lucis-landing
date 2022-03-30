@@ -29,11 +29,6 @@ const Career: NextPage = () => {
       <DocHead title="Lucis Launchpad & Marketplace"/>
 
       <div className={`${s.container}`}>
-        <p>
-          - Game publisher can host INO to sell NFT mistery boxes to Lucis community or users<br />
-          <br />
-          - Sell NFT boxes or NFT collection on Lucis marketplace
-        </p>
         <Marketplace />
       </div>      
       {showButton && (

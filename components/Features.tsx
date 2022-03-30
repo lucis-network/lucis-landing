@@ -21,13 +21,10 @@ export default function Features(props: Props) {
         <div className={s.itemEcosystem}>
           <div className={s.heading}>
             <h1>Social-Fi network platform</h1>
-            <h2>Social platform and User Ranking system</h2>
             <p>
               <b>Social platform</b> <br/>
               <br/>
-              A social network specialized for gamers in both NFT & traditional gamers<br/>
-              <br/>
-              Highly customizable for every popular games<br/>
+              A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games<br/>
               <br />
               <b>User Ranking system</b><br/>
               <br/>
@@ -44,13 +41,12 @@ export default function Features(props: Props) {
               </div>
           </div>
           <div className={s.im_Block}>
-            <img src="/assets/Feature/social-fi.png" alt="" />
+            <img src="/assets/Feature/social_fi1.png" alt="" />
           </div>
         </div>
         <div className={s.itemEcosystem}>
           <div className={s.heading}>
             <h1>Tournaments</h1>
-            <h2>Create and run</h2>
             <p>
               <b>A platform</b> for creating, running tournament events.<br/>
               <br/>
@@ -67,13 +63,12 @@ export default function Features(props: Props) {
             </div>
           </div>
           <div className={s.im_Block}>
-            <img src="/assets/Feature/tournaments.png" alt="" />
+            <img src="/assets/Feature/tournaments1.png" alt="" />
           </div>
         </div>
         <div className={s.itemEcosystem}>
           <div className={s.heading}>
             <h1>Lucis Insight & Game Ranking system</h1>
-            <h2>lucis insight and game ranking system</h2>
             <p>
               <b>Lucis Insight</b> <br/>
               <br/>
@@ -95,16 +90,14 @@ export default function Features(props: Props) {
             </div>
           </div>
           <div className={s.im_Block}>
-            <img src="/assets/Feature/insight.png" alt="" />
+            <img src="/assets/Feature/insight1.png" alt="" />
           </div>
         </div>
         <div className={s.itemEcosystem}>
           <div className={s.heading}>
             <h1>Lucis Media</h1>
-            <h2>lucis TV and Lucis blog</h2>
             <p>
-              <b>• Lucis TV</b><br/>
-              <b>• Lucis blog</b><br/>
+              <b>lucis TV and Lucis blog</b>
               <br/>
               <br />
               will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets
@@ -120,13 +113,12 @@ export default function Features(props: Props) {
             </div>
           </div>
           <div className={s.im_Block}>
-            <img src="/assets/Feature/media.png" alt="" />
+            <img src="/assets/Feature/media1.png" alt="" />
           </div>
         </div>
         <div className={s.itemEcosystem}>
           <div className={s.heading}>
             <h1>Launchpad & Marketplace</h1>
-            <h2>can host and sell</h2>
             <p>
             <b>Game publisher</b> can host INO to sell NFT mistery boxes to Lucis community or users<br/>
             <br/>
@@ -144,18 +136,19 @@ export default function Features(props: Props) {
             </div>
           </div>
           <div className={s.im_Block}>
-            <img src="/assets/Feature/launchpad.png" alt="" />
+            <img src="/assets/Feature/launchpad_marketplace.png" alt="" />
           </div>
         </div>
         <div className={s.itemEcosystem}>
           <div className={s.heading}>
             <h1>Gaming Guild</h1>
-            <h2>gaming guild tools and lucis academy</h2>
             <p>
-              We're starting from original Lucis Gaming Guild.
+              We're starting from original Lucis Gaming Guild.<br/>
+              <br/>
               <b>Gaming Guild tools:</b> <br/>
               <br/>
               Our Lucis Guild Platform will connect investors to scholars<br/>
+              <br/>
               <br/>
               <b>Lucis Academy:</b><br/>
               <br/>
@@ -174,28 +167,35 @@ export default function Features(props: Props) {
             </div>
           </div>
           <div className={s.im_Block}>
-            <img src="/assets/Feature/social-fi.png" alt="" />
+            <img src="/assets/Feature/guild1.png" alt="" />
           </div>
         </div>
         <div className={s.itemEcosystem}>
           <div className={s.heading}>
-            <h1>Automation tool zone</h1>
-            <h2>tool</h2>
-            <p>
-              All the best automation and handy tools for our scholars, gamers, and investors
-            </p>
-            <div>
-              <Button3D 
-                title="More Detail" 
-                normal 
-                onClick={() => {
-                  router.push('/')
-                }} 
-              />
+            <div className={s.item}>
+              <h1>Automation tool zone</h1>
+              <p>
+                All the best automation and handy tools for our scholars, gamers, and investors
+              </p>
+            </div>
+            <div className={s.item}>
+              <h1>Streaming platform</h1>
+              <p>
+                Is coming soon, and be apart of our SocialFi platform
+              </p>
+              <div>
+                <Button3D 
+                  title="Coming Soon" 
+                  normal 
+                  onClick={() => {
+                    router.push('/')
+                  }} 
+                />
+              </div>
             </div>
           </div>
           <div className={s.im_Block}>
-            <img src="/assets/Feature/insight.png" alt="" />
+            <img src="/assets/Feature/automation_tool_zone2.png" alt="" />
           </div>
         </div>
       </div>

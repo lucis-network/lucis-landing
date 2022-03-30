@@ -14,6 +14,8 @@ import Advisor from "components/Home/Advisor";
 import TokenAllocation from "components/TokenAllocation";
 import AnimWhenVisible from "components/Anim";
 import useScroll from 'hooks/useScroll';
+import PartnersStrategic from "components/Home/Backers";
+import IvestorBackers from "components/Home/IvestorBackers";
 
 const Home: NextPage = () => {
   const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";
@@ -78,11 +80,25 @@ const Home: NextPage = () => {
       >
         <Banner />
       </AnimWhenVisible>
-      <Community />
+      <AnimWhenVisible>
+        <Community />
+      </AnimWhenVisible>
+
+      <AnimWhenVisible>
+        <Features />
+      </AnimWhenVisible>
+
       <AnimWhenVisible>
         <SlideGame />
       </AnimWhenVisible>
-      <Features />
+
+      <AnimWhenVisible>
+        <PartnersStrategic />
+      </AnimWhenVisible>
+
+      <AnimWhenVisible>
+        <IvestorBackers />
+      </AnimWhenVisible>
       <AnimWhenVisible>
         <TokenAllocation />
       </AnimWhenVisible>

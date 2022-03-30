@@ -13,6 +13,11 @@ export default function Marketplace(props: Props) {
       <AnimWhenVisible>
         <TitleName titleName="Marketplace" />
       </AnimWhenVisible>
+      <p style={{marginTop: '40px'}}>
+        - Game publisher can host INO to sell NFT mistery boxes to Lucis community or users<br />
+        <br />
+        - Sell NFT boxes or NFT collection on Lucis marketplace
+      </p>
 
       <div className={`${s.content} section-content`}>
         <div className={s.conatainer_box}>
@@ -53,7 +58,7 @@ export default function Marketplace(props: Props) {
           </Link>
 
           <Link href="https://launchpad-testnet.lucis.network/">
-            Launchpad (DevNet)
+            Launchpad (TestNet)
           </Link>
       </div>
     </div>

@@ -6,6 +6,8 @@ import Link from "next/link";
 import TotalBanner from "components/Home/Total/TotalBanner";
 import Investor from "components/Investor";
 import Scholar from "components/Scholar";
+import PopupJoinUs from "components/PopUp/PopupJoinUs";
+import TitleName from "components/Home/TitleSection/TitleName";
 
 
 const Career: NextPage = () => {
@@ -29,8 +31,9 @@ const Career: NextPage = () => {
   return (
     <section className={`${s.container_guild} lucis-container`}>
       <DocHead title="Lucis Launchpad & Marketplace"/>
+      <TitleName titleName="Lucis Launchpad & Marketplace" />
 
-      <p>
+      <p style={{marginTop: '40px'}}>
         We started from original Lucis Gaming Guild, transformed to SocialFi.<br />
         <br />
         Gaming Guild tools:<br />
@@ -60,6 +63,9 @@ const Career: NextPage = () => {
       <div className={s.content_guild}>
         <Scholar />
       </div>
+
+      <PopupJoinUs />
+
     </section>
   );
 };

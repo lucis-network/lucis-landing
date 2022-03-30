@@ -2,10 +2,6 @@ import * as React from "react";
 import {ReactElement, useCallback} from "react";
 
 import { motion } from "framer-motion";
-import Logo from "../../assets/img/logo.png";
-import GradientButton from "../Button/GradientButton";
-import Image from "../Image";
-import {scrollToSection} from "../../utils/DOM";
 import {AppEmitter} from "../../services/emitter";
 import Link from "next/link";
 

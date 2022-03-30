@@ -8,7 +8,6 @@ import { Navigation } from "./Navigation";
 import Image from '../Image';
 import Logo from '../../assets/img/logo_hoz@2x_2.png';
 import {AppEmitter} from "../../services/emitter";
-import { useWindowSize } from "hooks/useWindowSize";
 import Link from "next/link";
 
 const sidebar = {

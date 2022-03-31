@@ -1,5 +1,5 @@
 .contentSubmenu
-  li
+  .item
     cursor: pointer
     transition: 0.5s
     a
@@ -8,8 +8,12 @@
       border-bottom: 1px solid #D9D9D9
       padding: 12px 2px
       display: block
-    li:last-child a
-      border-bottom: none
-    li:hover
-      background: linear-gradient(121.07deg, rgba(255, 255, 255, 0.3) -26.88%, rgba(255, 255, 255, 0) 73.85%)
-      box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.2)
+  .item:last-child a
+    border-bottom: none
+  .item:hover
+    background: linear-gradient(121.07deg, rgba(255, 255, 255, 0.3) -26.88%, rgba(255, 255, 255, 0) 73.85%)
+    box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.2)
+
+  .hello
+    opacity: 0.4
+    pointer-events: none

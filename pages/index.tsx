@@ -92,13 +92,13 @@ const Home: NextPage = () => {
         <SlideGame />
       </AnimWhenVisible>
 
-      <AnimWhenVisible>
+      {/* <AnimWhenVisible>
         <PartnersStrategic />
       </AnimWhenVisible>
 
       <AnimWhenVisible>
         <IvestorBackers />
-      </AnimWhenVisible>
+      </AnimWhenVisible> */}
       <AnimWhenVisible>
         <TokenAllocation />
       </AnimWhenVisible>

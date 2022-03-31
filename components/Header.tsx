@@ -5,7 +5,7 @@ import Logo from '../assets/img/logo_hoz@2x_2.png';
 import GradientButton from './Button/GradientButton';
 import { useWindowSize } from '../hooks/useWindowSize';
 import { MenuMobile } from './Menu/MenuMobile';
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {scrollToSection} from "../utils/DOM";
 
 import { Modal, Button } from 'antd';
@@ -16,6 +16,9 @@ type Props = {
 };
 export default function Header(props: Props) {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isSubMenu, setIsSubMenu] = useState(false);
+
+  const showSubMenu = isSubMenu ? s.isSubmenu : s.hideSubmenu
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -34,6 +37,13 @@ export default function Header(props: Props) {
     scrollToSection(selector ?? '', true, -90)
   }, [])
 
+  const handleMouseOver = () =>{
+    setIsSubMenu(true)
+  }
+  const handleMouseLeave = () => {
+    setIsSubMenu(false)
+  }
+
   useEffect(() => {
     const subscription = AppEmitter.addListener('setJoinUsVisible', (visible: boolean) => {
       setIsModalVisible(visible)
@@ -42,6 +52,18 @@ export default function Header(props: Props) {
       subscription.remove();
     }
   }, [])
+  
+
+  const datas = [
+    {id: 1,href:'social-fi', title: 'Social-Fi network platform',disabled: false},
+    {id: 2,href:'tournaments', title: 'Tournaments',disabled: false},
+    {id: 3,href:'insight', title: 'Lucis Insight & Game Ranking system',disabled: false},
+    {id: 4,href:'media', title: 'Lucis Media',disabled: false},
+    {id: 5,href:'launchpad', title: 'Launchpad & Marketplace',disabled: false},
+    {id: 6,href:'lucis-gaming-guild', title: 'Gaming Guild',disabled: false},
+    {id: 7,href:'ranking', title: 'Automation tool zone',disabled: true},
+    {id: 8,href:'ranking', title: 'Streaming platform',disabled: true},
+  ]
 
   if (width > 1024) {
     return (
@@ -54,22 +76,24 @@ export default function Header(props: Props) {
           </div>
           <nav className={s.menu}>
             <ul className="flex justify-between items-center m-0">
-              {/*<li><a href="#" className='text-white text-24px leading-28px p-15px'>Home</a></li>*/}
               <li><Link href="/social-fi">SocialFi</Link></li>
               <li><Link href="/lucis-gaming-guild">Guid</Link></li>
               <li><Link href="/launchpad">Marketplace</Link></li>
               <li><Link href="/ranking">Insight</Link></li>
               <li><Link href="/docs">Docs</Link></li>
 
-              {/* <li className={s.menuItem}>
-                <img src="/assets/header/ic_submenu.svg" alt="" />
-                  <div className={s.subMenu}>
-                    <div className={s.contentSubmenu}>
-                      <img src="/assets/header/ic_item_sub_menu.svg" alt="" />
-                        <SubMenu />
-                    </div>
+              <li className={s.menuItem} 
+                onMouseOver={handleMouseOver}
+                onMouseLeave={handleMouseLeave}
+              >
+                <img className={s.ic_submenu} onClick={()=>{setIsSubMenu(!isSubMenu)}} src="/assets/header/ic_submenu.svg" alt="" />
+                <div className={`${s.subMenu} ${showSubMenu}`}>
+                  <div className={s.contentSubmenu}>
+                    <img src="/assets/header/ic_item_sub_menu.svg" alt="" />
+                      <SubMenu onClick={()=>{setIsSubMenu(false)}} datas={datas} />
                   </div>
-              </li> */}
+                </div>
+              </li>
               <li> <GradientButton onClick={showModal} type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap',fontWeight: '600'}}>JOIN US</GradientButton> </li>
             </ul>
           </nav>

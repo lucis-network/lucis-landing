@@ -1,18 +1,28 @@
-import Image from "./Image";
 import s from "./Features.module.sass";
-import SimpleSlider from "./Home/Slider/SliderFeature/slideFeature";
-import Howework from "assets/img/howwework.png";
-import AnimWhenVisible from "./Anim";
-import Link from "next/link";
 import TitleName from "./Home/TitleSection/TitleName";
 import Button3D from "./Button3D";
 import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
 
 type Props = {};
 
 
 export default function Features(props: Props) {
   const router = useRouter()
+  const [width, setWidth] = useState(0)  
+  const handleResize = () =>{
+    const newWidth = window.innerWidth
+    setWidth(newWidth)
+  }
+  useEffect(() => {   
+    window.addEventListener("resize", handleResize)
+    return ()=>{
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])  
+
+  const styleWidth = width >= 768 ? s.setMargin: ''
+
   return (
     <section className="lucis-container" id="EcoSystem">
       <TitleName titleName="Ecosystem" />
@@ -89,7 +99,7 @@ export default function Features(props: Props) {
               />
             </div>
           </div>
-          <div className={s.im_Block}>
+          <div className={`${s.im_Block} ${styleWidth}`}>
             <img src="/assets/Feature/insight1.png" alt="" />
           </div>
         </div>
@@ -166,7 +176,7 @@ export default function Features(props: Props) {
               />
             </div>
           </div>
-          <div className={s.im_Block}>
+          <div className={`${s.im_Block} ${styleWidth}`}>
             <img src="/assets/Feature/guild1.png" alt="" />
           </div>
         </div>

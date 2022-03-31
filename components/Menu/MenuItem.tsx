@@ -28,18 +28,21 @@ export type MenuItemType = {
   text: string | ReactElement,
   scrollTarget?: string, // CSS selector of target scroll
   onClick?: () => void,
+  subMenu?: string | ReactElement,
 }
 
 export const MenuItem = (props: {item: MenuItemType}) => {
   const click = useCallback(() => {
     // if (props.item.scrollTarget) {
     //   scrollToSection(props.item.scrollTarget ?? '', true, -90)
-    // }
-    if (props.item.onClick) {
-      props.item.onClick()
-    }
-
-    AppEmitter.emit("setMbMenuVisible", false)
+    // 
+      if (props.item.onClick) {
+        props.item.onClick()
+      }
+        // if (props.item.subMenu) {
+          
+        // }
+        AppEmitter.emit("setMbMenuVisible", false)
   }, [])
 
   return (

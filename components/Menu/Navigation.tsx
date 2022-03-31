@@ -29,32 +29,35 @@ export const Navigation = () => {
     {
       color: "#FF008C",
       text: "SocialFi",
-      scrollTarget: "",
       src: "/social-fi"
     },
     {
       color: "#FF008C",
       text: "Guid",
-      scrollTarget: "",
       src: "/lucis-gaming-guild"
     },
     {
       color: "#FF008C",
       text: "Marketplace",
-      scrollTarget: "",
       src: "/launchpad"
     },
     {
       color: "#FF008C",
       text: "Insight",
-      scrollTarget: "",
       src: "/ranking"
     },
     {
       color: "#FF008C",
       text: "Docs",
-      scrollTarget: "",
       src: "/docs"
+    },
+    {
+      color: "#FF008C",
+      text: "Docs",
+      src: "/docs",
+      subMenu: (
+        <h1>sub menu</h1>
+      )
     },
     {
       color: "#FF008C",

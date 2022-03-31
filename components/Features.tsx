@@ -9,19 +9,6 @@ type Props = {};
 
 export default function Features(props: Props) {
   const router = useRouter()
-  const [width, setWidth] = useState(0)  
-  const handleResize = () =>{
-    const newWidth = window.innerWidth
-    setWidth(newWidth)
-  }
-  useEffect(() => {   
-    window.addEventListener("resize", handleResize)
-    return ()=>{
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])  
-
-  const styleWidth = width >= 768 ? s.setMargin: ''
 
   return (
     <section className="lucis-container" id="EcoSystem">
@@ -99,7 +86,7 @@ export default function Features(props: Props) {
               />
             </div>
           </div>
-          <div className={`${s.im_Block} ${styleWidth}`}>
+          <div className={`${s.im_Block} ${s.setMargin}`}>
             <img src="/assets/Feature/insight1.png" alt="" />
           </div>
         </div>
@@ -176,7 +163,7 @@ export default function Features(props: Props) {
               />
             </div>
           </div>
-          <div className={`${s.im_Block} ${styleWidth}`}>
+          <div className={`${s.im_Block} ${s.setMargin}`}>
             <img src="/assets/Feature/guild1.png" alt="" />
           </div>
         </div>

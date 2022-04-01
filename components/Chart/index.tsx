@@ -221,10 +221,9 @@ export default function PieChart() {
       <div className={style.im_token}>
         <img
           src="/assets/token_allocation/img_token_allocation.png"
-          // style={{ maxWidth: imgWidth }}
         />
       </div>
-      <div id="chart-container" style={{marginTop: '30px'}} className={style.chartContainer} >
+      <div id="chart-container" className={style.chartContainer} >
         <img src="/assets/token_allocation/im_chart.png" alt="" />
       </div>
     </div>

@@ -76,8 +76,7 @@ export default function Header(props: Props) {
           </div>
           <nav className={s.menu}>
             <ul className="flex justify-between items-center m-0">
-              <li><Link href="/social-fi">SocialFi</Link></li>
-              <li><Link href="/lucis-gaming-guild">Guid</Link></li>
+              <li><Link href="/tournaments">Tournaments</Link></li>
               <li><Link href="/launchpad">Marketplace</Link></li>
               <li><Link href="/ranking">Insight</Link></li>
               <li><Link href="/docs">Docs</Link></li>

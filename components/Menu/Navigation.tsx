@@ -93,13 +93,8 @@ export const Navigation = () => {
   const menuItems: MenuItemType[] = [
     {
       color: "#FF008C",
-      text: "SocialFi",
-      src: "/social-fi",
-    },
-    {
-      color: "#FF008C",
-      text: "Guid",
-      src: "/lucis-gaming-guild"
+      text: "Tournaments",
+      src: "/tournaments",
     },
     {
       color: "#FF008C",

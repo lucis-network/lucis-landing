@@ -71,7 +71,7 @@ const datas = [
     `,
     titleButton: "More Detail",
     href: "media",
-    srcImg: "/assets/Feature/media1.png",
+    srcImg: "/assets/Feature/media2.png",
   },
   {
     id: 5,

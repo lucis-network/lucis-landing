@@ -44,7 +44,7 @@ const Career: NextPage = () => {
     <section className={`${s.wrapper} lucis-container`}>
       <DocHead title="Lucis Tournaments"/>
 
-      <div className={`${s.container} section-content`}>
+      <div className={`${s.container}`}>
         <ItemEcosystem dataEcosystems = {datas} />
       </div>      
       {showButton && (

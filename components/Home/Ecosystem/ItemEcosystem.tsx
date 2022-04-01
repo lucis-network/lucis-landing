@@ -30,7 +30,7 @@ export default function ItemEcosystem(props: Props) {
           />
           </div>
       </div>
-      <div className={`${s.im_Block} ${e.id == 3 || e.id == 6 ? s.setMargin: ''}`}>
+      <div className={`${s.im_Block} ${e.id == 3 || e.id == 6 ? s.setMargin: ''} ${e.id == 4 ? s.setMarginleft: e.id == 3 ? s.setMarginRight: ''}`}>
         <img src={`${e.srcImg}`} alt="" />
       </div>
     </div>

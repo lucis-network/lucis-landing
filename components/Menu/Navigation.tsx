@@ -120,7 +120,7 @@ export const Navigation = () => {
       color: "#FF008C",
       text: (
         <div>
-          <div onClick={showSubmenu}>click me</div>
+          <div onClick={showSubmenu}>Ecosystem</div>
           <ul style={{height: styleSub}} className={s.submenu}>
           {dataSubMenu.map((data:any) =>(
             <li className={`${data.disabled == true && s.disabled}`} key={data.id} onClick={hideMenu}><Link href="/social-fi">{data.text}</Link></li>

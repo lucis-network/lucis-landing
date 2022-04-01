@@ -24,7 +24,7 @@
 .im_token{
   flex: 460px 0;
   margin-right: 20px;
-  max-width: 610px;
+  max-width: 567px;
 }
 .im_token img {
   width: 100%;
@@ -35,14 +35,16 @@
   }
   .im_token {
     width: 100%;
+    padding-right: 0px;
   }
 }
 @media (min-width: 768px){
   .chartContainer{
-    flex: 46%;
+    flex: 32%;
   }
   .im_token {
-    flex: 46%;
+    padding-right: 120px;
+    flex: 32%;
   }
 }
 

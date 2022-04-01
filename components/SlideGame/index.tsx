@@ -52,10 +52,10 @@ export default function SlideGame() {
 
   return (
     <div className="w-full mt-60px md:mt-97px">
-      <div className="lucis-container" style={{paddingBottom: '40px'}}>
+      <div className="lucis-container">
         <TitleName titleName="Game Partners" />
       </div>
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%" }} className="section-content">
         <Marquee speed={90} gradient={false}>
           <SlideItem
             addressGame='https://greenbeli.io/'

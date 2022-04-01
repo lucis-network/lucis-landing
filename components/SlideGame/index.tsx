@@ -1,3 +1,4 @@
+import TitleName from "components/Home/TitleSection/TitleName";
 import { useWindowSize } from "hooks/useWindowSize";
 import React from "react";
 import Marquee from "react-fast-marquee";
@@ -51,7 +52,10 @@ export default function SlideGame() {
 
   return (
     <div className="w-full mt-60px md:mt-97px">
-      <div style={{ width: "100%" }}>
+      <div className="lucis-container">
+        <TitleName titleName="Game Partners" />
+      </div>
+      <div style={{ width: "100%" }} className="section-content">
         <Marquee speed={90} gradient={false}>
           <SlideItem
             addressGame='https://greenbeli.io/'

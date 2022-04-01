@@ -8,6 +8,7 @@ import Investor from "components/Investor";
 import Scholar from "components/Scholar";
 import PopupJoinUs from "components/PopUp/PopupJoinUs";
 import TitleName from "components/Home/TitleSection/TitleName";
+import SlideGame from "components/SlideGame";
 
 
 const Career: NextPage = () => {
@@ -29,44 +30,51 @@ const Career: NextPage = () => {
     });
   };
   return (
-    <section className={`${s.container_guild} lucis-container`}>
+    <section className={`${s.container_guild}`}>
+    <div className="lucis-container">
       <DocHead title="Lucis Launchpad & Marketplace"/>
-      <TitleName titleName="Lucis Launchpad & Marketplace" />
+        <TitleName titleName="Lucis Gaming Guild" />
 
-      <p style={{marginTop: '40px'}}>
-        We started from original Lucis Gaming Guild, transformed to SocialFi.<br />
-        <br />
-        Gaming Guild tools:<br />
-        Our Lucis Guild Platform will connect investors to scholars<br />
-        <br />
-        Lucis Academy:<br />
-        With our knowlegde, we're converting traditional gamers into Play 2 Earn gamers<br />
-        We provide training and experience in Play 2 Earn field, to ensure our Scholars skill & quality
-      </p>
+        <p style={{marginTop: '40px'}}>
+          We're starting from original Lucis Gaming Guild<br />
+          <br />
+          <b>Gaming Guild tools:</b><br />
+          Our Lucis Guild Platform will connect investors to scholars<br />
+          <br />
+          <b>Lucis Academy:</b><br />
+          <br/>
+          With our knowlegde, we're converting traditional gamers into Play 2 Earn gamers<br />
+          <br/>
+          We provide training and experience in Play 2 Earn field, to ensure our Scholars skill & quality
+        </p>
 
-      <div className={s.titleTotal}>
-        <div className={s.ic_stats}>
-          <img src="/assets/Banner/ic_stats.svg" alt="" />
+        <div className={s.titleTotal}>
+          <div className={s.ic_stats}>
+            <img src="/assets/Banner/ic_stats.svg" alt="" />
+          </div>
+          <p>Lucis gaming guild stats</p>
         </div>
-        <p>Lucis gaming guild stats</p>
-      </div>
 
-      <div className={s.block_total}>
-        <TotalBanner title="Total Investors" titleNumber="100+" />
-        <TotalBanner title="Total Scholars" titleNumber="1000+" />
-        <TotalBanner title="Total Games" titleNumber="18+" />
-        <TotalBanner title="Monthly Revenue" titleNumber="$200k+" />
-      </div>
-      <div className={s.content_guild}>
-        <Investor />
-      </div>
-      <div className={s.content_guild}>
-        <Scholar />
-      </div>
+        <div className={s.block_total}>
+          <TotalBanner title="Total Investors" titleNumber="100+" />
+          <TotalBanner title="Total Scholars" titleNumber="1000+" />
+          <TotalBanner title="Total Games" titleNumber="18+" />
+          <TotalBanner title="Monthly Revenue" titleNumber="$200k+" />
+        </div>
+        <div className={s.content_guild}>
+          <Investor />
+        </div>
+        <div className={s.content_guild}>
+          <Scholar />
+        </div>
+    </div>
 
       <PopupJoinUs />
-
+      <div>
+        <SlideGame />
+      </div>
     </section>
+    
   );
 };
 

@@ -262,12 +262,12 @@ body .ant-modal-close{
   }
 
   .nav-list {
-    padding: 25px;
+    padding: 0px 8px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    margin-top: 82px;
+    margin-top: 40px;
   }
 
   .nav-list li {

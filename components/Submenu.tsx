@@ -14,7 +14,7 @@ export default function SubMenu(props: Props) {
     <ul className={s.contentSubmenu}>
       {
         datas.map((e: any) =>(
-          <li key={e.id} onClick={onClick} className={`${s.item} ${e.disabled == true ? s.hello : ''}`}><Link href={`/${e.href}`}>{e.title}</Link></li>
+          <li key={e.id} onClick={onClick} className={`${s.item} ${e.disabled == true ? s.hello : ''}`}><Link href={`${e.href}`}>{e.title}</Link></li>
         ))
       }
     </ul>

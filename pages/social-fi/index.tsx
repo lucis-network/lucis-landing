@@ -3,6 +3,28 @@ import type { NextPage } from "next";
 import s from "./index.module.sass";
 import DocHead from '../../components/DocHead'
 import Link from "next/link";
+import ItemEcosystem from "components/Home/Ecosystem/ItemEcosystem";
+
+const datas = [
+  {
+    id: 1,
+    titleH1: "Social-Fi network platform",
+    titleP: `
+      <p>
+        <b>Social platform</b> <br/>
+        <br/>
+        A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games<br/>
+        <br />
+        <b>User Ranking system</b><br/>
+        <br/>
+        For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "social-fi",
+    srcImg: "/assets/Feature/social_fi1.png",
+  },
+]
 
 
 const Career: NextPage = () => {
@@ -24,13 +46,11 @@ const Career: NextPage = () => {
     });
   };
   return (
-    <section className="lucis-container">
+    <section className={`${s.wrapper} lucis-container`}>
       <DocHead title="Lucis Social-Fi Platform"/>
 
-      <div className={`${s.container} section-content`}>
-        <img src="/social/tmp_social_fi.png" alt="" />
-
-        <Link href="/">Coming Soon</Link>
+      <div className={`${s.container}`}>
+      <ItemEcosystem dataEcosystems = {datas} />
       </div>      
       {showButton && (
         <button onClick={scrollToTop} className="btn-scrollTop">

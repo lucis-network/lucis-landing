@@ -61,9 +61,7 @@ export default function OurEcosystem(props: Props){
             </a>
           </div>
         </div>
-
-
-        <p>
+        <p className={s.title}>
           • Lucis TV <br />
           • Lucis blog <br />
           Will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets

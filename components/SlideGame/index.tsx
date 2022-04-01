@@ -1,3 +1,4 @@
+import TitleName from "components/Home/TitleSection/TitleName";
 import { useWindowSize } from "hooks/useWindowSize";
 import React from "react";
 import Marquee from "react-fast-marquee";
@@ -51,6 +52,9 @@ export default function SlideGame() {
 
   return (
     <div className="w-full mt-60px md:mt-97px">
+      <div className="lucis-container" style={{paddingBottom: '40px'}}>
+        <TitleName titleName="Game Partners" />
+      </div>
       <div style={{ width: "100%" }}>
         <Marquee speed={90} gradient={false}>
           <SlideItem

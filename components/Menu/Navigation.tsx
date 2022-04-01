@@ -4,8 +4,10 @@ import { MenuItem, MenuItemType } from "./MenuItem";
 import GradientButton from "../Button/GradientButton";
 import { useEffect, useState } from "react";
 
-import { Modal, Button } from "antd";
+import { Modal, Button, Menu } from "antd";
 import { AppEmitter } from "../../services/emitter";
+import Link from "next/link";
+import s from './MenuMobile.module.sass'
 
 const variants = {
   open: {
@@ -15,8 +17,62 @@ const variants = {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
   },
 };
+
+const dataSubMenu = [
+  {
+    id: 1,
+    text: 'Social-Fi network platform',
+    href: '/social-fi',
+    disabled: false
+  },
+  {
+    id: 2,
+    text: 'Tournaments',
+    href: '/tournaments',
+    disabled: false
+  },
+  {
+    id: 3,
+    text: 'Lucis Insight & Game Ranking system',
+    href: '/insight',
+    disabled: false
+  },
+  {
+    id: 4,
+    text: 'Lucis Media',
+    href: '/media',
+    disabled: false
+  },
+  {
+    id: 5,
+    text: 'Launchpad & Marketplace',
+    href: '/launchpad',
+    disabled: false
+  },
+  {
+    id: 6,
+    text: 'Gaming Guild',
+    href: '/lucis-gaming-guild',
+    disabled: false
+  },
+  {
+    id: 7,
+    text: 'Automation tool zone',
+    href: '/',
+    disabled: true
+  },
+  {
+    id: 8,
+    text: 'Streaming platform',
+    href: '/',
+    disabled: true
+  },
+]
 export const Navigation = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isSubMenu, setIsSubMenu] = useState(false);
+  const { SubMenu } = Menu
+
   const handleOk = () => {
     setIsModalVisible(false);
   };
@@ -25,11 +81,20 @@ export const Navigation = () => {
     setIsModalVisible(false);
   };
 
+  const showSubmenu = () =>{
+    setIsSubMenu(!isSubMenu)
+  }
+  const hideMenu = () =>{
+    AppEmitter.emit("setMbMenuVisible", false)
+    setIsSubMenu(false)
+  }
+  const styleSub = isSubMenu == false ? 0: 272
+  
   const menuItems: MenuItemType[] = [
     {
       color: "#FF008C",
       text: "SocialFi",
-      src: "/social-fi"
+      src: "/social-fi",
     },
     {
       color: "#FF008C",
@@ -53,11 +118,19 @@ export const Navigation = () => {
     },
     {
       color: "#FF008C",
-      text: "Docs",
-      src: "/docs",
-      subMenu: (
-        <h1>sub menu</h1>
-      )
+      text: (
+        <div>
+          <div onClick={showSubmenu}>click me</div>
+          <ul style={{height: styleSub}} className={s.submenu}>
+          {dataSubMenu.map((data:any) =>(
+            <li className={`${data.disabled == true && s.disabled}`} key={data.id} onClick={hideMenu}><Link href="/social-fi">{data.text}</Link></li>
+          ))}
+          </ul>
+        </div>
+        
+      ),
+      src: "",
+      subMenu: ""
     },
     {
       color: "#FF008C",
@@ -67,8 +140,8 @@ export const Navigation = () => {
             setIsModalVisible(true);
           }}
           type={1}
-          className="text-white font-saira text-24px leading-28px nw"
-          style={{ whiteSpace: "nowrap" }}
+          className="text-white font-saira nw"
+          style={{ whiteSpace: "nowrap",fontSize: "20px",lineHeight: '22px',padding: '10px 16px' }}
         >
           Join us
         </GradientButton>

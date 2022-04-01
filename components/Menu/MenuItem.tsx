@@ -39,21 +39,20 @@ export const MenuItem = (props: {item: MenuItemType}) => {
       if (props.item.onClick) {
         props.item.onClick()
       }
-        // if (props.item.subMenu) {
-          
-        // }
-        AppEmitter.emit("setMbMenuVisible", false)
+        if (props.item.subMenu == undefined) {
+          AppEmitter.emit("setMbMenuVisible", false)
+        }
   }, [])
 
   return (
     <motion.li
       variants={variants}
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={click}
     >
       {/* <div className="icon-placeholder" style={style} /> */}
-      <div className="text-placeholder font-saira text-white text-24px leading-28px p-15px">
+      <div className="text-placeholder font-saira text-white px-3 py-3" style={{fontSize: "20px",lineHeight: '22px'}}>
         <Link href={props.item.src}>{props.item.text}</Link>
       </div>
     </motion.li>

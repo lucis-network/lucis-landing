@@ -16,9 +16,9 @@ export default function ItemEcosystem(props: Props) {
     dataEcosystems.map((e:any) => (
     <div className={s.itemEcosystem} key={e.id}>
       
-      {width < 768 && <h1>{e.titleH1}</h1>}
+      {width < 1024 && <h1>{e.titleH1}</h1>}
       <div className={s.heading}>
-        {width >= 768 && <h1>{e.titleH1}</h1>}
+        {width >= 1024 && <h1>{e.titleH1}</h1>}
         <div dangerouslySetInnerHTML={{__html: `${e.titleP}`}} />
           <div>
             <Button3D 
@@ -30,7 +30,9 @@ export default function ItemEcosystem(props: Props) {
           />
           </div>
       </div>
-      <div className={`${s.im_Block} ${e.id == 3 || e.id == 6 ? s.setMargin: ''} ${e.id == 4 ? s.setMarginleft: e.id == 3 ? s.setMarginRight: ''}`}>
+      <div 
+        className={`${s.im_Block}`}
+      >
         <img src={`${e.srcImg}`} alt="" />
       </div>
     </div>

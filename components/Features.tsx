@@ -92,20 +92,14 @@ const datas = [
     id: 6,
     titleH1: "Gaming Guild",
     titleP: `
-      <p>
-        We're starting from original Lucis Gaming Guild.<br/>
-        <br/>
-        <b>Gaming Guild tools:</b> <br/>
-        <br/>
-        Our Lucis Guild Platform will connect investors to scholars<br/>
-        <br/>
-        <br/>
-        <b>Lucis Academy:</b><br/>
-        <br/>
-        With our knowlegde, we're converting traditional gamers into Play 2 Earn gamers<br/>
-        <br />
-        We provide training and experience in Play 2 Earn field, to ensure our Scholars skill & quality
-      </p>
+      <p>We're starting from original Lucis Gaming Guild.</p>
+      <br>
+      <b>Gaming Guild tools:</b><br/>
+      <p>Our Lucis Guild Platform will connect investors to scholars</p>
+      <br/>
+      <b>Lucis Academy:</b>
+      <p>With our knowlegde, we're converting traditional gamers into Play 2 Earn gamers</p>
+      <p>We provide training and experience in Play 2 Earn field, to ensure our Scholars skill & quality</p>
     `,
     titleButton: "More Detail",
     href: "lucis-gaming-guild",

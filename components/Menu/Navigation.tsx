@@ -34,7 +34,7 @@ const dataSubMenu = [
   {
     id: 3,
     text: 'Lucis Insight & Game Ranking system',
-    href: '/insight',
+    href: '/ranking',
     disabled: false
   },
   {

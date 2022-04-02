@@ -118,7 +118,7 @@ export const Navigation = () => {
           <div onClick={showSubmenu}>Ecosystem</div>
           <ul style={{height: styleSub}} className={s.submenu}>
           {dataSubMenu.map((data:any) =>(
-            <li className={`${data.disabled == true && s.disabled}`} key={data.id} onClick={hideMenu}><Link href="/social-fi">{data.text}</Link></li>
+            <li className={`${data.disabled == true && s.disabled}`} key={data.id} onClick={hideMenu}><Link href={`${data.href}`}>{data.text}</Link></li>
           ))}
           </ul>
         </div>

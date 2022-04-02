@@ -21,7 +21,7 @@ const datas = [
         We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.
       </p>
     `,
-    titleButton: "Coming Soon",
+    titleButton: "More Detail",
     href: "ranking",
     srcImg: "/assets/Feature/insight1.png",
   },

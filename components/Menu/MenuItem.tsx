@@ -48,7 +48,7 @@ export const MenuItem = (props: {item: MenuItemType}) => {
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      // whileTap={{ scale: 0.95 }}
       onClick={click}
     >
       {/* <div className="icon-placeholder" style={style} /> */}

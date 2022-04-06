@@ -128,7 +128,7 @@ export default function Features(props: Props) {
 
   return (
     <section className="lucis-container" id="EcoSystem">
-      <TitleName titleName="Ecosystem" />
+      <TitleName titleName="Lucis Ecosystem" />
 
       <div className={s.BlockContent}>
         <ItemEcosystem dataEcosystems = {datas} />

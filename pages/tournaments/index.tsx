@@ -7,7 +7,7 @@ import ItemEcosystem from "components/Home/Ecosystem/ItemEcosystem";
 
 const datas = [
   {
-    id: 1,
+    id: 2,
     titleH1: "Tournaments",
     titleP: `
     <p>

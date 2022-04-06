@@ -112,6 +112,8 @@ const datas = [
       <p>
         All the best automation and handy tools for our scholars, gamers, and investors
       </p>
+      <br/>
+      <br/>
       <h1>Streaming platform</h1>
       <p>
         Is coming soon, and be apart of our SocialFi platform

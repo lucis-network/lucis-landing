@@ -40,7 +40,7 @@ export default function Community(props: Props) {
   ];
 
   return (
-    <div className="lucis-container community-container">
+    <div className="lucis-container community-container" style={{marginBottom: 120}}>
       <div className="flex justify-between items-center mb-40px lg:mb-60px">
         {/* <AnimWhenVisible>
           <Title titleName={<span>Gaming community <br/>and partners</span>}/>

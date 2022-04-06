@@ -77,6 +77,7 @@ const Home: NextPage = () => {
           visible: { opacity: 1 },
           hidden: { opacity: 0 },
         }}
+        transition={{ duration: 0.3 }}
       >
         <Banner />
       </AnimWhenVisible>

@@ -1,0 +1,56 @@
+.content
+  position: relative
+  overflow: hidden
+  display: flex
+  align-self: center
+  justify-content: space-between
+  flex-direction: column
+  transition: 0.3s
+  border-radius: 16px
+  padding-top: 12px
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+  @media (min-width: 0px)
+    margin-top: 20px
+    max-width: 100%
+  @media (min-width: 640px)
+    margin-top: 40px
+    max-width: 50%
+  @media (min-width: 768px)
+    max-width: 28%
+    min-height: 250px
+  @media (min-width: 992px)
+    min-height: 296px
+  @media (min-width: 1280px)    
+    min-height: 370px
+  //noinspection CssInvalidPropertyValue
+  &:global(:before)
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    border-radius: 16px
+    padding: 1px
+    //background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
+    background: linear-gradient(115deg, #7f6bbdb3 0%, rgba(196, 44, 255, 0) 45%, rgba(196, 44, 255, 0) 30%, #44388b 100%)
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0)
+    -webkit-mask-composite: xor
+    mask-composite: exclude
+  &:hover
+    box-shadow: rgba(15, 179, 255, 0.2) 0px 8px 24px
+
+  img
+    width: 100%
+  p
+    line-height: 24px
+    color: #FFF
+    text-align: center
+    margin: 0px
+    border-radius: 0px 0px 16px 16px
+    padding: 20px 0px
+    background: linear-gradient(99.92deg, rgba(205, 40, 232, 0.2) 0%, rgba(11, 235, 214, 0.2) 100%)
+    @media (min-width: 768px)
+      font-size: 16px 
+    @media (min-width: 992px)
+      font-size: 20px 

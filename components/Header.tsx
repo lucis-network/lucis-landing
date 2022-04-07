@@ -17,6 +17,7 @@ type Props = {
 export default function Header(props: Props) {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isSubMenu, setIsSubMenu] = useState(false);
+  const listRef: any = useRef<HTMLDivElement>()
 
   const showSubMenu = isSubMenu ? s.isSubmenu : s.hideSubmenu
 
@@ -53,6 +54,15 @@ export default function Header(props: Props) {
     }
   }, [])
   
+  useEffect(() => {
+    listRef.current.addEventListener('mouseover', handleMouseOver)
+    listRef.current.addEventListener('mouseleave', handleMouseLeave)
+
+    return () => {
+      listRef.current.removeEventListener('mouseover', handleMouseOver)
+      listRef.current.removeEventListener('mouseleave', handleMouseLeave)
+    }
+  },[listRef.current])
 
   const datas = [
     {id: 1,href:'/social-fi', title: 'Social-Fi network platform',disabled: false},
@@ -82,8 +92,7 @@ export default function Header(props: Props) {
               <li><Link href="/docs">Docs</Link></li>
 
               <li className={s.menuItem} 
-                onMouseOver={handleMouseOver}
-                onMouseLeave={handleMouseLeave}
+                ref={listRef}
               >
                 <img className={s.ic_submenu} onClick={()=>{setIsSubMenu(!isSubMenu)}} src="/assets/header/ic_submenu.svg" alt="" />
                 <div className={`${s.subMenu} ${showSubMenu}`}>

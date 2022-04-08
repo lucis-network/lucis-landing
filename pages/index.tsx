@@ -18,8 +18,8 @@ import PartnersStrategic from "components/Home/Backers";
 import IvestorBackers from "components/Home/IvestorBackers";
 
 const Home: NextPage = () => {
-  const title = "Lucis Gaming Guild - Redefine Play to Earn ecosystem";
-  const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
+  const title = "Lucis Platform - Gaming SocialFi and Insights";
+  const desc = "Unite Gamers Across The Globe With The Power of Decentralize Finance. We transform & educate players from traditional games to NFT games";
   const thumb = "https://lucis.network/assets/lucis_preview_169.jpg";
   useScroll()
   const [showButton, setShowButton] = useState(false);

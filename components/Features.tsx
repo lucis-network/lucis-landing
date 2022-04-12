@@ -11,15 +11,12 @@ const datas = [
     id: 1,
     titleH1: "Social-Fi network platform",
     titleP: `
-      <p>
+        <br/>
         <b>Social platform</b> <br/>
+        <p>A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games<br/></p>
         <br/>
-        A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games<br/>
-        <br />
         <b>User Ranking system</b><br/>
-        <br/>
-        For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.
-      </p>
+        <p>For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.</p>
     `,
     titleButton: "More Detail",
     href: "social-fi",
@@ -43,16 +40,11 @@ const datas = [
     id: 3,
     titleH1: "Lucis Insight & Game Ranking system",
     titleP: `
-      <p>
         <b>Lucis Insight</b> <br/>
+        <p>Our researcher team will carefully analysis the market, filter out hidden gems<br/></p>
         <br/>
-        Our researcher team will carefully analysis the market, filter out hidden gems<br/>
-        <br/>
-        <br />
         <b>Game Ranking System</b><br/>
-        <br/>
-        We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.
-      </p>
+        <p>We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.</p>
     `,
     titleButton: "More Detail",
     href: "ranking",
@@ -62,12 +54,9 @@ const datas = [
     id: 4,
     titleH1: "Lucis Media",
     titleP: `
-      <p>
         <b>lucis TV and Lucis blog</b>
-        <br/>
         <br />
-        will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets
-      </p>
+        <p>Will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets</p>
     `,
     titleButton: "More Detail",
     href: "media",
@@ -79,7 +68,6 @@ const datas = [
     titleP: `
       <p>
         <b>Game publisher</b> can host INO to sell NFT mistery boxes to Lucis community or users<br/>
-        <br/>
         <br />
         <b>Sell</b> NFT boxes or NFT collection on Lucis marketplace
       </p>
@@ -112,8 +100,7 @@ const datas = [
       <p>
         All the best automation and handy tools for our scholars, gamers, and investors
       </p>
-      <br/>
-      <br/>
+      <br />
       <h1>Streaming platform</h1>
       <p>
         Is coming soon, and be apart of our SocialFi platform

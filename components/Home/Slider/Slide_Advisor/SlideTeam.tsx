@@ -46,7 +46,7 @@ export default class SimpleSliderAdvisor extends Component {
         </div>
 
       {/* @ts-ignore*/}
-      <div className="section-content">
+      <div style={{marginTop: '50px'}}>
         {/* @ts-ignore*/}
         <Slider ref={c => (this.slider = c)} {...settings}>
           <div className={s.block_team}>

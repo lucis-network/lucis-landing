@@ -47,7 +47,11 @@
     flex: 32%;
   }
 }
-
+@media (max-width: 767px){
+  .chartContainer{
+    margin-top: 40px;
+  }
+}
 .highcharts-data-table table {
   font-family: Verdana, sans-serif;
   border-collapse: collapse;

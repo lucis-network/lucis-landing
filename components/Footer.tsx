@@ -63,8 +63,8 @@ export default function Header(props: Props) {
       </div>
           <div className={s.links}>
             <Link href="/docs">Litepaper</Link>
+            <Link href="/docs">Docs</Link>
             <Link href="/careers">Careers</Link>
-            <Link href="/investor-packages">For Investors</Link>
           </div>
       <div>
         <img src="/assets/footer/footer.png" alt="" />

@@ -10,18 +10,13 @@ const datas = [
     id: 3,
     titleH1: "Lucis Insight & Game Ranking system",
     titleP: `
-      <p>
         <b>Lucis Insight</b> <br/>
+        <p>Our researcher team will carefully analysis the market, filter out hidden gems<br/></p>
         <br/>
-        Our researcher team will carefully analysis the market, filter out hidden gems<br/>
-        <br/>
-        <br />
         <b>Game Ranking System</b><br/>
-        <br/>
-        We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.
-      </p>
+        <p>We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.</p>
     `,
-    titleButton: "More Detail",
+    titleButton: "Coming Soon",
     href: "ranking",
     srcImg: "/assets/Feature/insight1.png",
   },

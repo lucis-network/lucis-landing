@@ -10,15 +10,12 @@ const datas = [
     id: 1,
     titleH1: "Social-Fi network platform",
     titleP: `
-      <p>
+        <br/>
         <b>Social platform</b> <br/>
+        <p>A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games<br/></p>
         <br/>
-        A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games<br/>
-        <br />
         <b>User Ranking system</b><br/>
-        <br/>
-        For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.
-      </p>
+        <p>For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.</p>
     `,
     titleButton: "Coming Soon",
     href: "social-fi",

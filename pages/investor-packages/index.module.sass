@@ -26,20 +26,21 @@
       margin: 40px 0px
     @media (min-width: 1024px)
       margin: 120px 0px
+  img:last-child
+    margin: 0px
   .ReadOur
     display: flex
     align-items: center
     justify-content: flex-end
+    margin-top: 40px
     a
       background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
       border-radius: 16px
       text-align: center
       color: #FFF
-      font-size: 24px
-      line-height: 28px
       font-weight: 400
-      padding: 15px 22px
       margin-right: 24px
+      transition: 0.3s
       @media (min-width: 0px)
         font-size: 16px
         padding: 9px 22px
@@ -52,7 +53,13 @@
       @media (min-width: 540px)
         font-size: 16px
         padding: 9px 22px
-        width: 260px
-      @media (min-width: 640px) and (max-width: 768px)
+        max-width: 360px
+      @media (min-width: 640px)
         font-size: 20px
         padding: 9px 22px
+      @media (min-width: 768px)
+        font-size: 24px
+        line-height: 28px
+        padding: 15px 22px
+  .ReadOur:hover a
+    transform: scale(1.02)

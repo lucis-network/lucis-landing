@@ -31,7 +31,8 @@ interface SlideItemProps {
 }
 function SlideItem(props: SlideItemProps) {
   return (
-    <a href={props.addressGame}  target='_blank' rel="noopener noreferrer">
+    <div>
+      <a href={props.addressGame}  target='_blank' rel="noopener noreferrer">
       <img
         src={props.src}
         alt=""
@@ -40,6 +41,7 @@ function SlideItem(props: SlideItemProps) {
         style={{ marginRight: "14px" }}
       />
     </a>
+    </div>
   );
 }
 

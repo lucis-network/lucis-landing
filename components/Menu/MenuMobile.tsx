@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height + 200}px at 280px 33px)`,
+    clipPath: `circle(${height + 200}px at 260px 33px)`,
     transition: {
       type: "spring",
       stiffness: 40,
@@ -20,7 +20,7 @@ const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(1px at 280px 30px)",
+    clipPath: "circle(1px at 260px 30px)",
     transition: {
       delay: 0.5, // delay before hide to wait menu item hidden first
       type: "spring",

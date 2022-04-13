@@ -87,7 +87,7 @@ export default function SlideGame() {
             height={heightImg}
           />
           <SlideItem
-            addressGame='https://play.illuivuim.io/'
+            addressGame='https://app.illiuvium.org/'
             src={im_illuvium}
             width={widthImg}
             height={heightImg}

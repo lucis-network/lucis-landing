@@ -51,7 +51,7 @@ export default function SlideGame() {
   const heightImg = widthImg * 0.67;
 
   return (
-    <div className="w-full mt-60px md:mt-97px">
+    <div style={{marginBottom: 90}}>
       <div className="lucis-container">
         <TitleName titleName="Game Partners" />
       </div>

@@ -34,6 +34,7 @@ export default function Scholar(props: Props) {
     <div
       id="Scholars"
       className="text-white"
+      style={{ marginTop: 90 }}
     >
       <AnimWhenVisible>
         <Title titleName="FOR SCHOLAR"></Title>

@@ -196,9 +196,8 @@ body .ant-modal-close{
   body {
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flow-root;
+    width: 100%;
   }
 
   body.nav-open {

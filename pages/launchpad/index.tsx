@@ -25,7 +25,7 @@ const Career: NextPage = () => {
     });
   };
   return (
-    <section className="lucis-container">
+    <section className={`lucis-container ${s.wrapper}`}>
       <DocHead title="Lucis Launchpad & Marketplace"/>
 
       <div className={`${s.container}`}>

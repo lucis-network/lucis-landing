@@ -35,7 +35,7 @@ export default function Investor(props: Props) {
   };
 
   return (
-    <div id="Investors" className="text-white">
+    <div id="Investors" className="text-white" style={{ marginTop: 90 }}>
       <AnimWhenVisible>
         <Title titleName="FOR INVESTOR"></Title>
       </AnimWhenVisible>

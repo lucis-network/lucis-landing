@@ -6,7 +6,7 @@ type Props = {}
 
 export default function Advisor(props: Props){
   return(
-    <section className="lucis-container">
+    <section className="lucis-container" style={{marginBottom: 90}}>
       <SimpleSliderAdvisor />
     </section>
   )

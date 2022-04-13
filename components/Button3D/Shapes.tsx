@@ -115,8 +115,8 @@ export function Icosahedron() {
       rotation-z={0.5}
       variants={{
         hover: {
-          x: 1.8,
-          z: 0.6,
+          x: 1.5,
+          z: 0.2,
           y: 0.6,
           rotateZ: -0.5,
         },

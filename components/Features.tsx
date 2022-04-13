@@ -116,14 +116,16 @@ export default function Features(props: Props) {
   const router = useRouter();
 
   return (
-    <section className="lucis-container" id="EcoSystem">
-      <TitleName titleName="Lucis Ecosystem" />
+    <section className={`${s.wrapper}`} id="EcoSystem">
+      <div className={`lucis-container`}>
+        <TitleName titleName="Lucis Ecosystem" />
 
-      <div className={s.BlockContent}>
-        <ItemEcosystem dataEcosystems = {datas} />
+        <div className={s.BlockContent}>
+          <ItemEcosystem dataEcosystems = {datas} />
+        </div>
+
+        <img src="/assets/Feature/im_diagram.png" alt="" />
       </div>
-
-      <img src="/assets/Feature/im_diagram.png" alt="" />
     </section>
   );
 }

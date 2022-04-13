@@ -40,7 +40,7 @@ export default function Community(props: Props) {
   ];
 
   return (
-    <div className="lucis-container community-container" style={{marginBottom: 120}}>
+    <div className="lucis-container">
       <div className="flex items-center">
         <div className="w-16px md:w-32px mr-4">
           <Image
@@ -55,7 +55,7 @@ export default function Community(props: Props) {
           HOT GAME
         </h5>
       </div>
-      <div className="xl:mt-300px lg:mt-200px md:mt-180px mt-180px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10 font-saira">
+      <div className="xl:mt-300px lg:mt-200px md:mt-180px mt-200px grid grid-cols-1 md:grid-cols-3 gap-250px md:gap-4 lg:gap-10 font-saira">
         {gameCommunityData.map((item, index) => (
           <CommunityCard
             image={item.image}

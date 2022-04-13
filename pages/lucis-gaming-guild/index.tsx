@@ -31,20 +31,18 @@ const Career: NextPage = () => {
   };
   return (
     <section className={`${s.container_guild}`}>
-    <div className="lucis-container">
+    <div className="lucis-container" style={{ marginTop: 0 }}>
       <DocHead title="Lucis Launchpad & Marketplace"/>
         <TitleName titleName="Lucis Gaming Guild" />
 
-        <p style={{marginTop: '40px'}}>
+        <p style={{marginTop: '40px', textTransform: 'inherit'}}>
           We're starting from original Lucis Gaming Guild<br />
           <br />
           <b>Gaming Guild tools:</b><br />
           Our Lucis Guild Platform will connect investors to scholars<br />
           <br />
           <b>Lucis Academy:</b><br />
-          <br/>
           With our knowlegde, we're converting traditional gamers into Play 2 Earn gamers<br />
-          <br/>
           We provide training and experience in Play 2 Earn field, to ensure our Scholars skill & quality
         </p>
 

@@ -23,10 +23,10 @@ const Career: NextPage = () => {
     });
   };
   return (
-    <section className="lucis-container">
+    <section className="lucis-container" style={{marginTop: 50}}>
       <DocHead title="Career"/>
 
-      <div className={`${s.container} section-content`}>
+      <div className={`${s.container}`}>
         <h1>For Investors</h1>
 
         <div>

@@ -6,7 +6,7 @@ import DocHead from '../../components/DocHead'
 
 const Career: NextPage = () => {
   return (
-    <section className="lucis-container">
+    <section className= {`${s.wrapper} lucis-container`}>
       <DocHead title="Career"/>
 
       <div className={`${s.container} section-content`}>

@@ -13,7 +13,7 @@ export default function Marketplace(props: Props) {
       <AnimWhenVisible>
         <TitleName titleName="Marketplace" />
       </AnimWhenVisible>
-      <p style={{marginTop: '40px'}}>
+      <p style={{marginTop: '40px', textTransform: 'inherit'}}>
         - Game publisher can host INO to sell NFT mistery boxes to Lucis community or users<br />
         <br />
         - Sell NFT boxes or NFT collection on Lucis marketplace

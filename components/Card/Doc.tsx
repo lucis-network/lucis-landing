@@ -3,7 +3,7 @@ import s from "./Doc.module.sass"
 type Props = {
   titleCard: string,
   srcImg: string,
-  link: string
+  link: string,
 }
 export default function CardDocs(props: Props) {
   const { titleCard, srcImg, link } = props

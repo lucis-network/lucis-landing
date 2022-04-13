@@ -41,12 +41,14 @@ const Career: NextPage = () => {
     });
   };
   return (
-    <section className={`${s.wrapper} lucis-container`}>
-      <DocHead title="Lucis Tournaments"/>
+    <section className={`${s.wrapper}`}>
+      <div className='lucis-container'>
+        <DocHead title="Lucis Tournaments"/>
 
-      <div className={`${s.container}`}>
-        <ItemEcosystem dataEcosystems = {datas} />
-      </div>      
+        <div className={`${s.container}`}>
+          <ItemEcosystem dataEcosystems = {datas} />
+        </div>      
+      </div>
       {showButton && (
         <button onClick={scrollToTop} className="btn-scrollTop">
           &#8679;

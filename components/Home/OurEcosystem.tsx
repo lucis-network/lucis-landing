@@ -61,11 +61,11 @@ export default function OurEcosystem(props: Props){
             </a>
           </div>
         </div>
-        <p className={s.title}>
-          • Lucis TV <br />
-          • Lucis blog <br />
-          Will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets
-        </p>
+        <div className={s.title}>
+          <p><b>• Lucis TV</b></p>
+          <p style={{marginBottom: 8}}><b>• Lucis blog</b></p>
+          <p>Will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets</p>
+        </div>
       </div>
     </section>
   )

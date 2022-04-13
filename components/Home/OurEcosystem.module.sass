@@ -29,11 +29,21 @@
   // mask-composite: exclude
 .title
   max-width: 920px 
-  margin: 0 auto
+  margin: 0 auto 90px auto
+  p
+    text-transform: inherit !important
+  span
+    padding: 12px 0px
 .group_ic
   @apply flex flex-row items-center justify-between flex-wrap
   max-width: 920px
-  margin: 100px auto 60px auto
+  @media (min-width: 0px)
+    margin: 20px auto 20px auto
+  @media (min-width: 540px)
+    margin: 60px auto 20px auto
+  @media (min-width: 1024px)
+    margin: 100px auto 60px auto
+    
   .ic_item
     cursor: pointer
     margin-bottom: 12px

@@ -7,8 +7,8 @@ import MailChimpSignUp from "./MailChimpSignUp/MailChimpSignUp";
 type Props = {};
 export default function Header(props: Props) {
   return (
-    <section className="lucis-container">
-      <div className={`${s.heading_footer} section-content`}>
+    <section className={`lucis-container ${s.wrapper}`}>
+      <div className={`${s.heading_footer}`}>
 
         <div className={s.logo}>
           <AnimWhenVisible

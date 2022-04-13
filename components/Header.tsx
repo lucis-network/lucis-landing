@@ -19,6 +19,7 @@ export default function Header(props: Props) {
   const [isSubMenu, setIsSubMenu] = useState(false);
 
   const showSubMenu = isSubMenu ? s.isSubmenu : s.hideSubmenu
+  const [width, height] = useWindowSize();
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -31,11 +32,6 @@ export default function Header(props: Props) {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
-  const [width, height] = useWindowSize();
-
-  const scrollAndCloseMenu = useCallback((selector: string) => {
-    scrollToSection(selector ?? '', true, -90)
-  }, [])
 
   const handleMouseOver = () =>{
     setIsSubMenu(true)
@@ -52,6 +48,16 @@ export default function Header(props: Props) {
       subscription.remove();
     }
   }, [])
+
+  useEffect(() => {
+    const element = document.getElementById('subMenu')
+    element?.addEventListener('mouseover', handleMouseOver)
+    element?.addEventListener('mouseleave', handleMouseLeave)
+    return () => {
+      element?.removeEventListener('mouseover', handleMouseOver)
+      element?.removeEventListener('mouseleave', handleMouseLeave)
+    }
+  })
   
 
   const datas = [
@@ -81,15 +87,14 @@ export default function Header(props: Props) {
               <li><Link href="/ranking">Insight</Link></li>
               <li><Link href="/docs">Docs</Link></li>
 
-              <li className={s.menuItem} 
-                onMouseOver={handleMouseOver}
-                onMouseLeave={handleMouseLeave}
-              >
+              <li className={s.menuItem} id="subMenu">
                 <img className={s.ic_submenu} onClick={()=>{setIsSubMenu(!isSubMenu)}} src="/assets/header/ic_submenu.svg" alt="" />
-                <div className={`${s.subMenu} ${showSubMenu}`}>
-                  <div className={s.contentSubmenu}>
-                    <img src="/assets/header/ic_item_sub_menu.svg" alt="" />
-                      <SubMenu onClick={()=>{setIsSubMenu(false)}} datas={datas} />
+                <div className={`${s.subMenu} ${showSubMenu}`} style={isSubMenu == false ? {pointerEvents: 'none'} : {}}>
+                  <div className={s.styleSubmenu}>
+                    <div className={s.contentSubmenu}>
+                      <img src="/assets/header/ic_item_sub_menu.svg" alt="" />
+                        <SubMenu onClick={()=>{setIsSubMenu(false)}} datas={datas} />
+                    </div>
                   </div>
                 </div>
               </li>

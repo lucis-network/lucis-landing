@@ -63,12 +63,12 @@ export default function Header(props: Props) {
   const datas = [
     {id: 1,href:'/social-fi', title: 'Social-Fi network platform',disabled: false},
     {id: 2,href:'/tournaments', title: 'Tournaments',disabled: false},
-    {id: 3,href:'/ranking', title: 'Lucis Insight & Game Ranking system',disabled: false},
+    {id: 3,href:'/insight', title: 'Lucis Insight & Game Ranking system',disabled: false},
     {id: 4,href:'/media', title: 'Lucis Media',disabled: false},
-    {id: 5,href:'/launchpad', title: 'Launchpad & Marketplace',disabled: false},
+    {id: 5,href:'/marketplace', title: 'Launchpad & Marketplace',disabled: false},
     {id: 6,href:'/lucis-gaming-guild', title: 'Gaming Guild',disabled: false},
-    {id: 7,href:'/ranking', title: 'Automation tool zone',disabled: true},
-    {id: 8,href:'/ranking', title: 'Streaming platform',disabled: true},
+    {id: 7,href:'/insight', title: 'Automation tool zone',disabled: true},
+    {id: 8,href:'/insight', title: 'Streaming platform',disabled: true},
   ]
 
   if (width > 1024) {
@@ -83,8 +83,8 @@ export default function Header(props: Props) {
           <nav className={s.menu}>
             <ul className="flex justify-between items-center m-0">
               <li><Link href="/tournaments">Tournaments</Link></li>
-              <li><Link href="/launchpad">Marketplace</Link></li>
-              <li><Link href="/ranking">Insight</Link></li>
+              <li><Link href="/marketplace">Marketplace</Link></li>
+              <li><Link href="/insight">Insight</Link></li>
               <li><Link href="/docs">Docs</Link></li>
 
               <li className={s.menuItem} id="subMenu">

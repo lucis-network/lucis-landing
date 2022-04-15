@@ -16,7 +16,7 @@ const datas = [
       <b>Team</b> will get more popular and big prizes, big donation amount from Lucis Tournament platform
     </p>
     `,
-    titleButton: "Coming Soon",
+    titleButton: "Coming on May 8",
     href: "tournaments",
     srcImg: "/assets/Feature/tournaments1.png",
   },
@@ -42,7 +42,7 @@ const Career: NextPage = () => {
   };
   return (
     <section className={`${s.wrapper}`}>
-      <div className='lucis-container'>
+      <div className={`lucis-container ${s.styleContent}`}>
         <DocHead title="Lucis Tournaments"/>
 
         <div className={`${s.container}`}>

@@ -34,7 +34,7 @@ const dataSubMenu = [
   {
     id: 3,
     text: 'Lucis Insight & Game Ranking system',
-    href: '/ranking',
+    href: '/insight',
     disabled: false
   },
   {
@@ -46,7 +46,7 @@ const dataSubMenu = [
   {
     id: 5,
     text: 'Launchpad & Marketplace',
-    href: '/launchpad',
+    href: '/marketplace',
     disabled: false
   },
   {
@@ -99,7 +99,7 @@ export const Navigation = () => {
     {
       color: "#FF008C",
       text: "Marketplace",
-      src: "/launchpad"
+      src: "/marketplace"
     },
     {
       color: "#FF008C",

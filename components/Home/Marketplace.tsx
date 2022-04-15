@@ -54,7 +54,7 @@ export default function Marketplace(props: Props) {
 
         <div className={s.item_btn}>
           <Link href="https://testnet.lucis.pro/">
-              Marketplace (DevNet)
+              Marketplace (Development)
           </Link>
 
           <Link href="https://launchpad-testnet.lucis.network/">

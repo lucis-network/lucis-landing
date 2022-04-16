@@ -19,6 +19,7 @@ const datas = [
     titleButton: "Coming on May 8",
     href: "tournaments",
     srcImg: "/assets/Feature/tournaments1.png",
+    statusHref: true
   },
 ]
 

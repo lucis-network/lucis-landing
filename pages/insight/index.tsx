@@ -11,14 +11,14 @@ const datas = [
     titleH1: "Lucis Insight & Game Ranking system",
     titleP: `
         <b>Lucis Insight</b> <br/>
-        <p>Our researcher team will carefully analysis the market, filter out hidden gems<br/></p>
+        <p>Our researcher team will carefully analyze the market, filter out hidden gems<br/></p>
         <br/>
         <b>Game Ranking System</b><br/>
-        <p>We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.</p>
+        <p>We collect game & market data and provide our users a completed overview and insight about a game with a glance.</p>
     `,
     titleButton: "Coming Soon",
-    href: "ranking",
     srcImg: "/assets/Feature/insight1.png",
+    statusHref: false
   },
 ]
 

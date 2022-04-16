@@ -19,8 +19,9 @@ const datas = [
         <p>For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.</p>
     `,
     titleButton: "More Detail",
-    href: "social-fi",
+    href: "/social-fi",
     srcImg: "/assets/Feature/social_fi1.png",
+    statusHref: true
   },
   {
     id: 2,
@@ -33,8 +34,9 @@ const datas = [
     </p>
     `,
     titleButton: "More Detail",
-    href: "tournaments",
+    href: "/tournaments",
     srcImg: "/assets/Feature/tournaments1.png",
+    statusHref: true
   },
   {
     id: 3,
@@ -47,8 +49,9 @@ const datas = [
         <p>We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.</p>
     `,
     titleButton: "More Detail",
-    href: "ranking",
+    href: "/insight",
     srcImg: "/assets/Feature/insight1.png",
+    statusHref: true
   },
   {
     id: 4,
@@ -59,8 +62,9 @@ const datas = [
         <p>Will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets</p>
     `,
     titleButton: "More Detail",
-    href: "media",
+    href: "/media",
     srcImg: "/assets/Feature/media2.png",
+    statusHref: true
   },
   {
     id: 5,
@@ -73,8 +77,9 @@ const datas = [
       </p>
     `,
     titleButton: "More Detail",
-    href: "launchpad",
+    href: "/marketplace",
     srcImg: "/assets/Feature/launchpad_marketplace.png",
+    statusHref: true
   },
   {
     id: 6,
@@ -90,8 +95,9 @@ const datas = [
       <p>We provide training and experience in Play 2 Earn field, to ensure our Scholars skill & quality</p>
     `,
     titleButton: "More Detail",
-    href: "lucis-gaming-guild",
+    href: "/lucis-gaming-guild",
     srcImg: "/assets/Feature/guild1.png",
+    statusHref: true
   },
   {
     id: 7,
@@ -109,6 +115,7 @@ const datas = [
     titleButton: "Coming Soon",
     href: "",
     srcImg: "/assets/Feature/automation_tool_zone2.png",
+    statusHref: true
   },
 ];
 

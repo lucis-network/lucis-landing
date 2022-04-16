@@ -1,5 +1,6 @@
 import Button3D from "components/Button3D";
 import { useWindowSize } from "hooks/useWindowSize";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import s from "./ItemEcosystem.module.sass";
 
@@ -38,13 +39,17 @@ export default function ItemEcosystem(props: Props) {
         {width >= 1024 && <h1>{e.titleH1}</h1>}
         <div dangerouslySetInnerHTML={{ __html: `${e.titleP}` }} />
         <div>
-          <Button3D
-            title={`${e.titleButton}`}
-            normal
-            onClick={() => {
-              router.push(`/${e.href}`);
-            }}
-          />
+          {
+            e.statusHref ? 
+              <Button3D
+                title={`${e.titleButton}`}
+                normal
+                onClick={() => {
+                  router.push(`${e.href}`);
+                }}
+              />
+            : <a href={'https://insight.lucis.network/'} target="_blank" rel="noopener noreferrer">More Detail</a>
+          }
         </div>
       </div>
       <div className={`${s.im_Block}`}>

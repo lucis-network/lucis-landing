@@ -19,8 +19,7 @@ const GROUPS = [
       name: "Hoa Phung",
       position: "COO",
       img:"/assets/Team/hoa.png",   
-      status: false,
-      linkIn:"#"
+      status: true,
     },
     {
       name: "Luat NGUYEN",

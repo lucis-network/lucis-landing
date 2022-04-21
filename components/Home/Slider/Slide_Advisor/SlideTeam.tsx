@@ -50,7 +50,7 @@ export default class SimpleSliderAdvisor extends Component {
         {/* @ts-ignore*/}
         <Slider ref={c => (this.slider = c)} {...settings}>
           <div className={s.block_team}>
-            <CardTeam srcImg='/assets/Team/nam.png' setLinkin={true} srcLinkedIn='http://linkedin.com/in/nguyễn-hoài-nam-36b743194' statusCard={1} nameTeam='Nam Nguyen' serviceTeam='Growth Advisor'  />
+            <CardTeam srcImg='/assets/Team/nam.png' setLinkin={true} srcLinkedIn='https://www.linkedin.com/in/nam-ng-175689127/' statusCard={1} nameTeam='Nam Nguyen' serviceTeam='Growth Advisor'  />
             {/* <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />

@@ -5,8 +5,8 @@ type Props = {
 };
 
 export default function DocHead(props: Props) {
-  const titleSuffix = props.title ?? "Redefine Play to Earn ecosystem";
-  const title = "Lucis Gaming Guild - " + titleSuffix;
+  const titleSuffix = props.title ?? "Gaming SocialFi and Insights";
+  const title = "Lucis Platform - " + titleSuffix;
   const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
   const thumb = "/assets/img/howwework.png";
 
@@ -24,7 +24,7 @@ export default function DocHead(props: Props) {
 
     <meta name="apple-mobile-web-app-title" content={title} />
     <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="application-name" content="Lucis Gaming Guild" />
+    <meta name="application-name" content="Lucis Platform" />
 
     <meta property="og:title" content={title} />
     <meta data-hid="description" name="description" content={desc} />

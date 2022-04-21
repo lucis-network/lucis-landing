@@ -42,10 +42,14 @@ export default function CardTeam(props: Props) {
       <div className={s.heading_team}>
         <AnimWhenVisible enable={props.enableAnim}>
           <div className={s.blockName}>
-            <a className={s.ico} style={styleLinkIn} href={props.srcLinkedIn} target='_blank' rel="noopener noreferrer">
+            {/* <a className={s.ico} style={styleLinkIn} href={props.srcLinkedIn} target='_blank' rel="noopener noreferrer">
               <img src="/assets/Team/in.svg" alt="" />
-            </a>
-            <span className={s.name}>{props.nameTeam}</span>
+            </a> */}
+            <span className={s.name}>
+              <a className={s.ico} style={styleLinkIn} href={props.srcLinkedIn} target='_blank' rel="noopener noreferrer">
+                {props.nameTeam}
+              </a>
+            </span>
           </div>
           <span className={s.team}>{props.serviceTeam}</span>
         </AnimWhenVisible>

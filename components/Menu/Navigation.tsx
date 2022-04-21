@@ -104,7 +104,7 @@ export const Navigation = () => {
     {
       color: "#FF008C",
       text: "Insight",
-      src: "/ranking"
+      src: "/insight"
     },
     {
       color: "#FF008C",

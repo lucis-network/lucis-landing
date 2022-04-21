@@ -22,7 +22,7 @@ const Career: NextPage = () => {
               <li><a href="#">Substrate (Rust) & BSC (Solidity) Developer</a></li>
               <li><a href="/career/Lucis-JD-QA.html" target="_blank">Tester / QA</a></li>
             </ul>
-            <p>Contact Email: <i>huyennp@lucis.network</i></p>
+            <p>Contact Email: <i>lienvtk@lucis.network</i></p>
           </div>
         </div>
 

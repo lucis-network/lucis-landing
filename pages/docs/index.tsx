@@ -8,7 +8,7 @@ import CardDocs from "components/Card/Doc";
 const Career: NextPage = () => {
   return (
     <section className="lucis-container">
-      <DocHead title="Career"/>
+      <DocHead title="Documents"/>
 
       <div className={`${s.container} section-content`}>
         <h1>Lucis Docs</h1>

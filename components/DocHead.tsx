@@ -7,7 +7,7 @@ type Props = {
 export default function DocHead(props: Props) {
   const titleSuffix = props.title ?? "Gaming SocialFi and Insights";
   const title = "Lucis Platform - " + titleSuffix;
-  const desc = "One of the most effective investment platforms for investors. We create a hybrid platform to connect investors and skilled scholars in the world of \"Play to Earn\" gaming and metaverse.";
+  const desc = "Unite Gamers Across The Globe With The Power of Decentralize Finance. We transform & educate players from traditional games to NFT games ";
   const thumb = "/assets/img/howwework.png";
 
   return <Head>

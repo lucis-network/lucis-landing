@@ -7,31 +7,28 @@ type Props = {};
 
 const roadmapData = [
   {
+    year: "Q1/2021",
+    content: (
+      <>
+        <p><b>Lucis Gaming Guild official launch</b></p>
+      </>
+    )
+  },
+  {
     year: "Q4/2021",
     content: (
       <>
-        <p><b>100</b> scholars</p>
-        <p><b>$100K</b> Revenue <small>(monthly)</small></p>
-        <p><b>Lucis</b> Media</p>
-        <p><b>Research</b> Gaming Guild Ecosystem</p>
+        <p><b>Lucis Media</b></p>
+        <p><b>Investigate </b>the Gaming Guild Ecosystem</p>
       </>
     )
   },
   {
-    year: "02/2022",
+    year: "Q1/2022",
     content: (
       <>
-        <p><b>Develop</b> Lucis Scholarship Platform</p>
-        <p><b>Lucis</b> Academy</p>
-      </>
-    )
-  },
-  {
-    year: "03/2022",
-    content: (
-      <>
+        <p><b>Lucis Academy</b></p>
         <p><b>Private</b> Scholarships Program for Early Investors</p>
-        <p><b>Develop</b> NFT cross-game Marketplace</p>
       </>
     )
   },
@@ -39,19 +36,11 @@ const roadmapData = [
     year: "Q2/2022",
     content: (
       <>
-        <p><b>Initial</b> Dex Offering</p>
-        <p><b>NFT</b> Marketplace Official Launch</p>
-        <p><b>Scholarship</b> Platform Official Launch</p>
-      </>
-    )
-  },
-  {
-    year: "06/2022",
-    content: (
-      <>
-        <p><b>Scholar</b> Tournament Events</p>
-        <p><b>DAO</b> Management Model</p>
-        <p><b>Market</b> Expansion</p>
+        <p><b>Private Round & IDO</b></p>
+        <p><b>Donating System</b></p>
+        <p><b>Tournaments platform</b></p>
+        <p><b>Mainnet</b> Tools Zone 1.0</p>
+        <p><b>Mainnet</b> Lucis Ranking System</p>
       </>
     )
   },
@@ -59,9 +48,10 @@ const roadmapData = [
     year: "Q3/2022",
     content: (
       <>
-        <p><b>Scholarship</b> Platform Features Enrichment</p>
-        <p><b>Develop</b> NFT Wallet</p>
-        <p><b>DeFi</b> Services Launch</p>
+        <p><b>Social Features</b></p>
+        <p><b>Mainnet</b> Tools Zone 2.0</p>
+        <p><b>Scholarship</b> Platform Mainet</p>
+        <p><b>Lucis</b> BattlePass System</p>
       </>
     )
   },
@@ -69,9 +59,18 @@ const roadmapData = [
     year: "Q4/2022",
     content: (
       <>
-        <p><b>NFT</b> Wallet Launch</p>
-        <p><b>INO</b> Launchpad</p>
-        <p><b>R&D</b> GameFi / NFT Ecosystem</p>
+        <p><b>Lucis</b> Mystery Box Launchpad</p>
+        <p><b>NFT Marketplace</b></p>
+        <p><b>Lucis</b> NFT collections</p>
+      </>
+    )
+  },
+  {
+    year: "Q3/2023",
+    content: (
+      <>
+        <p><b>Live Streaming</b></p>
+        <p><b>Mobile</b> App Launch</p>
       </>
     )
   },
@@ -79,7 +78,7 @@ const roadmapData = [
     year: "2023",
     content: (
       <>
-        <p><b>Continue</b> Growing</p>
+        <p><b>To be updating</b></p>
       </>
     )
   },

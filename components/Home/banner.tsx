@@ -45,7 +45,7 @@ function Banner(props: Props) {
       {/* Total */}
 
 
-      <div className={s.titleTotal}>
+      {/* <div className={s.titleTotal}>
         <div className={s.ic_stats}>
           <img src="/assets/Banner/ic_stats.svg" alt="" />
         </div>
@@ -57,7 +57,7 @@ function Banner(props: Props) {
         <TotalBanner title="Total Scholars" titleNumber="1000+" />
         <TotalBanner title="Total Games" titleNumber="18+" />
         <TotalBanner title="Monthly Revenue" titleNumber="$200k+" />
-      </div>
+      </div> */}
     </section>
   );
 }

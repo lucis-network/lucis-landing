@@ -81,9 +81,9 @@ const Home: NextPage = () => {
       >
         <Banner />
       </AnimWhenVisible>
-      <AnimWhenVisible>
+      {/* <AnimWhenVisible>
         <Community />
-      </AnimWhenVisible>
+      </AnimWhenVisible> */}
 
       <AnimWhenVisible>
         <Features />

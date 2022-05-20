@@ -99,24 +99,24 @@ const datas = [
     srcImg: "/assets/Feature/guild1.png",
     statusHref: true
   },
-  {
-    id: 7,
-    titleH1: "Automation tool zone",
-    titleP: `
-      <p>
-        All the best automation and handy tools for our scholars, gamers, and investors
-      </p>
-      <br />
-      <h1>Streaming platform</h1>
-      <p>
-        Is coming soon, and be apart of our SocialFi platform
-      </p>
-    `,
-    titleButton: "Coming Soon",
-    href: "",
-    srcImg: "/assets/Feature/automation_tool_zone2.png",
-    statusHref: true
-  },
+  // {
+  //   id: 7,
+  //   titleH1: "Automation tool zone",
+  //   titleP: `
+  //     <p>
+  //       All the best automation and handy tools for our scholars, gamers, and investors
+  //     </p>
+  //     <br />
+  //     <h1>Streaming platform</h1>
+  //     <p>
+  //       Is coming soon, and be apart of our SocialFi platform
+  //     </p>
+  //   `,
+  //   titleButton: "Coming Soon",
+  //   href: "",
+  //   srcImg: "/assets/Feature/automation_tool_zone2.png",
+  //   statusHref: true
+  // },
 ];
 
 export default function Features(props: Props) {

@@ -16,11 +16,11 @@ export default function ItemEcosystem(props: Props) {
   return dataEcosystems.map((e: any) => (
     <div
       className={`${s.itemEcosystem} ${
-        e.id == 1
+        e.id == 1 || e.id == 9
           ? s.item1
           : e.id == 2
           ? s.item2
-          : e.id == 3
+          : e.id == 3 || e.id == 10
           ? s.item3
           : e.id == 4
           ? s.item4

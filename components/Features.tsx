@@ -21,7 +21,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/social-fi",
     srcImg: "/assets/Feature/social_fi1.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/tournaments",
     srcImg: "/assets/Feature/tournaments1.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/insight",
     srcImg: "/assets/Feature/insight1.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/media",
     srcImg: "/assets/Feature/media2.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 5,
@@ -79,7 +79,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/marketplace",
     srcImg: "/assets/Feature/launchpad_marketplace.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 6,
@@ -97,26 +97,133 @@ const datas = [
     titleButton: "More Detail",
     href: "/lucis-gaming-guild",
     srcImg: "/assets/Feature/guild1.png",
-    statusHref: true
+    statusHref: true,
   },
-  // {
-  //   id: 7,
-  //   titleH1: "Automation tool zone",
-  //   titleP: `
-  //     <p>
-  //       All the best automation and handy tools for our scholars, gamers, and investors
-  //     </p>
-  //     <br />
-  //     <h1>Streaming platform</h1>
-  //     <p>
-  //       Is coming soon, and be apart of our SocialFi platform
-  //     </p>
-  //   `,
-  //   titleButton: "Coming Soon",
-  //   href: "",
-  //   srcImg: "/assets/Feature/automation_tool_zone2.png",
-  //   statusHref: true
-  // },
+  {
+    id: 7,
+    titleH1: "Lucis Play-to-earn 2.0 (Zone 1)",
+    titleP: `
+      <p>
+        All the best automation and handy tools for our scholars, gamers, and investors
+      </p>
+      <br />
+      <h1>Streaming platform</h1>
+      <p>
+        Is coming soon, and be apart of our SocialFi platform
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/zone1.png",
+    statusHref: true,
+  },
+  {
+    id: 8,
+    titleH1: "Lucis Tournaments Platform (Zone 2)",
+    titleP: `
+      <p>
+        All the best automation and handy tools for our scholars, gamers, and investors
+      </p>
+      <br />
+      <h1>Streaming platform</h1>
+      <p>
+        Is coming soon, and be apart of our SocialFi platform
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/zone2.png",
+    statusHref: true,
+  },
+  {
+    id: 9,
+    titleH1: "Lucis SocialFi (Zone 3)",
+    titleP: `
+      <p>
+        All the best automation and handy tools for our scholars, gamers, and investors
+      </p>
+      <br />
+      <h1>Streaming platform</h1>
+      <p>
+        Is coming soon, and be apart of our SocialFi platform
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/social_fi1.png",
+    statusHref: true,
+  },
+  {
+    id: 10,
+    titleH1: "Lucis Ranking (Zone 4)",
+    titleP: `
+      <p>
+        All the best automation and handy tools for our scholars, gamers, and investors
+      </p>
+      <br />
+      <h1>Streaming platform</h1>
+      <p>
+        Is coming soon, and be apart of our SocialFi platform
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/insight1.png",
+    statusHref: true,
+  },
+  {
+    id: 11,
+    titleH1: "Lucis Raffle (Zone 5)",
+    titleP: `
+      <p>
+        All the best automation and handy tools for our scholars, gamers, and investors
+      </p>
+      <br />
+      <h1>Streaming platform</h1>
+      <p>
+        Is coming soon, and be apart of our SocialFi platform
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "", 
+    srcImg: "/assets/Feature/zone5.png",
+    statusHref: true,
+  },
+  {
+    id: 12,
+    titleH1: "Lucis Scholarship (Zone 6)",
+    titleP: `
+      <p>
+        All the best automation and handy tools for our scholars, gamers, and investors
+      </p>
+      <br />
+      <h1>Streaming platform</h1>
+      <p>
+        Is coming soon, and be apart of our SocialFi platform
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/zone6.png",
+    statusHref: true,
+  },
+  {
+    id: 13,
+    titleH1: "Lucis Marketplace (Zone 7)",
+    titleP: `
+      <p>
+        <b>Zone 7</b> enables game publishers and guilds to launch and sell<b> NFT/Box</b>
+      </p>
+      <br />
+      <p>
+        Players can <b>sell/buy</b> their precious NFT directly on our <b>Marketplace</b>.
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/launchpad_marketplace.png",
+    statusHref: true,
+  },
 ];
 
 export default function Features(props: Props) {
@@ -128,7 +235,7 @@ export default function Features(props: Props) {
         <TitleName titleName="Lucis Ecosystem" />
 
         <div className={s.BlockContent}>
-          <ItemEcosystem dataEcosystems = {datas} />
+          <ItemEcosystem dataEcosystems={datas} />
         </div>
 
         <img src="/assets/Feature/im_diagram.png" alt="" />

@@ -224,7 +224,7 @@ export default function PieChart() {
         />
       </div>
       <div id="chart-container" className={style.chartContainer} >
-        <img src="/assets/token_allocation/im_chart.png" alt="" />
+        <img src="/assets/token_allocation/im_chart.svg" alt="" />
       </div>
     </div>
   );

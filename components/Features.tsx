@@ -21,7 +21,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/social-fi",
     srcImg: "/assets/Feature/social_fi1.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/tournaments",
     srcImg: "/assets/Feature/tournaments1.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/insight",
     srcImg: "/assets/Feature/insight1.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/media",
     srcImg: "/assets/Feature/media2.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 5,
@@ -79,7 +79,7 @@ const datas = [
     titleButton: "More Detail",
     href: "/marketplace",
     srcImg: "/assets/Feature/launchpad_marketplace.png",
-    statusHref: true
+    statusHref: true,
   },
   {
     id: 6,
@@ -97,26 +97,161 @@ const datas = [
     titleButton: "More Detail",
     href: "/lucis-gaming-guild",
     srcImg: "/assets/Feature/guild1.png",
-    statusHref: true
+    statusHref: true,
   },
-  // {
-  //   id: 7,
-  //   titleH1: "Automation tool zone",
-  //   titleP: `
-  //     <p>
-  //       All the best automation and handy tools for our scholars, gamers, and investors
-  //     </p>
-  //     <br />
-  //     <h1>Streaming platform</h1>
-  //     <p>
-  //       Is coming soon, and be apart of our SocialFi platform
-  //     </p>
-  //   `,
-  //   titleButton: "Coming Soon",
-  //   href: "",
-  //   srcImg: "/assets/Feature/automation_tool_zone2.png",
-  //   statusHref: true
-  // },
+  {
+    id: 7,
+    titleH1: "Lucis Play-to-earn 2.0 (Zone 1)",
+    titleP: `
+      <p>
+        Our unique Play-to-earn 2.0 Platform allows players of all skill levels to participate and reap the benefits 
+      </p>
+      <br />
+      <b>Play-to-earn 2.0</b>
+      <p>
+        Players can earn Lucis tokens, Lucis points and other valuable rewards simply by playing their favorite traditional games such as CS:GO, League of Legends, Valorant...
+      </p>
+      <p>
+        - It is completely free to begin earning rewards
+      </p>
+      <p>
+        - Rank up to earn more
+      </p>
+      <p>
+        - Points can be converted into Raffle tickets or Lucis tokens, and Lucis token reward earnings have monetary value
+      </p>
+      <p>
+        - NFT is a symbol of the player's personal status in Lucis's gaming SocialFi
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/zone1.png",
+    statusHref: true,
+  },
+  {
+    id: 8,
+    titleH1: "Lucis Tournaments Platform (Zone 2)",
+    titleP: `
+      <b>
+        Competitive play 
+      </b>
+      <p>
+        Pits players against opponents of similar skill levels to create a fair and enjoyable experience for all 
+      </p>
+      <p>
+        Players can create their own teams, clubs, and tournaments
+      </p>
+      <p>
+        Opportunity to form official partnerships gaming clubs, as well as professional esports leagues
+      </p>
+      <p>
+        Tournament organizers earn rewards in the same way that tournament winners do
+      </p>
+      <br />
+      <b>
+        Two Types of tournaments
+      </b>
+      <p>
+        Free (no entry fee required), Paid by $LUCIS
+      </p>
+      <br />
+      <b>
+        Tournament prizes come from
+      </b>
+      <p>
+        Entry fees, Sponsorships, Game Publishers, Gaming guilds, Lucis prize pool
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/zone2.png",
+    statusHref: true,
+  },
+  {
+    id: 9,
+    titleH1: "Lucis SocialFi (Zone 3)",
+    titleP: `
+      <p>
+        <b>Players</b> create their own customized SocialFi ID
+      </p>
+      <p>
+      <b>Players</b> will earn badges and achievements as they progress to show off their skills and customize their profile, as well as unique NFT backgrounds, collectibles, and tittles for the community to see
+      </p>
+      <p>
+        <b>Players</b> can also interact with their peers on our social platform to learn, compete, or form an esports team, club, or similar organization
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/social_fi1.png",
+    statusHref: true,
+  },
+  {
+    id: 10,
+    titleH1: "Lucis Ranking (Zone 4)",
+    titleP: `
+      <b>
+        Lucis Ranking System
+      </b>
+      <p>
+        Play-to-Earn and traditional Game Market exposure delivered via a single platform
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/insight1.png",
+    statusHref: true,
+  },
+  {
+    id: 11,
+    titleH1: "Lucis Raffle (Zone 5)",
+    titleP: `
+      <b>
+        Every week players can use their Lucis Points to enter Raffle for a chance to win random prizes such as:
+      </b>
+      <br />
+      <p>$100 in LUCIS tokens</p>
+      <p>
+        Physical items like: Razer headphone, Gaming keyboard, Gaming mouse, Gaming chair, Giftcard
+      </p>
+      <p>NFTs, Token</p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/zone5.png",
+    statusHref: true,
+  },
+  {
+    id: 12,
+    titleH1: "Lucis Scholarship (Zone 6)",
+    titleP: `
+      <p>
+        Zone 6 empowers players to play and managers to coach players while allowing both to earn
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/zone6.png",
+    statusHref: true,
+  },
+  {
+    id: 13,
+    titleH1: "Lucis Marketplace (Zone 7)",
+    titleP: `
+      <p>
+        <b>Zone 7</b> enables game publishers and guilds to launch and sell<b> NFT/Box</b>
+      </p>
+      <br />
+      <p>
+        Players can <b>sell/buy</b> their precious NFT directly on our <b>Marketplace</b>.
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/launchpad_marketplace.png",
+    statusHref: true,
+  },
 ];
 
 export default function Features(props: Props) {
@@ -128,7 +263,7 @@ export default function Features(props: Props) {
         <TitleName titleName="Lucis Ecosystem" />
 
         <div className={s.BlockContent}>
-          <ItemEcosystem dataEcosystems = {datas} />
+          <ItemEcosystem dataEcosystems={datas} />
         </div>
 
         <img src="/assets/Feature/im_diagram.png" alt="" />

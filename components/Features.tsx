@@ -104,12 +104,24 @@ const datas = [
     titleH1: "Lucis Play-to-earn 2.0 (Zone 1)",
     titleP: `
       <p>
-        All the best automation and handy tools for our scholars, gamers, and investors
+        Our unique Play-to-earn 2.0 Platform allows players of all skill levels to participate and reap the benefits 
       </p>
       <br />
-      <h1>Streaming platform</h1>
+      <b>Play-to-earn 2.0</b>
       <p>
-        Is coming soon, and be apart of our SocialFi platform
+        Players can earn Lucis tokens, Lucis points and other valuable rewards simply by playing their favorite traditional games such as CS:GO, League of Legends, Valorant...
+      </p>
+      <p>
+        - It is completely free to begin earning rewards
+      </p>
+      <p>
+        - Rank up to earn more
+      </p>
+      <p>
+        - Points can be converted into Raffle tickets or Lucis tokens, and Lucis token reward earnings have monetary value
+      </p>
+      <p>
+        - NFT is a symbol of the player's personal status in Lucis's gaming SocialFi
       </p>
     `,
     titleButton: "Coming Soon",
@@ -121,13 +133,34 @@ const datas = [
     id: 8,
     titleH1: "Lucis Tournaments Platform (Zone 2)",
     titleP: `
+      <b>
+        Competitive play 
+      </b>
       <p>
-        All the best automation and handy tools for our scholars, gamers, and investors
+        Pits players against opponents of similar skill levels to create a fair and enjoyable experience for all 
+      </p>
+      <p>
+        Players can create their own teams, clubs, and tournaments
+      </p>
+      <p>
+        Opportunity to form official partnerships gaming clubs, as well as professional esports leagues
+      </p>
+      <p>
+        Tournament organizers earn rewards in the same way that tournament winners do
       </p>
       <br />
-      <h1>Streaming platform</h1>
+      <b>
+        Two Types of tournaments
+      </b>
       <p>
-        Is coming soon, and be apart of our SocialFi platform
+        Free (no entry fee required), Paid by $LUCIS
+      </p>
+      <br />
+      <b>
+        Tournament prizes come from
+      </b>
+      <p>
+        Entry fees, Sponsorships, Game Publishers, Gaming guilds, Lucis prize pool
       </p>
     `,
     titleButton: "Coming Soon",
@@ -140,12 +173,13 @@ const datas = [
     titleH1: "Lucis SocialFi (Zone 3)",
     titleP: `
       <p>
-        All the best automation and handy tools for our scholars, gamers, and investors
+        <b>Players</b> create their own customized SocialFi ID
       </p>
-      <br />
-      <h1>Streaming platform</h1>
       <p>
-        Is coming soon, and be apart of our SocialFi platform
+      <b>Players</b> will earn badges and achievements as they progress to show off their skills and customize their profile, as well as unique NFT backgrounds, collectibles, and tittles for the community to see
+      </p>
+      <p>
+        <b>Players</b> can also interact with their peers on our social platform to learn, compete, or form an esports team, club, or similar organization
       </p>
     `,
     titleButton: "Coming Soon",
@@ -157,13 +191,11 @@ const datas = [
     id: 10,
     titleH1: "Lucis Ranking (Zone 4)",
     titleP: `
+      <b>
+        Lucis Ranking System
+      </b>
       <p>
-        All the best automation and handy tools for our scholars, gamers, and investors
-      </p>
-      <br />
-      <h1>Streaming platform</h1>
-      <p>
-        Is coming soon, and be apart of our SocialFi platform
+        Play-to-Earn and traditional Game Market exposure delivered via a single platform
       </p>
     `,
     titleButton: "Coming Soon",
@@ -175,17 +207,18 @@ const datas = [
     id: 11,
     titleH1: "Lucis Raffle (Zone 5)",
     titleP: `
-      <p>
-        All the best automation and handy tools for our scholars, gamers, and investors
-      </p>
+      <b>
+        Every week players can use their Lucis Points to enter Raffle for a chance to win random prizes such as:
+      </b>
       <br />
-      <h1>Streaming platform</h1>
+      <p>$100 in LUCIS tokens</p>
       <p>
-        Is coming soon, and be apart of our SocialFi platform
+        Physical items like: Razer headphone, Gaming keyboard, Gaming mouse, Gaming chair, Giftcard
       </p>
+      <p>NFTs, Token</p>
     `,
     titleButton: "Coming Soon",
-    href: "", 
+    href: "",
     srcImg: "/assets/Feature/zone5.png",
     statusHref: true,
   },
@@ -194,12 +227,7 @@ const datas = [
     titleH1: "Lucis Scholarship (Zone 6)",
     titleP: `
       <p>
-        All the best automation and handy tools for our scholars, gamers, and investors
-      </p>
-      <br />
-      <h1>Streaming platform</h1>
-      <p>
-        Is coming soon, and be apart of our SocialFi platform
+        Zone 6 empowers players to play and managers to coach players while allowing both to earn
       </p>
     `,
     titleButton: "Coming Soon",

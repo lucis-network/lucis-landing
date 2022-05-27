@@ -19,7 +19,7 @@ const Career: NextPage = () => {
               {/* <li><a href="https://docsend.com/view/mjjpga55dwewcdxb" target="_blank" rel="noopener noreferrer">Light paper</a></li>
               <li><a href="#" target="_blank" rel="noopener noreferrer">Pitchdeck</a></li>
               <li><a href="https://docsend.com/view/znv8hznu8fe4ckba" target="_blank" rel="noopener noreferrer">Investors packages</a></li> */}
-              <CardDocs titleCard='Light paper' srcImg='/docs/doc_1.png' link="https://docsend.com/view/mjjpga55dwewcdxb" />
+              <CardDocs titleCard='Lite paper' srcImg='/docs/doc_1.png' link="https://docsend.com/view/mjjpga55dwewcdxb" />
               {/* <CardDocs titleCard='Pitchdeck' srcImg='/docs/doc_2.png' link="https://docsend.com/view/qxbdpqxhfavu7bvi" /> */}
               <CardDocs titleCard='Onepager' srcImg='/docs/doc_3.png' link="https://docsend.com/view/94veg5467bj5ue6b" />
             </div>

@@ -22,7 +22,7 @@ export default function OurEcosystem(props: Props){
       <TitleName titleName='Lucis Media' />
       <div className="section-content">
         <div className={s.content_video}>
-        <iframe id="Content_video" src="https://www.youtube.com/embed/eIz-E4Jbsg8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameBorder="0"></iframe>
+        <iframe id="Content_video" src="https://www.youtube.com/embed/hRSgQmg26b4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameBorder="0"></iframe>
 
         <div style={styleIm} onClick={playVideo} className={s.bg_video}>
           <img src="/assets/OurEcosystem/bg_video.png" alt="" />

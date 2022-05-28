@@ -7,15 +7,23 @@ import { scrollToSection } from "utils/DOM";
 import s from "./banner.module.sass";
 import TotalBanner from "./Total/TotalBanner";
 
-
 type Props = {};
 
 function Banner(props: Props) {
-  const router = useRouter()
+  const [contentRef, setContentRef] = useState(true);
+  const router = useRouter();
   const HandleScrollToElement = useCallback((selector: string) => {
-    scrollToSection(selector ?? '', true, -90)
-  }, [])
-
+    scrollToSection(selector ?? "", true, -90);
+  }, []);
+  const styleIm = !contentRef ? { display: "none" } : { display: "block" };
+  function playVideo() {
+    setContentRef(false);
+    const Video = document.getElementById("Content_video");
+    setTimeout(() => {
+      //@ts-ignore
+      Video.src += "?autoplay=1&showinfo=0&modestbranding=1&rel=0&mute=1";
+    }, 1000);
+  }
   return (
     <section className={`${s.container_banner}`}>
       <div className="stars-bg"></div>
@@ -27,13 +35,17 @@ function Banner(props: Props) {
           </p>
           <div className={s.groupButton}>
             <div className={s.item_btn}>
-              <Button3D                 
+              <Button3D
                 onClick={() => {
-                  router.push('/social-fi')
-                }}  
-                title="Explore" />
+                  router.push("/social-fi");
+                }}
+                title="Explore"
+              />
             </div>
-            <div onClick={() => HandleScrollToElement('#EcoSystem')} className={s.item_btn}>
+            <div
+              onClick={() => HandleScrollToElement("#EcoSystem")}
+              className={s.item_btn}
+            >
               <Button3D title="Ecosystem" normal />
             </div>
           </div>
@@ -42,8 +54,19 @@ function Banner(props: Props) {
           <img src="/assets/Banner/vr-glass.png" alt="" />
         </div>
       </div>
-      {/* Total */}
+      <div className={s.content_video}>
+        <iframe
+          id="Content_video"
+          src="https://www.youtube.com/embed/hRSgQmg26b4"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          frameBorder="0"
+        ></iframe>
 
+        <div style={styleIm} onClick={playVideo} className={s.bg_video}>
+          <img src="/assets/OurEcosystem/bg_video.png" alt="" />
+        </div>
+      </div>
+      {/* Total */}
 
       {/* <div className={s.titleTotal}>
         <div className={s.ic_stats}>

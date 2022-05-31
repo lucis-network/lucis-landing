@@ -8,6 +8,7 @@
 
 .im_banner
   @include flex-rear
+  position: relative
   img
     width: 100%
 
@@ -320,61 +321,71 @@
     max-width: 414px
 
 
-.content_video
+.wrapper_video
   max-width: 545px
-  height: 318px
-  padding: 10px
-  @apply relative
-  z-index: 1
-  @media (min-width: 0px)
-    top: 0px
-    height: 190px
-  @media (min-width: 414px)
-    height: 220px
-  @media (min-width: 540px)
-    height: 290px
-  @media (min-width: 640px)
-    height: 310px
+  width: 100%
   @media (min-width: 768px)
-    height: 399px
     max-width: 100%
   @media (min-width: 992px)
-    height: 240px
-    max-width: 420px
-  @media (min-width: 992px)
-    height: 240px
-    max-width: 420px
+    position: absolute
+    top: 50%
+    right: 0px
+    transform: translateY(-50%)
+    max-width: 464px
+    z-index: 1
+  @media (min-width: 1024px)
+    right: 4rem
+    max-width: 400px
   @media (min-width: 1280px)
-    height: 252px
-    max-width: 440px
-    top: -80px
+    max-width: 540px
+    right: 5rem  
   @media (min-width: 1440px)
-    height: 302px
-    max-width: 530px
-    top: -80px
+    max-width: 570px
+    right: 100px
 
-  iframe
-    @apply w-full h-full relative
-    border-radius: 16px 
-.bg_video
-  @apply absolute h-full cursor-pointer
-  top: 10px
-  left: 9px
-  @media (min-width: 0px)
-    top: 5px
-    left: 5px
-  img
-    width: 99%
-.content_video::before
-  content:""
-  position: absolute
-  top:0
-  left:0
-  right:0
-  bottom:0
-  border-radius: 12px 
-  padding: 10px 
-  background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
-  -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0)
-  // -webkit-mask-composite: xor
-  // mask-composite: exclude
+  .content
+    height: 318px
+    padding: 10px
+    @apply relative
+    z-index: 1
+    @media (min-width: 0px)
+      height: 190px
+    @media (min-width: 414px)
+      height: 220px
+    @media (min-width: 540px)
+      height: 290px
+    @media (min-width: 640px)
+      height: 310px
+    @media (min-width: 768px)
+      height: 400px
+    @media (min-width: 992px)
+      height: 265px
+    @media (min-width: 1024px)
+      height: 230px
+    @media (min-width: 1280px)
+      height: 308px
+    @media (min-width: 1440px)
+      height: 324px
+    iframe
+      @apply w-full h-full relative
+      border-radius: 16px 
+  .bg_video
+    @apply absolute h-full cursor-pointer
+    top: 10px
+    left: 9px
+    @media (min-width: 0px)
+      top: 5px
+      left: 5px
+    img
+      width: 99%
+  .content::before
+    content:""
+    position: absolute
+    top:0
+    left:0
+    right:0
+    bottom:0
+    border-radius: 12px 
+    padding: 10px 
+    background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0)

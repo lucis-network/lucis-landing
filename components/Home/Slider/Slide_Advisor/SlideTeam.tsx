@@ -1,14 +1,13 @@
-import s from './SlideTeam.module.sass'
-
+import s from "./SlideTeam.module.sass";
 
 import React, { Component } from "react";
 import Slider from "react-slick";
-import CardTeam from 'components/Home/CardTeam/CardTeam';
-import TitleName from 'components/Home/TitleSection/TitleName';
-import AnimWhenVisible from 'components/Anim';
+import CardTeam from "components/Home/CardTeam/CardTeam";
+import TitleName from "components/Home/TitleSection/TitleName";
+import AnimWhenVisible from "components/Anim";
 
 export default class SimpleSliderAdvisor extends Component {
-  constructor(props:any) {
+  constructor(props: any) {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
@@ -27,13 +26,13 @@ export default class SimpleSliderAdvisor extends Component {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
     };
     return (
       <div>
         <div className={s.heading_feature}>
           <AnimWhenVisible>
-          <TitleName titleName='Advisor' />
+            <TitleName titleName="Advisor" />
           </AnimWhenVisible>
           {/* <div className={s.group_btn}>
             <button className={s.btn_left} onClick={this.previous}>
@@ -45,21 +44,35 @@ export default class SimpleSliderAdvisor extends Component {
           </div> */}
         </div>
 
-      {/* @ts-ignore*/}
-      <div style={{marginTop: '50px'}}>
         {/* @ts-ignore*/}
-        <Slider ref={c => (this.slider = c)} {...settings}>
-          <div className={s.block_team}>
-            <CardTeam srcImg='/assets/Team/nam.png' setLinkin={true} srcLinkedIn='https://www.linkedin.com/in/nam-ng-175689127/' statusCard={1} nameTeam='Nam Nguyen' serviceTeam='Growth Advisor'  />
-            {/* <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
+        <div style={{ marginTop: "50px" }}>
+          {/* @ts-ignore*/}
+          <Slider ref={(c) => (this.slider = c)} {...settings}>
+            <div className={s.block_team}>
+              <CardTeam
+                srcImg="/assets/Team/nam.png"
+                setLinkin={true}
+                srcLinkedIn="https://www.linkedin.com/in/nam-ng-175689127/"
+                statusCard={1}
+                nameTeam="Nam Nguyen"
+                serviceTeam="Growth Advisor"
+              />
+              <CardTeam
+                srcImg="/assets/Team/dat.png"
+                setLinkin={true}
+                srcLinkedIn="https://www.linkedin.com/in/nam-ng-175689127/"
+                statusCard={1}
+                nameTeam="Mai Xuan Đat"
+                serviceTeam="Marketing & OKR Advisor"
+              />
+              {/* <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  /> */}
-          </div>
-          {/* <div className={s.block_team}>
+            </div>
+            {/* <div className={s.block_team}>
           <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
@@ -79,8 +92,8 @@ export default class SimpleSliderAdvisor extends Component {
             <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
             <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
           </div> */}
-        </Slider>
-      </div>
+          </Slider>
+        </div>
       </div>
     );
   }

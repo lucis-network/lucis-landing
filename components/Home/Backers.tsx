@@ -6,70 +6,31 @@ type Props = {}
 export default function PartnersStrategic(props: Props) {
   return(
     <section className="lucis-container">
-      <TitleName titleName='Strategic & Community partners' />
+      <TitleName titleName='Partners' />
 
-      {/* <div className={`${s.block_item} section-content`}>
+      <div className={`${s.block_item} section-content`}>
           <div className={s.item_backer}>
-            <img src="/assets/backer/au21.png" alt="" />
+            <img src="/assets/backer/mones.png" alt="" />
           </div>
           <div className={s.item_backer}>
-            <img src="/assets/backer/basic.png" alt="" />
+            <img src="/assets/backer/tt.png" alt="" />
           </div>
           <div className={s.item_backer}>
-            <img src="/assets/backer/bigcoin.png" alt="" />
+            <img src="/assets/backer/anv.png" alt="" />
           </div>
           <div className={s.item_backer}>
-            <img src="/assets/backer/defi.png" alt="" />
+            <img src="/assets/backer/edigital.png" alt="" />
           </div>
           <div className={s.item_backer}>
-            <img src="/assets/backer/ex.png" alt="" />
+            <img src="/assets/backer/spac.png" alt="" />
           </div>
           <div className={s.item_backer}>
-            <img src="/assets/backer/formless.png" alt="" />
+            <img src="/assets/backer/aiza.png" alt="" />
           </div>
           <div className={s.item_backer}>
-            <img src="/assets/backer/gamee.png" alt="" />
+            <img src="/assets/backer/epic.png" alt="" />
           </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/gg.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/hub.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/impo.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/kyber.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/kyros.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/lua.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/okex.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/realdeal.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/sol(1).png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/solar.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/tk.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/tomo.png" alt="" />
-          </div>
-          <div className={s.item_backer}>
-            <img src="/assets/backer/au21.png" alt="" />
-          </div>
-      </div> */}
+      </div>
     </section>
   )
 }

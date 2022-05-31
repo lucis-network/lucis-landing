@@ -93,11 +93,8 @@ const Home: NextPage = () => {
         <SlideGame />
       </AnimWhenVisible> */}
 
-      {/* <AnimWhenVisible>
-        <PartnersStrategic />
-      </AnimWhenVisible>
 
-      <AnimWhenVisible>
+      {/* <AnimWhenVisible>
         <IvestorBackers />
       </AnimWhenVisible> */}
       <AnimWhenVisible>
@@ -106,6 +103,9 @@ const Home: NextPage = () => {
       <Roadmap />
       <Team />
       <Advisor />
+      <AnimWhenVisible>
+        <PartnersStrategic />
+      </AnimWhenVisible>
       {showButton && (
         <button onClick={scrollToTop} className="btn-scrollTop">
           &#8679;

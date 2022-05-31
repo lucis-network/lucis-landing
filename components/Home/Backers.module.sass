@@ -1,25 +1,25 @@
 @import "styles/common"
 .block_item
-  @apply flex flex-row items-center justify-between flex-wrap
+  @apply flex flex-row items-center justify-center flex-wrap
+  padding-bottom: 120px
   .item_backer
     @apply flex flex-row items-center justify-center
     margin-bottom: 40px
-    width: 22%
+    margin: 20px 60px
+    @media (min-width: 0px)
+      margin: 12px 30px
+    @media (min-width: 1280px)
+      margin: 12px 50px
+    @media (min-width: 1440px)
+      margin: 20px 60px
 
+    img
+      @media (min-width: 0px)
+        max-width: 100px
+      @media (min-width: 640px)
+        max-width: 120px      
+      @media (min-width: 1280px)
+        max-width: 150px
+      @media (min-width: 1440px)
+        max-width: 200px
 
-@media (min-width: 769px) and (max-width: 991px)
-  .item_backer
-    width: 32% !important
-@media (min-width: 640px) and (max-width: 768px)
-  .item_backer
-    width: 48% !important
-@media (min-width: 540px) and (max-width: 639px)
-  .item_backer
-    width: 48% !important
-@media (min-width: 414px) and (max-width: 539px)
-  .item_backer
-    width: 45% !important
-
-@media (min-width: 0px) and (max-width: 413px)
-  .item_backer
-    width: 100% !important

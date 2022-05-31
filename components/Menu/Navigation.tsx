@@ -93,13 +93,9 @@ export const Navigation = () => {
   const menuItems: MenuItemType[] = [
     {
       color: "#FF008C",
-      text: "Tournaments",
-      src: "/tournaments",
-    },
-    {
-      color: "#FF008C",
-      text: "Marketplace",
-      src: "/marketplace"
+      text: "Zone",
+      src: "",
+      scrollTarget: "#EcoSystem"
     },
     {
       color: "#FF008C",

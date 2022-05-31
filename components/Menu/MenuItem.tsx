@@ -1,9 +1,11 @@
 import * as React from "react";
-import {ReactElement, useCallback} from "react";
+import { ReactElement, useCallback } from "react";
 
 import { motion } from "framer-motion";
-import {AppEmitter} from "../../services/emitter";
+import { AppEmitter } from "../../services/emitter";
 import Link from "next/link";
+import { scrollToSection } from "utils/DOM";
+import { useRouter } from "next/router";
 
 const variants = {
   open: {
@@ -23,38 +25,40 @@ const variants = {
 };
 
 export type MenuItemType = {
-  color: string,
-  src: string,
-  text: string | ReactElement,
-  scrollTarget?: string, // CSS selector of target scroll
-  onClick?: () => void,
-  subMenu?: string | ReactElement,
-}
+  color: string;
+  src: string;
+  text: string | ReactElement;
+  scrollTarget?: string; // CSS selector of target scroll
+  onClick?: () => void;
+  subMenu?: string | ReactElement;
+};
 
-export const MenuItem = (props: {item: MenuItemType}) => {
-  const click = useCallback(() => {
-    // if (props.item.scrollTarget) {
-    //   scrollToSection(props.item.scrollTarget ?? '', true, -90)
-    // 
-      if (props.item.onClick) {
-        props.item.onClick()
-      }
-        if (props.item.subMenu == undefined) {
-          AppEmitter.emit("setMbMenuVisible", false)
-        }
-  }, [])
+export const MenuItem = (props: { item: MenuItemType }) => {
+  const router = useRouter();
+  const click = useCallback((src: string) => {
+    if (src && src != '') {
+      router.push(src)
+    }else{
+      scrollToSection(props.item.scrollTarget ?? "", true, -90)
+    }
+    if (props.item.onClick) {
+      props.item.onClick();
+    }
+    if (props.item.subMenu == undefined) {
+      AppEmitter.emit("setMbMenuVisible", false);
+    }
+  }, []);
 
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.05 }}
       // whileTap={{ scale: 0.95 }}
-      onClick={click}
+      onClick={() => click(props.item.src)}
+      className="text-placeholder font-saira text-white px-3 py-3"
+      style={{ fontSize: "20px", lineHeight: "22px" }}
     >
-      {/* <div className="icon-placeholder" style={style} /> */}
-      <div className="text-placeholder font-saira text-white px-3 py-3" style={{fontSize: "20px",lineHeight: '22px'}}>
-        <Link href={props.item.src}>{props.item.text}</Link>
-      </div>
+      {props.item.text}
     </motion.li>
   );
 };

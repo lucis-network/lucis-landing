@@ -53,17 +53,19 @@ function Banner(props: Props) {
         <div className={s.content_glass}>
           <img src="/assets/Banner/vr-glass.png" alt="" />
         </div>
-      </div>
-      <div className={s.content_video}>
-        <iframe
-          id="Content_video"
-          src="https://www.youtube.com/embed/hRSgQmg26b4"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          frameBorder="0"
-        ></iframe>
+        <div className={s.wrapper_video}>
+          <div className={s.content}>
+            <iframe
+              id="Content_video"
+              src="https://www.youtube.com/embed/hRSgQmg26b4"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameBorder="0"
+            ></iframe>
 
-        <div style={styleIm} onClick={playVideo} className={s.bg_video}>
-          <img src="/assets/OurEcosystem/bg_video.png" alt="" />
+            <div style={styleIm} onClick={playVideo} className={s.bg_video}>
+              <img src="/assets/OurEcosystem/bg_video.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
       {/* Total */}

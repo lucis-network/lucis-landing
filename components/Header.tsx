@@ -1,24 +1,24 @@
-import Image from './Image';
-import Link from 'next/link';
-import s from './Header.module.sass'
-import Logo from '../assets/img/logo_hoz@2x_2.png';
-import GradientButton from './Button/GradientButton';
-import { useWindowSize } from '../hooks/useWindowSize';
-import { MenuMobile } from './Menu/MenuMobile';
+import Image from "./Image";
+import Link from "next/link";
+import s from "./Header.module.sass";
+import Logo from "../assets/img/logo_hoz@2x_2.png";
+import GradientButton from "./Button/GradientButton";
+import { useWindowSize } from "../hooks/useWindowSize";
+import { MenuMobile } from "./Menu/MenuMobile";
 import { useCallback, useEffect, useRef, useState } from "react";
-import {scrollToSection} from "../utils/DOM";
+import { scrollToSection } from "../utils/DOM";
 
-import { Modal, Button } from 'antd';
+import { Modal, Button } from "antd";
 import { AppEmitter } from "../services/emitter";
-import SubMenu from './Submenu';
+import SubMenu from "./Submenu";
 type Props = {
-  handleMenuOpen: Function,
+  handleMenuOpen: Function;
 };
 export default function Header(props: Props) {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isSubMenu, setIsSubMenu] = useState(false);
 
-  const showSubMenu = isSubMenu ? s.isSubmenu : s.hideSubmenu
+  const showSubMenu = isSubMenu ? s.isSubmenu : s.hideSubmenu;
   const [width, height] = useWindowSize();
 
   const showModal = () => {
@@ -33,43 +33,65 @@ export default function Header(props: Props) {
     setIsModalVisible(false);
   };
 
-  const handleMouseOver = () =>{
-    setIsSubMenu(true)
-  }
+  const handleMouseOver = () => {
+    setIsSubMenu(true);
+  };
   const handleMouseLeave = () => {
-    setIsSubMenu(false)
-  }
+    setIsSubMenu(false);
+  };
 
   useEffect(() => {
-    const subscription = AppEmitter.addListener('setJoinUsVisible', (visible: boolean) => {
-      setIsModalVisible(visible)
-    });
+    const subscription = AppEmitter.addListener(
+      "setJoinUsVisible",
+      (visible: boolean) => {
+        setIsModalVisible(visible);
+      }
+    );
     return () => {
       subscription.remove();
-    }
-  }, [])
+    };
+  }, []);
 
   useEffect(() => {
-    const element = document.getElementById('subMenu')
-    element?.addEventListener('mouseover', handleMouseOver)
-    element?.addEventListener('mouseleave', handleMouseLeave)
+    const element = document.getElementById("subMenu");
+    element?.addEventListener("mouseover", handleMouseOver);
+    element?.addEventListener("mouseleave", handleMouseLeave);
     return () => {
-      element?.removeEventListener('mouseover', handleMouseOver)
-      element?.removeEventListener('mouseleave', handleMouseLeave)
-    }
-  })
-  
+      element?.removeEventListener("mouseover", handleMouseOver);
+      element?.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  });
 
   const datas = [
-    {id: 1,href:'/social-fi', title: 'Social-Fi network platform',disabled: false},
-    {id: 2,href:'/tournaments', title: 'Tournaments',disabled: false},
-    {id: 3,href:'/insight', title: 'Lucis Insight & Game Ranking system',disabled: false},
-    {id: 4,href:'/media', title: 'Lucis Media',disabled: false},
-    {id: 5,href:'/marketplace', title: 'Launchpad & Marketplace',disabled: false},
-    {id: 6,href:'/lucis-gaming-guild', title: 'Gaming Guild',disabled: false},
-    {id: 7,href:'/insight', title: 'Automation tool zone',disabled: true},
-    {id: 8,href:'/insight', title: 'Streaming platform',disabled: true},
-  ]
+    {
+      id: 1,
+      href: "/social-fi",
+      title: "Social-Fi network platform",
+      disabled: false,
+    },
+    { id: 2, href: "/tournaments", title: "Tournaments", disabled: false },
+    {
+      id: 3,
+      href: "/insight",
+      title: "Lucis Insight & Game Ranking system",
+      disabled: false,
+    },
+    { id: 4, href: "/media", title: "Lucis Media", disabled: false },
+    {
+      id: 5,
+      href: "/marketplace",
+      title: "Launchpad & Marketplace",
+      disabled: false,
+    },
+    {
+      id: 6,
+      href: "/lucis-gaming-guild",
+      title: "Gaming Guild",
+      disabled: false,
+    },
+    { id: 7, href: "/insight", title: "Automation tool zone", disabled: true },
+    { id: 8, href: "/insight", title: "Streaming platform", disabled: true },
+  ];
 
   if (width > 1024) {
     return (
@@ -77,70 +99,130 @@ export default function Header(props: Props) {
         <div className="container py-20px flex justify-between items-center relative z-10`">
           <div className={s.logo}>
             <Link href="/">
-              <Image src={Logo} alt='logo' priority />
+              <Image src={Logo} alt="logo" priority />
             </Link>
           </div>
           <nav className={s.menu}>
             <ul className="flex justify-between items-center m-0">
-              <li><Link href="/tournaments">Tournaments</Link></li>
-              <li><Link href="/marketplace">Marketplace</Link></li>
-              <li><Link href="/insight">Insight</Link></li>
-              <li><Link href="/docs">Docs</Link></li>
+              <li
+                className='text-white text-24px leading-28px px-40px py-15px ml-15px'
+                style={{cursor: 'pointer'}}
+                onClick={() => {
+                  scrollToSection("#EcoSystem" ?? "", true, -90);
+                }}
+              >
+                Zone
+              </li>
+              <li>
+                <Link href="/insight">Insight</Link>
+              </li>
+              <li>
+                <Link href="/docs">Docs</Link>
+              </li>
 
               <li className={s.menuItem} id="subMenu">
-                <img className={s.ic_submenu} onClick={()=>{setIsSubMenu(!isSubMenu)}} src="/assets/header/ic_submenu.svg" alt="" />
-                <div className={`${s.subMenu} ${showSubMenu}`} style={isSubMenu == false ? {pointerEvents: 'none'} : {}}>
+                <img
+                  className={s.ic_submenu}
+                  onClick={() => {
+                    setIsSubMenu(!isSubMenu);
+                  }}
+                  src="/assets/header/ic_submenu.svg"
+                  alt=""
+                />
+                <div
+                  className={`${s.subMenu} ${showSubMenu}`}
+                  style={isSubMenu == false ? { pointerEvents: "none" } : {}}
+                >
                   <div className={s.styleSubmenu}>
                     <div className={s.contentSubmenu}>
                       <img src="/assets/header/ic_item_sub_menu.svg" alt="" />
-                        <SubMenu onClick={()=>{setIsSubMenu(false)}} datas={datas} />
+                      <SubMenu
+                        onClick={() => {
+                          setIsSubMenu(false);
+                        }}
+                        datas={datas}
+                      />
                     </div>
                   </div>
                 </div>
               </li>
-              <li> <GradientButton onClick={showModal} type={1} className="text-white text-24px leading-28px px-40px py-15px ml-15px" style={{whiteSpace: 'nowrap',fontWeight: '600'}}>JOIN US</GradientButton> </li>
+              <li>
+                {" "}
+                <GradientButton
+                  onClick={showModal}
+                  type={1}
+                  className="text-white text-24px leading-28px px-40px py-15px ml-15px"
+                  style={{ whiteSpace: "nowrap", fontWeight: "600" }}
+                >
+                  JOIN US
+                </GradientButton>{" "}
+              </li>
             </ul>
           </nav>
 
-
-          <Modal title="Contact us" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-            <div>          
-              <p>Feel free to discuss more with us, just leave your content here and we'll reach you soon.</p>
+          <Modal
+            title="Contact us"
+            visible={isModalVisible}
+            onOk={handleOk}
+            onCancel={handleCancel}
+          >
+            <div>
+              <p>
+                Feel free to discuss more with us, just leave your content here
+                and we'll reach you soon.
+              </p>
               <p>We're mainly opening for Investors, scholars.</p>
-              <p>We also open to discuss with every who wanna become developer and ambassadors, or be a part of our team.</p>
-              
-              <p>Please send us the content in Telegram by clicking the below button.</p>
+              <p>
+                We also open to discuss with every who wanna become developer
+                and ambassadors, or be a part of our team.
+              </p>
+
+              <p>
+                Please send us the content in Telegram by clicking the below
+                button.
+              </p>
               <p>The content might follow this template:</p>
-              
-              <div 
-              style={{
-                color:'#FFF',
-                background: 'rgba(63, 183, 219,0.5)',
-                padding: '30px',
-                borderRadius: '40px 40px 40px 0',
-                fontSize: 'smaller'
-              }}
+
+              <div
+                style={{
+                  color: "#FFF",
+                  background: "rgba(63, 183, 219,0.5)",
+                  padding: "30px",
+                  borderRadius: "40px 40px 40px 0",
+                  fontSize: "smaller",
+                }}
               >
-                From: Alexander George<br/>
-                Proposal: Become an Investor<br/>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non quam id libero pulvinar accumsan at eu est. Nulla faucibus nisi eget mattis cursus.<br/>
+                From: Alexander George
+                <br />
+                Proposal: Become an Investor
+                <br />
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                non quam id libero pulvinar accumsan at eu est. Nulla faucibus
+                nisi eget mattis cursus.
+                <br />
               </div>
-              <br/>
-              <p style={{color:'#00c4ff'}}>Note: Lucis network will never dm you first.</p>
+              <br />
+              <p style={{ color: "#00c4ff" }}>
+                Note: Lucis network will never dm you first.
+              </p>
             </div>
             <div id="content_btn">
               <div id="btn_Chat">
-                <a href="https://t.me/lucis_network_application_form" target="_blank" rel="noreferrer">Chat with us</a>
+                <a
+                  href="https://t.me/lucis_network_application_form"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Chat with us
+                </a>
                 <img src="/assets/Banner/teleChat.svg" alt="" />
+              </div>
             </div>
-          </div>
           </Modal>
         </div>
       </div>
     );
   } else {
-    return (
-        <MenuMobile />
-    )
+    return <MenuMobile />;
   }
 }

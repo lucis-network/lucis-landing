@@ -3,8 +3,27 @@ import type { NextPage } from "next";
 import s from "./index.module.sass";
 import DocHead from '../../components/DocHead'
 import Link from "next/link";
-import Marketplace from "components/Home/Marketplace";
+import ItemEcosystem from "components/Home/Ecosystem/ItemEcosystem";
 
+const datas = [
+  {
+    id: 13,
+    titleH1: "Lucis Marketplace (Zone 7)",
+    titleP: `
+      <p>
+        <b>Zone 7</b> enables game publishers and guilds to launch and sell<b> NFT/Box</b>
+      </p>
+      <br />
+      <p>
+        Players can <b>sell/buy</b> their precious NFT directly on our <b>Marketplace</b>.
+      </p>
+    `,
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/launchpad_marketplace.png",
+    statusHref: true,
+  },
+]
 
 const Career: NextPage = () => {
   const [showButton, setShowButton] = useState(false);
@@ -25,12 +44,14 @@ const Career: NextPage = () => {
     });
   };
   return (
-    <section className={`lucis-container ${s.wrapper}`}>
-      <DocHead title="Lucis Launchpad & Marketplace"/>
+    <section className={`${s.wrapper}`}>
+      <div className='lucis-container'>
+        <DocHead title="Lucis marketplace"/>
 
-      <div className={`${s.container}`}>
-        <Marketplace />
-      </div>      
+        <div className={`${s.container} section-content`}>
+        <ItemEcosystem dataEcosystems = {datas} />
+        </div>  
+      </div>
       {showButton && (
         <button onClick={scrollToTop} className="btn-scrollTop">
           &#8679;

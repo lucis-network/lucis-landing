@@ -1,9 +1,15 @@
 @import "styles/common"
 
 .block_team
-  @apply flex-row items-center justify-between flex-wrap
+  @apply flex-row items-center flex-wrap
   display: flex !important
-
+  justify-content: start
+.block_team > div
+  @media ( min-width: 0px )
+    margin-right: 0px
+  @media ( min-width: 1440px )
+    margin-right: 30px
+    
 .heading_feature
   @apply flex flex-row items-center justify-between
   margin-bottom: 50px
@@ -26,12 +32,9 @@
 
 
 
-@media (min-width: 1025px) and (max-width: 1400px)
+@media (min-width: 640px) and (max-width: 768px)
   .block_team
     justify-content: space-between
-@media (min-width: 992px) and (max-width: 1024px)
-@media (min-width: 769px) and (max-width: 991px)
-@media (min-width: 640px) and (max-width: 768px)
   .heading_feature
     .group_btn
       button
@@ -39,6 +42,8 @@
         height: 46px
         padding: 0
 @media (min-width: 540px) and (max-width: 639px)
+  .block_team
+    justify-content: space-between
   .heading_feature
     .group_btn
       button

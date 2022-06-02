@@ -7,22 +7,22 @@ import ItemEcosystem from "components/Home/Ecosystem/ItemEcosystem";
 
 const datas = [
   {
-    id: 9,
-    titleH1: "Lucis SocialFi (Zone 3)",
+    id: 11,
+    titleH1: "Lucis Raffle (Zone 5)",
     titleP: `
+      <b>
+        Every week players can use their Lucis Points to enter Raffle for a chance to win random prizes such as:
+      </b>
+      <br />
+      <p>$100 in LUCIS tokens</p>
       <p>
-        <b>Players</b> create their own customized SocialFi ID
+        Physical items like: Razer headphone, Gaming keyboard, Gaming mouse, Gaming chair, Giftcard
       </p>
-      <p>
-      <b>Players</b> will earn badges and achievements as they progress to show off their skills and customize their profile, as well as unique NFT backgrounds, collectibles, and tittles for the community to see
-      </p>
-      <p>
-        <b>Players</b> can also interact with their peers on our social platform to learn, compete, or form an esports team, club, or similar organization
-      </p>
+      <p>NFTs, Token</p>
     `,
     titleButton: "Coming Soon",
     href: "",
-    srcImg: "/assets/Feature/social_fi1.png",
+    srcImg: "/assets/Feature/tournaments1.png",
     statusHref: true,
   },
 ];
@@ -47,8 +47,8 @@ const Career: NextPage = () => {
   };
   return (
     <section className={`${s.wrapper}`}>
-      <div className="lucis-container">
-        <DocHead title="Lucis Social-Fi" />
+      <div className={`lucis-container ${s.content}`}>
+        <DocHead title="Lucis raffle" />
 
         <div className={`${s.container}`}>
           <ItemEcosystem dataEcosystems={datas} />

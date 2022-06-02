@@ -6,9 +6,10 @@ import s from "./ItemEcosystem.module.sass";
 
 type Props = {
   dataEcosystems?: any;
+  properties?: object; 
 };
 export default function ItemEcosystem(props: Props) {
-  const { dataEcosystems } = props;
+  const { dataEcosystems, properties } = props;
 
   const router = useRouter();
   const [width] = useWindowSize();
@@ -70,7 +71,7 @@ export default function ItemEcosystem(props: Props) {
           )}
         </div>
       </div>
-      <div className={`${s.im_Block}`}>
+      <div className={`${s.im_Block}`} style={properties}>
         <img src={`${e.srcImg}`} alt="" />
       </div>
     </div>

@@ -39,7 +39,9 @@ export const MenuItem = (props: { item: MenuItemType }) => {
     if (src && src != '') {
       router.push(src)
     }else{
-      scrollToSection(props.item.scrollTarget ?? "", true, -90)
+      if (props.item.scrollTarget) {
+        scrollToSection(props.item.scrollTarget ?? "", true, -90)
+      }
     }
     if (props.item.onClick) {
       props.item.onClick();

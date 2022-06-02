@@ -80,7 +80,7 @@ export default function Header(props: Props) {
     {
       id: 5,
       href: "/raffle",
-      title: "lucis raffle",
+      title: "Lucis raffle",
       disabled: false,
     },
     {
@@ -89,7 +89,7 @@ export default function Header(props: Props) {
       title: "Lucis scholarship",
       disabled: false,
     },
-    { id: 7, href: "/marketplace", title: "lucis marketplace", disabled: false },
+    { id: 7, href: "/marketplace", title: "Lucis marketplace", disabled: false },
   ];
 
   if (width > 1024) {
@@ -113,7 +113,7 @@ export default function Header(props: Props) {
                 Zone
               </li>
               <li>
-                <Link href="/tournament">Tournament</Link>
+                <Link href="/tournaments">Tournament</Link>
               </li>
               <li>
                 <Link href="/docs">Docs</Link>

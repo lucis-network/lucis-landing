@@ -19,55 +19,35 @@ const variants = {
 };
 
 const dataSubMenu = [
-  {
-    id: 1,
-    text: "Social-Fi network platform",
-    href: "/social-fi",
-    disabled: false,
-  },
-  {
-    id: 2,
-    text: "Tournaments",
-    href: "/tournaments",
-    disabled: false,
-  },
-  {
-    id: 3,
-    text: "Lucis Insight & Game Ranking system",
-    href: "/insight",
-    disabled: false,
-  },
-  {
-    id: 4,
-    text: "Lucis Media",
-    href: "/media",
-    disabled: false,
-  },
-  {
-    id: 5,
-    text: "Launchpad & Marketplace",
-    href: "/marketplace",
-    disabled: false,
-  },
-  {
-    id: 6,
-    text: "Gaming Guild",
-    href: "/lucis-gaming-guild",
-    disabled: false,
-  },
-  {
-    id: 7,
-    text: "Automation tool zone",
-    href: "/",
-    disabled: true,
-  },
-  {
-    id: 8,
-    text: "Streaming platform",
-    href: "/",
-    disabled: true,
-  },
+    {
+      id: 1,
+      href: "/play-to-earn",
+      title: "Lucis play-to-earn 2.0",
+      disabled: false,
+    },
+    { id: 2, href: "/tournaments", title: "Lucis tournament platform", disabled: false },
+    {
+      id: 3,
+      href: "/social-fi",
+      title: "Lucis socialfi",
+      disabled: false,
+    },
+    { id: 4, href: "/ranking", title: "Lucis ranking", disabled: false },
+    {
+      id: 5,
+      href: "/raffle",
+      title: "Lucis raffle",
+      disabled: false,
+    },
+    {
+      id: 6,
+      href: "/scholarship",
+      title: "Lucis scholarship",
+      disabled: false,
+    },
+    { id: 7, href: "/marketplace", title: "Lucis marketplace", disabled: false },
 ];
+
 export const Navigation = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isSubMenu, setIsSubMenu] = useState(false);
@@ -99,11 +79,6 @@ export const Navigation = () => {
     },
     {
       color: "#FF008C",
-      text: "Insight",
-      src: "/insight",
-    },
-    {
-      color: "#FF008C",
       text: "Docs",
       src: "/docs",
     },
@@ -119,14 +94,14 @@ export const Navigation = () => {
                 key={data.id}
                 onClick={hideMenu}
               >
-                <Link href={`${data.href}`}>{data.text}</Link>
+                <Link href={`${data.href}`}>{data.title}</Link>
               </li>
             ))}
           </ul>
         </div>
       ),
       src: "",
-      subMenu: "",
+      subMenu: true,
     },
     {
       color: "#FF008C",

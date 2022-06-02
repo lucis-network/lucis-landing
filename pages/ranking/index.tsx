@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import s from "./index.module.sass";
-import DocHead from '../../components/DocHead'
+import DocHead from "../../components/DocHead";
 import Link from "next/link";
 import ItemEcosystem from "components/Home/Ecosystem/ItemEcosystem";
 
 const datas = [
   {
-    id: 3,
-    titleH1: "Lucis Insight & Game Ranking system",
+    id: 10,
+    titleH1: "Lucis Ranking (Zone 4)",
     titleP: `
-        <b>Lucis Insight</b> <br/>
-        <p>Our researcher team will carefully analyze the market, filter out hidden gems<br/></p>
-        <br/>
-        <b>Game Ranking System</b><br/>
-        <p>We collect game & market data and provide our users a completed overview and insight about a game with a glance.</p>
+      <b>
+        Lucis Ranking System
+      </b>
+      <p>
+        Play-to-Earn and traditional Game Market exposure delivered via a single platform
+      </p>
     `,
     titleButton: "Coming Soon",
+    href: "",
     srcImg: "/assets/Feature/insight1.png",
-    statusHref: false
+    statusHref: true,
   },
-]
+];
 
 const Career: NextPage = () => {
   const [showButton, setShowButton] = useState(false);
@@ -37,17 +39,17 @@ const Career: NextPage = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
   return (
     <section className={`${s.wrapper}`}>
-      <div className='lucis-container'>
-        <DocHead title="Lucis Insight"/>
+      <div className="lucis-container">
+        <DocHead title="Lucis ranking" />
 
-        <div className={`${s.container} section-content`}>
-        <ItemEcosystem dataEcosystems = {datas} />
-        </div>  
+        <div className={`${s.container}`}>
+          <ItemEcosystem dataEcosystems={datas} />
+        </div>
       </div>
       {showButton && (
         <button onClick={scrollToTop} className="btn-scrollTop">
@@ -58,4 +60,4 @@ const Career: NextPage = () => {
   );
 };
 
-export default Career
+export default Career;

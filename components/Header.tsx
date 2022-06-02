@@ -65,32 +65,31 @@ export default function Header(props: Props) {
   const datas = [
     {
       id: 1,
-      href: "/social-fi",
-      title: "Social-Fi network platform",
+      href: "/play-to-earn",
+      title: "Lucis play-to-earn 2.0",
       disabled: false,
     },
-    { id: 2, href: "/tournaments", title: "Tournaments", disabled: false },
+    { id: 2, href: "/tournaments", title: "Lucis tournament platform", disabled: false },
     {
       id: 3,
-      href: "/insight",
-      title: "Lucis Insight & Game Ranking system",
+      href: "/social-fi",
+      title: "Lucis socialfi",
       disabled: false,
     },
-    { id: 4, href: "/media", title: "Lucis Media", disabled: false },
+    { id: 4, href: "/ranking", title: "Lucis ranking", disabled: false },
     {
       id: 5,
-      href: "/marketplace",
-      title: "Launchpad & Marketplace",
+      href: "/raffle",
+      title: "lucis raffle",
       disabled: false,
     },
     {
       id: 6,
-      href: "/lucis-gaming-guild",
-      title: "Gaming Guild",
+      href: "/scholarship",
+      title: "Lucis scholarship",
       disabled: false,
     },
-    { id: 7, href: "/insight", title: "Automation tool zone", disabled: true },
-    { id: 8, href: "/insight", title: "Streaming platform", disabled: true },
+    { id: 7, href: "/marketplace", title: "lucis marketplace", disabled: false },
   ];
 
   if (width > 1024) {
@@ -105,8 +104,8 @@ export default function Header(props: Props) {
           <nav className={s.menu}>
             <ul className="flex justify-between items-center m-0">
               <li
-                className='text-white text-24px leading-28px px-40px py-15px ml-15px'
-                style={{cursor: 'pointer'}}
+                className="text-white text-24px leading-28px px-40px py-15px ml-15px"
+                style={{ cursor: "pointer" }}
                 onClick={() => {
                   scrollToSection("#EcoSystem" ?? "", true, -90);
                 }}
@@ -114,7 +113,7 @@ export default function Header(props: Props) {
                 Zone
               </li>
               <li>
-                <Link href="/insight">Insight</Link>
+                <Link href="/tournament">Tournament</Link>
               </li>
               <li>
                 <Link href="/docs">Docs</Link>
@@ -154,7 +153,7 @@ export default function Header(props: Props) {
                   className="text-white text-24px leading-28px px-40px py-15px ml-15px"
                   style={{ whiteSpace: "nowrap", fontWeight: "600" }}
                 >
-                  JOIN US
+                  Contact Us
                 </GradientButton>{" "}
               </li>
             </ul>
@@ -171,18 +170,16 @@ export default function Header(props: Props) {
                 Feel free to discuss more with us, just leave your content here
                 and we'll reach you soon.
               </p>
-              <p>We're mainly opening for Investors, scholars.</p>
+              <p>We're mainly opening for Investors, media partners, game publishers.</p>
               <p>
-                We also open to discuss with every who wanna become developer
+                We also open to discuss with everyone who wanna become developer
                 and ambassadors, or be a part of our team.
               </p>
 
               <p>
-                Please send us the content in Telegram by clicking the below
-                button.
+                Please get in touch with us via email: <b>partner@lucis.network</b>
               </p>
-              <p>The content might follow this template:</p>
-
+              <br />
               <div
                 style={{
                   color: "#FFF",
@@ -196,9 +193,9 @@ export default function Header(props: Props) {
                 <br />
                 Proposal: Become an Investor
                 <br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                non quam id libero pulvinar accumsan at eu est. Nulla faucibus
-                nisi eget mattis cursus.
+                {
+                  `<your content here>`
+                }
                 <br />
               </div>
               <br />
@@ -209,6 +206,15 @@ export default function Header(props: Props) {
             <div id="content_btn">
               <div id="btn_Chat">
                 <a
+                  href="mailto://partner@lucis.network"
+                >
+                  Email us
+                </a>
+                <img src="/assets/Banner/teleChat.svg" alt="" />
+              </div>
+
+              {/* <div id="btn_Chat">
+                <a
                   href="https://t.me/lucis_network_application_form"
                   target="_blank"
                   rel="noreferrer"
@@ -216,7 +222,7 @@ export default function Header(props: Props) {
                   Chat with us
                 </a>
                 <img src="/assets/Banner/teleChat.svg" alt="" />
-              </div>
+              </div> */}
             </div>
           </Modal>
         </div>

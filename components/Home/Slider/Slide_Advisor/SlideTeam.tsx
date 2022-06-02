@@ -60,38 +60,12 @@ export default class SimpleSliderAdvisor extends Component {
               <CardTeam
                 srcImg="/assets/Team/dat.png"
                 setLinkin={true}
-                srcLinkedIn="https://www.linkedin.com/in/nam-ng-175689127/"
+                // srcLinkedIn="https://www.linkedin.com/in/nam-ng-175689127/"
                 statusCard={1}
                 nameTeam="Mai Xuan Đat"
                 serviceTeam="Marketing & OKR Advisor"
               />
-              {/* <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  /> */}
             </div>
-            {/* <div className={s.block_team}>
-          <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-          </div>
-          <div className={s.block_team}>
-          <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={4} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={3} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={2} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-            <CardTeam statusCard={1} nameTeam='Oanh nguyen' serviceTeam='Desginer'  />
-          </div> */}
           </Slider>
         </div>
       </div>

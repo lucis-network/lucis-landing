@@ -30,27 +30,27 @@ export default function Header(props: Props) {
               </a>
             </div>
             <div className={s.ic_item}>
-              <a href="https://www.facebook.com/lucistv.news" target='_blank' rel="noopener noreferrer">
+              <a href="https://www.facebook.com/lucis.network" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/fb.svg" alt="" />
               </a>
             </div>
             <div className={s.ic_item}>
-              <a href="https://www.youtube.com/c/LucisTVGaming" target='_blank' rel="noopener noreferrer">
+              <a href="https://www.youtube.com/lucisnetwork" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/ytb.svg" alt="" />
               </a>
             </div>
             <div className={s.ic_item}>
-              <a href="https://t.me/sankeonft" target='_blank' rel="noopener noreferrer">
+              <a href="https://t.me/lucisnetwork" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/tele.svg" alt="" />
               </a>
             </div>
             <div className={s.ic_item}>
-              <a href="https://twitter.com/Lucis_TV" target='_blank' rel="noopener noreferrer">
+              <a href="https://twitter.com/LucisNetwork" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/tw.svg" alt="" />
               </a>
             </div>
             <div className={s.ic_item}>
-              <a href="https://discord.com/channels/911921072830574603/926398655093702666" target='_blank' rel="noopener noreferrer">
+              <a href="https://discord.com/invite/KyNRtJt2gy" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/dis.svg" alt="" />
               </a>
             </div>

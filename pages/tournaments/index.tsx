@@ -7,20 +7,38 @@ import ItemEcosystem from "components/Home/Ecosystem/ItemEcosystem";
 
 const datas = [
   {
-    id: 2,
-    titleH1: "Tournaments",
+    id: 8,
+    titleH1: "Lucis Tournaments Platform (Zone 2)",
     titleP: `
-    <p>
-      <b>A platform</b> for creating, running tournament events.<br/>
-      <br/>
-      <b>Team</b> will get more popular and big prizes, big donation amount from Lucis Tournament platform
-    </p>
+      <b>
+        Competitive play 
+      </b>
+      <p>
+        Pits players against opponents of similar skill levels to create a fair and enjoyable experience for all 
+      </p>
+      <p>
+        Players can create their own teams, clubs, and tournaments
+      </p>
+      <br />
+      <b>
+        Two Types of tournaments
+      </b>
+      <p>
+        Free (no entry fee required), Paid by $LUCIS
+      </p>
+      <br />
+      <b>
+        Tournament prizes come from
+      </b>
+      <p>
+        Entry fees, Sponsorships, Game Publishers, Gaming guilds, Lucis prize pool
+      </p>
     `,
-    titleButton: "Coming on May 8",
-    href: "tournaments",
-    srcImg: "/assets/Feature/tournaments1.png",
-    statusHref: true
-  },
+    titleButton: "Coming Soon",
+    href: "",
+    srcImg: "/assets/Feature/zone2.png",
+    statusHref: true,
+  }
 ]
 
 const Career: NextPage = () => {
@@ -47,7 +65,7 @@ const Career: NextPage = () => {
         <DocHead title="Lucis Tournaments"/>
 
         <div className={`${s.container}`}>
-          <ItemEcosystem dataEcosystems = {datas} />
+          <ItemEcosystem dataEcosystems = {datas} properties= {{justifyContent: 'end'}} />
         </div>      
       </div>
       {showButton && (

@@ -108,12 +108,11 @@ body .ant-modal-body #btn_Chat{
   padding: 4px 12px;
   border-radius: 16px;
   cursor: pointer;
-  max-width: 150px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 160px;
+  min-width: 130px;
 }
 body .ant-modal-body a{
   font-size: 18px;

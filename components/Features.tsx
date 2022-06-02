@@ -112,8 +112,8 @@ const datas = [
         <b>Players</b> can earn Lucis tokens, Lucis points and other valuable rewards simply by playing their favorite traditional games such as CS:GO, League of Legends, Valorant... 
       </p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "More Detail",
+    href: "/play-to-earn",
     srcImg: "/assets/Feature/zone1.png",
     statusHref: true,
   },
@@ -145,8 +145,8 @@ const datas = [
         Entry fees, Sponsorships, Game Publishers, Gaming guilds, Lucis prize pool
       </p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "More Detail",
+    href: "/tournaments",
     srcImg: "/assets/Feature/zone2.png",
     statusHref: true,
   },
@@ -164,8 +164,8 @@ const datas = [
         <b>Players</b> can also interact with their peers on our social platform to learn, compete, or form an esports team, club, or similar organization
       </p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "More Detail",
+    href: "/social-fi",
     srcImg: "/assets/Feature/social_fi1.png",
     statusHref: true,
   },
@@ -180,8 +180,8 @@ const datas = [
         Play-to-Earn and traditional Game Market exposure delivered via a single platform
       </p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "More Detail",
+    href: "/ranking",
     srcImg: "/assets/Feature/insight1.png",
     statusHref: true,
   },
@@ -199,8 +199,8 @@ const datas = [
       </p>
       <p>NFTs, Token</p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "More Detail",
+    href: "/raffle",
     srcImg: "/assets/Feature/tournaments1.png",
     statusHref: true,
   },
@@ -212,8 +212,8 @@ const datas = [
         Zone 6 empowers players to play and managers to coach players while allowing both to earn
       </p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "More Detail",
+    href: "/scholarship",
     srcImg: "/assets/Feature/zone6.png",
     statusHref: true,
   },
@@ -229,8 +229,8 @@ const datas = [
         Players can <b>sell/buy</b> their precious NFT directly on our <b>Marketplace</b>.
       </p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "More Detail",
+    href: "/marketplace",
     srcImg: "/assets/Feature/launchpad_marketplace.png",
     statusHref: true,
   },

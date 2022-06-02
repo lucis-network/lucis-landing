@@ -22,7 +22,7 @@ const GROUPS = [
       status: true,
     },
     {
-      name: "Nguyen Binh",
+      name: "Binh Duy",
       position: "CFO",
       img:"/assets/Team/binh.png",   
       status: true,

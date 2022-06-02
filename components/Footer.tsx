@@ -25,7 +25,7 @@ export default function Header(props: Props) {
         <div className={s.r}>
           <div className={s.group_ic}>
             <div className={s.ic_item}>
-              <a href="https://www.tiktok.com/@lucistvv" target='_blank' rel="noopener noreferrer">
+              <a href="https://www.tiktok.com/@lucisnetwork" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/tiktok.svg" alt="" />
               </a>
             </div>
@@ -40,7 +40,7 @@ export default function Header(props: Props) {
               </a>
             </div>
             <div className={s.ic_item}>
-              <a href="https://t.me/lucisnetwork" target='_blank' rel="noopener noreferrer">
+              <a href="https://t.me/lucisnetworkglobal" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/tele.svg" alt="" />
               </a>
             </div>

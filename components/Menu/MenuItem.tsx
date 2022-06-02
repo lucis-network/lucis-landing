@@ -30,23 +30,20 @@ export type MenuItemType = {
   text: string | ReactElement;
   scrollTarget?: string; // CSS selector of target scroll
   onClick?: () => void;
-  subMenu?: string | ReactElement;
+  subMenu?: boolean | ReactElement;
 };
 
 export const MenuItem = (props: { item: MenuItemType }) => {
   const router = useRouter();
   const click = useCallback((src: string) => {
-    if (src && src != '') {
-      router.push(src)
-    }else{
+    if (src && src != "") {
+      router.push(src);
+    } else {
       if (props.item.scrollTarget) {
-        scrollToSection(props.item.scrollTarget ?? "", true, -90)
+        scrollToSection(props.item.scrollTarget ?? "", true, -90);
       }
     }
-    if (props.item.onClick) {
-      props.item.onClick();
-    }
-    if (props.item.subMenu == undefined) {
+    if (!props.item.subMenu) {
       AppEmitter.emit("setMbMenuVisible", false);
     }
   }, []);

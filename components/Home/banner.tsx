@@ -64,6 +64,9 @@ function Banner(props: Props) {
 
             <div style={styleIm} onClick={playVideo} className={s.bg_video}>
               <img src="/assets/OurEcosystem/bg_video.png" alt="" />
+              <div className={s.ic_play}>
+                <img src="/assets/OurEcosystem/ic_play.svg" alt="" />
+              </div>
             </div>
           </div>
         </div>

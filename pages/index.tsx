@@ -102,10 +102,10 @@ const Home: NextPage = () => {
       </AnimWhenVisible>
       <Roadmap />
       <AnimWhenVisible>
-        <Advisor />
+        <PartnersStrategic />
       </AnimWhenVisible>
       <AnimWhenVisible>
-        <PartnersStrategic />
+        <Advisor />
       </AnimWhenVisible>
       <AnimWhenVisible>
         <Team />

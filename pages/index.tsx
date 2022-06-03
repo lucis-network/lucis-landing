@@ -13,15 +13,16 @@ import Team from "components/Home/Team";
 import Advisor from "components/Home/Advisor";
 import TokenAllocation from "components/TokenAllocation";
 import AnimWhenVisible from "components/Anim";
-import useScroll from 'hooks/useScroll';
+import useScroll from "hooks/useScroll";
 import PartnersStrategic from "components/Home/Backers";
 import IvestorBackers from "components/Home/IvestorBackers";
 
 const Home: NextPage = () => {
   const title = "Lucis Platform - Gaming SocialFi and Insights";
-  const desc = "Unite Gamers Across The Globe With The Power of Decentralize Finance. We transform & educate players from traditional games to NFT games";
+  const desc =
+    "Unite Gamers Across The Globe With The Power of Decentralize Finance. We transform & educate players from traditional games to NFT games";
   const thumb = "https://lucis.network/assets/lucis_preview_169.jpg";
-  useScroll()
+  useScroll();
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -32,11 +33,11 @@ const Home: NextPage = () => {
       }
     });
   }, []);
- 
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -93,7 +94,6 @@ const Home: NextPage = () => {
         <SlideGame />
       </AnimWhenVisible> */}
 
-
       {/* <AnimWhenVisible>
         <IvestorBackers />
       </AnimWhenVisible> */}
@@ -101,10 +101,14 @@ const Home: NextPage = () => {
         <TokenAllocation />
       </AnimWhenVisible>
       <Roadmap />
-      <Team />
-      <Advisor />
+      <AnimWhenVisible>
+        <Advisor />
+      </AnimWhenVisible>
       <AnimWhenVisible>
         <PartnersStrategic />
+      </AnimWhenVisible>
+      <AnimWhenVisible>
+        <Team />
       </AnimWhenVisible>
       {showButton && (
         <button onClick={scrollToTop} className="btn-scrollTop">

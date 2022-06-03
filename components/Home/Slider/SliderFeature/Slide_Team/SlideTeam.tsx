@@ -136,14 +136,14 @@ export default class SimpleSliderTeam extends Component {
           <div className={s.heading_feature}>
             <TitleName titleName="Team" />
 
-            <div className={s.group_btn}>
+            {/* <div className={s.group_btn}>
               <button className={s.btn_left} onClick={this.previous}>
                 <img src="/assets/Feature/ic_left.svg" alt="" />
               </button>
               <button className={s.btn_right} onClick={this.next}>
                 <img src="/assets/Feature/ic_right.svg" alt="" />
               </button>
-            </div>
+            </div> */}
           </div>
         </AnimWhenVisible>
 

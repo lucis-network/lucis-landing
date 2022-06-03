@@ -110,7 +110,7 @@ export default function Header(props: Props) {
                   setHref('/')
                   setTimeout(() => {
                     scrollToSection("#EcoSystem" ?? "", true, -90);
-                  }, 1000);
+                  }, 500);
                 }}
               >
                 <Link href={`${href}`}>Zone</Link>

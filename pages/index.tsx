@@ -32,7 +32,7 @@ const Home: NextPage = () => {
       }
     });
   }, []);
-
+ 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

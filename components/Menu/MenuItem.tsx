@@ -40,7 +40,10 @@ export const MenuItem = (props: { item: MenuItemType }) => {
       router.push(src);
     } else {
       if (props.item.scrollTarget) {
-        scrollToSection(props.item.scrollTarget ?? "", true, -90);
+        router.push("/")
+        setTimeout(() => {
+          scrollToSection(props.item.scrollTarget ?? "", true, -90);
+        }, 1000);
       }
     }
     if (!props.item.subMenu) {

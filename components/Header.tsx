@@ -17,9 +17,9 @@ type Props = {
 export default function Header(props: Props) {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isSubMenu, setIsSubMenu] = useState(false);
-
-  const showSubMenu = isSubMenu ? s.isSubmenu : s.hideSubmenu;
+  const [href, setHref]= useState<string>("")
   const [width, height] = useWindowSize();
+  const showSubMenu = isSubMenu ? s.isSubmenu : s.hideSubmenu;
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -107,10 +107,13 @@ export default function Header(props: Props) {
                 className="text-white text-24px leading-28px px-40px py-15px ml-15px"
                 style={{ cursor: "pointer" }}
                 onClick={() => {
-                  scrollToSection("#EcoSystem" ?? "", true, -90);
+                  setHref('/')
+                  setTimeout(() => {
+                    scrollToSection("#EcoSystem" ?? "", true, -90);
+                  }, 1000);
                 }}
               >
-                Zone
+                <Link href={`${href}`}>Zone</Link>
               </li>
               <li>
                 <Link href="/tournaments">Tournament</Link>

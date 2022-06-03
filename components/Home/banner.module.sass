@@ -333,6 +333,10 @@
     transform: translateY(-50%)
     max-width: 464px
     z-index: 1
+  @media (min-width: 640px)
+    max-width: 546px
+  @media (min-width: 992px)
+    max-width: 460px
   @media (min-width: 1024px)
     right: 4rem
     max-width: 400px
@@ -345,27 +349,25 @@
 
   .content
     height: 318px
-    padding: 10px
+    padding: 4px
     @apply relative
     z-index: 1
     @media (min-width: 0px)
-      height: 190px
+      height: 189px
     @media (min-width: 414px)
-      height: 220px
+      height: 218px
     @media (min-width: 540px)
-      height: 290px
+      height: 288px
     @media (min-width: 640px)
       height: 310px
-    @media (min-width: 768px)
-      height: 400px
     @media (min-width: 992px)
-      height: 265px
+      height: 262px
     @media (min-width: 1024px)
       height: 230px
     @media (min-width: 1280px)
-      height: 308px
+      height: 307px
     @media (min-width: 1440px)
-      height: 324px
+      height: 323px
     iframe
       @apply w-full h-full relative
       border-radius: 16px 
@@ -376,8 +378,42 @@
     @media (min-width: 0px)
       top: 5px
       left: 5px
-    img
+    @media (min-width: 1440px)
+      width: 567px
+  .bg_video > img
       width: 99%
+      border-radius: 12px
+  .ic_play
+    position: absolute
+    top: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    transform: translateY(-50%)
+    img
+      max-width: 120px
+
+  .bg_video::before
+    content: ""
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 99%
+    height: 97%
+    background: #0000006b
+    border-radius: 12px
+    @media (min-width: 0px)
+      height: 94%
+    @media (min-width: 414px)
+      height: 95%
+    @media (min-width: 540px)
+      height: 97%
+    @media (min-width: 1024px)
+      height: 96%
+    @media (min-width: 1440px)
+      height: 97%
+
   .content::before
     content:""
     position: absolute

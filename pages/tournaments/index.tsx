@@ -34,8 +34,8 @@ const datas = [
         Entry fees, Sponsorships, Game Publishers, Gaming guilds, Lucis prize pool
       </p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "Visit Tournament",
+    href: "https://tournament.lucis.network",
     srcImg: "/assets/Feature/zone2.png",
     statusHref: true,
   }

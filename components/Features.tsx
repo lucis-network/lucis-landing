@@ -101,7 +101,7 @@ const datas = [
   // },
   {
     id: 7,
-    titleH1: "Lucis Play-to-earn 2.0 (Zone 1)",
+    titleH1: "Lucis PlayCore (Zone 1)",
     titleP: `
       <p>
         Our unique Play-to-earn 2.0 Platform allows players of all skill levels to participate and reap the benefits 
@@ -119,7 +119,7 @@ const datas = [
   },
   {
     id: 8,
-    titleH1: "Lucis Tournaments Platform (Zone 2)",
+    titleH1: "Arena (Zone 2)",
     titleP: `
       <b>
         Competitive play 

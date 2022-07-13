@@ -30,6 +30,15 @@ export default function PartnersStrategic(props: Props) {
           <div className={s.item_backer}>
             <img src="/assets/backer/epic.png" alt="" />
           </div>
+          <div className={s.item_backer}>
+            <img src="/assets/backer/partner_7.png" alt="" />
+          </div>
+          <div className={s.item_backer}>
+            <img src="/assets/backer/partner_8.png" alt="" />
+          </div>
+          <div className={s.item_backer}>
+            <img src="/assets/backer/partner_9.png" alt="" />
+          </div>
       </div>
     </section>
   )

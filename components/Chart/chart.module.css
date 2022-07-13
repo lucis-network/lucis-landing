@@ -31,6 +31,12 @@
 @media (min-width: 0px){
   .chartContainer{
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .chartContainer img {
+    max-width: 500px;
+    padding-top: 60px;
   }
   .im_token {
     width: 100%;
@@ -41,9 +47,30 @@
   .chartContainer{
     flex: 32%;
   }
+  .chartContainer img{
+    padding-left: 0px;
+  }
   .im_token {
-    padding-right: 120px;
     flex: 32%;
+  }
+}
+@media (min-width: 992px){
+  .chartContainer{
+    justify-content: flex-end;
+  }
+  .chartContainer img{
+    padding-left: 120px;
+    padding-top: 0px
+  }
+  .im_token{
+    padding-right: 60px;
+  }
+
+
+}
+@media (min-width: 1280px){
+  .chartContainer img{
+    padding-left: 20px;
   }
 }
 @media (max-width: 767px){
@@ -102,9 +129,6 @@
     max-width: 100% !important;
     align-items: center;
     margin-top: 50px;
-  }
-  .highchartsFigure img{
-    max-width: 100% !important
   }
 }
 

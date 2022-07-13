@@ -1,184 +1,58 @@
-@import "styles/common"
-
 .containerTeam
-  @apply flex flex-col items-center
-  min-width: 282px
-  margin: 24px 0px
+  display: flex
+  flex-flow: column
+  justify-content: center
+  flex: 45% 0 0
+  margin: 20px 0px
+  @media (min-width: 992px)
+    flex: 18% 0 0
   .content_im
-    min-height: 256px
-    background: linear-gradient(99.92deg, #CD28E8 0%, #0BEBD6 100%)
-    border-radius: 100%
-    width: 256px
-    @apply h-full relative
+    position: relative
+    display: flex
+    justify-content: center
     .im_team
-      display: flex
-      flex-direction: column
-      align-items: center
-      width: 250px
-      border-radius: 100%
-      overflow: hidden
-      padding-top: 15px
-    .bg_team
       position: absolute
-      top: 0
-      left: 0
-    .im_team1
-      padding-left: 2px
-      padding-top: 0px
-      img
-        max-width: 115%
-        top: -12px
-        left: -2px
-        position: absolute
-        filter: drop-shadow(0px 0px 8px rgba(155, 251, 242, 0.37))
-  .heading_team
-    padding-top: 26px
-    text-align: center
-    .name
-      @include my-text(24px, 1, 700)
-      color: #00CDFC
-      font-family: 'Transformer'
-      margin-bottom: 0 !important
-      padding-top: 4px
-    .team
-      @include my-text(24px, 28px, 400)
-      color: #FFFFFF
-      padding-top: 0.5em
-      display: inline-block
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 110px
+      @media (min-width: 414px)
+        width: 130px
+      @media (min-width: 540px)
+        width: 160px
+      @media (min-width: 640px)
+        width: 190px
+      @media (min-width: 768px)
+        width: 200px
       @media (min-width: 992px)
-        font-size: 13px
-    .blockName
-      @apply flex flex-row items-center justify-center
-      img
-        padding-right: 0.8em
-
-
-
-@media (min-width: 992px)
-  .containerTeam
-    .content_im
-      width: 153px
-      min-height: 153px
-  .im_team1
-    img
-      max-width: 104% !important
-      top: -6px !important
-      left: 0px !important
-@media (min-width: 1280px)
-  .containerTeam
-    .content_im
-      width: 180px
-      min-height: 180px
-    .im_team1
-      img
-        max-width: 115%
-        top: -12px !important
-        left: -2px !important
-    .heading_team
-      .name
-        font-size: 20px
-      .team
-        font-size: 16px
-@media (min-width: 1440px)
-  .containerTeam
-    .content_im
-      width: 200px
-      min-height: 200px
-    .im_team1
-      img
-        max-width: 115%
-        top: -12px !important
-        left: -2px !important
-    .heading_team
-      .name
-        font-size: 20px
-      .team
+        width: 110px
+      @media (min-width: 1280px)
+        width: 140px
+      @media (min-width: 1440px)
+        width: 160px
+  .heading_team
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    padding-top: 10px
+    span
+      font-style: normal
+      font-weight: 400
+      font-size: 12px
+      line-height: 130%
+      text-align: center
+      color: #FFFFFF
+      @media (min-width: 640px)
         font-size: 16px
 
-@media (min-width: 992px)
-  .containerTeam
-    min-width: 18%
-    max-width: 18%
-    margin: 12px 0px
-    .content_im
-      .im_team
-        width: 96%
-        padding-top: 9px
-        padding-left: 2px
-      .im_team1
-        width: 94%
-        padding: 11px 0px 0px 10px !important
-
-@media (min-width: 541px) and (max-width: 639px)
-  .containerTeam
-    max-width: 220px
-    min-width: 48%
-    margin: 20px 0px
-    .content_im
-      width: 200px
-      min-height: 200px
-      .im_team
-        width: 206px
-        margin-left: 3px
-        padding-top: 13px
-      .im_team1
-        padding-left: 14px
-        padding-top: 8px
-        img
-          filter: drop-shadow(0px 0px 7px rgba(155, 251, 242, 0.37))
-          max-width: 104% !important
-          top: -6px !important
-          left: 0px !important
-    .heading_team
-      .name
-        font-size: 20px !important
-      .team
-        font-size: 20px
-@media (min-width: 0px) and (max-width: 540px)
-  .containerTeam
-    min-width: 47%
-    max-width: 47%
-    margin: 12px 0px
-    .content_im
-      width: 135px
-      min-height: 135px
-      .im_team
-        width: 95%
-        padding-top: 9px
-        padding-left: 2px
-      .im_team1
-        width: 94%
-        padding: 10px 0px 0px 8px !important
-        img
-          max-width: 104% !important
-          top: -4px !important
-          left: -2px !important
-
-          filter: drop-shadow(0px 0px 7px rgba(155, 251, 242, 0.37))
-
-    .heading_team
-      .name
-        font-size: 18px
-      .team
-        font-size: 13px
-  
-    .blockName
       a
-        width: 100%
-
-@media (min-width: 414px) and (max-width: 540px)
-  .containerTeam
-    .content_im
-      width: 180px
-      min-height: 180px
-      .im_team
-        width: 95%
-        padding-top: 9px
-        padding-left: 2px
-      .im_team1
-        width: 94%
-        padding: 10px 0px 0px 8px !important
-        img
-          top: 0px
-          left: 0px
-          filter: drop-shadow(0px 0px 7px rgba(155, 251, 242, 0.37))
+        font-family: 'Transformer'
+        font-style: normal
+        font-weight: 700
+        font-size: 16px
+        line-height: 115%
+        text-align: center
+        color: #00CDFC
+        @media (min-width: 640px)
+          font-size: 20px

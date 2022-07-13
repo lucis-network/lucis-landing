@@ -11,22 +11,18 @@ type Props = {
   setLinkin?: boolean;
 };
 
-export default function CardTeam(props: Props) {
+export default function c(props: Props) {
   const bg_Team =
     props.statusCard == 1
-      ? "/assets/Team/vector_team.svg"
-      : props.statusCard == 2
-      ? "/assets/Team/bg_2.svg"
-      : props.statusCard == 3
-      ? "/assets/Team/bg_3.svg"
-      : "/assets/Team/bg_4.svg";
+      ? "/assets/Team/bg_team.png"
+      : "/assets/Team/bg_av.png"
+
   const styleLinkIn = props.setLinkin == true ? {display:'block'} :{display:'none'}
-  const im_team = props.statusCard == 1 ? s.im_team1 : s.im_team;
 
   return (
     <div className={s.containerTeam}>
       <div className={s.content_im}>
-        <div className={im_team}>
+        <div className={s.im_team}>
           <AnimWhenVisible
             variants={{
               visible: { opacity: 1 },
@@ -39,6 +35,7 @@ export default function CardTeam(props: Props) {
         </div>
         <img className={s.bg_team} src={bg_Team} alt="" />
       </div>
+
       <div className={s.heading_team}>
         <AnimWhenVisible enable={props.enableAnim}>
           <div className={s.blockName}>

@@ -16,6 +16,7 @@ import AnimWhenVisible from "components/Anim";
 import useScroll from "hooks/useScroll";
 import PartnersStrategic from "components/Home/Backers";
 import IvestorBackers from "components/Home/IvestorBackers";
+import MediaPage from "components/media";
 
 const Home: NextPage = () => {
   const title = "Lucis Platform - Gaming SocialFi and Insights";
@@ -94,9 +95,9 @@ const Home: NextPage = () => {
         <SlideGame />
       </AnimWhenVisible> */}
 
-      {/* <AnimWhenVisible>
-        <IvestorBackers />
-      </AnimWhenVisible> */}
+      <AnimWhenVisible>
+        <MediaPage />
+      </AnimWhenVisible>
       <AnimWhenVisible>
         <TokenAllocation />
       </AnimWhenVisible>

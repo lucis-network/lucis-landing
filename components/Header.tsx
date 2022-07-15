@@ -113,7 +113,7 @@ export default function Header(props: Props) {
                   }, 500);
                 }}
               >
-                <Link href={`${href}`}>Zone</Link>
+                <Link href={`${href}`}>Zones</Link>
               </li>
               <li>
                 <Link href="/tournaments">Tournament</Link>

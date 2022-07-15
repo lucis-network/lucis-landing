@@ -18,8 +18,8 @@ const datas = [
         Players can <b>sell/buy</b> their precious NFT directly on our <b>Marketplace</b>.
       </p>
     `,
-    titleButton: "Coming Soon",
-    href: "",
+    titleButton: "Go Launchpad",
+    href: "https://launchpad.lucis.network",
     srcImg: "/assets/Feature/launchpad_marketplace.png",
     statusHref: true,
   },

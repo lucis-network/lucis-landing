@@ -53,7 +53,7 @@ export default class SimpleSliderAdvisor extends Component {
                 srcImg="/assets/Team/nam.png"
                 setLinkin={true}
                 srcLinkedIn="https://www.linkedin.com/in/nam-ng-175689127/"
-                statusCard={1}
+                statusCard={2}
                 nameTeam="Nam Nguyen"
                 serviceTeam="Growth Advisor"
               />
@@ -61,7 +61,7 @@ export default class SimpleSliderAdvisor extends Component {
                 srcImg="/assets/Team/dat.png"
                 setLinkin={true}
                 // srcLinkedIn="https://www.linkedin.com/in/nam-ng-175689127/"
-                statusCard={1}
+                statusCard={2}
                 nameTeam="Mai Xuan Đat"
                 serviceTeam="Marketing & OKR Advisor"
               />

@@ -11,7 +11,7 @@ const GROUPS = [
     {
       name: "Anh Tran",
       position: "CEO",
-      img:"/assets/Team/tu_anh.png",
+      img:"/assets/Team/tu_a.png",
       status: true,
       linkIn:"https://www.linkedin.com/in/tuanhbeu"
     },

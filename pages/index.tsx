@@ -95,9 +95,9 @@ const Home: NextPage = () => {
         <SlideGame />
       </AnimWhenVisible> */}
 
-      <AnimWhenVisible>
-        <MediaPage />
-      </AnimWhenVisible>
+      {/*<AnimWhenVisible>*/}
+      {/*  <MediaPage />*/}
+      {/*</AnimWhenVisible>*/}
       <AnimWhenVisible>
         <TokenAllocation />
       </AnimWhenVisible>

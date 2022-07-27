@@ -45,7 +45,7 @@ export default function Header(props: Props) {
               </a>
             </div>
             <div className={s.ic_item}>
-              <a href="https://twitter.com/LucisNetwork" target='_blank' rel="noopener noreferrer">
+              <a href="https://twitter.com/LucisNetworkLSN" target='_blank' rel="noopener noreferrer">
                 <img src="/assets/OurEcosystem/tw.svg" alt="" />
               </a>
             </div>

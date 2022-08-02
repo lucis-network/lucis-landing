@@ -155,27 +155,27 @@ function Camera({
   const scene = useThree(({ scene }) => scene);
   const cameraRef = useRef();
 
-  useLayoutEffect(() => {
-    const { current: cam } = cameraRef;
-    if (cam) {
-      //@ts-ignore
-      cam.aspect = size.width / size.height;
-      //@ts-ignore
-      cam.updateProjectionMatrix();
-    }
-  }, [size, props]);
-
-  useLayoutEffect(() => {
-    if (cameraRef.current) {
-      const oldCam = camera;
-      set(() => ({ camera: cameraRef.current }));
-      return () => set(() => ({ camera: oldCam }));
-    }
-  }, [camera, cameraRef, set]);
-
-  useLayoutEffect(() => {
-    return cameraX.onChange(() => camera.lookAt(scene.position));
-  }, [camera, scene, cameraX]);
+  // useLayoutEffect(() => {
+  //   const { current: cam } = cameraRef;
+  //   if (cam) {
+  //     //@ts-ignore
+  //     cam.aspect = size.width / size.height;
+  //     //@ts-ignore
+  //     cam.updateProjectionMatrix();
+  //   }
+  // }, [size, props]);
+  //
+  // useLayoutEffect(() => {
+  //   if (cameraRef.current) {
+  //     const oldCam = camera;
+  //     set(() => ({ camera: cameraRef.current }));
+  //     return () => set(() => ({ camera: oldCam }));
+  //   }
+  // }, [camera, cameraRef, set]);
+  //
+  // useLayoutEffect(() => {
+  //   return cameraX.onChange(() => camera.lookAt(scene.position));
+  // }, [camera, scene, cameraX]);
 
   return (
     <motion.perspectiveCamera

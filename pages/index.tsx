@@ -17,6 +17,8 @@ import useScroll from "hooks/useScroll";
 import PartnersStrategic from "components/Home/Backers";
 import IvestorBackers from "components/Home/IvestorBackers";
 import MediaPage from "components/media";
+import LuckyChest from "../components/homepage/luckychest";
+import Arena from "../components/homepage/arena";
 
 const Home: NextPage = () => {
   const title = "Lucis Platform - Gaming SocialFi and Insights";
@@ -74,36 +76,39 @@ const Home: NextPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <AnimWhenVisible
-        variants={{
-          visible: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <Banner />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Features />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <TokenAllocation />
-      </AnimWhenVisible>
-      <Roadmap />
-      <AnimWhenVisible>
-        <PartnersStrategic />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Advisor />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Team />
-      </AnimWhenVisible>
-      {showButton && (
-        <button onClick={scrollToTop} className="btn-scrollTop">
-          &#8679;
-        </button>
-      )}
+      {/*<AnimWhenVisible*/}
+      {/*  variants={{*/}
+      {/*    visible: { opacity: 1 },*/}
+      {/*    hidden: { opacity: 0 },*/}
+      {/*  }}*/}
+      {/*  transition={{ duration: 0.3 }}*/}
+      {/*>*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <Features />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <TokenAllocation />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<Roadmap />*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <PartnersStrategic />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <Advisor />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <Team />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*{showButton && (*/}
+      {/*  <button onClick={scrollToTop} className="btn-scrollTop">*/}
+      {/*    &#8679;*/}
+      {/*  </button>*/}
+      {/*)}*/}
+
+      <Banner />
+      {/*<LuckyChest />*/}
+      <Arena />
     </div>
   );
 };

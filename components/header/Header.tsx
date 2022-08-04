@@ -1,4 +1,4 @@
-import Link from "next/link";
+  import Link from "next/link";
 import s from "./Header.module.sass";
 import {useRouter} from "next/router";
 import React from "react";
@@ -37,8 +37,8 @@ export default function Header() {
                       HOME
                     </a>
                   </Link></li>
-                <li className={`${router.pathname.includes("/playcore") ? s.active : ""}`}><Link href="/playcore">PLAYCORE</Link></li>
-                <li className={`${router.pathname.includes("/arena") ? s.active : ""}`}><Link href="/arena">ARENA</Link></li>
+                <li className={`${router.pathname.includes("/playcore") ? s.active : ""}`}><Link href="https://play-beta.lucis.network/">PLAYCORE</Link></li>
+                <li className={`${router.pathname.includes("/arena") ? s.active : ""}`}><Link href="https://play-beta.lucis.network/arena">ARENA</Link></li>
                 <li><a href="https://insight.lucis.network/" target="_blank"
                        rel="noopener noreferrer">INSIGHT</a></li>
                 <li className={`${router.pathname.includes("/ranking") ? s.active : ""}`}><Link href="/ranking">RANKING</Link></li>

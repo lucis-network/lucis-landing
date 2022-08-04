@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;600;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
 @font-face{
   font-family: 'Transformer';
   src: url(/font/SVN-Transformer.ttf)
 }
-
+@font-face{
+  font-family: 'RevxNeueDemo';
+  src: url(/font/RevxNeueDemo-Regular.ttf)
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -480,6 +484,6 @@ body .backdrop-blur-sm {
 
 @media screen and (min-width: 1900px) {
   .lucis-container-2 {
-    width: 1600px;
+    width: 1400px;
   }
 }

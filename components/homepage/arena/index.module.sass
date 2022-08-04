@@ -1,0 +1,201 @@
+.wrapper
+  //height: 580px
+  margin-top: 258px
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    background: url("/assets/homepage/bg_left_arena.png") no-repeat
+    top: 0
+    width: 571px
+    aspect-ratio: 571/683
+    left: 0
+    z-index: 0
+  &:after
+    content: ""
+    position: absolute
+    background: url("/assets/homepage/bg_right_arena.png") no-repeat
+    top: 0
+    width: 1120px
+    aspect-ratio: 1120/726
+    right: 0
+    z-index: 0
+.container
+  display: flex
+  max-width: 1130px
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  position: relative
+  z-index: 1
+  .title
+    margin-top: 58px
+    margin-bottom: 36px
+  .listItems
+    display: flex
+    gap: 0 20px
+    .item
+      display: flex
+      flex-direction: column
+      color: #FFFFFF
+      width: 268px
+      position: relative
+      cursor: pointer
+      > *
+        z-index: 1
+      &:after
+        position: absolute
+        content: ""
+        background: rgba(69, 80, 107, 0.4)
+        backdrop-filter: blur(32.2681px)
+        width: 100%
+        height: 100%
+        z-index: 0
+      &:hover
+        &:before
+          position: absolute
+          content: ""
+          width: 100%
+          height: 100%
+          z-index: 2
+          box-shadow: inset 0px 0px 40px rgba(11, 235, 214, 0.64)
+      .itemImg
+        position: relative
+        &:hover
+          box-shadow: inset 0px 0px 40px rgba(11, 235, 214, 0.64)
+        img
+          aspect-ratio: 268/115
+          width: 268px
+        .itemDescImg
+          position: absolute
+          display: flex
+          justify-content: space-around
+          background: linear-gradient(180deg, rgba(23, 29, 46, 0.8) 0%, rgba(23, 29, 46, 0.8) 0.01%, rgba(23, 29, 46, 0.48) 73.33%, rgba(0, 6, 37, 0) 100%)
+          color: #FFFFFF
+          padding: 5px 0
+          width: 100%
+          .itemDescImgLR
+            display: flex
+            align-items: center
+            img
+              width: 12px
+              height: 10px
+              margin-right: 6px
+            span
+              font-family: 'Poppins', serif
+              font-weight: 400
+              font-size: 10px
+          .itemDescImgGameMode
+            font-family: 'Poppins', serif
+            font-weight: 400
+            font-size: 10px
+      .itemDesc
+        display: flex
+        //justify-content: space-between
+        padding: 0 13px
+        margin-top: 7px
+        .itemFreeEntry
+          font-family: 'Lexend', serif
+          font-weight: 300
+          font-size: 10px
+          line-height: 12px
+          text-transform: uppercase
+          margin-right: 10px
+          //background: linear-gradient(91.01deg, rgba(0, 6, 37, 0.4) 3.83%, rgba(0, 0, 0, 0.4) 108.05%)
+          p
+            margin-bottom: 0
+        .itemAva
+          margin-right: 10px
+          img
+            width: 29px
+            height: 29px
+            border-radius: 50%
+        .itemCreator
+          p
+            font-family: 'Lexend', serif
+            font-weight: 400
+            font-size: 10px
+            line-height: 12px
+            margin-bottom: 3px
+          h2
+            font-family: 'Lexend', serif
+            font-weight: 400
+            font-size: 10px
+            line-height: 12px
+            color: #00F9FF
+      .itemTitle
+        p
+          font-family: 'Lexend', serif
+          font-weight: 600
+          font-size: 16px
+          line-height: 23px
+          padding: 0 13px
+          margin-top: 12px
+          letter-spacing: -0.04em
+      .itemGroupCT
+        display: flex
+        justify-content: space-between
+        padding: 12px 13px
+        margin-bottom: 8px
+        background: linear-gradient(88.26deg, rgba(11, 235, 214, 0.4) 0%, rgba(57, 199, 255, 0) 100%)
+        .itemCurrency
+          font-family: 'Lexend', serif
+          font-weight: 500
+          font-size: 24px
+          line-height: 30px
+          color: #00F9FF
+        .itemTime
+          display: flex
+          align-items: center
+          img
+            width: 12px
+            margin-right: 4px
+          span
+            margin-bottom: 0
+            font-family: 'Poppins', serif
+            font-weight: 400
+            font-size: 11px
+            line-height: 17px
+  .desc
+    font-family: 'Lexend', serif
+    font-weight: 300
+    font-size: 24px
+    line-height: 33px
+    letter-spacing: 0.04em
+    color: #DBE0E8
+    margin-top: 36px
+    p
+      margin-bottom: 0
+  .groupBtn
+    display: flex
+    gap: 0 20px
+    margin-top: 26px
+  .btn
+    width: 323px
+    padding: 10px 0
+    background: #ffffff
+    position: relative
+    cursor: pointer
+    div
+      font-family: 'RevxNeueDemo', serif
+      font-weight: 400
+      font-size: 28px
+      line-height: 31px
+      text-align: center
+      letter-spacing: 0.2em
+      text-transform: uppercase
+      color: #000000
+      height: 27px
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 1px
+      right: 1px
+      bottom: 1px
+      left: 1px
+      border: 1px solid #000000
+    &:hover
+      background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+      div
+        color: #fff

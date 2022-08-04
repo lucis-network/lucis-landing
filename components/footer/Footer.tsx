@@ -2,7 +2,6 @@ import Link from "next/link";
 import s from "./Footer.module.sass";
 import React from "react";
 import ButtonWrapper from "components/Button/Button";
-import { Button } from "antd";
 
 type Props = {};
 export default function Footer(props: Props) {
@@ -13,8 +12,8 @@ export default function Footer(props: Props) {
           <ul className={s.block_item_menu}>
             <li><Link href="https://lucis.network">ZONE</Link></li>
             <li><Link href="/">FAQ</Link></li>
-            <li><Link href="/arena">Privacy Policy</Link></li>
-            <li><Link href="/playcore/raffles"><a>Contact Us</a></Link></li>
+            <li><Link href="/">Privacy Policy</Link></li>
+            <li><Link href="/"><a>Contact Us</a></Link></li>
           </ul>
         </div>
         <div className={s.logoTab}>

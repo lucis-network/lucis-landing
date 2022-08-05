@@ -1109,7 +1109,7 @@ export type MutationKycAccountArgs = {
 
 
 export type MutationOpenChestArgs = {
-  game_platform_id: Scalars['Int'];
+  game_platform_id?: InputMaybe<Scalars['Int']>;
   tier: LuckyChestTier;
 };
 
@@ -1551,7 +1551,7 @@ export type QueryGetAppErrorCodeArgs = {
 
 
 export type QueryGetChestDetailArgs = {
-  game_platform_id: Scalars['Int'];
+  game_platform_id?: InputMaybe<Scalars['Int']>;
   tier: LuckyChestTier;
 };
 
@@ -1573,7 +1573,7 @@ export type QueryGetLucisMissionArgs = {
 
 
 export type QueryGetLuckyChestUserInfoArgs = {
-  game_platform_id: Scalars['Int'];
+  game_platform_id?: InputMaybe<Scalars['Int']>;
   limit?: InputMaybe<Scalars['Int']>;
   page?: InputMaybe<Scalars['Int']>;
   tier: LuckyChestTier;

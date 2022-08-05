@@ -28,7 +28,7 @@ export const useGetDataArena = (): {
         game_uid: "",
         prize_pool: "NONE",
         size: "",
-        time: "NONE"
+        time: "DESC"
       },
     },
     fetchPolicy: "no-cache"

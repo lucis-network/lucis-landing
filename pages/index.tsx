@@ -19,6 +19,7 @@ import IvestorBackers from "components/Home/IvestorBackers";
 import MediaPage from "components/media";
 import LuckyChest from "../components/homepage/luckychest";
 import Arena from "../components/homepage/arena";
+import LastNews from "../components/homepage/lastNews";
 
 const Home: NextPage = () => {
   const title = "Lucis Platform - Gaming SocialFi and Insights";
@@ -109,6 +110,7 @@ const Home: NextPage = () => {
       <Banner />
       {/*<LuckyChest />*/}
       <Arena />
+      <LastNews />
     </div>
   );
 };

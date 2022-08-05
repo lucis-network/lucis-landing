@@ -53,9 +53,9 @@ export default function Arena() {
           </div>
           <div className={s.listItems}>
             {
-              data && data.map((item) => {
+              data && data.map((item, index) => {
                 return (
-                  <>
+                  <div key={`${item.uid}${index}`}>
                     <div className={s.item} onClick={() => getDetailArena(item)}>
                       <div className={s.itemImg}>
                         <div className={s.itemDescImg}>
@@ -76,15 +76,16 @@ export default function Arena() {
                             <span>{item?.team_size} vs {item?.team_size}</span>
                           </div>
                         </div>
-                        <div>
+                        <div className={s.thumbnail}>
                           <img
-                            src={item?.cover}
-                            width={268} height={155} alt=""/>
+                            //src={item?.cover}
+                            src="/assets/homepage/test_arena.png"
+                            alt=""/>
                         </div>
                       </div>
                       <div className={s.itemDesc}>
                         <div className={s.itemFreeEntry}>
-                          <p>{item?.game?.name}</p>
+                          {/*<p>{item?.game?.name}</p>*/}
                           <span>Free entry</span>
                         </div>
                         <div className={s.itemAva}>
@@ -96,7 +97,7 @@ export default function Arena() {
                         </div>
                       </div>
                       <div className={s.itemTitle}>
-                        <p>{item?.name}</p>
+                          <p>{item?.name}</p>
                       </div>
                       <div className={s.itemGroupCT}>
                         <div className={s.itemCurrency}>{
@@ -111,7 +112,7 @@ export default function Arena() {
                         </div>
                       </div>
                     </div>
-                  </>
+                  </div>
                 )
               })
             }

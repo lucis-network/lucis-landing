@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       app_origin: app_origin
     });
   });
+
   return (
     <ApolloProvider client={client}>
       <Layout>

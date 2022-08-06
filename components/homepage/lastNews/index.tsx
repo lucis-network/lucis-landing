@@ -16,7 +16,9 @@ export default function LastNews() {
                 <div className={s.tagNameRaffles}>
                   Hot Raffles
                 </div>
-                <img src="/assets/homepage/hot_raffles.jpg" alt=""/>
+                <div className={s.imgRaffles}>
+                  <img src="/assets/homepage/hot_raffles.jpg" alt=""/>
+                </div>
                 <div className={s.descHotRaffles}>
                   <p>Raffles: Hot raffles will be availabled in next August. Let’s get it!</p>
                 </div>
@@ -32,7 +34,7 @@ export default function LastNews() {
                   <p>League of legend: Lucis priavte 2nd beta test.</p>
                 </div>
               </div>
-              <div className={`${s.itemHotNews} ${s.itemHotNews}`}>
+              <div className={`${s.itemHotNews}`}>
                 <div className={`${s.tagNameRaffles} ${s.tagNameNews}`}>
                   Lucis Review
                 </div>

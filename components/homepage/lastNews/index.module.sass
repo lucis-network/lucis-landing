@@ -32,17 +32,33 @@
       flex-direction: row
     .leftListNews
       display: flex
+      cursor: pointer
+      overflow: hidden
+      border-radius: 4px
       .itemHotRaffles
         position: relative
+        display: block
+        .imgRaffles
+          img
+            &:hover
+              transform: scale(1.1)
+              transition: transform 0.3s ease 0s
     .rightListNews
       display: flex
       flex-direction: row
       gap: 13px 13px
+      cursor: pointer
+      border-radius: 4px
       @media screen and (min-width: 992px)
         gap: 20px 20px
         flex-direction: column
       .itemHotNews
         position: relative
+        overflow: hidden
+        img
+          &:hover
+            transform: scale(1.1)
+            transition: transform 0.3s ease 0s
         .tagNameNews
           padding: 2px 8px
           font-size: 6px
@@ -94,6 +110,7 @@
   font-size: 12px
   line-height: 15px
   position: absolute
+  z-index: 1
   content: ""
   top: 10px
   left: 10px

@@ -1,0 +1,43 @@
+.wrapper
+  background: rgba(0, 6, 37, 0.5)
+  backdrop-filter: blur(4px)
+  padding: 40px 0
+.container
+  display: flex
+  justify-content: center
+  flex-direction: row
+  align-items: center
+  flex-wrap: wrap
+  gap: 16px 7.5px
+  @media screen and (min-width: 768px)
+    gap: 16px 16px
+  .item
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 120px
+    height: 40px
+    background: rgba(45, 52, 70, 0.5)
+    border-radius: 8px
+    cursor: pointer
+    overflow: hidden
+    @media screen and (min-width: 768px)
+      width: 160px
+      height: 52px
+    @media screen and (min-width: 992px)
+      width: 220px
+      height: 80px
+    @media screen and (min-width: 1200px)
+      width: 302px
+      height: 100px
+    img
+      max-width: 40%
+      height: auto
+      &:hover
+        transform: scale(1.1)
+        transition: transform 0.3s ease 0s
+      @media screen and (min-width: 1200px)
+        max-width: 100%
+
+
+

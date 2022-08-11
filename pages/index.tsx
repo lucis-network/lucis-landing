@@ -22,6 +22,7 @@ import Arena from "../components/homepage/arena";
 import LastNews from "../components/homepage/lastNews";
 import NetWork from "../components/homepage/network";
 import FavoriteGames from "../components/homepage/favoriteGames";
+import NewBanner from "../components/Home/NewBanner";
 
 const Home: NextPage = () => {
   const title = "Lucis Platform - Gaming SocialFi and Insights";
@@ -109,6 +110,7 @@ const Home: NextPage = () => {
       {/*  </button>*/}
       {/*)}*/}
 
+      <NewBanner />
       <Banner />
       {/*<LuckyChest />*/}
       <FavoriteGames />

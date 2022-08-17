@@ -70,7 +70,7 @@ export default function Arena() {
             {
               data && data.map((item, index) => {
                 return (
-                  <div>
+                  <div key={`${item?.team_size}-${item?.uid}`}>
                     <SwiperSlide onClick={() => getDetailArena(item)} key={`${item?.team_size}-${item?.uid}`}>
                       <ItemArena item={item}></ItemArena>
                     </SwiperSlide>

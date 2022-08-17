@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import s from "./index.module.sass";
 import DocHead from '../../components/DocHead'
-import Link from "next/link";
 import ItemEcosystem from "components/Home/Ecosystem/ItemEcosystem";
 
 const datas = [

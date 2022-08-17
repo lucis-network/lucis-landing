@@ -43,6 +43,7 @@ const Career: NextPage = () => {
       behavior: 'smooth'
     });
   };
+
   return (
     <section className={`${s.wrapper}`}>
       <div className='lucis-container'>

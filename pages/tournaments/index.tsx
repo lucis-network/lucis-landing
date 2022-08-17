@@ -4,6 +4,7 @@ import s from "./index.module.sass";
 import DocHead from '../../components/DocHead'
 import ItemEcosystem from "components/Home/Ecosystem/ItemEcosystem";
 
+
 const datas = [
   {
     id: 8,

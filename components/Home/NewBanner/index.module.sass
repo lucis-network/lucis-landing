@@ -1,23 +1,16 @@
 
 .wrapper
-  margin-top: 46px
-  margin-bottom: 240px
   width: 100%
-  padding-top: 200px
   position: relative
   color: #ffffff
   display: flex
-  flex-direction: column
   justify-content: center
   align-items: space-between
   &:before
     content: ""
     position: absolute
     background: url("/assets/home/bg_left_newbanner.png") no-repeat
-    background-size: 35%
     transform: rotate(-45deg)
-    top: -300px
-    left: -10px
     width: 1000px
     aspect-ratio: 1251/853
     z-index: 0
@@ -25,18 +18,13 @@
     content: ""
     position: absolute
     background: url("/assets/home/bg_right_newbanner.png") no-repeat
-    background-size: 35%
     width: 1000px
     height: 1000px
     aspect-ratio: 1939/704
     z-index: 0
-    right: -500px
-    top: 620px
-    transform: rotate(30deg)
+
 .container
   display: flex
-  width: 100vw
-  height: 332px
   flex-direction: column
   justify-content: flex-start
   align-items: center
@@ -44,33 +32,107 @@
   font-family: 'Lexend', serif
   position: relative
   z-index: 1
-  .logo
-    content: url("/assets/home/lucis.png")
-    margin: 0 auto 18px auto
-    width: 113.21px
-    height: 40px
-  .slogan
+
+.logo
+  content: url("/assets/home/lucis.png")
+
+.slogan
+  p
+    margin-bottom: 8px
+    
+#slogan1
+  color: #00F9FF
+  font-family: 'RevxNeueDemo'
+  font-style: normal
+  font-weight: 600
+
+#slogan2
+  color: #DBE0E8
+  font-weight: 300
+  margin-bottom: 0px
+  width: 70vw
+  margin: 0 auto
+
+.statContainer
+  div
     p
-      margin-bottom: 8px
-    #slogan1
-      color: #00F9FF
-      font-family: 'RevxNeueDemo'
       font-style: normal
-      font-weight: 600
-      letter-spacing: 0.04em
-      font-size: 20px
-      line-height: 22px
+      text-transform: capitalize
+      &:nth-child(1)
+        font-weight: 300
+        color: #fff
+        margin: 0
+      &:nth-child(2)
+        font-weight: 500
+        margin: 0
 
-    #slogan2
-      color: #DBE0E8
-      font-weight: 300
-      margin-bottom: 0px
-      font-size: 14px
-      line-height: 18px
-      width: 70vw
-      max-width: 257px
-      margin: 0 auto
+#gamers
+  background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+  text-shadow: 0px 0px 6px rgba(11, 235, 214, 0.4)
 
+#reward
+  background: linear-gradient(90deg, #BB7239 0%, #FCEEAE 22.75%, #E09E5B 52.16%, #FCE9A4 75.29%, #F1D693 82.75%, #E1BD7C 92.16%, #D08A4A 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+  text-shadow: 0px 0px 8px rgba(255, 197, 49, 0.4)
+
+.games
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  div
+    margin-left: 24px
+    &:nth-child(1)
+      margin-left: 0px
+      content: url("/assets/home/pubg.svg")
+    &:nth-child(2)
+      content: url("/assets/home/lol.svg")
+    &:nth-child(3)
+      content: url("/assets/home/csgo.svg")
+    &:nth-child(4)
+      content: url("/assets/home/tft.svg")
+    &:nth-child(5)
+      content: url("/assets/home/val.svg")
+    &:nth-child(6)
+      content: url("/assets/home/dota.svg")
+
+@media screen and (min-width: 0px) //mobile
+  .wrapper
+    flex-direction: column
+    margin-top: 46px
+    margin-bottom: 240px
+    padding-top: 200px
+    &::before
+      background-size: 35%
+      top: -300px
+      left: -10px
+    &::after
+      background-size: 35%
+      right: -480px
+      top: 620px
+      transform: rotate(30deg)
+  .container
+    width: 100vw
+    height: 332px
+  .logo
+    width: 115px
+    height: 40px
+    margin: 0 auto 18px auto
+  #slogan1
+    letter-spacing: 0.04em
+    font-size: 20px
+    line-height: 22px
+  #slogan2
+    font-size: 14px
+    line-height: 18px
+    max-width: 257px
   .statContainer
     margin-top: 18px
     margin-bottom: 16px
@@ -78,64 +140,229 @@
       &:nth-child(1)
         margin-bottom: 16px
       p
-        font-style: normal
         letter-spacing: 0.04em
-        text-transform: capitalize
         &:nth-child(1)
-          font-weight: 300
-          color: #fff
           font-size: 14px
           line-height: 18px
-          margin: 0
         &:nth-child(2)
-          font-weight: 600
           font-size: 42px
           line-height: 53px
-          margin: 0
-      #gamers
-        background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        background-clip: text
-        text-fill-color: transparent
-        text-shadow: 0px 0px 6px rgba(11, 235, 214, 0.4)
-      #reward
-        background: linear-gradient(90deg, #BB7239 0%, #FCEEAE 22.75%, #E09E5B 52.16%, #FCE9A4 75.29%, #F1D693 82.75%, #E1BD7C 92.16%, #D08A4A 100%)
-        -webkit-background-clip: text
-        -webkit-text-fill-color: transparent
-        background-clip: text
-        text-fill-color: transparent
-        text-shadow: 0px 0px 8px rgba(255, 197, 49, 0.4)
-        margin-top: 4px
+  #reward
+    margin-top: 4px
   .games
-    display: flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
     div
-      margin-left: 24px
       max-height: 12px
-    :nth-child(1)
-      margin-left: 0px
-      content: url("/assets/home/pubg.svg")
-    :nth-child(2)
-      content: url("/assets/home/lol.svg")
-    :nth-child(3)
-      content: url("/assets/home/csgo.svg")
-    :nth-child(4)
-      content: url("/assets/home/tft.svg")
-    :nth-child(5)
-      content: url("/assets/home/val.svg")
-    :nth-child(6)
-      content: url("/assets/home/dota.svg")
-    
 
-@media screen and (min-width: 1280px)
+@media screen and (min-width: 540px) //mobile
   .wrapper
     flex-direction: row
-    margin-top: 86px
-    margin-bottom: 200px
-    padding-top: 100px
+    margin-top: 92px
+    margin-bottom: 100px
+    padding-top: 54px
+    &::before
+      background-size: 30%
+      top: -70px
+      left: -10px
+    &::after
+      background-size: 30%
+      right: -780px
+      top: 220px
+      transform: rotate(0)
+  .container
+    width: 712px
+    height: 548px
+  .logo
+    width: 150px
+    height: 53px
+    margin: 0 auto 24px auto
+  #slogan1
+    font-size: 26px
+    line-height: 35px
+    letter-spacing: 0.2em
+  #slogan2
+    font-size: 20px
+    line-height: 33px
+    letter-spacing: 0.04em
+    max-width: 712px
+  .statContainer
+    margin-top: 32px
+    margin-bottom: 48px
+    div
+      &:nth-child(1)
+        margin-bottom: 8px
+      p
+        letter-spacing: normal
+        &:nth-child(1)
+          font-size: 16px
+          line-height: 20px
+        &:nth-child(2)
+          font-size: 55px
+          line-height: 70px
+  #reward
+    margin: 0
+  .games
+    div
+      max-height: 24px
+
+@media screen and (min-width: 768px) //tablet
+  .wrapper
+    flex-direction: row
+    margin-top: 92px
+    margin-bottom: 100px
+    padding-top: 64px
+    &::before
+      background-size: 35%
+      top: -50px
+      left: -10px
+    &::after
+      background-size: 35%
+      right: -730px
+      top: 220px
+      transform: rotate(0)
+  .container
+    width: 712px
+    height: 548px
+  .logo
+    width: 150px
+    height: 53px
+    margin: 0 auto 24px auto
+  #slogan1
+    font-size: 32px
+    line-height: 35px
+    letter-spacing: 0.2em
+  #slogan2
+    font-size: 24px
+    line-height: 33px
+    letter-spacing: 0.04em
+    max-width: 712px
+  .statContainer
+    margin-top: 32px
+    margin-bottom: 48px
+    div
+      &:nth-child(1)
+        margin-bottom: 8px
+      p
+        letter-spacing: normal
+        &:nth-child(1)
+          font-size: 17px
+          line-height: 22px
+        &:nth-child(2)
+          font-size: 61px
+          line-height: 77px
+  #reward
+    margin: 0
+  .games
+    div
+      max-height: 24px
+
+@media screen and (min-width: 1024px) //laptop
+  .wrapper
+    flex-direction: row
+    margin-top: 92px
+    margin-bottom: 100px
+    padding-top: 64px
+    &::before
+      background-size: 45%
+      top: 0px
+      left: -80px
+    &::after
+      background-size: 45%
+      right: -650px
+      top: 200px
+      transform: rotate(0)
+  .container
+    width: 712px
+    height: 548px
+  .logo
+    width: 150px
+    height: 53px
+    margin: 0 auto 24px auto
+  #slogan1
+    font-size: 32px
+    line-height: 35px
+    letter-spacing: 0.2em
+  #slogan2
+    font-size: 24px
+    line-height: 33px
+    letter-spacing: 0.04em
+    max-width: 712px
+  .statContainer
+    margin-top: 32px
+    margin-bottom: 48px
+    div
+      &:nth-child(1)
+        margin-bottom: 8px
+      p
+        letter-spacing: normal
+        &:nth-child(1)
+          font-size: 17px
+          line-height: 22px
+        &:nth-child(2)
+          font-size: 61px
+          line-height: 77px
+  #reward
+    margin: 0
+  .games
+    div
+      max-height: 24px
+
+@media screen and (min-width: 1440px) //laptop L
+  .wrapper
+    flex-direction: row
+    margin-top: 92px
+    margin-bottom: 100px
+    padding-top: 64px
+    &::before
+      background-size: 65%
+      top: 60px
+      left: -80px
+    &::after
+      background-size: 65%
+      right: -500px
+      top: 130px
+      transform: rotate(0)
+  .container
+    width: 712px
+    height: 548px
+  .logo
+    width: 150px
+    height: 53px
+    margin: 0 auto 24px auto
+  #slogan1
+    font-size: 32px
+    line-height: 35px
+    letter-spacing: 0.2em
+  #slogan2
+    font-size: 24px
+    line-height: 33px
+    letter-spacing: 0.04em
+    max-width: 712px
+  .statContainer
+    margin-top: 32px
+    margin-bottom: 48px
+    div
+      &:nth-child(1)
+        margin-bottom: 8px
+      p
+        letter-spacing: normal
+        &:nth-child(1)
+          font-size: 20px
+          line-height: 25px
+        &:nth-child(2)
+          font-size: 80px
+          line-height: 100px
+  #reward
+    margin: 0
+  .games
+    div
+      max-height: 24px
+
+@media screen and (min-width: 1920px) //desktop
+  .wrapper
+    flex-direction: row
+    margin-top: 92px
+    margin-bottom: 100px
+    padding-top: 64px
     &::before
       background-size: 75%
       top: 60px
@@ -148,37 +375,35 @@
   .container
     width: 712px
     height: 548px
-    .logo
-      width: 150px
-      height: 53px
-      margin: 0 auto 24px auto
-    .slogan
-      #slogan1
-        font-size: 32px
-        line-height: 35px
-        letter-spacing: 0.02em
-      #slogan2
-        font-size: 24px
-        line-height: 33px
-        letter-spacing: 0.04em
-        max-width: 712px
-    .statContainer
-      margin-top: 32px
-      margin-bottom: 48px
-      div
+  .logo
+    width: 150px
+    height: 53px
+    margin: 0 auto 24px auto
+  #slogan1
+    font-size: 32px
+    line-height: 35px
+    letter-spacing: 0.2em
+  #slogan2
+    font-size: 24px
+    line-height: 33px
+    letter-spacing: 0.04em
+    max-width: 712px
+  .statContainer
+    margin-top: 32px
+    margin-bottom: 48px
+    div
+      &:nth-child(1)
+        margin-bottom: 8px
+      p
+        letter-spacing: normal
         &:nth-child(1)
-          margin-bottom: 8px
-        p
-          letter-spacing: normal
-          &:nth-child(1)
-            font-size: 20px
-            line-height: 25px
-          &:nth-child(2)
-            font-size: 80px
-            line-height: 100px
-        #reward
-          margin: 0
-    .games
-      div
-        max-height: 24px
-
+          font-size: 20px
+          line-height: 25px
+        &:nth-child(2)
+          font-size: 80px
+          line-height: 100px
+  #reward
+    margin: 0
+  .games
+    div
+      max-height: 24px

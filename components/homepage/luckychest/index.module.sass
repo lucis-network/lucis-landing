@@ -1,5 +1,17 @@
 .wrapper
   background: rgba(0, 6, 37, 0.48)
+  position: relative
+  &:after
+    position: absolute
+    background: url("/assets/homepage/bg_list_luckychest.svg") no-repeat
+    //background-size: cover
+    bottom: 0
+    width: 100%
+    height: 100%
+    left: -18%
+    top: -3%
+    @media screen and (min-width: 1900px)
+      content: ""
 .container1
   //display: flex
   //align-items: center
@@ -47,9 +59,15 @@
     flex-direction: column
     justify-content: center
     align-items: center
+    position: relative
     @media screen and (min-width: 992px)
       justify-content: flex-start
       align-items: flex-start
+      padding-top: 55px
+    @media screen and (min-width: 1200px)
+      padding-top: 25px
+    @media screen and (min-width: 1400px)
+      padding-top: 50px
   .listItems
     display: flex
     min-width: 375px
@@ -59,6 +77,11 @@
     margin-bottom: 24px
     :global(.swiper-slide)
       height: auto
+      margin-top: 0 !important
+      @media screen and (min-width: 992px)
+        margin-bottom: 8px !important
+    :global(.swiper-grid-column>.swiper-wrapper)
+      flex-direction: row
     @media screen and (min-width: 575px)
       min-width: 575px
       max-width: 575px
@@ -121,8 +144,10 @@
       //content: ""
       //position: absolute
       max-width: 100%
-      @media screen and (min-width: 1400px)
-        max-width: 117%
+      @media screen and (min-width: 992px)
+        max-width: 115%
+      @media screen and (min-width: 1600px)
+        max-width: 125%
 
 .swiper
   width: 100%

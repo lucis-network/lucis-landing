@@ -9,7 +9,7 @@
   &:before
     content: ""
     position: absolute
-    background: url("/assets/home/bg_left_newbanner.png") no-repeat
+    background: url("/assets/homepage/bg_left_newbanner.png") no-repeat
     transform: rotate(-45deg)
     width: 1000px
     aspect-ratio: 1251/853
@@ -17,7 +17,7 @@
   &:after
     content: ""
     position: absolute
-    background: url("/assets/home/bg_right_newbanner.png") no-repeat
+    background: url("/assets/homepage/bg_right_newbanner.png") no-repeat
     width: 1000px
     height: 1000px
     aspect-ratio: 1939/704
@@ -34,7 +34,7 @@
   z-index: 1
 
 .logo
-  content: url("/assets/home/lucis.png")
+  content: url("/assets/homepage/lucis.png")
 
 .slogan
   p
@@ -58,13 +58,15 @@
     p
       font-style: normal
       text-transform: capitalize
+      letter-spacing: 0.04em
       &:nth-child(1)
         font-weight: 300
         color: #fff
         margin: 0
       &:nth-child(2)
-        font-weight: 500
-        margin: 0
+        width: fit-content
+        font-weight: 600
+        margin: 0 auto
 
 #gamers
   background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
@@ -91,17 +93,17 @@
     margin-left: 24px
     &:nth-child(1)
       margin-left: 0px
-      content: url("/assets/home/pubg.svg")
+      content: url("/assets/homepage/pubg.svg")
     &:nth-child(2)
-      content: url("/assets/home/lol.svg")
+      content: url("/assets/homepage/lol.svg")
     &:nth-child(3)
-      content: url("/assets/home/csgo.svg")
+      content: url("/assets/homepage/csgo.svg")
     &:nth-child(4)
-      content: url("/assets/home/tft.svg")
+      content: url("/assets/homepage/tft.svg")
     &:nth-child(5)
-      content: url("/assets/home/val.svg")
+      content: url("/assets/homepage/val.svg")
     &:nth-child(6)
-      content: url("/assets/home/dota.svg")
+      content: url("/assets/homepage/dota.svg")
 
 @media screen and (min-width: 0px) //mobile
   .wrapper
@@ -140,7 +142,6 @@
       &:nth-child(1)
         margin-bottom: 16px
       p
-        letter-spacing: 0.04em
         &:nth-child(1)
           font-size: 14px
           line-height: 18px
@@ -153,12 +154,12 @@
     div
       max-height: 12px
 
-@media screen and (min-width: 540px) //mobile
+@media screen and (min-width: 540px) //mobile L
   .wrapper
     flex-direction: row
     margin-top: 92px
     margin-bottom: 100px
-    padding-top: 54px
+    padding-top: 64px
     &::before
       background-size: 30%
       top: -70px
@@ -178,7 +179,7 @@
   #slogan1
     font-size: 26px
     line-height: 35px
-    letter-spacing: 0.2em
+    letter-spacing: 0.1em
   #slogan2
     font-size: 20px
     line-height: 33px
@@ -191,7 +192,6 @@
       &:nth-child(1)
         margin-bottom: 8px
       p
-        letter-spacing: normal
         &:nth-child(1)
           font-size: 16px
           line-height: 20px
@@ -229,7 +229,7 @@
   #slogan1
     font-size: 32px
     line-height: 35px
-    letter-spacing: 0.2em
+    letter-spacing: 0.1em
   #slogan2
     font-size: 24px
     line-height: 33px
@@ -242,7 +242,6 @@
       &:nth-child(1)
         margin-bottom: 8px
       p
-        letter-spacing: normal
         &:nth-child(1)
           font-size: 17px
           line-height: 22px
@@ -280,7 +279,7 @@
   #slogan1
     font-size: 32px
     line-height: 35px
-    letter-spacing: 0.2em
+    letter-spacing: 0.1em
   #slogan2
     font-size: 24px
     line-height: 33px
@@ -293,7 +292,6 @@
       &:nth-child(1)
         margin-bottom: 8px
       p
-        letter-spacing: normal
         &:nth-child(1)
           font-size: 17px
           line-height: 22px
@@ -331,7 +329,7 @@
   #slogan1
     font-size: 32px
     line-height: 35px
-    letter-spacing: 0.2em
+    letter-spacing: 0.1em
   #slogan2
     font-size: 24px
     line-height: 33px
@@ -344,7 +342,6 @@
       &:nth-child(1)
         margin-bottom: 8px
       p
-        letter-spacing: normal
         &:nth-child(1)
           font-size: 20px
           line-height: 25px
@@ -366,7 +363,7 @@
     &::before
       background-size: 75%
       top: 60px
-      left: -80px
+      left: -70px
     &::after
       background-size: 75%
       right: -300px
@@ -382,7 +379,7 @@
   #slogan1
     font-size: 32px
     line-height: 35px
-    letter-spacing: 0.2em
+    letter-spacing: 0.1em
   #slogan2
     font-size: 24px
     line-height: 33px
@@ -395,7 +392,6 @@
       &:nth-child(1)
         margin-bottom: 8px
       p
-        letter-spacing: normal
         &:nth-child(1)
           font-size: 20px
           line-height: 25px

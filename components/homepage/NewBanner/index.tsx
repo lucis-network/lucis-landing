@@ -16,7 +16,7 @@ export default function NewBanner() {
                     <div className={s.logo}></div>
                     <div className={s.slogan}>
                         <p id={s.slogan1}>PLAY - ENJOY - EARN - REPEAT</p>
-                        <p id={s.slogan2}>Get reward from playing esport and your favourite traditional games</p>
+                        <p id={s.slogan2}>Get reward from playing esports and your favourite traditional games</p>
                     </div>
                 </div>
                 <div className={s.statContainer}>

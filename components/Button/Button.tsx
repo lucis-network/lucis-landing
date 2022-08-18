@@ -20,7 +20,7 @@ const ButtonWrapper = (props: IProps) => {
                 maxWidth: width,
                 minHeight: height,
                 // maxHeight: height,
-                lineHeight: `${height - 3}px`
+                lineHeight: `${height}px`
             }} />
         //</div >
     )

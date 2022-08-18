@@ -111,7 +111,7 @@ const Home: NextPage = () => {
 
       <NewBanner />
       <Banner />
-      {/*<LuckyChest />*/}
+      <LuckyChest />
       <Arena />
       <LastNews />
       <NetWork />

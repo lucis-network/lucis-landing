@@ -2,14 +2,15 @@
 
 .chestPrize
   min-width: 90px
-  margin-right: 16px
+  //margin-right: 16px
   height: 100%
   display: flex
   flex-direction: column
   align-items: center
   color: $colorPrizeCommon
   @media screen and (min-width: 1200px)
-    min-width: 130px
+    min-width: 84px
+    max-width: 84px
   &:global(.Common)
     color: $colorPrizeCommon
     .prizeImg
@@ -71,7 +72,7 @@
   .prizeTitle
     background: rgba(45, 52, 70, 0.5)
     backdrop-filter: blur(40px)
-    height: 100%
+    //height: 100%
     width: 100%
     display: flex
     align-items: center

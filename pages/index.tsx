@@ -23,6 +23,7 @@ import LastNews from "../components/homepage/lastNews";
 import NetWork from "../components/homepage/network";
 import NewBanner from "../components/Home/NewBanner";
 import Destiny from './../components/homepage/destiny/index';
+import Raffles from './../components/homepage/raffles/index';
 
 const Home: NextPage = () => {
   const title = "Lucis Platform - Gaming SocialFi and Insights";
@@ -113,6 +114,7 @@ const Home: NextPage = () => {
       <NewBanner />
       <Banner />
       {/*<LuckyChest />*/}
+      <Raffles />
       <Arena />
       <Destiny />
       <LastNews />

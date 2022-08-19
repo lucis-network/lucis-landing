@@ -21,8 +21,8 @@ import LuckyChest from "../components/homepage/luckychest";
 import Arena from "../components/homepage/arena";
 import LastNews from "../components/homepage/lastNews";
 import NetWork from "../components/homepage/network";
+import NewBanner from "../components/homepage/NewBanner";
 import FavoriteGames from "../components/homepage/favoriteGames";
-import NewBanner from "../components/Home/NewBanner";
 import LucisNFTs from "../components/homepage/lucisNFTs";
 
 const Home: NextPage = () => {
@@ -113,9 +113,9 @@ const Home: NextPage = () => {
 
       <NewBanner />
       {/*<Banner />*/}
-      {/*<LuckyChest />*/}
       <FavoriteGames />
       <LucisNFTs />
+      <LuckyChest />
       <Arena />
       <LastNews />
       <NetWork />

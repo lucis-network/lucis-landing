@@ -7,10 +7,9 @@ export type ChestPrizeProps = {
   title: string,
   description: Maybe<string> | undefined,
   rarity: string,
-  amount?: number,
 }
 
-const ChestPrize = ({image, title, description, rarity, amount}: ChestPrizeProps) => {
+const ChestPrize = ({image, title, description, rarity}: ChestPrizeProps) => {
   return (
     <PrizePopover
       image={image}
@@ -25,12 +24,6 @@ const ChestPrize = ({image, title, description, rarity, amount}: ChestPrizeProps
         <div className={s.prizeTitle}>
           {title ?? ''}
         </div>
-        {
-          amount &&
-            <div className={s.prizeAmount}>
-              Amount:{" "}{amount}
-            </div>
-        }
       </div>
     </PrizePopover>
   )

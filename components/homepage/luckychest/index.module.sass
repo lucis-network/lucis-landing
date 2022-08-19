@@ -1,8 +1,154 @@
 .wrapper
   background: rgba(0, 6, 37, 0.48)
-  height: 580px
+  position: relative
+  &:after
+    position: absolute
+    background: url("/assets/homepage/bg_list_luckychest.svg") no-repeat
+    //background-size: cover
+    bottom: 0
+    width: 100%
+    height: 100%
+    left: -18%
+    top: -3%
+    @media screen and (min-width: 1900px)
+      content: ""
+.container1
+  //display: flex
+  //align-items: center
+  text-align: center
+  @media screen and (min-width: 1400px)
+    width: 615px !important
+    height: 84px
+  .rowData
+    .time
+      font-family: 'Lexend'
+      font-weight: 300
+      font-size: 16px
+      line-height: 20px
+      color: #FFD058
+    .name
+      font-family: 'Lexend'
+      font-weight: 400
+      font-size: 16px
+      line-height: 20px
+      color: #FFFFFF
+    .desc
+      font-family: 'Lexend'
+      font-weight: 300
+      font-size: 16px
+      line-height: 20px
+      color: #D9D9D9
+    .value
+      font-family: 'Lexend'
+      font-weight: 400
+      font-size: 16px
+      line-height: 20px
+      background: linear-gradient(90deg, #BB7239 0%, #FCEEAE 22.75%, #E09E5B 52.16%, #FCE9A4 75.29%, #F1D693 82.75%, #E1BD7C 92.16%, #D08A4A 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
 .container
   display: flex
+  align-items: center
+  @media screen and (max-width: 991px)
+    flex-direction: column-reverse
+  @media screen and (min-width: 1400px)
+    width: 1400px !important
+    height: 580px
+  .leftContainer
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    @media screen and (min-width: 992px)
+      justify-content: flex-start
+      align-items: flex-start
+      padding-top: 55px
+    @media screen and (min-width: 1200px)
+      padding-top: 25px
+    @media screen and (min-width: 1400px)
+      padding-top: 50px
   .listItems
     display: flex
+    min-width: 375px
+    max-width: 375px
+    gap: 8px 8px
     //flex-wrap: wrap
+    margin-bottom: 24px
+    :global(.swiper-slide)
+      height: auto
+      margin-top: 0 !important
+      @media screen and (min-width: 992px)
+        margin-bottom: 8px !important
+    :global(.swiper-grid-column>.swiper-wrapper)
+      flex-direction: row
+    @media screen and (min-width: 575px)
+      min-width: 575px
+      max-width: 575px
+    @media screen and (min-width: 768px)
+      min-width: 768px
+      max-width: 768px
+    @media screen and (min-width: 992px)
+      min-width: 463px
+      max-width: 463px
+    @media screen and (min-width: 1200px)
+      min-width: 556px
+      max-width: 556px
+    @media screen and (min-width: 1400px)
+      min-width: 824px
+      max-width: 824px
+  .btn
+    width: 126px
+    padding: 10px 0
+    background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+    position: relative
+    cursor: pointer
+    @media screen and (min-width: 768px)
+      width: 258px
+    @media screen and (min-width: 1200px)
+      width: 338px
+    div
+      font-family: 'RevxNeueDemo', serif
+      font-weight: 400
+      font-size: 12px
+      line-height: 13px
+      text-align: center
+      letter-spacing: 0.2em
+      text-transform: uppercase
+      color: #000000
+      height: auto
+      @media screen and (min-width: 768px)
+        font-size: 18px
+        line-height: 22px
+        height: 18px
+      @media screen and (min-width: 992px)
+        font-size: 24px
+        line-height: 28px
+        height: 25px
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 1px
+      right: 1px
+      bottom: 1px
+      left: 1px
+      border: 1px solid #000000
+    &:hover
+      background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+      div
+        color: #fff
+  .boxImages
+    //position: relative
+    img
+      //content: ""
+      //position: absolute
+      max-width: 100%
+      @media screen and (min-width: 992px)
+        max-width: 115%
+      @media screen and (min-width: 1600px)
+        max-width: 125%
+
+.swiper
+  width: 100%
+  height: 100%

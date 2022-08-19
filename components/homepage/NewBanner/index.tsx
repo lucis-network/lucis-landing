@@ -1,13 +1,6 @@
 
 import s from "./index.module.sass";
 import React, { useEffect, useState } from "react";
-import { useGetDataArena } from "../../../hooks/useArena";
-import { Bracket, TournamentGql } from "../../../src/generated/graphql";
-import moment from "moment";
-import { format } from "utils/Number";
-import { useRouter } from "next/router";
-import { LINK_HOME_ARENA } from "../../../utils/Enum";
-import { slugify } from "utils/String";
 
 const data = {
     'gamers': 2068,
@@ -23,7 +16,7 @@ export default function NewBanner() {
                     <div className={s.logo}></div>
                     <div className={s.slogan}>
                         <p id={s.slogan1}>PLAY - ENJOY - EARN - REPEAT</p>
-                        <p id={s.slogan2}>Get reward from playing esport and your favourite traditional games</p>
+                        <p id={s.slogan2}>Get reward from playing esports and your favourite traditional games</p>
                     </div>
                 </div>
                 <div className={s.statContainer}>

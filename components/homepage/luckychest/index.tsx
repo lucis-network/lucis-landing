@@ -27,14 +27,42 @@ export default function LuckyChest() {
   return (
     <>
       <section>
-        <div className={`lucis-container-2 ${s.container1}`}>
-          <div className={s.rowData}>
-            <span className={s.time}>June 29th, 6:30 am </span>
-            <span className={s.name}>Ngô Thị Là Ánh Dương </span>
-            <span className={s.desc}>Received a prize </span>
-            <span className={s.value}>Valued at €20</span>
-          </div>
-        </div>
+        {/*<div className={`lucis-container-2 ${s.container1}`}>*/}
+        {/*  <ul>*/}
+        {/*    <li>*/}
+        {/*      <div className={s.rowData}>*/}
+        {/*        <span className={s.time}>June 29th, 6:30 am </span>*/}
+        {/*        <span className={s.name}>Ngô Thị Là Ánh Dương </span>*/}
+        {/*        <span className={s.desc}>Received a prize </span>*/}
+        {/*        <span className={s.value}>Valued at €20</span>*/}
+        {/*      </div>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <div className={s.rowData}>*/}
+        {/*        <span className={s.time}>June 29th, 6:30 am </span>*/}
+        {/*        <span className={s.name}>Ngô Thị Là Ánh Dương </span>*/}
+        {/*        <span className={s.desc}>Received a prize </span>*/}
+        {/*        <span className={s.value}>Valued at €201</span>*/}
+        {/*      </div>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <div className={s.rowData}>*/}
+        {/*        <span className={s.time}>June 29th, 6:30 am </span>*/}
+        {/*        <span className={s.name}>Ngô Thị Là Ánh Dương </span>*/}
+        {/*        <span className={s.desc}>Received a prize </span>*/}
+        {/*        <span className={s.value}>Valued at €202</span>*/}
+        {/*      </div>*/}
+        {/*    </li>*/}
+        {/*    <li>*/}
+        {/*      <div className={s.rowData}>*/}
+        {/*        <span className={s.time}>June 29th, 6:30 am </span>*/}
+        {/*        <span className={s.name}>Ngô Thị Là Ánh Dương </span>*/}
+        {/*        <span className={s.desc}>Received a prize </span>*/}
+        {/*        <span className={s.value}>Valued at €203</span>*/}
+        {/*      </div>*/}
+        {/*    </li>*/}
+        {/*  </ul>*/}
+        {/*</div>*/}
         <div className={s.wrapper}>
           <div className={`lucis-container-2 ${s.container}`}>
             <div className={s.leftContainer}>

@@ -9,16 +9,26 @@
     width: 100%
     height: 100%
     left: -18%
-    top: -3%
+    top: -7%
     @media screen and (min-width: 1900px)
       content: ""
 .container1
   //display: flex
   //align-items: center
   text-align: center
+  ul
+    margin: 0
+    padding: 0
+    //animation: scrollUp 1s .16s infinite forwards
+    //li
+    //  opacity: 1
+    //  height: 20px
+    //  padding: 10px
+    //  list-style: none
   @media screen and (min-width: 1400px)
     width: 615px !important
     height: 84px
+  sc
   .rowData
     .time
       font-family: 'Lexend'
@@ -68,6 +78,8 @@
       padding-top: 25px
     @media screen and (min-width: 1400px)
       padding-top: 50px
+    @media screen and (min-width: 1600px)
+      padding-top: 0
   .listItems
     display: flex
     min-width: 375px
@@ -152,3 +164,18 @@
 .swiper
   width: 100%
   height: 100%
+
+@keyframes fadeOut
+  from
+    opacity: 1
+  to
+    opacity: 0
+// Varaibles
+$item-count: 4
+$item: 1 / $item-count
+
+@keyframes scrollUp
+  from
+    transform: translateY(0)
+  to
+    transform: translateY((-100% / $item-count) * ($item-count - 1))

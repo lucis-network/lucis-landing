@@ -1,0 +1,153 @@
+.wrapper
+  margin-top: 200px
+  color: #FFFFFF
+.container
+  display: flex
+  max-width: 1320px
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  position: relative
+  z-index: 1
+  .title
+    margin-bottom: 48px
+    align-items: center
+    h2
+      font-family: 'RevxNeueDemo'
+      font-style: normal
+      font-weight: 400
+      font-size: 48px
+      line-height: 53px
+      text-align: center
+      letter-spacing: 0.2em
+      color: #FFFFFF
+      margin-bottom: 8px !important
+    p
+      font-family: 'Lexend'
+      font-style: normal
+      font-weight: 300
+      font-size: 24px
+      line-height: 33px
+      letter-spacing: 0.04em
+      color: #DBE0E8
+      margin-bottom: 0 !important
+  .listItems
+    display: flex
+    gap: 0 20px
+    :global(.swiper-slide)
+      //margin-right: 0 !important
+      height: auto
+    @media screen and (max-width: 574px)
+      width: 375px !important
+    @media screen and (min-width: 575px)
+      width: 575px !important
+    @media screen and (min-width: 768px)
+      width: 768px !important
+    @media screen and (min-width: 992px)
+      width: 768px !important
+    @media screen and (min-width: 1200px)
+      width: 992px !important
+    @media screen and (min-width: 1320px)
+      width: 1320px !important
+    @media screen and (min-width: 1600px)
+      width: 1320px !important
+
+    .item
+      display: flex
+      flex-direction: column
+      color: #FFFFFF
+      width: 132px
+      position: relative
+      cursor: pointer
+      @media screen and (min-width: 768px)
+        width: 180px
+      @media screen and (min-width: 1200px)
+        width: 240px
+      > *
+        z-index: 1
+      &:after
+        position: absolute
+        content: ""
+        background: rgba(69, 80, 107, 0.4)
+        //backdrop-filter: blur(32.2681px)
+        width: 100%
+        height: 100%
+        z-index: 0
+      .itemImg
+        img
+
+      .content
+        padding: 10px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        .itemTitle
+          p
+            font-family: 'RevxNeueDemo'
+            font-style: normal
+            font-weight: 600
+            font-size: 20px
+            line-height: 22px
+            letter-spacing: 0.04em
+            color: #00F9FF
+            margin-bottom: 2px !important
+        .itemPrice
+          p
+            font-family: 'Lexend'
+            font-weight: 600
+            font-size: 24px
+            line-height: 30px
+            letter-spacing: 0.04em
+            color: #FFB601
+            margin-bottom: 0 !important
+  .btn
+    margin-top: 48px
+    width: 126px
+    padding: 10px 0
+    background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+    position: relative
+    cursor: pointer
+    @media screen and (min-width: 768px)
+      width: 243px
+    @media screen and (min-width: 1320px)
+      width: 405px
+    div
+      font-family: 'RevxNeueDemo', serif
+      font-weight: 400
+      font-size: 12px
+      line-height: 13px
+      text-align: center
+      letter-spacing: 0.2em
+      text-transform: uppercase
+      color: #000000
+      height: auto
+      @media screen and (min-width: 768px)
+        font-size: 18px
+        line-height: 22px
+        height: 18px
+      @media screen and (min-width: 992px)
+        font-size: 24px
+        line-height: 28px
+        height: 25px
+      @media screen and (min-width: 1320px)
+        font-size: 28px
+        line-height: 31px
+        height: 27px
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 1px
+      right: 1px
+      bottom: 1px
+      left: 1px
+      border: 1px solid #000000
+    &:hover
+      background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+      div
+        color: #fff
+
+.swiper
+  width: 100%
+  height: 100%
+

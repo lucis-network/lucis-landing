@@ -17,6 +17,23 @@ export default function NetWork() {
               <p>The ultimate Gaming SocialFi Unite Gamers Across The Globe With The Power of Decentralize Finance Where every gamers can experience, show their skills, record their history and get very, very big rewards</p>
             </div>
           </div>
+          {/*<div className={s.titlePartner}>*/}
+          {/*  <div className={s.linearTitlePartner}>*/}
+          {/*    <div className={s.descLinearTitlePartner}>Partners</div>*/}
+          {/*    <div className={s.descLinearTitlePartner}>Backed</div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
+          <div className={s.centerTitlePartner}>
+            <span className={s.linearCenterTitlePartner}>
+              Partners
+            </span>
+            <span>
+              and
+            </span>
+            <span className={s.linearCenterTitlePartner}>
+              Backed
+            </span>
+          </div>
           <Partner />
           {/*<div className={`lucis-container-2 ${s.containerEmail}`}>*/}
           {/*  <div className={s.descEmail}>*/}

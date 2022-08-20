@@ -57,7 +57,8 @@ export default function ItemArena(prop: Props) {
           <div className={s.itemDesc}>
             <div className={s.itemFreeEntry}>
               {/*<p>{item?.game?.name}</p>*/}
-              <span>Free entry</span>
+              <img src="/assets/game/csgo.png" alt=""></img>
+              <p>Free entry</p>
             </div>
             <div className={s.itemAva}>
               <img src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : "/assets/homepage/default_avatar.png"} alt=""/>
@@ -78,7 +79,7 @@ export default function ItemArena(prop: Props) {
             <div className={s.itemTime}>
               <img src="/assets/homepage/date_range_arena.svg" alt=""/>
               <span>{moment(item.brackets?.[0].start_at).format(
-                "MMM Do hh:mm"
+                "MMM Do, hh:mm"
               )}</span>
             </div>
           </div>

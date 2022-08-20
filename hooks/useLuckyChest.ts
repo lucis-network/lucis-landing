@@ -127,21 +127,10 @@ const GET_CHEST_DETAIL = gql`
         id
         title
         desc
-        prize_amount
         quantity_in_stock
         valued_at
         img
         rarity
-        user_prize_history {
-          uid
-          prize_id
-          prize {
-            id
-            title
-            desc          
-          }
-          is_claimed
-        }
       }
     }
   }
@@ -163,7 +152,6 @@ const GET_LUCKY_CHEST_USER_INFO = gql`
           img
           prize_type
           rarity
-          prize_amount
           created_at
         }
         is_claimed

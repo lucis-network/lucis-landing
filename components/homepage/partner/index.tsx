@@ -8,31 +8,34 @@ export default function Partner() {
       <div className={s.wrapper}>
         <div className={`${s.container}`}>
           <div className={s.item}>
-            <img src="/assets/partner/mones.png" alt="" />
+            <img src="/assets/partner/mo_nes.png" alt="" />
           </div>
           <div className={s.item}>
-            <img src="/assets/partner/aiza.png" alt="" />
+            <img src="/assets/partner/ai_za.png" alt="" />
           </div>
           <div className={s.item}>
-            <img src="/assets/partner/epic_war.png" alt="" />
+            <img src="/assets/partner/bizverse.png" alt="" />
           </div>
           <div className={s.item}>
-            <img src="/assets/partner/animverse.png" alt="" />
+            <img src="/assets/partner/animverses.png" alt="" />
           </div>
           <div className={s.item}>
-            <img src="/assets/partner/thetan.png" alt="" />
+            <img src="/assets/partner/coinbay.png" alt="" />
           </div>
           <div className={s.item}>
-            <img src="/assets/partner/galaxy_survey.png" alt="" />
+            <img src="/assets/partner/galaxySurvey.png" alt="" />
           </div>
           <div className={s.item}>
-            <img src="/assets/partner/yeah1_digital.png" alt="" />
+            <img src="/assets/partner/follow_trend.png" alt="" />
           </div>
           <div className={s.item}>
-            <img src="/assets/partner/metawork.png" alt="" />
+            <img src="/assets/partner/mifu.png" alt="" />
           </div>
           <div className={s.item}>
-            <img src="/assets/partner/spac3ship.png" alt="" />
+            <img src="/assets/partner/meta_work.png" alt="" />
+          </div>
+          <div className={s.item}>
+            <img src="/assets/partner/spac3_ship.png" alt="" />
           </div>
         </div>
       </div>

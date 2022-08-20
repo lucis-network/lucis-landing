@@ -13,7 +13,7 @@ export default function Header() {
           <div className={s.logoSection}>
             <Link href="/" passHref>
               <a>
-                <img src="/assets/header/logo.png" className={s.logo} alt="logo"/>
+                <img src="/assets/header/new_logo.png" className={s.logo} alt="logo"/>
               </a>
             </Link>
             {

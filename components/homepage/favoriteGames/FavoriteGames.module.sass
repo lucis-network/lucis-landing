@@ -1,0 +1,101 @@
+.sectionFavoriteGames
+  :global(.lucis-container-2)
+    @media screen and (max-width: 1199px)
+      width: 100%
+      padding: 0
+.sliderWrap
+  :global(.swiper-slide)
+    display: flex
+    align-items: flex-start
+    width: 272px !important
+    @media screen and (min-width: 1600px)
+      width: 496px !important
+    .gameItem
+      margin-right: 8px
+      @media screen and (min-width: 1600px)
+        margin-right: 16px
+      &:last-of-type
+        margin-right: 0
+  //:global(.swiper-slide-prev)
+  //  .gameItem
+  //    &:first-of-type
+  //      img
+  //        width: 108px
+  //        height: 144px
+  //    &:last-of-type
+  //      img
+  //        width: 120px
+  //        height: 160px
+  //:global(.swiper-slide-next)
+  //  .gameItem
+  //    &:first-of-type
+  //      img
+  //        width: 120px
+  //        height: 160px
+  //    &:last-of-type
+  //      img
+  //        width: 108px
+  //        height: 144px
+  //:global(.swiper-slide-active)
+  //  .gameItem
+  //    img
+  //      width: 132px
+  //      height: 176px
+  :global(.swiper-pagination)
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 16px
+    @media screen and (min-width: 1600px)
+      margin-top: 32px
+    :global(.swiper-pagination-bullet)
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: #fff
+      display: block
+      margin-right: 12px
+      @media screen and (min-width: 1600px)
+        width: 12px
+        height: 12px
+      &:last-of-type
+        margin-right: 0
+    :global(.swiper-pagination-bullet-active)
+      background: #00FFFF
+.gameItem
+  position: relative
+  opacity: 0.5
+  &:global(.available)
+    opacity: 1
+    &:after
+      content: none
+    &:hover
+      &:after
+        content: ''
+      .btnCommon
+        display: block
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 12, 13, 0) 0%, #000C0D 100%)
+    z-index: 0
+    border-radius: 4px
+  img
+    border-radius: 4px
+    transition: .3s
+    width: 132px
+    height: 176px
+    @media screen and (min-width: 1600px)
+      width: 240px
+      height: 320px
+  .btnCommon
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1
+    display: none

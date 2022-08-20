@@ -113,7 +113,6 @@ const GET_CHEST_DETAIL = gql`
     getChestDetail(game_platform_id: $game_platform_id, tier: $tier) {
       id
       title
-      desc
       ticket_cost
       ticket_cost_type
       created_at

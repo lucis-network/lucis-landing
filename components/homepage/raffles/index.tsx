@@ -11,20 +11,20 @@ const Raffles = () => {
         </div>
       </div>
       <div className={s.body}>
-        <div className={s.banner1}>
-          <img src="/assets/homepage/raffles/banner1.png" alt="" />
+        <div className={`${s.banner1} ${s.bannerHover}`}>
+          <div className={s.btnHover}>Join raffles</div>
         </div>
-        <div className={s.banner2}>
-          <img src="/assets/homepage/raffles/banner2.png" alt="" />
+        <div className={`${s.banner2} ${s.bannerHover}`}>
+          <div className={s.btnHover}>Join raffles</div>
         </div>
-        <div className={s.banner3}>
-          <img src="/assets/homepage/raffles/banner3.png" alt="" />
+        <div className={`${s.banner3} ${s.bannerHover}`}>
+          <div className={s.btnHover}>Join raffles</div>
         </div>
-        <div className={s.banner4}>
-          <img src="/assets/homepage/raffles/banner4.png" alt="" />
+        <div className={`${s.banner4} ${s.bannerHover}`}>
+          <div className={s.btnHover}>Join raffles</div>
         </div>
-        <div className={s.banner5}>
-          <img src="/assets/homepage/raffles/banner5.png" alt="" />
+        <div className={`${s.banner5} ${s.bannerHover}`}>
+          <div className={s.btnHover}>Join raffles</div>
         </div>
       </div>
       <div className={s.footer}></div>

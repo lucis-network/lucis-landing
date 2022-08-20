@@ -107,11 +107,11 @@ const Destiny = () => {
     ],
     [
       {
-        name: "Streaming platform",
+        name: "Automation tool zone",
         intro: [
           {
             title: "",
-            content: "Is coming soon, and be apart of our SocialFi platform.",
+            content: "All the best automation and handy tools for our scholars, gamers, and investors.",
           },
         ],
         img: "/assets/homepage/streamingPlatform.png",

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import s from "./index.module.sass";
 const Raffles = () => {
+  const bannerClasses = [s.banner1, s.banner2, s.banner3, s.banner4, s.banner5]
+  const bannerBg = [s.bgBanner1, s.bgBanner2, s.bgBanner3, s.bgBanner4, s.bgBanner5]
+
+  const [stateIndexBanner, setStateIndexBanner] = useState(0)
   return (
     <div className={s.raffles_wrapper}>
       <div className={s.header}>
@@ -11,21 +15,17 @@ const Raffles = () => {
         </div>
       </div>
       <div className={s.body}>
-        <div className={`${s.banner1} ${s.bannerHover}`}>
-          <div className={s.btnHover}>Join raffles</div>
-        </div>
-        <div className={`${s.banner2} ${s.bannerHover}`}>
-          <div className={s.btnHover}>Join raffles</div>
-        </div>
-        <div className={`${s.banner3} ${s.bannerHover}`}>
-          <div className={s.btnHover}>Join raffles</div>
-        </div>
-        <div className={`${s.banner4} ${s.bannerHover}`}>
-          <div className={s.btnHover}>Join raffles</div>
-        </div>
-        <div className={`${s.banner5} ${s.bannerHover}`}>
-          <div className={s.btnHover}>Join raffles</div>
-        </div>
+        {
+          bannerClasses.map((bannerClass, bannerIndex) => {
+            // let index = stateIndexBanner + bannerIndex > 4 ? stateIndexBanner + bannerIndex  - 4 : stateIndexBanner + bannerIndex
+            let srcImg = `/assets/homepage/raffles/banner${bannerIndex+1}.png`
+            return (
+              <div className={`${bannerClasses[bannerIndex]} ${bannerBg[bannerIndex]}`} key={bannerClass} onClick = {() => setStateIndexBanner(bannerIndex)}>
+                {/* <div className={s.btnHover}>Join raffles</div> */}
+              </div>
+            )
+          })
+        }
       </div>
       <div className={s.footer}></div>
     </div>

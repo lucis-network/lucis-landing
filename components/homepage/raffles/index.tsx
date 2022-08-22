@@ -18,7 +18,6 @@ const Raffles = () => {
         {
           bannerClasses.map((bannerClass, bannerIndex) => {
             // let index = stateIndexBanner + bannerIndex > 4 ? stateIndexBanner + bannerIndex  - 4 : stateIndexBanner + bannerIndex
-            let srcImg = `/assets/homepage/raffles/banner${bannerIndex+1}.png`
             return (
               <div className={`${bannerClasses[bannerIndex]} ${bannerBg[bannerIndex]}`} key={bannerClass} onClick = {() => setStateIndexBanner(bannerIndex)}>
                 {/* <div className={s.btnHover}>Join raffles</div> */}

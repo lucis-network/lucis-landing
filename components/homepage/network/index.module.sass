@@ -1,5 +1,9 @@
 .wrapper
-  margin-top: 200px
+  margin-top: 80px
+  @media screen and (min-width: 992px)
+    margin-top: 120px
+  @media screen and (min-width: 1200px)
+    margin-top: 200px
 .container
   display: flex
   justify-content: center
@@ -7,7 +11,11 @@
   align-items: center
   position: relative
   .title
-    margin-bottom: 32px
+    margin-bottom: 24px
+    @media screen and (min-width: 992px)
+      margin-bottom: 28px
+    @media screen and (min-width: 1200px)
+      margin-bottom: 32px
     h2
       font-family: 'RevxNeueDemo', serif
       font-weight: 400
@@ -36,18 +44,16 @@
       font-family: 'Lexend', serif
       font-weight: 300
       font-size: 14px
-      line-height: 20px
+      line-height: 28px
       letter-spacing: 0.04em
       color: #DBE0E8
       text-align: center
       margin-bottom:  24px
       @media screen and (min-width: 768px)
         font-size: 16px
-        line-height: 22px
         margin-bottom:  36px
       @media screen and (min-width: 992px)
         font-size: 20px
-        line-height: 26px
         margin-bottom:  52px
       @media screen and (min-width: 1400px)
         font-size: 24px
@@ -123,3 +129,45 @@
         background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
         div
           color: #fff
+.titlePartner
+  display: flex
+  flex-direction: column
+  .linearTitlePartner
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    @media screen and (max-width: 991px)
+      display: none
+    .descLinearTitlePartner
+      font-family: 'RevxNeueDemo'
+      font-style: normal
+      font-weight: 600
+      font-size: 108px
+      line-height: 118px
+      color: rgba(255, 255, 255, 0.115)
+      text-transform: uppercase
+      @media screen and (min-width: 1600px)
+        font-size: 178px
+        line-height: 178px
+.centerTitlePartner
+  display: flex
+  flex-direction: row
+  justify-content: center
+  gap: 0 10px
+  margin-bottom: -6px
+  @media screen and (min-width: 992px)
+    margin-bottom: -14px
+  span
+    color: #0F1222
+    font-family: 'RevxNeueDemo'
+    font-weight: 900
+    font-size: 24px
+    line-height: 24px
+    @media screen and (min-width: 992px)
+      font-size: 54px
+      line-height: 53px
+  .linearCenterTitlePartner
+    background: -webkit-linear-gradient(270deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.06) 50%, rgba(255, 255, 255, 0) 100%)
+    -webkit-background-clip: text
+    -webkit-text-stroke: 1px transparent
+    text-transform: uppercase

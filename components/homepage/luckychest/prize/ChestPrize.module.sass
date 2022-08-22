@@ -1,15 +1,18 @@
 @import "/styles/playcore/variables"
 
 .chestPrize
-  min-width: 90px
-  margin-right: 16px
-  height: 100%
   display: flex
   flex-direction: column
   align-items: center
   color: $colorPrizeCommon
+  min-width: 86px
+  max-width: 86px
   @media screen and (min-width: 1200px)
-    min-width: 130px
+    min-width: 86px
+    max-width: 86px
+  @media screen and (min-width: 1400px)
+    min-width: 96px
+    max-width: 96px
   &:global(.Common)
     color: $colorPrizeCommon
     .prizeImg
@@ -69,22 +72,21 @@
       aspect-ratio: 1/1
       object-fit: cover
   .prizeTitle
-    background: rgba(45, 52, 70, 0.5)
-    backdrop-filter: blur(40px)
-    height: 100%
+    background: rgba(45, 52, 70, 1)
+    //backdrop-filter: blur(40px)
     width: 100%
     display: flex
     align-items: center
     justify-content: center
     text-align: center
-    padding: 7px
-    font-family: 'Revx Neue Demo'
+    padding: 2.5px 0
+    font-family: 'RevxNeueDemo'
     font-weight: 600
     font-size: 12px
     line-height: 13px
-    text-transform: uppercase
+    height: 31px
   .prizeAmount
-    font-family: 'Revx Neue Demo'
+    font-family: 'RevxNeueDemo'
     font-weight: 600
     font-size: 12px
     line-height: 13px
@@ -203,13 +205,13 @@
         aspect-ratio: 1/1
         object-fit: cover
   .detailPrizeTitle
-    font-family: 'Revx Neue Demo'
+    font-family: 'RevxNeueDemo'
     font-weight: 600
     font-size: 12px
-    text-align: center
+    line-height: 13px
     background: rgba(69, 80, 107, 0.5)
     backdrop-filter: blur(40px)
-    padding: 4px
+    padding: 2px 0px
   .detailPrizeRarity
     font-family: 'Lexend'
     font-weight: 500

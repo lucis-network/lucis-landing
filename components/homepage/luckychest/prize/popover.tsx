@@ -5,9 +5,9 @@ import {Maybe} from "@graphql-tools/utils";
 
 type PrizePopoverProps = {
   image: string,
-  title: string,
-  description: Maybe<string> | undefined,
-  rarity: string,
+  title?: Maybe<string>,
+  description: Maybe<string>,
+  rarity?: Maybe<string>,
   children?: JSX.Element
 }
 

@@ -1,84 +1,131 @@
 .wrapper
-  //height: 580px
-  margin-top: 258px
+  margin-top: 61px
   position: relative
   color: #FFFFFF
-  :global(.swiper-wrapper)
-    @media screen and (min-width: 992px)
-      display: flex
-      justify-content: space-between
-  :global(.swiper-slide)
-    @media screen and (max-width: 991px)
-      width: 200px !important
-      opacity: 0.4
-      transform: scale(0.9) !important
-      transform-origin: top
-      transition: .3s
-    @media screen and (min-width: 992px)
-      width: 180px !important
-    @media screen and (min-width: 1200px)
-      width: 210px !important
-    @media screen and (min-width: 1400px)
-      width: 250px !important
-    @media screen and (min-width: 1600px)
-      width: 260px !important
-  :global(.swiper-slide-active)
-    @media screen and (max-width: 991px)
-      opacity: 1
-      transform: scale(1) !important
+  @media screen and (min-width: 768px)
+    margin-top: 90px
+  @media screen and (min-width: 1200px)
+    margin-top: 138px
   &:before
     content: ""
     position: absolute
     background: url("/assets/homepage/bg_left_arena.png") no-repeat
+    background-size: cover
     top: 0
-    width: 571px
+    height: 33%
     aspect-ratio: 571/683
-    left: -100px
+    left: 0
     z-index: 0
+    @media screen and (min-width: 575px)
+      height: 50%
+      left: 0
+      top: 0
+    @media screen and (min-width: 768px)
+      left: -50px
+    @media screen and (min-width: 992px)
+      height: 65%
+      left: 0
+      top: -5px
     @media screen and (min-width: 1200px)
       left: 0
+      top: 60px
+    @media screen and (min-width: 1320px)
+      height: 100%
+      top: 0
   &:after
     content: ""
     position: absolute
     background: url("/assets/homepage/bg_right_arena.png") no-repeat
-    top: 0
-    width: 1000px
+    background-size: cover
+    top: -20px
+    height: 38%
     aspect-ratio: 1120/726
-    right: -100px
+    right: -27px
     z-index: 0
-    @media screen and (min-width: 1200px)
+    @media screen and (min-width: 575px)
+      height: 50%
       right: 0
+      top: -20px
+    @media screen and (min-width: 768px)
+      right: -50px
+    @media screen and (min-width: 992px)
+      height: 65%
+      right: 0
+      top: -5px
+    @media screen and (min-width: 1200px)
+      top: 25px
+    @media screen and (min-width: 1320px)
+      height: 95%
+      top: 0
     @media screen and (min-width: 1600px)
-      width: 1120px
+      height: 100%
 
 .container
   display: flex
-  max-width: 1130px
+  max-width: 1320px
   justify-content: center
   flex-direction: column
   align-items: center
   position: relative
   z-index: 1
   .title
-    margin-top: 58px
+    margin-top: 16px
     margin-bottom: 36px
+    display: flex
+    justify-content: center
+    @media screen and (min-width: 768px)
+      margin-top: 48px
+    @media screen and (min-width: 1200px)
+      margin-top: 98px
+    img
+      width: 55%
+      @media screen and (min-width: 575px)
+        width: 65%
+      @media screen and (min-width: 768px)
+        width: 75%
+      @media screen and (min-width: 992px)
+        width: 85%
+      @media screen and (min-width: 1200px)
+        width: 100%
   .listItems
     display: flex
     gap: 0 20px
+    :global(.swiper-slide)
+      //margin-right: 0 !important
+      height: auto
+    @media screen and (max-width: 574px)
+      width: 375px !important
+    @media screen and (min-width: 575px)
+      width: 575px !important
+    @media screen and (min-width: 768px)
+      width: 768px !important
+    @media screen and (min-width: 992px)
+      width: 768px !important
+    @media screen and (min-width: 1200px)
+      width: 992px !important
+    @media screen and (min-width: 1320px)
+      width: 1320px !important
+    @media screen and (min-width: 1600px)
+      width: 1320px !important
+
     .item
       display: flex
       flex-direction: column
       color: #FFFFFF
-      width: 305px
+      width: 184px
       position: relative
       cursor: pointer
+      @media screen and (min-width: 768px)
+        width: 245px
+      @media screen and (min-width: 1200px)
+        width: 305px
       > *
         z-index: 1
       &:after
         position: absolute
         content: ""
         background: rgba(69, 80, 107, 0.4)
-        backdrop-filter: blur(32.2681px)
+        //backdrop-filter: blur(32.2681px)
         width: 100%
         height: 100%
         z-index: 0
@@ -107,50 +154,121 @@
             display: flex
             align-items: center
             img
-              width: 14px
-              height: 13px
-              margin-right: 6px
+              width: 10px
+              height: 10px
+              margin-right: 4px
+              @media screen and (min-width: 768px)
+                width: 14px
+                height: 13px
+                margin-right: 8px
             span
               font-family: 'Poppins', serif
               font-weight: 400
-              font-size: 12px
-              line-height: 18px
+              font-size: 10px
+              line-height: 15px
+              @media screen and (min-width: 768px)
+                font-size: 12px
+                line-height: 18px
+              @media screen and (min-width: 1200px)
+                font-size: 14px
+                line-height: 21px
           .itemDescImgGameMode
             font-family: 'Poppins', serif
             font-weight: 400
-            font-size: 12px
-            line-height: 18px
+            font-size: 10px
+            line-height: 15px
+            @media screen and (min-width: 768px)
+              font-size: 12px
+              line-height: 15px
+            @media screen and (min-width: 1200px)
+              font-size: 14px
+              line-height: 21px
         .thumbnail
           img
-            width: 305px
+            width: 184px
             aspect-ratio: 305/171
+            @media screen and (min-width: 768px)
+              width: 245px
+            @media screen and (min-width: 1200px)
+              width: 305px
       .itemDesc
         display: flex
-        padding: 0 8px
-        margin-top: 7px
+        //padding: 0 8px
+        //margin-top: 10px
+        //@media screen and (min-width: 768px)
+        //  margin-top: 12px
         .itemFreeEntry
-          font-family: 'Lexend', serif
-          font-weight: 300
-          font-size: 12px
-          line-height: 15px
-          text-transform: uppercase
-          margin-right: 10px
-          //background: linear-gradient(91.01deg, rgba(0, 6, 37, 0.4) 3.83%, rgba(0, 0, 0, 0.4) 108.05%)
-          p
-            margin-bottom: 0
-        .itemAva
-          margin-right: 8px
+          padding: 9px 20px 9px 9px
+          width: 62px
+          position: relative
+          overflow: hidden
+          @media screen and (min-width: 575px)
+            width: 80px
+          @media screen and (min-width: 768px)
+            width: 107px
+            padding: 8px
+          &:after
+            z-index: -1
+            content: ''
+            position: absolute
+            right: 0
+            top: 0
+            background: linear-gradient(91.01deg, rgba(0, 6, 37, 0.4) 3.83%, rgba(0, 0, 0, 0.4) 108.05%)
+            width: 100%
+            height: 100%
+            transform: skewX(340deg)
+            transform-origin: top
           img
-            width: 30px
-            height: 30px
-            border-radius: 50%
-        .itemCreator
+            width: 72px
+            aspect-ratio: 72/25
+            @media screen and (min-width: 768px)
+              width: 72px
           p
             font-family: 'Lexend', serif
-            font-weight: 400
-            font-size: 12px
-            line-height: 15px
+            font-weight: 300
+            font-size: 6px
+            line-height: 8px
+            text-transform: uppercase
+            margin-bottom: 0 !important
+            width: 80px
+            @media screen and (min-width: 575px)
+              font-size: 8px
+              line-height: 10px
+              margin-left: 2px
+            @media screen and (min-width: 768px)
+              font-size: 10px
+              line-height: 12px
+              margin-left: 7px
+            @media screen and (min-width: 1200px)
+              font-size: 12px
+              line-height: 15px
+              margin-left: 0
+            //background: linear-gradient(91.01deg, rgba(0, 6, 37, 0.4) 3.83%, rgba(0, 0, 0, 0.4) 108.05%)
+        .itemAva
+          margin-top: 8px
+          margin-right: 8px
+          @media screen and (min-width: 768px)
+            margin-top: 12px
+          img
+            width: 20px
+            height: 20px
+            border-radius: 50%
+            @media screen and (min-width: 768px)
+              width: 30px
+              height: 30px
+        .itemCreator
+          margin-top: 9px
+          @media screen and (min-width: 768px)
+            margin-top: 13px
+          p
+            font-family: 'Lexend', serif
+            font-weight: 300
+            font-size: 10px
+            line-height: 12px
             margin-bottom: 4px
+            @media screen and (min-width: 768px)
+              font-size: 12px
+              line-height: 15px
           h2
             font-family: 'Lexend', serif
             font-weight: 400
@@ -162,18 +280,23 @@
             -webkit-line-clamp: 1
             -webkit-box-orient: vertical
             margin-bottom: 0
+            @media screen and (min-width: 768px)
+              font-size: 12px
+              line-height: 15px
       .itemTitle
-        margin: 16px 0 8px 0
+        margin: 6px 8px
+        @media screen and (min-width: 768px)
+          margin: 8px 0
         p
-          max-height: 56px
-          min-height: 56px
+          max-height: 31px
+          min-height: 31px
           //display: flex
           align-items: center
           font-family: 'Lexend', serif
           font-weight: 600
-          font-size: 20px
-          line-height: 28px
-          padding: 0 8px
+          font-size: 13px
+          line-height: 15px
+          padding: 0
           letter-spacing: -0.04em
           text-overflow: ellipsis
           overflow: hidden
@@ -181,6 +304,12 @@
           -webkit-line-clamp: 2
           -webkit-box-orient: vertical
           margin-bottom: 0
+          @media screen and (min-width: 768px)
+            font-size: 20px
+            line-height: 28px
+            padding: 0 8px
+            max-height: 56px
+            min-height: 56px
       .itemGroupCT
         display: flex
         justify-content: space-between
@@ -190,52 +319,94 @@
         .itemCurrency
           font-family: 'Lexend', serif
           font-weight: 500
-          font-size: 24px
-          line-height: 30px
+          font-size: 14px
+          line-height: 18px
           color: #00F9FF
+          @media screen and (min-width: 768px)
+            font-size: 18px
+            line-height: 22px
+          @media screen and (min-width: 1200px)
+            font-size: 24px
+            line-height: 30px
         .itemTime
           display: flex
           align-items: center
           img
-            width: 20px
-            height: 20px
+            width: 10px
+            height: 10px
             margin-right: 4px
+            @media screen and (min-width: 768px)
+              width: 20px
+              height: 20px
           span
             margin-bottom: 0
             font-family: 'Poppins', serif
             font-weight: 400
-            font-size: 14px
-            line-height: 21px
+            font-size: 10px
+            line-height: 15px
+            @media screen and (min-width: 768px)
+              font-size: 14px
+              line-height: 21px
   .desc
-    font-family: 'Lexend', serif
-    font-weight: 300
-    font-size: 24px
-    line-height: 33px
-    letter-spacing: 0.04em
-    color: #DBE0E8
-    margin-top: 36px
+    margin-top: 24px
+    @media screen and (max-width: 767px)
+      display: none
+    @media screen and (min-width: 992px)
+      margin-top: 36px
     p
+      font-family: 'Lexend', serif
+      font-weight: 300
+      font-size: 20px
+      line-height: 24px
+      letter-spacing: 0.04em
+      color: #DBE0E8
       margin-bottom: 0
+      @media screen and (min-width: 992px)
+        font-size: 24px
+        line-height: 33px
   .groupBtn
     display: flex
-    gap: 0 32px
-    margin-top: 36px
+    gap: 0 10px
+    margin-top: 24px
+    @media screen and (min-width: 768px)
+      gap: 0 18px
+    @media screen and (min-width: 992px)
+      gap: 0 32px
+      margin-top: 36px
+    //.btnJoin
+    //  width: 327px !important
   .btn
-    width: 323px
+    width: 126px !important
     padding: 10px 0
-    background: #ffffff
+    background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
     position: relative
     cursor: pointer
+    @media screen and (min-width: 768px)
+      width: 243px !important
+    @media screen and (min-width: 1320px)
+      width: 327px !important
     div
       font-family: 'RevxNeueDemo', serif
       font-weight: 400
-      font-size: 28px
-      line-height: 31px
+      font-size: 12px
+      line-height: 13px
       text-align: center
       letter-spacing: 0.2em
       text-transform: uppercase
-      color: #000000
-      height: 27px
+      color: #FFFFFF
+      height: auto
+      @media screen and (min-width: 768px)
+        font-size: 18px
+        line-height: 22px
+        height: 18px
+      @media screen and (min-width: 992px)
+        font-size: 24px
+        line-height: 28px
+        height: 25px
+      @media screen and (min-width: 1320px)
+        font-size: 28px
+        line-height: 31px
+        height: 28px
     &:before
       content: ''
       display: block
@@ -254,31 +425,3 @@
   width: 100%
   height: 100%
 
-
-.swiper-slide
-  text-align: center
-  font-size: 18px
-  background: #fff
-  display: -webkit-box
-  display: -ms-flexbox
-  display: -webkit-flex
-  display: flex
-  -webkit-box-pack: center
-  -ms-flex-pack: center
-  -webkit-justify-content: center
-  justify-content: center
-  -webkit-box-align: center
-  -ms-flex-align: center
-  -webkit-align-items: center
-  align-items: center
-
-.swiper-slide img
-  display: block
-  width: 100%
-  height: 100%
-  object-fit: cover
-
-
-.swiper
-  margin-left: auto
-  margin-right: auto

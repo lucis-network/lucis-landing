@@ -4,9 +4,9 @@ import PrizePopover from "./popover";
 
 export type ChestPrizeProps = {
   image: string,
-  title: string,
-  description: Maybe<string> | undefined,
-  rarity: string,
+  title: Maybe<string>,
+  description?: Maybe<string>,
+  rarity: Maybe<string>,
 }
 
 const ChestPrize = ({image, title, description, rarity}: ChestPrizeProps) => {

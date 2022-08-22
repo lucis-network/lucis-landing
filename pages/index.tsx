@@ -21,16 +21,11 @@ import LuckyChest from "../components/homepage/luckychest";
 import Arena from "../components/homepage/arena";
 import LastNews from "../components/homepage/lastNews";
 import NetWork from "../components/homepage/network";
-<<<<<<< HEAD
-import NewBanner from "../components/Home/NewBanner";
 import Destiny from './../components/homepage/destiny/index';
 import Raffles from './../components/homepage/raffles/index';
-=======
-import NewBanner from "../components/homepage/NewBanner";
-import LucisNFT from "../components/homepage/nft";
 import FavoriteGames from "../components/homepage/favoriteGames";
 import LucisNFTs from "../components/homepage/lucisNFTs";
->>>>>>> 744d366a63a9edd09876dabaefd955147eb679e8
+import NewBanner from "components/homepage/NewBanner";
 
 const Home: NextPage = () => {
   const title = "Lucis Platform - Gaming SocialFi and Insights";
@@ -119,16 +114,13 @@ const Home: NextPage = () => {
       {/*)}*/}
 
       <NewBanner />
-<<<<<<< HEAD
-      <Banner />
+      {/*<Banner />*/}
       {/*<LuckyChest />*/}
       <Raffles />
-=======
       <FavoriteGames />
       {/*<LucisNFT />*/}
       <LucisNFTs />
       <LuckyChest />
->>>>>>> 744d366a63a9edd09876dabaefd955147eb679e8
       <Arena />
       <Destiny />
       <LastNews />

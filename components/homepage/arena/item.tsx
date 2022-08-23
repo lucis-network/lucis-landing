@@ -30,7 +30,7 @@ export default function ItemArena(prop: Props) {
         <div className={s.item}>
           <div className={s.itemImg}>
             <div className={s.itemDescImg}>
-              <div className={s.itemDescImgLR}>
+              <div className={s.itemDescImgL}>
                 <img src="/assets/homepage/ic_user_arena.svg" alt=""/>
                 <span>
                           { item.cache_tournament?.team_participated === undefined || null

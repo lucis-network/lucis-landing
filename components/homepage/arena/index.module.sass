@@ -23,6 +23,7 @@
     @media screen and (min-width: 768px)
       left: -50px
     @media screen and (min-width: 992px)
+      opacity: 0.4
       height: 65%
       left: 0
       top: -5px
@@ -32,12 +33,13 @@
     @media screen and (min-width: 1320px)
       height: 100%
       top: 0
+      left: -2%
   &:after
     content: ""
     position: absolute
     background: url("/assets/homepage/bg_right_arena.png") no-repeat
     background-size: cover
-    top: -20px
+    top: -5px
     height: 38%
     aspect-ratio: 1120/726
     right: -27px
@@ -45,13 +47,12 @@
     @media screen and (min-width: 575px)
       height: 50%
       right: 0
-      top: -20px
     @media screen and (min-width: 768px)
       right: -50px
     @media screen and (min-width: 992px)
+      opacity: 0.4
       height: 65%
       right: 0
-      top: -5px
     @media screen and (min-width: 1200px)
       top: 25px
     @media screen and (min-width: 1320px)
@@ -70,7 +71,7 @@
   z-index: 1
   .title
     margin-top: 16px
-    margin-bottom: 36px
+    margin-bottom: 45px
     display: flex
     justify-content: center
     @media screen and (min-width: 768px)
@@ -150,20 +151,42 @@
           padding: 8px 0
           width: 100%
           margin-bottom: 16px
+          .itemDescImgL
+            display: flex
+            align-items: center
+            img
+              width: 12px
+              height: 12px
+              margin-right: 4px
+              @media screen and (min-width: 768px)
+                width: 15px
+                height: 15px
+                margin-right: 8px
+            span
+              font-family: 'Poppins', serif
+              font-weight: 300
+              font-size: 10px
+              line-height: 15px
+              @media screen and (min-width: 768px)
+                font-size: 12px
+                line-height: 18px
+              @media screen and (min-width: 1200px)
+                font-size: 14px
+                line-height: 21px
           .itemDescImgLR
             display: flex
             align-items: center
             img
-              width: 10px
-              height: 10px
+              width: 14px
+              height: 15px
               margin-right: 4px
               @media screen and (min-width: 768px)
-                width: 14px
+                width: 18px
                 height: 13px
                 margin-right: 8px
             span
               font-family: 'Poppins', serif
-              font-weight: 400
+              font-weight: 300
               font-size: 10px
               line-height: 15px
               @media screen and (min-width: 768px)
@@ -174,7 +197,7 @@
                 line-height: 21px
           .itemDescImgGameMode
             font-family: 'Poppins', serif
-            font-weight: 400
+            font-weight: 300
             font-size: 10px
             line-height: 15px
             @media screen and (min-width: 768px)
@@ -199,13 +222,13 @@
         //  margin-top: 12px
         .itemFreeEntry
           padding: 9px 20px 9px 9px
-          width: 62px
+          width: 62px !important
           position: relative
           overflow: hidden
           @media screen and (min-width: 575px)
-            width: 80px
+            width: 80px !important
           @media screen and (min-width: 768px)
-            width: 107px
+            width: 107px !important
             padding: 8px
           &:after
             z-index: -1
@@ -219,7 +242,7 @@
             transform: skewX(340deg)
             transform-origin: top
           img
-            width: 72px
+            width: 40px
             aspect-ratio: 72/25
             @media screen and (min-width: 768px)
               width: 72px
@@ -257,7 +280,9 @@
               width: 30px
               height: 30px
         .itemCreator
-          margin-top: 9px
+          margin-top: 1px
+          @media screen and (min-width: 575px)
+            margin-top: 9px
           @media screen and (min-width: 768px)
             margin-top: 13px
           p
@@ -394,7 +419,7 @@
       letter-spacing: 0.2em
       text-transform: uppercase
       color: #FFFFFF
-      height: auto
+      height: 10px
       @media screen and (min-width: 768px)
         font-size: 18px
         line-height: 22px

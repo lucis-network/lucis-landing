@@ -24,7 +24,6 @@ export default function Footer(props: Props) {
           >
             <img src="/assets/header/new_logo.png" alt=""/>
           </a>
-
         </div>
         <div className={s.wrapper}>
           <div className={s.group_ic}>

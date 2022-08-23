@@ -43,7 +43,7 @@ export default function Header() {
                        rel="noopener noreferrer">INSIGHT</a></li>
                 <li className={`${router.pathname.includes("/ranking") ? s.active : ""}`}><Link href="/ranking">RANKING</Link></li>
                 <li className={s.default}><a>SCHORLARSHIP <span>Coming Soon</span></a></li>
-                <li className={s.default}><a>SOCIAL <span>Coming Soon</span></a></li>
+                <li className={s.default}><a>SOCIAL <span style={{left: 0}}>Coming Soon</span></a></li>
               </ul>
             </div>
             <div>

@@ -3,7 +3,7 @@ import React from "react";
 import { LuckyChestTier } from "src/generated/graphql_p2e";
 import { useGetChestDetail } from "hooks/useLuckyChest";
 import ChestPrize from "./prize";
-import {LINK_HOME_ARENA} from "../../../utils/Enum";
+import {LINK_HOME, LINK_HOME_ARENA} from "../../../utils/Enum";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid } from "swiper";
 import "swiper/css";
@@ -21,7 +21,7 @@ export default function LuckyChest() {
   })
 
   const joinNow = () => {
-    window.open(LINK_HOME_ARENA, '_blank');
+    window.open(LINK_HOME + "/playcore/lucky-chest", '_blank');
   }
 
   return (

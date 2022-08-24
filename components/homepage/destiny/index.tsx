@@ -111,7 +111,8 @@ const Destiny = () => {
         intro: [
           {
             title: "",
-            content: "All the best automation and handy tools for our scholars, gamers, and investors.",
+            content:
+              "All the best automation and handy tools for our scholars, gamers, and investors.",
           },
         ],
         img: "/assets/homepage/streamingPlatform.png",
@@ -166,31 +167,39 @@ const Destiny = () => {
           {setDestiny.map((destinyItems, destinyIndex) => {
             return tab == destinyIndex ? (
               <div className={s.body_wrapper} key={destinyItems[0].name}>
-                <div className={s.left}>
-                  {destinyItems.map((destinyItem) => {
-                    return (
-                      <>
-                        <div className={s.bigName}>{destinyItem.name}</div>
-                        {destinyItem.intro.map((introItem) => {
-                          return (
-                            <div className={s.someIntro} key={introItem.title}>
-                              <div className={s.title}>{introItem.title}</div>
-                              <div className={s.content}>
-                                {introItem.content}
+                <div className={s.bigName}>{destinyItems[0].name}</div>
+                <div className={s.wrapLR}>
+                  <div className={s.left}>
+                    {destinyItems.map((destinyItem, destinyItemIndex) => {
+                      return (
+                        <>
+                          {destinyItemIndex != 0 ? (
+                            <div className={s.bigName}>{destinyItem.name}</div>
+                          ) : null}
+                          {destinyItem.intro.map((introItem) => {
+                            return (
+                              <div
+                                className={s.someIntro}
+                                key={introItem.title}
+                              >
+                                <div className={s.title}>{introItem.title}</div>
+                                <div className={s.content}>
+                                  {introItem.content}
+                                </div>
                               </div>
-                            </div>
-                          );
-                        })}
-                      </>
-                    );
-                  })}
-                  <div className={s.moreBtn}>
-                    more detail
-                    <div className={s.border}></div>
+                            );
+                          })}
+                        </>
+                      );
+                    })}
+                    <div className={s.moreBtn}>
+                      more detail
+                      <div className={s.border}></div>
+                    </div>
                   </div>
-                </div>
-                <div className={s.right}>
-                  <img src={destinyItems[0].img} alt="" />
+                  <div className={s.right}>
+                    <img src={destinyItems[0].img} alt="" />
+                  </div>
                 </div>
               </div>
             ) : null;

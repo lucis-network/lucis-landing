@@ -9,6 +9,61 @@
   font-family: 'RevxNeueDemo';
   src: url(/font/RevxNeueDemo-Regular.ttf)
 }
+@font-face {
+  font-family: 'Revx Neue Demo';
+  src: url("/font/RevxNeue/RevxNeueDemo-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Revx Neue Demo';
+  src: url("/font/RevxNeue/RevxNeueDemo-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Revx Neue Demo';
+  src: url("/font/RevxNeue/RevxNeueDemo-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Revx Neue Demo';
+  src: url("/font/RevxNeue/RevxNeueDemo-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url("/font/lexend/Lexend-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url("/font/lexend/Lexend-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url("/font/lexend/Lexend-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url("/font/lexend/Lexend-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url("/font/lexend/Lexend-Bold.ttf");
+  font-weight: 700;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

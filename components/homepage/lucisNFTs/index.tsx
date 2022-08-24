@@ -1,23 +1,35 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import homepage from '../Homepage.module.sass'
 import lucisNFTs from './LucisNFTs.module.sass'
 import 'swiper/css'
+import {useRef} from "react";
 
 const LucisNFTs = () => {
+  const navPrevRef = useRef(null)
+  const navNextRef = useRef(null)
 
   return (
     <section className={`${homepage.section} ${lucisNFTs.sectionFavoriteGames}`}>
-      <div className="lucis-container-2">
-        <div className={homepage.sectionTitleWrap}>
+      <div className={homepage.sectionTitleWrap}>
+        <div className="lucis-container-2">
           <h2 className={homepage.sectionTitle}>LUCIS NFTS</h2>
           <p className={homepage.sectionDesc}>Want to earn real money from playing your games?</p>
         </div>
-        <div className={lucisNFTs.sliderWrap}>
+      </div>
+      <div className={lucisNFTs.sliderWrap}>
+        <div className="lucis-container-2">
           <Swiper
             centeredSlides
             slidesPerView="auto"
             initialSlide={1}
+            navigation={{
+              prevEl: navPrevRef.current,
+              nextEl: navNextRef.current,
+            }}
+            modules={[Navigation]}
+            className={lucisNFTs.nftSwiper}
             breakpoints={{
               320: {
                 spaceBetween: 8
@@ -124,9 +136,17 @@ const LucisNFTs = () => {
               </div>
             </SwiperSlide>
           </Swiper>
+          <div className={`${lucisNFTs.swiperNavWrap}`}>
+            <button className={`${lucisNFTs.sliderNav} prev`} ref={navPrevRef}>
+              <img src="/assets/homepage/lucisNFTs/sliderNavLeft.svg" alt="" />
+            </button>
+            <button className={`${lucisNFTs.sliderNav} next`} ref={navNextRef}>
+              <img src="/assets/homepage/lucisNFTs/sliderNavRight.svg" alt="" />
+            </button>
+          </div>
         </div>
-        <button className={homepage.btnCommon}>OWN LUCIS NFTS</button>
       </div>
+      <button className={`${homepage.btnCommon} ${lucisNFTs.btnCommon}`}>OWN LUCIS NFTS</button>
     </section>
   )
 }

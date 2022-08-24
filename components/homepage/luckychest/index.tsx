@@ -1,5 +1,5 @@
 import s from "./index.module.sass";
-import React from "react";
+import React, {useEffect} from "react";
 import { LuckyChestTier } from "src/generated/graphql_p2e";
 import { useGetChestDetail } from "hooks/useLuckyChest";
 import ChestPrize from "./prize";
@@ -24,45 +24,26 @@ export default function LuckyChest() {
     window.open(LINK_HOME + "/playcore/lucky-chest", '_blank');
   }
 
+  useEffect(() => {
+    let btn = document.querySelector('.btn_hover_luckychest');
+    if(btn) {
+      btn.addEventListener('mousemove', e => {
+        let rect = e.target.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        const span = btn.querySelector('.btn_glow');
+        if(span) {
+          span.style.left = x + 'px';
+          span.style.top = y + 'px';
+        }
+      });
+    }
+  }, [])
+
   return (
     <>
       <section>
-        {/*<div className={`lucis-container-2 ${s.container1}`}>*/}
-        {/*  <ul>*/}
-        {/*    <li>*/}
-        {/*      <div className={s.rowData}>*/}
-        {/*        <span className={s.time}>June 29th, 6:30 am </span>*/}
-        {/*        <span className={s.name}>Ngô Thị Là Ánh Dương </span>*/}
-        {/*        <span className={s.desc}>Received a prize </span>*/}
-        {/*        <span className={s.value}>Valued at €20</span>*/}
-        {/*      </div>*/}
-        {/*    </li>*/}
-        {/*    <li>*/}
-        {/*      <div className={s.rowData}>*/}
-        {/*        <span className={s.time}>June 29th, 6:30 am </span>*/}
-        {/*        <span className={s.name}>Ngô Thị Là Ánh Dương </span>*/}
-        {/*        <span className={s.desc}>Received a prize </span>*/}
-        {/*        <span className={s.value}>Valued at €201</span>*/}
-        {/*      </div>*/}
-        {/*    </li>*/}
-        {/*    <li>*/}
-        {/*      <div className={s.rowData}>*/}
-        {/*        <span className={s.time}>June 29th, 6:30 am </span>*/}
-        {/*        <span className={s.name}>Ngô Thị Là Ánh Dương </span>*/}
-        {/*        <span className={s.desc}>Received a prize </span>*/}
-        {/*        <span className={s.value}>Valued at €202</span>*/}
-        {/*      </div>*/}
-        {/*    </li>*/}
-        {/*    <li>*/}
-        {/*      <div className={s.rowData}>*/}
-        {/*        <span className={s.time}>June 29th, 6:30 am </span>*/}
-        {/*        <span className={s.name}>Ngô Thị Là Ánh Dương </span>*/}
-        {/*        <span className={s.desc}>Received a prize </span>*/}
-        {/*        <span className={s.value}>Valued at €203</span>*/}
-        {/*      </div>*/}
-        {/*    </li>*/}
-        {/*  </ul>*/}
-        {/*</div>*/}
+
         <div className={s.wrapper}>
           <div className={`lucis-container-2 ${s.container}`}>
             <div className={s.leftContainer}>
@@ -159,8 +140,9 @@ export default function LuckyChest() {
                   ))}
                 </Swiper>
               </div>
-              <div className={`${s.btn}`} onClick={joinNow}>
+              <div className={`${s.btn} btn_hover_luckychest`} onClick={joinNow}>
                 <div>LUCKY CHEST</div>
+                <span className={`${s.btn_hover} btn_glow`}></span>
               </div>
             </div>
 

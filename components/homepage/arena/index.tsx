@@ -32,6 +32,40 @@ export default function Arena() {
     window.open(LINK_HOME_ARENA + `/${item.uid}/${slugify(item.name)}`, '_blank');
   }
 
+  useEffect(() => {
+    let btn = document.querySelector('.btn_hover');
+    // @ts-ignore
+    if(btn) {
+      btn.addEventListener('mousemove', e => {
+        let rect = e.target.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        const span = btn.querySelector('.btn_glow');
+        if(span) {
+          span.style.left = x + 'px';
+          span.style.top = y + 'px';
+        }
+      });
+    }
+  }, [])
+
+  useEffect(() => {
+    let btn = document.querySelector('.btn_cr_hover');
+    // @ts-ignore
+    if(btn) {
+      btn.addEventListener('mousemove', e => {
+        let rect = e.target.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+        let y = e.clientY - rect.top;
+        const span = btn.querySelector('.btn_cr_glow');
+        if(span) {
+          span.style.left = x + 'px';
+          span.style.top = y + 'px';
+        }
+      });
+    }
+  }, [])
+
   return (
     <>
       <section>
@@ -86,11 +120,13 @@ export default function Arena() {
               <p>Let's create your own playing field and show your level to others!</p>
             </div>
             <div className={s.groupBtn}>
-              <div className={`${s.btn} ${s.btnJoin}`} onClick={joinNow}>
+              <div className={`${s.btn} btn_hover`} onClick={joinNow}>
                 <div>Join Now</div>
+                <span className={`${s.btn_hover} btn_glow`}></span>
               </div>
-              <div className={`${s.btn} ${s.btnCreate}`} onClick={createNow}>
+              <div className={`${s.btn} btn_cr_hover`} onClick={createNow}>
                 <div>Create Now</div>
+                <span className={`${s.btn_hover} btn_cr_glow`}></span>
               </div>
             </div>
           </div>

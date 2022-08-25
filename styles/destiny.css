@@ -1,0 +1,42 @@
+.imgSocial {
+  background-image: url("/assets/homepage/social-fi.png");
+  background-repeat: no-repeat;
+  width: 716px;
+  height: 458px;
+}
+.imgTournaments {
+  background-image: url("/assets/homepage/tournaments.png");
+  background-repeat: no-repeat;
+  height: 420px;
+  width: 716px;
+}
+.imgInstance {
+  background-image: url("/assets/homepage/lucisInsight.png");
+  background-repeat: no-repeat;
+  height: 395px;
+  width: 713px;
+}
+.imgMedia {
+  background-image: url("/assets/homepage/lucisMedia.png");
+  background-repeat: no-repeat;
+  width: 713px;
+  height: 480px;
+}
+.imgLaunchpad {
+  background-image: url("/assets/homepage/launchpad.png");
+  background-repeat: no-repeat;
+  width: 713px;
+  height: 420px;
+}
+.imgGuild {
+  background-image: url("/assets/homepage/gamingGuild.png");
+  background-repeat: no-repeat;
+  height: 420px;
+  width: 713px;
+}
+.imgPlatform {
+  background-image: url("/assets/homepage/streamingPlatform.png");
+  background-repeat: no-repeat;
+  height: 420px;
+  width: 713px;
+}

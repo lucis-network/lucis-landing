@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "antd/lib/style/themes/default.less";
 import "antd/dist/antd.less";
 import "../styles/globals.css";
+import "../styles/destiny.css";
 import { ApolloProvider } from "@apollo/client";
 import client from "utils/apollo_client";
 // @ts-ignore

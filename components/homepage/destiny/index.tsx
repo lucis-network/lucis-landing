@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import s from "./index.module.sass";
 import DiamondIcon from "./icon/DiamondIcon";
-
 const Destiny = () => {
   const setDestiny = [
     [
@@ -9,17 +8,25 @@ const Destiny = () => {
         name: "Social-Fi network platform",
         intro: [
           {
-            title: "social platform",
+            title: (
+              <span>
+                <span className={s.title_hl}>social platform</span>
+              </span>
+            ),
             content:
               "A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games.",
           },
           {
-            title: "User Ranking system",
+            title: (
+              <span>
+                <span className={s.title_hl}>User Ranking system</span>
+              </span>
+            ),
             content:
               "For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.",
           },
         ],
-        img: "/assets/homepage/social-fi.png",
+        img: "imgSocial",
       },
     ],
     [
@@ -27,16 +34,24 @@ const Destiny = () => {
         name: "Tournaments",
         intro: [
           {
-            title: "A platform",
+            title: (
+              <span className={s.inline}>
+                <span className={s.title_hl}>A platform</span>
+              </span>
+            ),
             content: "For creating, running tournament events.",
           },
           {
-            title: "Team",
+            title: (
+              <span className={s.inline}>
+                <span className={s.title_hl}>Team</span>
+              </span>
+            ),
             content:
-              "will get more popular and big prizes, big donation amount from Lucis Tournament platform",
+              "will get more popular and big prizes, big donation amount from Lucis Tournament platform.",
           },
         ],
-        img: "/assets/homepage/tournaments.png",
+        img: "imgTournaments",
       },
     ],
     [
@@ -44,17 +59,25 @@ const Destiny = () => {
         name: "Lucis Insight & Game Ranking system",
         intro: [
           {
-            title: "Lucis Insight",
+            title: (
+              <span>
+                <span className={s.title_hl}>Lucis Insight</span>
+              </span>
+            ),
             content:
               "Our researcher team will carefully analysis the market, filter out hidden gems,",
           },
           {
-            title: "Game Ranking System",
+            title: (
+              <span>
+                <span className={s.title_hl}>Game Ranking System</span>
+              </span>
+            ),
             content:
               "We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.",
           },
         ],
-        img: "/assets/homepage/lucisInsight.png",
+        img: "imgInstance",
       },
     ],
     [
@@ -62,12 +85,16 @@ const Destiny = () => {
         name: "Lucis Media",
         intro: [
           {
-            title: "lucis TV and Lucis blog",
+            title: (
+              <span>
+                <span className={s.title_hl}>lucis TV and Lucis blog</span>
+              </span>
+            ),
             content:
               "will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets.",
           },
         ],
-        img: "/assets/homepage/lucisMedia.png",
+        img: "imgMedia",
       },
     ],
     [
@@ -75,16 +102,27 @@ const Destiny = () => {
         name: "Launchpad & Marketplace",
         intro: [
           {
-            title: "Game publisher",
+            title: (
+              <span className={s.inline}>
+                <span className={s.title_hl}>Game publisher</span>
+              </span>
+            ),
             content:
-              "Game publisher can host INO to sell NFT mistery boxes to Lucis community or users.",
+              "can host INO to sell NFT mistery boxes to Lucis community or users.",
           },
           {
-            title: "Sell NFT boxes or NFT",
+            title: (
+              <span className={s.inline}>
+                Sell{" "}
+                <span className={`${s.title_hl} ${s.inline}`}>NFT boxes</span>
+                {" "}or{" "}
+                <span className={`${s.title_hl} ${s.inline}`}>NFT</span>
+              </span>
+            ),
             content: "collection on Lucis marketplace.",
           },
         ],
-        img: "/assets/homepage/launchpad.png",
+        img: "imgLaunchpad",
       },
     ],
     [
@@ -92,17 +130,39 @@ const Destiny = () => {
         name: "Gaming Guild",
         intro: [
           {
-            title: "Gaming Guild tools:",
+            title: "",
+            content: "We're starting from original Lucis Gaming Guild.",
+          },
+          {
+            title: (
+              <span>
+                <span className={s.title_hl}>Gaming Guild tools:</span>
+              </span>
+            ),
             content:
               "Our Lucis Guild Platform will connect investors to scholars",
           },
           {
-            title: "Lucis Academy:",
-            content:
-              "With our knowlegde, we're converting traditional gamers into Play 2 Earn gamers. We provide training and experience in Play 2 Earn field, to ensure our Scholars skill & quality",
+            title: (
+              <span>
+                <span className={s.title_hl}>Lucis Academy:</span>
+              </span>
+            ),
+            content: (
+              <>
+                <span>
+                  With our knowlegde, we're converting traditional gamers into
+                  Play 2 Earn gamers.
+                </span>
+                <span>
+                  We provide training and experience in Play 2 Earn field, to
+                  ensure our Scholars skill {"&"} quality
+                </span>
+              </>
+            ),
           },
         ],
-        img: "/assets/homepage/gamingGuild.png",
+        img: "imgGuild",
       },
     ],
     [
@@ -115,7 +175,7 @@ const Destiny = () => {
               "All the best automation and handy tools for our scholars, gamers, and investors.",
           },
         ],
-        img: "/assets/homepage/streamingPlatform.png",
+        img: "imgPlatform",
       },
       {
         name: "Streaming platform",
@@ -167,38 +227,42 @@ const Destiny = () => {
           {setDestiny.map((destinyItems, destinyIndex) => {
             return tab == destinyIndex ? (
               <div className={s.body_wrapper} key={destinyItems[0].name}>
-                <div className={s.bigName}>{destinyItems[0].name}</div>
                 <div className={s.wrapLR}>
                   <div className={s.left}>
-                    {destinyItems.map((destinyItem, destinyItemIndex) => {
-                      return (
-                        <>
-                          {destinyItemIndex != 0 ? (
+                    <div className={`${s.left_content} ${s.mb32}`}>
+                      {destinyItems.map((destinyItem, destinyItemIndex) => {
+                        return (
+                          <>
                             <div className={s.bigName}>{destinyItem.name}</div>
-                          ) : null}
-                          {destinyItem.intro.map((introItem) => {
-                            return (
-                              <div
-                                className={s.someIntro}
-                                key={introItem.title}
-                              >
-                                <div className={s.title}>{introItem.title}</div>
-                                <div className={s.content}>
-                                  {introItem.content}
-                                </div>
-                              </div>
-                            );
-                          })}
-                        </>
-                      );
-                    })}
+                            {destinyItem.intro.map(
+                              (introItem, introItemIndex) => {
+                                return (
+                                  <div
+                                    className={s.someIntro}
+                                    key={introItemIndex}
+                                  >
+                                    <span className={s.title}>
+                                      {" "}
+                                      {introItem.title}{" "}
+                                    </span>
+                                    <span className={`${s.content} ${s.mb36}`}>
+                                      {introItem.content}
+                                    </span>
+                                  </div>
+                                );
+                              }
+                            )}
+                          </>
+                        );
+                      })}
+                    </div>
                     <div className={s.moreBtn}>
-                      more detail
+                      <span>more detail</span>
                       <div className={s.border}></div>
                     </div>
                   </div>
                   <div className={s.right}>
-                    <img src={destinyItems[0].img} alt="" />
+                    <div className={destinyItems[0].img}></div>
                   </div>
                 </div>
               </div>

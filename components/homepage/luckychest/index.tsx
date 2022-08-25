@@ -78,7 +78,7 @@ export default function LuckyChest() {
                     360: {
                       slidesPerView: 4,
                       spaceBetween: 8,
-                      loop: true,
+                      //loop: true,
                       grid: {
                         rows: 1,
                       },
@@ -86,7 +86,7 @@ export default function LuckyChest() {
                     575: {
                       slidesPerView: 6,
                       spaceBetween: 8,
-                      loop: true,
+                      //loop: true,
                       grid: {
                         rows: 1,
                       },
@@ -97,7 +97,7 @@ export default function LuckyChest() {
                       grid: {
                         rows: 1,
                       },
-                      loop: true
+                      //loop: true
                     },
                     992: {
                       slidesPerView: 5,
@@ -113,7 +113,7 @@ export default function LuckyChest() {
                         rows: 2,
                       },
                       spaceBetween: 8,
-                      loop: false
+                      //loop: false
                     },
                     1400: {
                       slidesPerView: 8,
@@ -121,7 +121,7 @@ export default function LuckyChest() {
                         rows: 2,
                       },
                       spaceBetween: 8,
-                      loop: false
+                      //loop: false
                     },
                   }}
                 >

@@ -1,6 +1,5 @@
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useSwiper } from 'swiper/react';
 
 import homepage from '../Homepage.module.sass'
 import fvGame from './FavoriteGames.module.sass'
@@ -20,7 +19,10 @@ const FavoriteGames = () => {
             slidesPerView="auto"
             initialSlide={1}
             modules={[Pagination]}
-            pagination
+            loop
+            pagination={{
+              clickable: true
+            }}
             breakpoints={{
               320: {
                 spaceBetween: 8

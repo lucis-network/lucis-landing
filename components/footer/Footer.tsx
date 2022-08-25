@@ -1,13 +1,12 @@
 import Link from "next/link";
 import s from "./Footer.module.sass";
-import React from "react";
-import ButtonWrapper from "components/Button/Button";
+import React, {useRef} from "react";
 import homepage from "../homepage/Homepage.module.sass";
 
 type Props = {};
 export default function Footer(props: Props) {
   return (
-    <section className={`${s.container_footer}`}>
+    <section className={`${s.container_footer}`} >
       <div className={`lucis-container-2 ${s.container}`}>
         <div className={s.group_link}>
           <ul className={s.block_item_menu}>
@@ -24,7 +23,6 @@ export default function Footer(props: Props) {
           >
             <img src="/assets/header/new_logo.png" alt=""/>
           </a>
-
         </div>
         <div className={s.wrapper}>
           <div className={s.group_ic}>

@@ -29,6 +29,7 @@ import Raffles from './../components/homepage/raffles/index';
 
 import FavoriteGames from "../components/homepage/favoriteGames";
 import LucisNFTs from "../components/homepage/lucisNFTs";
+import NewBanner from "../components/homepage/NewBanner";
 
 
 const Home: NextPage = () => {
@@ -119,15 +120,13 @@ const Home: NextPage = () => {
 
       {/* <NewBanner /> */}
 
-      <Banner />
+      <NewBanner></NewBanner>
       {/*<LuckyChest />*/}
-      <Raffles />
-
       <FavoriteGames />
       {/*<LucisNFT />*/}
       <LucisNFTs />
       <LuckyChest />
-
+      <Raffles />
       <Arena />
       <Destiny />
       <LastNews />

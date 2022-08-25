@@ -71,15 +71,15 @@ export default function Footer(props: Props) {
                 <img src="/assets/footer/twitter.svg" alt=""/>
               </a>
             </div>
-            <div className={s.ic_item}>
-              <a
-                href="https://twitter.com/LucisNetwork"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/assets/footer/twitch.svg" alt=""/>
-              </a>
-            </div>
+            {/*<div className={s.ic_item}>*/}
+            {/*  <a*/}
+            {/*    href="https://twitter.com/LucisNetwork"*/}
+            {/*    target="_blank"*/}
+            {/*    rel="noopener noreferrer"*/}
+            {/*  >*/}
+            {/*    <img src="/assets/footer/twitch.svg" alt=""/>*/}
+            {/*  </a>*/}
+            {/*</div>*/}
           </div>
 
           <a href={`https://discord.com/invite/kdDUjJcSF5`}

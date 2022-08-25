@@ -78,7 +78,7 @@ export default function Arena() {
         <div className={s.wrapper}>
           <div className={`lucis-container-2 ${s.container}`}>
             <div className={s.title}>
-              <img src="/assets/homepage/arena.png" alt=""/>
+              <img srcSet="/assets/homepage/new_arena.png" alt=""/>
             </div>
             <div className={s.listItems}>
               <Swiper

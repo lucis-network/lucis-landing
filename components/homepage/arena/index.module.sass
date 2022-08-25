@@ -81,15 +81,17 @@
     @media screen and (min-width: 1200px)
       margin-top: 98px
     img
-      width: 55%
+      width: 115px
+      aspect-ratio: 210/64
       @media screen and (min-width: 575px)
-        width: 65%
+        width: 130px
       @media screen and (min-width: 768px)
-        width: 75%
+        width: 150px
       @media screen and (min-width: 992px)
-        width: 85%
+        width: 180px
       @media screen and (min-width: 1200px)
-        width: 100%
+        width: 210px
+
   .listItems
     display: flex
     gap: 0 20px
@@ -118,6 +120,7 @@
       width: 184px
       position: relative
       cursor: pointer
+      border-radius: 4px
       @media screen and (min-width: 768px)
         width: 245px
       @media screen and (min-width: 1200px)
@@ -375,7 +378,11 @@
             font-weight: 400
             font-size: 10px
             line-height: 15px
+            margin-top: 3px
             @media screen and (min-width: 768px)
+              font-size: 12px
+              line-height: 16px
+            @media screen and (min-width: 1200px)
               font-size: 14px
               line-height: 21px
   .desc

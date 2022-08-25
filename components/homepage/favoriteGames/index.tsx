@@ -19,6 +19,7 @@ const FavoriteGames = () => {
             slidesPerView="auto"
             initialSlide={1}
             modules={[Pagination]}
+            loop
             pagination={{
               clickable: true
             }}

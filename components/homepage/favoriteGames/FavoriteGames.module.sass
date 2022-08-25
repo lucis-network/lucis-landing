@@ -4,11 +4,11 @@
       width: 100%
       padding: 0
 .sliderWrap
-  @media screen and (min-width: 725px)
-    width: 725px
-    margin: auto
-  @media screen and (min-width: 1600px)
-    width: 1340px
+  //@media screen and (min-width: 725px)
+  //  width: 725px
+  //  margin: auto
+  //@media screen and (min-width: 1600px)
+  //  width: 1340px
   :global(.swiper-wrapper)
     height: 176px
     @media screen and (min-width: 1600px)
@@ -20,7 +20,7 @@
   :global(.swiper-slide)
     display: flex
     align-items: flex-start
-    opacity: 0
+    //opacity: 0
     transition: opacity .3s
     .gameItem
       margin-right: 8px
@@ -29,7 +29,7 @@
       &:last-of-type
         margin-right: 0
   :global(.swiper-slide-prev)
-    opacity: 1
+    //opacity: 1
     .gameItem
       &:first-of-type
         img
@@ -46,7 +46,7 @@
             width: 220px
             height: 292px
   :global(.swiper-slide-next)
-    opacity: 1
+    //opacity: 1
     .gameItem
       &:first-of-type
         img
@@ -63,7 +63,7 @@
             width: 200px
             height: 266px
   :global(.swiper-slide-active)
-    opacity: 1
+    //opacity: 1
     width: 272px !important
     @media screen and (min-width: 1600px)
       width: 496px !important
@@ -129,6 +129,7 @@
     @media screen and (min-width: 1600px)
       width: 240px
       height: 320px
+      border-radius: 8px
   .btnCommon
     position: absolute
     top: 50%

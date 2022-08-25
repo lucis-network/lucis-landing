@@ -7,36 +7,69 @@
 .imgTournaments {
   background-image: url("/assets/homepage/tournaments.png");
   background-repeat: no-repeat;
-  height: 420px;
   width: 716px;
+  height: 420px;
 }
 .imgInstance {
   background-image: url("/assets/homepage/lucisInsight.png");
   background-repeat: no-repeat;
-  height: 395px;
   width: 713px;
+  height: 395px;
 }
 .imgMedia {
   background-image: url("/assets/homepage/lucisMedia.png");
   background-repeat: no-repeat;
-  width: 713px;
   height: 480px;
+  width: 713px;
 }
 .imgLaunchpad {
   background-image: url("/assets/homepage/launchpad.png");
   background-repeat: no-repeat;
-  width: 713px;
   height: 420px;
+  width: 713px;
 }
 .imgGuild {
   background-image: url("/assets/homepage/gamingGuild.png");
   background-repeat: no-repeat;
-  height: 420px;
   width: 713px;
+  height: 420px;
 }
 .imgPlatform {
   background-image: url("/assets/homepage/streamingPlatform.png");
   background-repeat: no-repeat;
-  height: 420px;
   width: 713px;
+  height: 420px;
+}
+
+@media (max-width: 375px ) {
+  .imgSocial {
+    height: 244px;
+    width: 716px;
+    background-size: 375px 244px;
+    transform: scale(1.4) translateY(20px);
+  }
+  .imgTournaments {
+    width: 373px;
+    height: 220px;
+  }
+  .imgInstance {
+    width: 375px;
+    height: 190px;
+  }
+  .imgMedia {
+    width: 375px;
+    height: 277px;
+  }
+  .imgLaunchpad {
+    width: 375px;
+    height: 238px;
+  }
+  .imgGuild {
+    width: 375px;
+    height: 220px;
+  }
+  .imgPlatform {
+    width: 375px;
+    height: 172px;
+  }
 }

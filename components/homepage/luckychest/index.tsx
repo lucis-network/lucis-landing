@@ -24,21 +24,24 @@ export default function LuckyChest() {
     window.open(LINK_HOME + "/playcore/lucky-chest", '_blank');
   }
 
-  useEffect(() => {
-    let btn = document.querySelector('.btn_hover_luckychest');
-    if(btn) {
-      btn.addEventListener('mousemove', e => {
-        let rect = e.target.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-        let y = e.clientY - rect.top;
-        const span = btn.querySelector('.btn_glow');
-        if(span) {
-          span.style.left = x + 'px';
-          span.style.top = y + 'px';
-        }
-      });
-    }
-  }, [])
+  // useEffect(() => {
+  //   let btn = document.querySelector('.btn_hover_luckychest');
+  //   if(btn) {
+  //
+  //     btn.addEventListener('mousemove', e => {
+  //       if(e) {
+  //         let rect = e.target.getBoundingClientRect();
+  //         let x = e.clientX - rect.left;
+  //         let y = e.clientY - rect.top;
+  //         const span = btn.querySelector('.btn_glow');
+  //         if(span) {
+  //           span.style.left = x + 'px';
+  //           span.style.top = y + 'px';
+  //         }
+  //       }
+  //     });
+  //   }
+  // }, [])
 
   return (
     <>
@@ -63,7 +66,7 @@ export default function LuckyChest() {
                   slidesPerView={4}
                   spaceBetween={8}
                   initialSlide={1}
-                  loop={true}
+                  //loop={true}
                   grid={{
                     rows: 2,
                   }}

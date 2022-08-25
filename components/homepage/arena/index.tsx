@@ -1,3 +1,4 @@
+// @ts-nocheck
 import s from "./index.module.sass";
 import React, {useEffect, useState} from "react";
 import {useGetDataArena} from "../../../hooks/useArena";
@@ -37,13 +38,15 @@ export default function Arena() {
     // @ts-ignore
     if(btn) {
       btn.addEventListener('mousemove', e => {
-        let rect = e.target.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-        let y = e.clientY - rect.top;
-        const span = btn.querySelector('.btn_glow');
-        if(span) {
-          span.style.left = x + 'px';
-          span.style.top = y + 'px';
+        if(e) {
+          let rect = e.target.getBoundingClientRect();
+          let x = e.clientX - rect.left;
+          let y = e.clientY - rect.top;
+          const span = btn.querySelector('.btn_glow');
+          if(span) {
+            span.style.left = x + 'px';
+            span.style.top = y + 'px';
+          }
         }
       });
     }
@@ -54,13 +57,16 @@ export default function Arena() {
     // @ts-ignore
     if(btn) {
       btn.addEventListener('mousemove', e => {
-        let rect = e.target.getBoundingClientRect();
-        let x = e.clientX - rect.left;
-        let y = e.clientY - rect.top;
-        const span = btn.querySelector('.btn_cr_glow');
-        if(span) {
-          span.style.left = x + 'px';
-          span.style.top = y + 'px';
+        if(e) {
+          // @ts-ignore
+          let rect = e.target.getBoundingClientRect();
+          let x = e.clientX - rect.left;
+          let y = e.clientY - rect.top;
+          const span = btn.querySelector('.btn_cr_glow');
+          if(span) {
+            span.style.left = x + 'px';
+            span.style.top = y + 'px';
+          }
         }
       });
     }

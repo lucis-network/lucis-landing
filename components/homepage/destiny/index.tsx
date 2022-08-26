@@ -39,7 +39,7 @@ const Destiny = () => {
                 <span className={s.title_hl}>A platform</span>
               </span>
             ),
-            content: "For creating, running tournament events.",
+            content: "for creating, running tournament events.",
           },
           {
             title: (
@@ -155,7 +155,7 @@ const Destiny = () => {
                 </span>
                 <span>
                   We provide training and experience in Play 2 Earn field, to
-                  ensure our Scholars skill {"&"} quality
+                  ensure our Scholars skill {"&"} quality.
                 </span>
               </>
             ),
@@ -211,9 +211,11 @@ const Destiny = () => {
                 key={navigateItem[0].name}
                 onClick={(e) => onchangeTab(navigateIndex, e)}
               >
-                {tab === navigateIndex ? <div className={s.diamond}>
-                  <DiamondIcon />
-                </div> : null}
+                {tab === navigateIndex ? (
+                  <div className={s.diamond}>
+                    <DiamondIcon />
+                  </div>
+                ) : null}
                 <span>{navigateItem[0].name}</span>
               </div>
             );
@@ -234,7 +236,7 @@ const Destiny = () => {
               <div className={s.body_wrapper} key={destinyItems[0].name}>
                 <div className={s.wrapLR}>
                   <div className={s.left}>
-                    <div className={`${s.left_content} ${s.mb32}`}>
+                    <div className={`${s.left_content}`}>
                       {destinyItems.map((destinyItem, destinyItemIndex) => {
                         return (
                           <>
@@ -257,19 +259,21 @@ const Destiny = () => {
                                 );
                               }
                             )}
+                            <div className={s.moreBtn}>
+                              <span>more detail</span>
+                              <div className={s.border}></div>
+                            </div>
                           </>
                         );
                       })}
-                    </div>
-                    <div className={s.moreBtn}>
-                      <span>more detail</span>
-                      <div className={s.border}></div>
                     </div>
                   </div>
                   <div className={s.right}>
                     <div className={destinyItems[0].img}></div>
                   </div>
-                  <div className={`${s.nameMobile}`}>{destinyItems[0].name}</div>
+                  <div className={`${s.nameMobile}`}>
+                    {destinyItems[0].name}
+                  </div>
                 </div>
               </div>
             ) : null;

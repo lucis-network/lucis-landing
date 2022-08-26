@@ -1,3 +1,4 @@
+// @ts-nocheck
 import s from "./index.module.sass";
 import React, {useEffect} from "react";
 import { LuckyChestTier } from "src/generated/graphql_p2e";
@@ -24,24 +25,24 @@ export default function LuckyChest() {
     window.open(LINK_HOME + "/playcore/lucky-chest", '_blank');
   }
 
-  // useEffect(() => {
-  //   let btn = document.querySelector('.btn_hover_luckychest');
-  //   if(btn) {
-  //
-  //     btn.addEventListener('mousemove', e => {
-  //       if(e) {
-  //         let rect = e.target.getBoundingClientRect();
-  //         let x = e.clientX - rect.left;
-  //         let y = e.clientY - rect.top;
-  //         const span = btn.querySelector('.btn_glow');
-  //         if(span) {
-  //           span.style.left = x + 'px';
-  //           span.style.top = y + 'px';
-  //         }
-  //       }
-  //     });
-  //   }
-  // }, [])
+  useEffect(() => {
+    let btn = document.querySelector('.btn_hover_luckychest');
+    if(btn) {
+
+      btn.addEventListener('mousemove', e => {
+        if(e) {
+          let rect = e.target.getBoundingClientRect();
+          let x = e.clientX - rect.left;
+          let y = e.clientY - rect.top;
+          const span = btn.querySelector('.btn_glow');
+          if(span) {
+            span.style.left = x + 'px';
+            span.style.top = y + 'px';
+          }
+        }
+      });
+    }
+  }, [])
 
   return (
     <>
@@ -126,20 +127,17 @@ export default function LuckyChest() {
                   }}
                 >
                   {getChestDetailData?.prizes?.map((prize,index) => (
-                    <>
-                      <div key={`${prize?.id}-${index}`}>
-                        <SwiperSlide  key={`${prize?.id}-${index}`}>
-                          <ChestPrize
-                            key={prize?.id}
-                            description={prize?.desc}
-                            image={prize?.img ?? ''}
-                            title={prize?.title}
-                            rarity={prize?.rarity}
-                          />
-                        </SwiperSlide>
-                      </div>
-
-                    </>
+                    <div key={`${prize?.id}-${index}`}>
+                      <SwiperSlide  key={`${prize?.id}-${index}`}>
+                        <ChestPrize
+                          key={prize?.id}
+                          description={prize?.desc}
+                          image={prize?.img ?? ''}
+                          title={prize?.title}
+                          rarity={prize?.rarity}
+                        />
+                      </SwiperSlide>
+                    </div>
                   ))}
                 </Swiper>
               </div>

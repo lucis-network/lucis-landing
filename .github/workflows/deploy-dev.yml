@@ -29,6 +29,7 @@ jobs:
             cd /home/dev/lucis-landing
             echo "Current directory: "
             pwd
+            git reset --hard HEAD
             git pull
             git status
             bash ./deploy-on-caddy.sh ~/caddy/site

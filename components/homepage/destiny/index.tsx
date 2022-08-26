@@ -65,7 +65,7 @@ const Destiny = () => {
               </span>
             ),
             content:
-              "Our researcher team will carefully analysis the market, filter out hidden gems,",
+              "Our researcher team will carefully analysis the market, filter out hidden gems.",
           },
           {
             title: (
@@ -114,9 +114,8 @@ const Destiny = () => {
             title: (
               <span className={s.inline}>
                 Sell{" "}
-                <span className={`${s.title_hl} ${s.inline}`}>NFT boxes</span>
-                {" "}or{" "}
-                <span className={`${s.title_hl} ${s.inline}`}>NFT</span>
+                <span className={`${s.title_hl} ${s.inline}`}>NFT boxes</span>{" "}
+                or <span className={`${s.title_hl} ${s.inline}`}>NFT</span>
               </span>
             ),
             content: "collection on Lucis marketplace.",
@@ -191,8 +190,9 @@ const Destiny = () => {
 
   const [tab, setTab] = useState(0);
 
-  const onchangeTab = (number: number) => {
+  const onchangeTab = (number: number, e: any) => {
     setTab(number);
+    console.log("e >>> ", e.target.offsetWidth);
   };
 
   return (
@@ -209,19 +209,24 @@ const Destiny = () => {
                   tab === navigateIndex ? s.naviItemActive : s.naviItem
                 }
                 key={navigateItem[0].name}
-                onClick={() => onchangeTab(navigateIndex)}
+                onClick={(e) => onchangeTab(navigateIndex, e)}
               >
+                {tab === navigateIndex ? <div className={s.diamond}>
+                  <DiamondIcon />
+                </div> : null}
                 <span>{navigateItem[0].name}</span>
               </div>
             );
           })}
         </div>
         <div className={s.line}>
-          <div className={s.lineFirst}></div>
-          <div className={s.diamond}>
-            <DiamondIcon />
+          {/* <div className={s.lineFirst}></div> */}
+
+          <div className={s.lineSecond}>
+            {/* <div className={s.diamond}>
+              <DiamondIcon />
+            </div> */}
           </div>
-          <div className={s.lineSecond}></div>
         </div>
         <div className={s.someDestiny}>
           {setDestiny.map((destinyItems, destinyIndex) => {
@@ -264,6 +269,7 @@ const Destiny = () => {
                   <div className={s.right}>
                     <div className={destinyItems[0].img}></div>
                   </div>
+                  <div className={`${s.nameMobile}`}>{destinyItems[0].name}</div>
                 </div>
               </div>
             ) : null;

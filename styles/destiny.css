@@ -41,35 +41,43 @@
   height: 420px;
 }
 
-@media (max-width: 375px ) {
+
+
+@media (max-width: 376px ) {
   .imgSocial {
     height: 244px;
-    width: 716px;
+    width: 375px;
     background-size: 375px 244px;
-    transform: scale(1.4) translateY(20px);
+    transform: scale(1.4) translateY(20px) translateX(4px)
   }
   .imgTournaments {
     width: 373px;
     height: 220px;
+    background-size: 375px 244px;
   }
   .imgInstance {
     width: 375px;
     height: 190px;
+    background-size: 375px 190px;
   }
   .imgMedia {
     width: 375px;
-    height: 277px;
+    height: 285px;
+    background-size: 375px 285px;
   }
   .imgLaunchpad {
     width: 375px;
     height: 238px;
+    background-size: 375px 244px;
   }
   .imgGuild {
     width: 375px;
     height: 220px;
+    background-size: 375px 244px;
   }
   .imgPlatform {
     width: 375px;
     height: 172px;
+    background-size: 375px 172px;
   }
 }

@@ -3,6 +3,9 @@ import s from "./index.module.sass";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper";
 const Raffles = () => {
+  const bannerClasses = [s.banner1, s.banner2, s.banner3, s.banner4, s.banner5]
+  const bannerBg = [s.bgBanner1, s.bgBanner2, s.bgBanner3, s.bgBanner4, s.bgBanner5]
+
   const [stateIndexBanner, setStateIndexBanner] = useState(0);
   return (
     <div className={s.raffles_wrapper}>
@@ -14,22 +17,22 @@ const Raffles = () => {
         </div>
       </div>
       <div className={s.body}>
-        {/* {bannerClasses.map((bannerClass, bannerIndex) => {
-          let index =
-            stateIndexBanner + bannerIndex > 4
-              ? stateIndexBanner + bannerIndex - 4
-              : stateIndexBanner + bannerIndex;
+        {bannerClasses.map((bannerClass, bannerIndex) => {
+          // let index =
+          //   stateIndexBanner + bannerIndex > 4
+          //     ? stateIndexBanner + bannerIndex - 4
+          //     : stateIndexBanner + bannerIndex;
           return (
             <div
-              className={`${bannerClasses[bannerIndex]} ${bannerBg[index]}`}
+              className={`${bannerClasses[bannerIndex]} ${bannerBg[bannerIndex]}`}
               key={bannerClass}
               onClick={() => setStateIndexBanner(bannerIndex)}
             >
               <div className={s.btnHover}>Join raffles</div>
             </div>
           );
-        })} */}
-        <Swiper
+        })}
+        {/* <Swiper
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -72,7 +75,7 @@ const Raffles = () => {
         <SwiperSlide>
           <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-9.jpg" />
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
       </div>
       <div className={s.footer}></div>
     </div>

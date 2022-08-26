@@ -31,16 +31,19 @@
             justify-content: center
             margin-top: 48px
             width: 100%
-            // padding: 0 16px
+            padding: 0 16px
             font-weight: 400
             font-size: 16px
             line-height: 18px
             overflow-x: scroll
-            height: 46px
+            min-height: 46px
+            padding-bottom: 22px
+            // border-bottom: 1px solid rgba(255, 255, 255, 0.3)
             &::-webkit-scrollbar
                 display: none
 
             .naviItem, .naviItemActive
+                position: relative
                 width: max-content
                 font-family: Revx Neue Demo
                 cursor: pointer
@@ -58,10 +61,15 @@
                 &:hover
                     color: #00FFEC
                 span
-                    letter-spacing: 0.6px
+                    // letter-spacing: 0.6px
                     text-align: center
                     width: max-content
                     display: inline-block
+                .diamond
+                    margin: 0 4px
+                    position: absolute
+                    top: 45px
+                    // transition: all 0.4s
 
             .naviItemActive
                 color: #00FFEC
@@ -71,19 +79,21 @@
             justify-content: center
             margin-top: 4px
             width: 100%
-            .lineFirst, .lineSecond
+            position: relative
+            top: -12px
+            .lineSecond
                 height: 1px
                 border-top: 1px solid rgba(255, 255, 255, 0.3)
-            .lineFirst
-                width: 8%
-                // margin-left: 26px
-            .lineSecond
-                width: 90%
-                // margin-right: 26px
-            .diamond
-                margin: 0 4px
+                width: 100%
+                // position: relative
+                margin: 0 16px
+            // .diamond
+            //     margin: 0 4px
+            //     position: absolute
+            //     top: -8px
         .someDestiny
             margin-top: 20px
+            padding: 0 16px
             .body_wrapper
                 width: 100%
                 min-height: 350px
@@ -107,6 +117,8 @@
                     display: flex
                     justify-content: space-between
                     // height: 458px
+                    .nameMobile
+                        display: none
                     .left
                         width: 660px
                         height: 458px
@@ -194,10 +206,16 @@
                         overflow: hidden
                         height: max-content
                         width: 716px
-@media (max-width: 1400px)
+@media (max-width: 1399px)
     .navigate
         justify-content: flex-start !important
-        padding: 0 16px !important
+    .someDestiny
+        .body-wrapper
+            .wrapLR
+                .left
+                    width: 50%
+                .right
+                    width: 50%
 @media (max-width: 800px)
     .container
         .header
@@ -213,9 +231,7 @@
                 line-height: 28px !important
         .moreBtn
             margin-top: 10px !important
-    .right
-
-@media (max-width: 800px )
+@media (max-width: 800px ) and ( min-width: 768px)
     .left
         .someIntro
             div
@@ -224,7 +240,7 @@
         .moreBtn
             margin-top: 10px !important
 
-@media (max-width: 768px )
+@media (max-width: 768px ) and ( min-width: 376px)
     .line
         margin-top: 10px !important
     .someDestiny
@@ -247,27 +263,62 @@
         .body_wrapper
             .bigName
                 font-size: 20px !important
-            .wrapLR
-                .right
 
-@media (max-width: 375px )
-    .navigate
-
+@media (max-width: 376px )
+    .header 
+        font-size: 24px !important
     .line
         margin-top: 10px
     .someDestiny
+        overflow: hidden
+        padding: 0 !important
+        // margin: 0 16px !important
         .body_wrapper
             margin-top: 24px !important
             .bigName
-                font-size: 16px !important
+                display: none
             .wrapLR
+                flex-direction: column-reverse !important
+                .nameMobile
+                    display: block !important
+                    font-family: 'Revx Neue Demo'
+                    font-style: normal
+                    font-weight: 600
+                    font-size: 24px
+                    line-height: 26px
+                    text-transform: uppercase
+                    color: #0BEBD6
+                    margin:  0 16px 24px
                 .left
-                    .someIntro
-                        div
-                            font-size: 14px !important
-                            line-height: 20px !important
-                    .moreBtn
-                        margin-top: 10px !important
+                    height: auto !important
+                    margin: 0 16px
+                    .left_content
+                        max-width: 342px
+                        .someIntro
+                            margin-bottom: 16px !important
+                            span
+                                font-size: 14px !important
+                                line-height: 20px !important
+                            .title
+                                span
+                                    font-family: 'Lexend' !important
+                                    font-style: normal !important
+                                    font-weight: 400 !important
+                                    font-size: 14px !important
+                                    line-height: 34px !important
+                                    text-transform: capitalize !important
+                                    color: #FFFFFF !important
+                            .content
+                                font-family: 'Lexend' !important
+                                font-style: normal !important
+                                font-weight: 300 !important
+                                font-size: 14px !important
+                                line-height: 20px !important
+                                color: #E6E6E6
+                        .moreBtn
+                            margin-top: 10px !important
                 .right
                     height: 244px
                     overflow: hidden
+                    max-width: 375px !important
+                    margin-bottom: 16px

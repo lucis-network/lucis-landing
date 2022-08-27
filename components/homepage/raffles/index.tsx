@@ -3,8 +3,14 @@ import s from "./index.module.sass";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper";
 const Raffles = () => {
-  const bannerClasses = [s.banner1, s.banner2, s.banner3, s.banner4, s.banner5]
-  const bannerBg = [s.bgBanner1, s.bgBanner2, s.bgBanner3, s.bgBanner4, s.bgBanner5]
+  const bannerClasses = [s.banner1, s.banner2, s.banner3, s.banner4, s.banner5];
+  const bannerBg = [
+    s.bgBanner1,
+    s.bgBanner2,
+    s.bgBanner3,
+    s.bgBanner4,
+    s.bgBanner5,
+  ];
 
   const [stateIndexBanner, setStateIndexBanner] = useState(0);
   return (
@@ -28,7 +34,12 @@ const Raffles = () => {
               key={bannerClass}
               onClick={() => setStateIndexBanner(bannerIndex)}
             >
-              <div className={s.btnHover}>Join raffles</div>
+              <div className={s.btnHover}>
+                <div className={s.join_raffles}>
+                  <div className={s.borderBtn}></div>
+                  <span>Join raffles</span>
+                </div>
+              </div>
             </div>
           );
         })}

@@ -1,5 +1,5 @@
 import {ApolloError, ApolloQueryResult, gql, useApolloClient, useQuery} from "@apollo/client";
-import { ChestDetail, LuckyChestUserInfo } from "src/generated/graphql_p2e";
+import { ChestDetail, IntroductoryChestPrizes, LuckyChestUserInfo } from "src/generated/graphql_p2e";
 
 type GetChestDetailProps = {
   game_platform_id: number,
@@ -49,25 +49,20 @@ export const useGetChestDetail = ({game_platform_id, tier}: GetChestDetailProps)
   }
 }
 
-export const useGetLuckyChestUserInfo = ({game_platform_id, tier, page, limit}: GetUserHistoryProps): {
-  getLuckyChestUserInfoLoading: boolean,
-  getLuckyChestUserInfoError: ApolloError | undefined,
-  refetchGetLuckyChestUserInfo: () => Promise<ApolloQueryResult<any>>,
-  dataLuckyChestUserInfo: LuckyChestUserInfo,
+export const useGetAllChest = (): {
+  getAllChestLoading: boolean,
+  getAllChestError: ApolloError | undefined,
+  refetchGetAllChest: () => Promise<ApolloQueryResult<any>>,
+  getDataAllChest: IntroductoryChestPrizes,
 } => {
   const {
-    loading: getLuckyChestUserInfoLoading,
-    error: getLuckyChestUserInfoError,
-    refetch: refetchGetLuckyChestUserInfo,
+    loading: getAllChestLoading,
+    error: getAllChestError,
+    refetch: refetchGetAllChest,
     data,
-  } = useQuery(GET_LUCKY_CHEST_USER_INFO, {
+  } = useQuery(GET_ALL_CHEST, {
     variables: {
-      game_platform_id: game_platform_id,
-      tier: tier,
-      page: page,
-      limit: limit,
     },
-    skip: !game_platform_id || !tier,
     context: {
       endpoint: 'p2e'
     },
@@ -75,36 +70,10 @@ export const useGetLuckyChestUserInfo = ({game_platform_id, tier, page, limit}: 
   })
 
   return {
-    getLuckyChestUserInfoLoading,
-    getLuckyChestUserInfoError,
-    refetchGetLuckyChestUserInfo,
-    dataLuckyChestUserInfo: data?.getLuckyChestUserInfo,
-  }
-}
-
-export const useClaimChestPrize = (): {
-  claimChestPrize: ({user_prize_history_uid, onCompleted, onError}: ClaimChestPrizeProps) => Promise<any>
-} => {
-  const client = useApolloClient()
-  const claimChestPrize = async ({user_prize_history_uid, onCompleted, onError}: ClaimChestPrizeProps) => {
-    try {
-      const result = await client.mutate({
-        mutation: CLAIM_CHEST_PRIZE,
-        variables: {
-          user_prize_history_uid: user_prize_history_uid,
-        },
-        context: {
-          endpoint: 'p2e'
-        }
-      })
-      onCompleted && onCompleted(result)
-    } catch (error: any) {
-      onError && onError(error)
-    }
-  }
-
-  return {
-    claimChestPrize
+    getAllChestLoading,
+    getAllChestError,
+    refetchGetAllChest,
+    getDataAllChest: data?.introductoryChestPrizes,
   }
 }
 
@@ -135,44 +104,19 @@ const GET_CHEST_DETAIL = gql`
   }
 `
 
-const GET_LUCKY_CHEST_USER_INFO = gql`
-  query($game_platform_id: Int!, $tier: LuckyChestTier!, $page: Int, $limit: Int) {
-    getLuckyChestUserInfo(game_platform_id: $game_platform_id, tier: $tier, page: $page ,limit: $limit) {
-      history_count
-      history {
-        uid
-        code
-        tier
-        prize_id
-        prize {
-          id
-          title
-          desc
-          img
-          prize_type
-          rarity
-          created_at
-        }
-        is_claimed
-        created_at
+const GET_ALL_CHEST = gql`
+  query {
+    introductoryChestPrizes{
+      id
+      prizes {
+        id
+        title
+        desc
+        quantity_in_stock
+        valued_at
+        img
+        rarity
       }
-    }
-  }
-`
-
-export const OPEN_CHEST = gql`
-  mutation ($game_platform_id: Int!, $tier: LuckyChestTier!) {
-    openChest (game_platform_id: $game_platform_id, tier: $tier) {
-      prize
-      user_prize_history_uid
-    }
-  }
-`
-
-const CLAIM_CHEST_PRIZE = gql`
-  mutation($user_prize_history_uid: String!) {
-    claimChestPrize(user_prize_history_uid: $user_prize_history_uid) {
-      required_contact
     }
   }
 `

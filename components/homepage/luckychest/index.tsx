@@ -1,28 +1,19 @@
 // @ts-nocheck
 import s from "./index.module.sass";
 import React, {useEffect} from "react";
-import { LuckyChestTier } from "src/generated/graphql_p2e";
-import { useGetChestDetail } from "hooks/useLuckyChest";
+import {useGetAllChest} from "hooks/useLuckyChest";
 import ChestPrize from "./prize";
-import {LINK_HOME, LINK_HOME_ARENA} from "../../../utils/Enum";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid } from "swiper";
 import "swiper/css";
 import "swiper/css/grid";
 
-export enum GAMES {
-  FACEITCSGO = 1,
-  GARENALOL = 2,
-}
-
 export default function LuckyChest() {
-  const {getChestDetailLoading, getChestDetailError, getChestDetailData} = useGetChestDetail({
-    game_platform_id: GAMES.GARENALOL,
-    tier: LuckyChestTier.Standard,
-  })
+
+  const {getDataAllChest} = useGetAllChest();
 
   const joinNow = () => {
-    window.open(LINK_HOME + "/playcore/lucky-chest", '_blank');
+    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/playcore/lucky-chest", '_blank');
   }
 
   useEffect(() => {
@@ -52,17 +43,6 @@ export default function LuckyChest() {
           <div className={`lucis-container-2 ${s.container}`}>
             <div className={s.leftContainer}>
               <div className={s.listItems}>
-                {/*{getChestDetailData?.prizes?.slice(0,16).map(prize => (*/}
-                {/*  <>*/}
-                {/*    <ChestPrize*/}
-                {/*      key={prize?.id}*/}
-                {/*      description={prize?.desc}*/}
-                {/*      image={prize?.img ?? ''}*/}
-                {/*      title={prize?.title}*/}
-                {/*      rarity={prize?.rarity}*/}
-                {/*    />*/}
-                {/*  </>*/}
-                {/*))}*/}
                 <Swiper
                   slidesPerView={4}
                   spaceBetween={8}
@@ -126,7 +106,7 @@ export default function LuckyChest() {
                     },
                   }}
                 >
-                  {getChestDetailData?.prizes?.map((prize,index) => (
+                  {getDataAllChest?.prizes?.map((prize,index) => (
                     <div key={`${prize?.id}-${index}`}>
                       <SwiperSlide  key={`${prize?.id}-${index}`}>
                         <ChestPrize

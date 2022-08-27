@@ -22,15 +22,15 @@ export default function Arena() {
   }, [getDataArena])
 
   const joinNow = () => {
-    window.open(LINK_HOME_ARENA, '_blank');
+    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena", '_blank');
   }
 
   const createNow = () => {
-    window.open(LINK_HOME_ARENA + "/create", '_blank');
+    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena/create", '_blank');
   }
 
   const getDetailArena = (item: TournamentGql) => {
-    window.open(LINK_HOME_ARENA + `/${item.uid}/${slugify(item.name)}`, '_blank');
+    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena" + `/${item.uid}/${slugify(item.name)}`, '_blank');
   }
 
   useEffect(() => {

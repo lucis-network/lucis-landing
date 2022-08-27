@@ -36,12 +36,48 @@
             border-radius: 4px
             overflow: hidden
             cursor: pointer
-            align-items: center
-            justify-content: center
-            display: flex
+            &:hover
+                z-index: 4
+                // transform: scale(1.02)
+                .btnHover
+                    display: flex
             .btnHover
+                display: none
                 cursor: pointer
-                color: white
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%)
+                border-radius: 4px
+                align-items: center
+                justify-content: center
+                &:hover
+                    display: flex
+                .join_raffles
+                    position: relative
+                    color: white
+                    padding: 8px 20px
+                    background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+                    display: flex
+                    align-items: center
+                    text-align: center
+                    span
+                        font-family: 'Revx Neue Demo'
+                        font-style: normal
+                        font-weight: 400
+                        font-size: 14px
+                        letter-spacing: 0.2em
+                        text-transform: uppercase
+                        color: #000000
+                    .borderBtn
+                        position: absolute
+                        top: -2px
+                        bottom: -2px
+                        right: -2px
+                        left: -2px
+                        border: 1px solid #00F9FF
 
         .banner1
             top: 141px
@@ -101,4 +137,3 @@
             background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/homepage/raffles/banner5.png")
             background-repeat: no-repeat
             background-size: cover
-

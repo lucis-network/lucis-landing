@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import s from "./index.module.sass";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper";
@@ -11,6 +11,11 @@ const Raffles = () => {
     s.bgBanner4,
     s.bgBanner5,
   ];
+
+  const [screenWidth, setScreenWidth] = useState(0)
+  useEffect(() => {
+    setScreenWidth(window.outerWidth);
+  })
 
   const [stateIndexBanner, setStateIndexBanner] = useState(0);
   return (
@@ -88,7 +93,42 @@ const Raffles = () => {
         </SwiperSlide>
       </Swiper> */}
       </div>
-      <div className={s.footer}></div>
+      <div className={s.footer}>
+        <div className={s.footerBtnJoin}>
+          <div className={s.borderBtn}></div>
+          <span>join now</span>
+        </div>
+        <div className={s.footerRank}>
+          <div className={s.footerItem1}>
+            <div className={s.time}>June 29th, 6:30 am</div>
+            <div className={s.img}>{"[]"}</div>
+            <div className={s.name}>Ngô Thị Là Ánh Dương</div>
+            <div className={s.received}>Received a prize</div>
+            <div className={s.value}>Valued at €20</div>
+          </div>
+          <div className={s.footerItem2}>
+            <div className={s.time}>{screenWidth}</div>
+            <div className={s.img}></div>
+            <div className={s.name}></div>
+            <div className={s.received}></div>
+            <div className={s.value}></div>
+          </div>
+          <div className={s.footerItem3}>
+            <div className={s.time}></div>
+            <div className={s.img}></div>
+            <div className={s.name}></div>
+            <div className={s.received}></div>
+            <div className={s.value}></div>
+          </div>
+          <div className={s.footerItem4}>
+            <div className={s.time}></div>
+            <div className={s.img}></div>
+            <div className={s.name}></div>
+            <div className={s.received}></div>
+            <div className={s.value}></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

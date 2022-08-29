@@ -39,7 +39,7 @@ const Destiny = () => {
                 <span className={s.title_hl}>A platform</span>
               </span>
             ),
-            content: "for creating, running tournament events.",
+            content: " for creating, running tournament events.",
           },
           {
             title: (
@@ -48,7 +48,7 @@ const Destiny = () => {
               </span>
             ),
             content:
-              "will get more popular and big prizes, big donation amount from Lucis Tournament platform.",
+              " will get more popular and big prizes, big donation amount from Lucis Tournament platform.",
           },
         ],
         img: "imgTournaments",

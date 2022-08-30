@@ -121,38 +121,38 @@
   .imgSocial {
     height: 244px;
     width: 375px;
-    background-size: 375px 244px;
+    background-size: 100%;
     transform: scale(1.4) translateY(20px) translateX(4px)
   }
   .imgTournaments {
     width: 373px;
     height: 220px;
-    background-size: 375px 244px;
+    background-size: 100%;
   }
   .imgInstance {
     width: 375px;
     height: 190px;
-    background-size: 375px 190px;
+    background-size: 100%;
   }
   .imgMedia {
     width: 375px;
-    height: 285px;
-    background-size: 375px 285px;
+    height: 256px;
+    background-size: 100%;
   }
   .imgLaunchpad {
     width: 375px;
     height: 238px;
-    background-size: 375px 244px;
+    background-size: 100%;
   }
   .imgGuild {
     width: 375px;
     height: 220px;
-    background-size: 375px 244px;
+    background-size: 100%;
   }
   .imgPlatform {
     width: 375px;
-    height: 172px;
-    background-size: 375px 172px;
+    height: 195px;
+    background-size: 100%;
   }
 }
 

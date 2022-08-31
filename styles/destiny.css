@@ -41,43 +41,156 @@
   height: 420px;
 }
 
+@media (max-width: 1400px ) and (min-width: 800px) {
+  .imgSocial {
+    width: 716px;
+    height: 400px;
+    background-size: 100%;
+  }
+  .imgTournaments {
+    width: 716px;
+    height: 400px;
+    background-size: 100%;
+  }
+  .imgInstance {
+    width: 713px;
+    height: 400px;
+    background-size: 100%;
+  }
+  .imgMedia {
+    height: 400px;
+    background-size: 100%;
+    width: 713px;
+  }
+  .imgLaunchpad {
+    height: 400px;
+    background-size: 100%;
+    width: 713px;
+  }
+  .imgGuild {
+    width: 713px;
+    height: 400px;
+    background-size: 100%;
+  }
+  .imgPlatform {
+    width: 713px;
+    height: 400px;
+    background-size: 100%;
+  }
+}
 
+@media (max-width: 800px ) and (min-width: 500px) {
+  .imgSocial {
+    width: 100%;
+    max-height: 375px;
+    background-size: 100% auto;
+  }
+  .imgTournaments {
+    width: 100%;
+    max-height: 375px;
+    background-size: 100% auto;
+  }
+  .imgInstance {
+    width: 100%;
+    max-height: 375px;
+    background-size: 100% auto;
+  }
+  .imgMedia {
+    width: 100%;
+    max-height: 375px;
+    background-size: 100% auto;
+  }
+  .imgLaunchpad {
+    width: 100%;
+    max-height: 375px;
+    background-size: 100% auto;
+  }
+  .imgGuild {
+    width: 100%;
+    max-height: 375px;
+    background-size: 100% auto;
+  }
+  .imgPlatform {
+    width: 100%;
+    max-height: 375px;
+    background-size: 100% auto;
+  }
+}
 
-@media (max-width: 376px ) {
+@media (max-width: 500px ) {
   .imgSocial {
     height: 244px;
     width: 375px;
-    background-size: 375px 244px;
+    background-size: 100%;
     transform: scale(1.4) translateY(20px) translateX(4px)
   }
   .imgTournaments {
     width: 373px;
     height: 220px;
-    background-size: 375px 244px;
+    background-size: 100%;
   }
   .imgInstance {
     width: 375px;
     height: 190px;
-    background-size: 375px 190px;
+    background-size: 100%;
   }
   .imgMedia {
     width: 375px;
-    height: 285px;
-    background-size: 375px 285px;
+    height: 256px;
+    background-size: 100%;
   }
   .imgLaunchpad {
     width: 375px;
     height: 238px;
-    background-size: 375px 244px;
+    background-size: 100%;
   }
   .imgGuild {
     width: 375px;
     height: 220px;
-    background-size: 375px 244px;
+    background-size: 100%;
   }
   .imgPlatform {
     width: 375px;
+    height: 195px;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 375px ) {
+  .imgSocial {
+    height: 244px;
+    width: 100%;
+    background-size: 100% 244px;
+    transform: scale(1.4) translateY(20px) translateX(4px)
+  }
+  .imgTournaments {
+    width: 373px;
+    height: 220px;
+    background-size: 100% 244px;
+  }
+  .imgInstance {
+    width: 100%;
+    height: 190px;
+    background-size: 100% 190px;
+  }
+  .imgMedia {
+    width: 100%;
+    height: 285px;
+    background-size: 100% 285px;
+  }
+  .imgLaunchpad {
+    width: 100%;
+    height: 238px;
+    background-size: 100% 244px;
+  }
+  .imgGuild {
+    width: 100%;
+    height: 220px;
+    background-size: 100% 244px;
+  }
+  .imgPlatform {
+    width: 100%;
     height: 172px;
-    background-size: 375px 172px;
+    background-size: 100% 172px;
   }
 }

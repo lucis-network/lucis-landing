@@ -45,7 +45,7 @@
             .naviItem, .naviItemActive
                 position: relative
                 width: max-content
-                font-family: Revx Neue Demo
+                font-family: RevxNeueDemo
                 cursor: pointer
                 padding: 10px 26px
                 height: 38px
@@ -96,8 +96,8 @@
             padding: 0 16px
             .body_wrapper
                 width: 100%
-                min-height: 350px
-                margin-top: 75px
+                min-height: 531px
+                margin-top: 55px
                 display: flex
                 align-items: flex-start
                 justify-content: space-between
@@ -114,6 +114,7 @@
                     width: max-content
                 .wrapLR
                     width: 100%
+                    // height: 100%
                     display: flex
                     justify-content: space-between
                     // height: 458px
@@ -121,24 +122,27 @@
                         display: none
                     .left
                         width: 660px
-                        height: 458px
+                        // height: 458px
                         // padding-right: 24px
                         display: flex
-                        align-items: flex-start
+                        align-items: center
                         justify-content: center
                         flex-direction: column
                         .left_content
                             width: 660px
-                            margin-bottom: 26px
+                            // margin-bottom: 26px
+                            div
+                                &:last-child
+                                    margin-bottom: 0!important
                             .someIntro
                                 font-family: 'Lexend'
                                 font-style: normal
                                 line-height: 34px
                                 color: white
-                                &:nth-child(2)
+                                &:nth-child(2), &:nth-child(3)
                                     margin-bottom: 24px
-                                // &:nth-child(2)
-                                //     margin-bottom: 24px
+                                &:nth-child(4)
+                                    margin-bottom: 0
                                 .block
                                     display: block
                                 .title
@@ -173,8 +177,8 @@
                                     margin-bottom: 36px
                                 &:last-child
                                     margin-bottom: 0
-                        .mb32
-                            margin-bottom: 32px
+                        // .mb32
+                        //     margin-bottom: 32px
                         .moreBtn
                             position: relative
                             // padding: 8px 20px
@@ -182,7 +186,8 @@
                             background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
                             text-transform: uppercase
                             width: 152px
-                            // margin-top: 26px
+                            margin-top: 26px
+                            margin-bottom: 50px
                             color: #000000
                             font-weight: 400
                             font-size: 14px
@@ -191,6 +196,7 @@
                             display: Flex
                             align-items: center
                             justify-content: center
+                            letter-spacing: 0.2em
                             .border
                                 position: absolute
                                 top: 1px
@@ -206,22 +212,29 @@
                         overflow: hidden
                         height: max-content
                         width: 716px
+
+@media (min-width: 900px)
+    .wrapLR
+        position: relative
+        top: -26px
+        height: 100%
 @media (max-width: 1399px)
     .navigate
         justify-content: flex-start !important
     .someDestiny
-        .body-wrapper
+        .body_wrapper
             .wrapLR
                 .left
                     width: 50%
                 .right
                     width: 50%
-@media (max-width: 800px)
-    .container
-        .header
-            font-size: 26px
-        .navigate
-            padding-bottom: 15px
+@media (max-width: 1400px ) and (min-width: 900px)
+    .wrapLR
+        align-items: center !important
+        .left
+            width: 50% !important
+            .left_content
+                width: 100% !important
 
 @media (max-width: 992px) and ( min-width: 800px)
     .left
@@ -240,45 +253,82 @@
         .moreBtn
             margin-top: 10px !important
 
-@media (max-width: 768px ) and ( min-width: 376px)
+@media (max-width: 900px ) and ( min-width: 376px)
     .line
         margin-top: 10px !important
+        top: -17px !important
     .someDestiny
         .body_wrapper
-            margin-top: 50px !important
+            margin-top: 16px !important
             .bigName
-                font-size: 24px !important
+                display: none
+                &:last-child
+                    display: block !important
+            .blockName
+                display: block !important
+                font-family: 'RevxNeueDemo'
+                font-style: normal
+                font-weight: 600
+                font-size: 24px
+                line-height: 26px
+                text-transform: uppercase
+                color: #0BEBD6
+                margin: 0 16px 24px 0
+                width: 100%
             .wrapLR
                 flex-direction: column-reverse
+                .nameMobile
+                    display: block !important
+                    font-family: 'RevxNeueDemo'
+                    font-style: normal
+                    font-weight: 600
+                    font-size: 24px
+                    line-height: 26px
+                    text-transform: uppercase
+                    color: #0BEBD6
+                    margin: 0 16px 24px
+                    width: 100%
                 .left, .right
                     width: 100% !important
                     height: max-content !important
                     top: 0 !important
                     padding-right: 0 !important
+                .left
+                    .left_content
+                        width: 100% !important
+                        padding: 0 16px
+                        .someIntro
+                            margin-bottom: 16px !important
+                            line-height: 20px !important
+                            span
+                                font-size: 14px !important
+                            .title
+                                span
+                                    font-family: 'Lexend' !important
+                                    font-style: normal !important
+                                    font-weight: 400 !important
+                                    font-size: 20px !important
+                                    line-height: 34px !important
+                                    text-transform: capitalize !important
+                                    color: #FFFFFF !important
+                            .content
+                                font-family: 'Lexend' !important
+                                font-style: normal !important
+                                font-weight: 300 !important
+                                font-size: 20px !important
+                                line-height: 20px !important
+                                color: #E6E6E6
                 .right
                     margin-bottom: 16px !important
 
-@media (max-width: 500px )
+@media (max-width: 500px ) and ( min-width: 376px)
     .someDestiny
         .body_wrapper
-            .bigName
-                font-size: 20px !important
-
-@media (max-width: 376px )
-    .header 
-        font-size: 24px !important
-    .line
-        margin-top: 10px
-    .someDestiny
-        overflow: hidden
-        padding: 0 !important
-        // margin: 0 16px !important
-        .body_wrapper
-            margin-top: 24px !important
             .bigName
                 display: none
             .wrapLR
                 flex-direction: column-reverse !important
+                align-items: center
                 .nameMobile
                     display: block !important
                     font-family: 'Revx Neue Demo'
@@ -288,17 +338,17 @@
                     line-height: 26px
                     text-transform: uppercase
                     color: #0BEBD6
-                    margin:  0 16px 24px
+                    margin: 0 16px 24px
+                    width: 100%
                 .left
-                    height: auto !important
-                    margin: 0 16px
+                    margin: 0 1px
                     .left_content
-                        max-width: 342px
+                        width: 100% !important
                         .someIntro
                             margin-bottom: 16px !important
+                            line-height: 20px !important
                             span
                                 font-size: 14px !important
-                                line-height: 20px !important
                             .title
                                 span
                                     font-family: 'Lexend' !important
@@ -318,7 +368,92 @@
                         .moreBtn
                             margin-top: 10px !important
                 .right
-                    height: 244px
-                    overflow: hidden
-                    max-width: 375px !important
-                    margin-bottom: 16px
+                    width: 375px !important
+@media (max-width: 376px )
+    .destiny_wrapper
+        margin-top: 76px
+        .container
+            .header
+                font-size: 24px !important
+            .navigate
+                font-size: 14px !important
+                line-height: 15px !important
+                font-weight: 600 !important
+            .line
+                margin-top: 4px
+                .lineSecond
+                    margin: 0 !important
+            .someDestiny
+                overflow: hidden
+                padding: 0 !important
+                margin-top: 0 !important
+                .body_wrapper
+                    margin-top: 24px !important
+                    max-height: 630px !important
+                    .bigName
+                        display: none
+                        &:last-child
+                            display: block !important
+                    .blockName
+                        display: block !important
+                        font-family: 'RevxNeueDemo'
+                        font-style: normal
+                        font-weight: 600
+                        font-size: 24px
+                        line-height: 26px
+                        text-transform: uppercase
+                        color: #0BEBD6
+                        margin: 0 16px 24px 0
+                        width: 100%
+                    .wrapLR
+                        flex-direction: column-reverse !important
+                        align-items: flex-start
+                        .nameMobile
+                            display: block !important
+                            font-family: 'RevxNeueDemo'
+                            font-style: normal
+                            font-weight: 600
+                            font-size: 24px
+                            line-height: 26px
+                            text-transform: uppercase
+                            color: #0BEBD6
+                            margin: 0 16px 24px
+                            width: 100%
+                        .left
+                            height: auto !important
+                            margin: 0 16px
+                            width: 342px !important
+                            .left_content
+                                width: 100% !important
+                                .someIntro
+                                    margin-bottom: 24px !important
+                                    line-height: 24px !important
+                                    span
+                                        font-size: 14px !important
+                                        line-height: 20px !important
+                                    .title
+                                        span
+                                            font-family: 'Lexend' !important
+                                            font-style: normal !important
+                                            font-size: 14px !important
+                                            color: #FFFFFF !important
+                                            margin-bottom: 4px !important
+                                            line-height: 20px !important
+                                    .content
+                                        font-family: 'Lexend' !important
+                                        font-style: normal !important
+                                        font-weight: 300 !important
+                                        font-size: 14px !important
+                                        line-height: 20px !important
+                                        color: #E6E6E6
+                                .moreBtn
+                                    margin-top: 10px !important
+                                    margin-bottom: 32px !important
+                                    .border
+                                        bottom: 1px !important
+                        .right
+                            min-height: 172px
+                            align-items: flex-start
+                            overflow: hidden
+                            width: 100% !important
+                            margin-bottom: 18px

@@ -39,7 +39,7 @@ const Destiny = () => {
                 <span className={s.title_hl}>A platform</span>
               </span>
             ),
-            content: "For creating, running tournament events.",
+            content: " for creating, running tournament events.",
           },
           {
             title: (
@@ -48,7 +48,7 @@ const Destiny = () => {
               </span>
             ),
             content:
-              "will get more popular and big prizes, big donation amount from Lucis Tournament platform.",
+              " will get more popular and big prizes, big donation amount from Lucis Tournament platform.",
           },
         ],
         img: "imgTournaments",
@@ -91,7 +91,7 @@ const Destiny = () => {
               </span>
             ),
             content:
-              "will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets.",
+              "will provide up to date and valuable info about the market, deeply analysis for game projects, NFT and the whole markets.",
           },
         ],
         img: "imgMedia",
@@ -104,21 +104,21 @@ const Destiny = () => {
           {
             title: (
               <span className={s.inline}>
-                <span className={s.title_hl}>Game publisher</span>
+                <span className={s.title_hl}>Game publisher </span>
               </span>
             ),
             content:
-              "can host INO to sell NFT mistery boxes to Lucis community or users.",
+              " can host INO to sell NFT mistery boxes to Lucis community or users.",
           },
           {
             title: (
               <span className={s.inline}>
                 Sell{" "}
                 <span className={`${s.title_hl} ${s.inline}`}>NFT boxes</span>{" "}
-                or <span className={`${s.title_hl} ${s.inline}`}>NFT</span>
+                or <span className={`${s.title_hl} ${s.inline}`}>NFT </span>
               </span>
             ),
-            content: "collection on Lucis marketplace.",
+            content: " collection on Lucis marketplace.",
           },
         ],
         img: "imgLaunchpad",
@@ -155,7 +155,7 @@ const Destiny = () => {
                 </span>
                 <span>
                   We provide training and experience in Play 2 Earn field, to
-                  ensure our Scholars skill {"&"} quality
+                  ensure our Scholars skill {"&"} quality.
                 </span>
               </>
             ),
@@ -211,9 +211,11 @@ const Destiny = () => {
                 key={navigateItem[0].name}
                 onClick={(e) => onchangeTab(navigateIndex, e)}
               >
-                {tab === navigateIndex ? <div className={s.diamond}>
-                  <DiamondIcon />
-                </div> : null}
+                {tab === navigateIndex ? (
+                  <div className={s.diamond}>
+                    <DiamondIcon />
+                  </div>
+                ) : null}
                 <span>{navigateItem[0].name}</span>
               </div>
             );
@@ -234,11 +236,11 @@ const Destiny = () => {
               <div className={s.body_wrapper} key={destinyItems[0].name}>
                 <div className={s.wrapLR}>
                   <div className={s.left}>
-                    <div className={`${s.left_content} ${s.mb32}`}>
-                      {destinyItems.map((destinyItem, destinyItemIndex) => {
+                    <div className={`${s.left_content}`}>
+                      {destinyItems.map((destinyItem,) => {
                         return (
                           <>
-                            <div className={s.bigName}>{destinyItem.name}</div>
+                            <div className={destinyIndex === 6 ? `${s.bigName} ${s.blockName}` : `${s.bigName}`}>{destinyItem.name}</div>
                             {destinyItem.intro.map(
                               (introItem, introItemIndex) => {
                                 return (
@@ -247,8 +249,7 @@ const Destiny = () => {
                                     key={introItemIndex}
                                   >
                                     <span className={s.title}>
-                                      {" "}
-                                      {introItem.title}{" "}
+                                      {introItem.title}
                                     </span>
                                     <span className={`${s.content} ${s.mb36}`}>
                                       {introItem.content}
@@ -257,19 +258,21 @@ const Destiny = () => {
                                 );
                               }
                             )}
+                            <div className={s.moreBtn}>
+                              <span>more detail</span>
+                              <div className={s.border}></div>
+                            </div>
                           </>
                         );
                       })}
-                    </div>
-                    <div className={s.moreBtn}>
-                      <span>more detail</span>
-                      <div className={s.border}></div>
                     </div>
                   </div>
                   <div className={s.right}>
                     <div className={destinyItems[0].img}></div>
                   </div>
-                  <div className={`${s.nameMobile}`}>{destinyItems[0].name}</div>
+                  {destinyIndex === 6 ? null :<div className={`${s.nameMobile}`}>
+                    {destinyItems[0].name}
+                  </div>}
                 </div>
               </div>
             ) : null;

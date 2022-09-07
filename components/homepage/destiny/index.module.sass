@@ -1,459 +1,204 @@
 .destiny_wrapper
-    color: white
+  color: #FFFFFF
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: 180px
+
+  .container
+    max-width: 1400px
+    z-index: 1
     width: 100%
-    display: flex
-    align-items: center
-    justify-content: center
-    margin-top: 180px
-    .container
-        max-width: 1400px
-        z-index: 1
-        width: 100%
-        // display: flex
-        // align-items: center
-        // flex-direction: column
-        // justify-content: center
-        .header
-            width: 100%
-            display: flex
-            align-items: center
-            justify-content: center
-            text-transform: uppercase
-            font-weight: 400
-            font-size: 48px
-            line-height: 53px
-            span
-                font-family: Revx Neue Demo
 
-        .navigate
-            display: flex
-            align-items: center
-            justify-content: center
-            margin-top: 48px
-            width: 100%
-            padding: 0 16px
-            font-weight: 400
-            font-size: 16px
-            line-height: 18px
-            overflow-x: scroll
-            min-height: 46px
-            padding-bottom: 22px
-            // border-bottom: 1px solid rgba(255, 255, 255, 0.3)
-            &::-webkit-scrollbar
-                display: none
+    .header
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      text-transform: uppercase
+      h1
+        font-family: "RevxNeueDemo" , serif
+        font-weight: 400
+        font-size: 48px
+        line-height: 53px
+        color: #FFFFFF
 
-            .naviItem, .naviItemActive
-                position: relative
-                width: max-content
-                font-family: RevxNeueDemo
-                cursor: pointer
-                padding: 10px 26px
-                height: 38px
-                display: flex
-                align-items: center
-                justify-content: center
-                border-right: 1px solid rgba(255, 255, 255, 0.3)
-                &:last-child
-                    border: none
-                    padding-right: 0
-                &:first-child
-                    padding-left: 0
-                &:hover
-                    color: #00FFEC
-                span
-                    // letter-spacing: 0.6px
-                    text-align: center
-                    width: max-content
-                    display: inline-block
-                .diamond
-                    margin: 0 4px
-                    position: absolute
-                    top: 45px
-                    // transition: all 0.4s
-
-            .naviItemActive
-                color: #00FFEC
-        .line
-            display: flex
-            align-items: center
-            justify-content: center
-            margin-top: 4px
-            width: 100%
-            position: relative
-            top: -12px
-            .lineSecond
-                height: 1px
-                border-top: 1px solid rgba(255, 255, 255, 0.3)
-                width: 100%
-                // position: relative
-                margin: 0 16px
-            // .diamond
-            //     margin: 0 4px
-            //     position: absolute
-            //     top: -8px
-        .someDestiny
-            margin-top: 20px
-            padding: 0 16px
-            .body_wrapper
-                width: 100%
-                min-height: 531px
-                margin-top: 55px
-                display: flex
-                align-items: flex-start
-                justify-content: space-between
-                flex-direction: column
-                .bigName
-                    font-family: RevxNeueDemo
-                    font-style: normal
-                    font-weight: 600
-                    font-size: 32px
-                    line-height: 35px
-                    text-transform: uppercase
-                    color: #0BEBD6
-                    margin-bottom: 22px
-                    width: max-content
-                .wrapLR
-                    width: 100%
-                    // height: 100%
-                    display: flex
-                    justify-content: space-between
-                    // height: 458px
-                    .nameMobile
-                        display: none
-                    .left
-                        width: 660px
-                        // height: 458px
-                        // padding-right: 24px
-                        display: flex
-                        align-items: center
-                        justify-content: center
-                        flex-direction: column
-                        .left_content
-                            width: 660px
-                            // margin-bottom: 26px
-                            div
-                                &:last-child
-                                    margin-bottom: 0!important
-                            .someIntro
-                                font-family: 'Lexend'
-                                font-style: normal
-                                line-height: 34px
-                                color: white
-                                &:nth-child(2), &:nth-child(3)
-                                    margin-bottom: 24px
-                                &:nth-child(4)
-                                    margin-bottom: 0
-                                .block
-                                    display: block
-                                .title
-                                    font-family: 'Lexend'
-                                    font-style: normal
-                                    font-weight: 300
-                                    font-size: 24px
-                                    line-height: 34px
-                                    span
-                                        display: block
-                                        margin-bottom: 6px
-                                        text-transform: capitalize
-                                        .title_hl
-                                            font-weight: 500
-                                    .inline
-                                        display: inline-block
-                                        margin-bottom: 0
-                                        span
-                                            text-transform: none
-                                .content
-                                    font-family: 'Lexend'
-                                    font-style: normal
-                                    font-weight: 300
-                                    font-size: 24px
-                                    line-height: 34px
-                                    color: #E6E6E6
-                                    margin-bottom: 24px
-                                    span
-                                        display: block
-                                        margin-bottom: 6px
-                                .mb36
-                                    margin-bottom: 36px
-                                &:last-child
-                                    margin-bottom: 0
-                        // .mb32
-                        //     margin-bottom: 32px
-                        .moreBtn
-                            position: relative
-                            // padding: 8px 20px
-                            height: 35px
-                            background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
-                            text-transform: uppercase
-                            width: 152px
-                            margin-top: 26px
-                            margin-bottom: 50px
-                            color: #000000
-                            font-weight: 400
-                            font-size: 14px
-                            cursor: pointer
-                            font-family: Revx Neue Demo
-                            display: Flex
-                            align-items: center
-                            justify-content: center
-                            letter-spacing: 0.2em
-                            .border
-                                position: absolute
-                                top: 1px
-                                bottom: 0.5px
-                                left: 1px
-                                right: 0.5px
-                                border: 1px solid black
-
-                    .right
-                        display: flex
-                        justify-content: center
-                        align-items: center
-                        overflow: hidden
-                        height: max-content
-                        width: 716px
-
-@media (min-width: 900px)
-    .wrapLR
-        position: relative
-        top: -26px
-        height: 100%
-@media (max-width: 1399px)
     .navigate
-        justify-content: flex-start !important
-    .someDestiny
-        .body_wrapper
-            .wrapLR
-                .left
-                    width: 50%
-                .right
-                    width: 50%
-@media (max-width: 1400px ) and (min-width: 900px)
-    .wrapLR
-        align-items: center !important
-        .left
-            width: 50% !important
-            .left_content
-                width: 100% !important
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 48px
+      width: 100%
+      font-weight: 400
+      font-size: 16px
+      line-height: 18px
+      overflow-x: scroll
+      min-height: 46px
+      padding-bottom: 14px
+      color: #DBE0E8
+      &::-webkit-scrollbar
+        display: none
 
-@media (max-width: 992px) and ( min-width: 800px)
-    .left
-        .someIntro
-            div
-                font-size: 20px !important
-                line-height: 28px !important
-        .moreBtn
-            margin-top: 10px !important
-@media (max-width: 800px ) and ( min-width: 768px)
-    .left
-        .someIntro
-            div
-                font-size: 16px !important
-                // line-height: 34px !important
-        .moreBtn
-            margin-top: 10px !important
+      .naviItem, .naviItemActive
+        position: relative
+        width: max-content
+        font-family: "RevxNeueDemo"
+        cursor: pointer
+        padding: 10px 47px
+        height: 38px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-right: 1px solid rgba(255, 255, 255, 0.3)
 
-@media (max-width: 900px ) and ( min-width: 376px)
+        &:last-child
+          border: none
+          padding-right: 0
+
+        &:first-child
+          padding-left: 0
+
+        &:hover
+          color: #00FFEC
+
+        span
+          text-align: center
+          width: max-content
+          display: inline-block
+
+        .diamond
+          margin: 0 4px
+          position: absolute
+          top: 37px
+
+      .naviItemActive
+        color: #00FFEC
+
     .line
-        margin-top: 10px !important
-        top: -17px !important
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-top: 4px
+      width: 100%
+      position: relative
+      top: -12px
+      .lineSecond
+        height: 1px
+        border-top: 1px solid rgba(255, 255, 255, 0.3)
+        width: 100%
     .someDestiny
-        .body_wrapper
-            margin-top: 16px !important
-            .bigName
-                display: none
-                &:last-child
-                    display: block !important
-            .blockName
-                display: block !important
-                font-family: 'RevxNeueDemo'
-                font-style: normal
-                font-weight: 600
-                font-size: 24px
-                line-height: 26px
-                text-transform: uppercase
-                color: #0BEBD6
-                margin: 0 16px 24px 0
-                width: 100%
-            .wrapLR
-                flex-direction: column-reverse
-                .nameMobile
-                    display: block !important
-                    font-family: 'RevxNeueDemo'
-                    font-style: normal
-                    font-weight: 600
-                    font-size: 24px
-                    line-height: 26px
-                    text-transform: uppercase
-                    color: #0BEBD6
-                    margin: 0 16px 24px
-                    width: 100%
-                .left, .right
-                    width: 100% !important
-                    height: max-content !important
-                    top: 0 !important
-                    padding-right: 0 !important
-                .left
-                    .left_content
-                        width: 100% !important
-                        padding: 0 16px
-                        .someIntro
-                            margin-bottom: 16px !important
-                            line-height: 20px !important
-                            span
-                                font-size: 14px !important
-                            .title
-                                span
-                                    font-family: 'Lexend' !important
-                                    font-style: normal !important
-                                    font-weight: 400 !important
-                                    font-size: 20px !important
-                                    line-height: 34px !important
-                                    text-transform: capitalize !important
-                                    color: #FFFFFF !important
-                            .content
-                                font-family: 'Lexend' !important
-                                font-style: normal !important
-                                font-weight: 300 !important
-                                font-size: 20px !important
-                                line-height: 20px !important
-                                color: #E6E6E6
-                .right
-                    margin-bottom: 16px !important
+      margin-top: 12px
+      padding: 36px 0 36px 8px
 
-@media (max-width: 500px ) and ( min-width: 376px)
-    .someDestiny
-        .body_wrapper
-            .bigName
-                display: none
-            .wrapLR
-                flex-direction: column-reverse !important
-                align-items: center
-                .nameMobile
-                    display: block !important
-                    font-family: 'Revx Neue Demo'
-                    font-style: normal
-                    font-weight: 600
-                    font-size: 24px
-                    line-height: 26px
-                    text-transform: uppercase
-                    color: #0BEBD6
-                    margin: 0 16px 24px
-                    width: 100%
-                .left
-                    margin: 0 1px
-                    .left_content
-                        width: 100% !important
-                        .someIntro
-                            margin-bottom: 16px !important
-                            line-height: 20px !important
-                            span
-                                font-size: 14px !important
-                            .title
-                                span
-                                    font-family: 'Lexend' !important
-                                    font-style: normal !important
-                                    font-weight: 400 !important
-                                    font-size: 14px !important
-                                    line-height: 34px !important
-                                    text-transform: capitalize !important
-                                    color: #FFFFFF !important
-                            .content
-                                font-family: 'Lexend' !important
-                                font-style: normal !important
-                                font-weight: 300 !important
-                                font-size: 14px !important
-                                line-height: 20px !important
-                                color: #E6E6E6
-                        .moreBtn
-                            margin-top: 10px !important
-                .right
-                    width: 375px !important
-@media (max-width: 376px )
-    .destiny_wrapper
-        margin-top: 76px
-        .container
-            .header
-                font-size: 24px !important
-            .navigate
-                font-size: 14px !important
-                line-height: 15px !important
-                font-weight: 600 !important
-            .line
-                margin-top: 4px
-                .lineSecond
-                    margin: 0 !important
-            .someDestiny
-                overflow: hidden
-                padding: 0 !important
-                margin-top: 0 !important
-                .body_wrapper
-                    margin-top: 24px !important
-                    max-height: 630px !important
-                    .bigName
-                        display: none
-                        &:last-child
-                            display: block !important
-                    .blockName
-                        display: block !important
-                        font-family: 'RevxNeueDemo'
-                        font-style: normal
-                        font-weight: 600
-                        font-size: 24px
-                        line-height: 26px
-                        text-transform: uppercase
-                        color: #0BEBD6
-                        margin: 0 16px 24px 0
-                        width: 100%
-                    .wrapLR
-                        flex-direction: column-reverse !important
-                        align-items: flex-start
-                        .nameMobile
-                            display: block !important
-                            font-family: 'RevxNeueDemo'
-                            font-style: normal
-                            font-weight: 600
-                            font-size: 24px
-                            line-height: 26px
-                            text-transform: uppercase
-                            color: #0BEBD6
-                            margin: 0 16px 24px
-                            width: 100%
-                        .left
-                            height: auto !important
-                            margin: 0 16px
-                            width: 342px !important
-                            .left_content
-                                width: 100% !important
-                                .someIntro
-                                    margin-bottom: 24px !important
-                                    line-height: 24px !important
-                                    span
-                                        font-size: 14px !important
-                                        line-height: 20px !important
-                                    .title
-                                        span
-                                            font-family: 'Lexend' !important
-                                            font-style: normal !important
-                                            font-size: 14px !important
-                                            color: #FFFFFF !important
-                                            margin-bottom: 4px !important
-                                            line-height: 20px !important
-                                    .content
-                                        font-family: 'Lexend' !important
-                                        font-style: normal !important
-                                        font-weight: 300 !important
-                                        font-size: 14px !important
-                                        line-height: 20px !important
-                                        color: #E6E6E6
-                                .moreBtn
-                                    margin-top: 10px !important
-                                    margin-bottom: 32px !important
-                                    .border
-                                        bottom: 1px !important
-                        .right
-                            min-height: 172px
-                            align-items: flex-start
-                            overflow: hidden
-                            width: 100% !important
-                            margin-bottom: 18px
+.titleTab
+  font-family: 'RevxNeueDemo'
+  font-style: normal
+  font-weight: 600
+  font-size: 32px
+  line-height: 35px
+  text-transform: uppercase
+  color: #0BEBD6
+  margin-bottom: 16px !important
+
+.title
+  h3
+    font-family: 'Lexend'
+    font-weight: 400
+    font-size: 24px
+    line-height: 34px
+    text-transform: capitalize
+    color: #FFFFFF
+.desc
+  margin-top: 4px
+  margin-bottom: 24px
+  p
+    font-family: 'Lexend'
+    font-weight: 300
+    font-size: 24px
+    line-height: 34px
+    color: #E6E6E6
+.wrapperSocialFi
+  display: flex
+  gap: 0 24px
+  .leftContent
+    width: 660px
+  .rightContent
+    position: relative
+    &:before
+      position: absolute
+      content: ""
+      background: url(/assets/homepage/destiny/bg_img.png) no-repeat
+      background-size: cover
+      width: 100%
+      top: -4%
+      left: -9%
+      aspect-ratio: 710/498
+      z-index: -1
+    img
+      position: relative
+.wrapperArena
+  display: flex
+  gap: 0 16px
+  .leftContent
+    width: 660px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    .descArena
+      font-family: 'Lexend'
+      font-size: 24px
+      line-height: 34px
+      .descArenaBold
+        text-transform: capitalize
+        font-weight: 400
+        margin-right: 6px
+      .descArenaNormal
+        text-transform: lowercase
+        font-weight: 300
+        color: #DBE0E8
+    .descArenaB
+      margin-top: 24px
+      margin-bottom: 24px
+.wrapperInsight
+  display: flex
+  gap: 0 24px
+  .leftContent
+    width: 660px
+.wrapperMedia
+  display: flex
+  gap: 0 24px
+  .leftContent
+    width: 660px
+    display: flex
+    flex-direction: column
+    justify-content: center
+.wrapperLaunchpad
+  display: flex
+  gap: 0 16px
+  .leftContent
+    width: 660px
+    display: flex
+    flex-direction: column
+    justify-content: center
+  .descLaunchpad
+    font-family: 'Lexend'
+    font-size: 24px
+    line-height: 34px
+    margin-bottom: 24px
+    span
+      font-weight: 300
+      color: #DBE0E8
+    b
+      font-weight: 500
+      color: #FFFFFF
+
+.leftContentRanking
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin-bottom: 65px
+
+.btn
+  color: #000000 !important
+  padding: 0 21px
+  width: fit-content

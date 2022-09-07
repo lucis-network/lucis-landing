@@ -1,282 +1,235 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import s from "./index.module.sass";
 import DiamondIcon from "./icon/DiamondIcon";
+import ButtonBorder from "../../Button/buttonBorder/ButtonBorder";
+
 const Destiny = () => {
-  const setDestiny = [
-    [
-      {
-        name: "Social-Fi network platform",
-        intro: [
-          {
-            title: (
-              <span>
-                <span className={s.title_hl}>social platform</span>
-              </span>
-            ),
-            content:
-              "A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games.",
-          },
-          {
-            title: (
-              <span>
-                <span className={s.title_hl}>User Ranking system</span>
-              </span>
-            ),
-            content:
-              "For team ranking & user ranking help them standing out and get more reputation, benefit from Lucis ecosystems.",
-          },
-        ],
-        img: "imgSocial",
-      },
-    ],
-    [
-      {
-        name: "Tournaments",
-        intro: [
-          {
-            title: (
-              <span className={s.inline}>
-                <span className={s.title_hl}>A platform</span>
-              </span>
-            ),
-            content: " for creating, running tournament events.",
-          },
-          {
-            title: (
-              <span className={s.inline}>
-                <span className={s.title_hl}>Team</span>
-              </span>
-            ),
-            content:
-              " will get more popular and big prizes, big donation amount from Lucis Tournament platform.",
-          },
-        ],
-        img: "imgTournaments",
-      },
-    ],
-    [
-      {
-        name: "Lucis Insight & Game Ranking system",
-        intro: [
-          {
-            title: (
-              <span>
-                <span className={s.title_hl}>Lucis Insight</span>
-              </span>
-            ),
-            content:
-              "Our researcher team will carefully analysis the market, filter out hidden gems.",
-          },
-          {
-            title: (
-              <span>
-                <span className={s.title_hl}>Game Ranking System</span>
-              </span>
-            ),
-            content:
-              "We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.",
-          },
-        ],
-        img: "imgInstance",
-      },
-    ],
-    [
-      {
-        name: "Lucis Media",
-        intro: [
-          {
-            title: (
-              <span>
-                <span className={s.title_hl}>lucis TV and Lucis blog</span>
-              </span>
-            ),
-            content:
-              "will provide up to date and valuable info about the market, deeply analysis for game projects, NFT and the whole markets.",
-          },
-        ],
-        img: "imgMedia",
-      },
-    ],
-    [
-      {
-        name: "Launchpad & Marketplace",
-        intro: [
-          {
-            title: (
-              <span className={s.inline}>
-                <span className={s.title_hl}>Game publisher </span>
-              </span>
-            ),
-            content:
-              " can host INO to sell NFT mistery boxes to Lucis community or users.",
-          },
-          {
-            title: (
-              <span className={s.inline}>
-                Sell{" "}
-                <span className={`${s.title_hl} ${s.inline}`}>NFT boxes</span>{" "}
-                or <span className={`${s.title_hl} ${s.inline}`}>NFT </span>
-              </span>
-            ),
-            content: " collection on Lucis marketplace.",
-          },
-        ],
-        img: "imgLaunchpad",
-      },
-    ],
-    [
-      {
-        name: "Gaming Guild",
-        intro: [
-          {
-            title: "",
-            content: "We're starting from original Lucis Gaming Guild.",
-          },
-          {
-            title: (
-              <span>
-                <span className={s.title_hl}>Gaming Guild tools:</span>
-              </span>
-            ),
-            content:
-              "Our Lucis Guild Platform will connect investors to scholars",
-          },
-          {
-            title: (
-              <span>
-                <span className={s.title_hl}>Lucis Academy:</span>
-              </span>
-            ),
-            content: (
-              <>
-                <span>
-                  With our knowlegde, we're converting traditional gamers into
-                  Play 2 Earn gamers.
-                </span>
-                <span>
-                  We provide training and experience in Play 2 Earn field, to
-                  ensure our Scholars skill {"&"} quality.
-                </span>
-              </>
-            ),
-          },
-        ],
-        img: "imgGuild",
-      },
-    ],
-    [
-      {
-        name: "Automation tool zone",
-        intro: [
-          {
-            title: "",
-            content:
-              "All the best automation and handy tools for our scholars, gamers, and investors.",
-          },
-        ],
-        img: "imgPlatform",
-      },
-      {
-        name: "Streaming platform",
-        intro: [
-          {
-            title: "",
-            content: "Is coming soon, and be apart of our SocialFi platform.",
-          },
-        ],
-      },
-    ],
-  ];
+  const listTabDestiny = [
+    {key: "SocialFi", title: "Social-Fi network platform"},
+    {key: "Arena", title: "Arena"},
+    {key: "Insight", title: "Lucis Insight & Game Ranking system"},
+    {key: "Media", title: "Lucis Media"},
+    {key: "Launchpad", title: "Launchpad & Marketplace"},
+    {key: "Ranking", title: "Lucis ranking system"}]
 
   const [tab, setTab] = useState(0);
 
   const onchangeTab = (number: number, e: any) => {
     setTab(number);
-    console.log("e >>> ", e.target.offsetWidth);
   };
+
+  const SocialFi = () => {
+    return (
+      <div className={s.wrapperSocialFi}>
+        <div className={s.leftContent}>
+          <h2 className={s.titleTab}>Social-Fi network platform</h2>
+          <div className={s.title}>
+            <h3>Social platform</h3>
+          </div>
+          <div className={s.desc}>
+            <p>A social network specialized for gamers in both NFT & traditional gamers. Highly customizable for every popular games.</p>
+          </div>
+          <div className={s.title}>
+            <h3>Gaming Guild</h3>
+          </div>
+          <div className={s.desc}>
+            <p>Lucis Gaming Guild provides investors a place to recruit scholars (gamers) in order to work together in the gaming field for big prizes.</p>
+          </div>
+          <ButtonBorder>
+            <div className={s.btn} onClick={() => window.open(process.env.NEXT_PUBLIC_P2E_URL, '_blank')}>
+              MORE DETAIL
+            </div>
+          </ButtonBorder>
+        </div>
+        <div className={s.rightContent}>
+          <img src="/assets/homepage/destiny/social-fi.png" alt=""/>
+        </div>
+      </div>
+    );
+  }
+
+  const Arena = () => {
+    return (
+      <div className={s.wrapperArena}>
+        <div className={s.leftContent}>
+          <h2 className={s.titleTab}>Arena</h2>
+          <div className={s.descArena}>
+            <span className={s.descArenaBold}>A platform</span>
+            <span className={s.descArenaNormal}>for creating, running tournament events.</span>
+          </div>
+          <div className={`${s.descArena} ${s.descArenaB}`}>
+            <span className={s.descArenaBold}>Team</span>
+            <span className={s.descArenaNormal}>will get more popular and big prizes, big donation amount from Lucis Tournament platform.</span>
+          </div>
+          <ButtonBorder>
+            <div className={s.btn} onClick={() => window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena", '_blank')}>
+              MORE DETAIL
+            </div>
+          </ButtonBorder>
+        </div>
+        <div className={s.rightContent}>
+          <img src="/assets/homepage/destiny/tournaments.png" alt=""/>
+        </div>
+      </div>
+    );
+  }
+
+  const Insight = () => {
+    return (
+      <div className={s.wrapperInsight}>
+        <div className={s.leftContent}>
+          <h2 className={s.titleTab}>Lucis Insight & Game Ranking system</h2>
+          <div className={s.title}>
+            <h3>Lucis Insight</h3>
+          </div>
+          <div className={s.desc}>
+            <p>Our researcher team will carefully analysis the market, filter out hidden gems.</p>
+          </div>
+          <div className={s.title}>
+            <h3>Game Ranking System</h3>
+          </div>
+          <div className={s.desc}>
+            <p>We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.</p>
+          </div>
+          <ButtonBorder>
+            <div className={s.btn} onClick={() => window.open("https://insight.lucis.network/", '_blank')}>
+              MORE DETAIL
+            </div>
+          </ButtonBorder>
+        </div>
+        <div className={s.rightContent}>
+          <img src="/assets/homepage/destiny/lucisInsight.png" alt=""/>
+        </div>
+      </div>
+    );
+  }
+
+  const Media = () => {
+    return (
+      <div className={s.wrapperMedia}>
+        <div className={s.leftContent}>
+          <h2 className={s.titleTab}>Launchpad & Marketplace</h2>
+          <div className={s.title}>
+            <h3>lucis TV and Lucis blog</h3>
+          </div>
+          <div className={s.desc}>
+            <p>will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets.</p>
+          </div>
+          <ButtonBorder>
+            <div className={s.btn} onClick={() => window.open("https://insight.lucis.network/", '_blank')}>
+              MORE DETAIL
+            </div>
+          </ButtonBorder>
+        </div>
+        <div className={s.rightContent}>
+          <img src="/assets/homepage/destiny/lucisMedia.png" alt=""/>
+        </div>
+      </div>
+    );
+  }
+
+  const Launchpad = () => {
+    return (
+      <div className={s.wrapperLaunchpad}>
+        <div className={s.leftContent}>
+          <h2 className={s.titleTab}>Lucis Media</h2>
+          <div className={s.descLaunchpad}>
+            <span><b>Game publisher</b> can host INO to sell NFT mistery boxes to Lucis community or users.</span><br/>
+            <span>Sell <b>NFT boxes</b> or <b>NFT</b> collection on Lucis marketplace.</span>
+          </div>
+          <ButtonBorder>
+            <div className={s.btn} onClick={() => window.open("https://insight.lucis.network/", '_blank')}>
+              MORE DETAIL
+            </div>
+          </ButtonBorder>
+        </div>
+        <div className={s.rightContent}>
+          <img src="/assets/homepage/destiny/launchpad.png" alt=""/>
+        </div>
+      </div>
+    );
+  }
+
+  const Ranking = () => {
+    return (
+      <div className={s.wrapperSocialFi}>
+        <div className={`${s.leftContent} ${s.leftContentRanking}`}>
+          <h2 className={s.titleTab}>Lucis ranking System</h2>
+          <div className={s.desc}>
+            <p>Create a competitive environment for gamers, game clubs and guild games that lets them to actively engage and enjoy the game.<br/>
+              As a result, landing at the top of the leaderboard with monetary or physical prizes.<br/>
+              Achieving the top position will result in numerous awards and recognition on the system.</p>
+          </div>
+          <ButtonBorder>
+            <div className={s.btn} onClick={() => window.open(process.env.NEXT_PUBLIC_P2E_URL + "/ranking", '_blank')}>
+              MORE DETAIL
+            </div>
+          </ButtonBorder>
+        </div>
+        <div className={s.rightContent}>
+          <img src="/assets/homepage/destiny/social-fi.png" alt=""/>
+        </div>
+      </div>
+    );
+  }
+
+  const renderWithTab = (param: string, navigateIndex: number) => {
+    if(navigateIndex === tab) {
+      switch(param) {
+        case 'SocialFi':
+          return <SocialFi />;
+        case 'Arena':
+          return <Arena/>;
+        case 'Insight':
+          return <Insight/>;
+        case 'Media':
+          return <Media/>;
+        case 'Launchpad':
+          return <Launchpad/>;
+        case 'Ranking':
+          return <Ranking/>;
+        default:
+          return <></>;
+      }
+    }
+  }
 
   return (
     <div className={s.destiny_wrapper}>
       <div className={s.container}>
         <div className={s.header}>
-          <span>Welcome to our Destiny</span>
+          <h1>Welcome to our Destiny</h1>
         </div>
         <div className={s.navigate}>
-          {setDestiny.map((navigateItem, navigateIndex) => {
+          {listTabDestiny.map((navigateItem, navigateIndex) => {
             return (
               <div
                 className={
                   tab === navigateIndex ? s.naviItemActive : s.naviItem
                 }
-                key={navigateItem[0].name}
+                key={navigateItem.key}
                 onClick={(e) => onchangeTab(navigateIndex, e)}
               >
                 {tab === navigateIndex ? (
                   <div className={s.diamond}>
-                    <DiamondIcon />
+                    <DiamondIcon/>
                   </div>
                 ) : null}
-                <span>{navigateItem[0].name}</span>
+                <span>{navigateItem.title}</span>
               </div>
             );
           })}
         </div>
         <div className={s.line}>
-          {/* <div className={s.lineFirst}></div> */}
-
           <div className={s.lineSecond}>
-            {/* <div className={s.diamond}>
-              <DiamondIcon />
-            </div> */}
           </div>
         </div>
         <div className={s.someDestiny}>
-          {setDestiny.map((destinyItems, destinyIndex) => {
-            return tab == destinyIndex ? (
-              <div className={s.body_wrapper} key={destinyItems[0].name}>
-                <div className={s.wrapLR}>
-                  <div className={s.left}>
-                    <div className={`${s.left_content}`}>
-                      {destinyItems.map((destinyItem,) => {
-                        return (
-                          <>
-                            <div className={destinyIndex === 6 ? `${s.bigName} ${s.blockName}` : `${s.bigName}`}>{destinyItem.name}</div>
-                            {destinyItem.intro.map(
-                              (introItem, introItemIndex) => {
-                                return (
-                                  <div
-                                    className={s.someIntro}
-                                    key={introItemIndex}
-                                  >
-                                    <span className={s.title}>
-                                      {introItem.title}
-                                    </span>
-                                    <span className={`${s.content} ${s.mb36}`}>
-                                      {introItem.content}
-                                    </span>
-                                  </div>
-                                );
-                              }
-                            )}
-                            <div className={s.moreBtn}>
-                              <span>more detail</span>
-                              <div className={s.border}></div>
-                            </div>
-                          </>
-                        );
-                      })}
-                    </div>
-                  </div>
-                  <div className={s.right}>
-                    <div className={destinyItems[0].img}></div>
-                  </div>
-                  {destinyIndex === 6 ? null :<div className={`${s.nameMobile}`}>
-                    {destinyItems[0].name}
-                  </div>}
-                </div>
-              </div>
-            ) : null;
-          })}
+          {listTabDestiny.map((navigateItem, navigateIndex) =>
+            (
+              renderWithTab(navigateItem.key, navigateIndex)
+            )
+          )}
         </div>
       </div>
     </div>

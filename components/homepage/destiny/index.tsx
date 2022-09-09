@@ -171,7 +171,7 @@ const Destiny = () => {
             </div>
           </ButtonBorder>
         </div>
-        <div className={s.rightContentC}>
+        <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/imgRanking.png" alt=""/>
         </div>
         <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Lucis ranking System</h2>

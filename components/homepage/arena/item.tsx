@@ -4,6 +4,7 @@ import {Bracket, TournamentGql} from "../../../src/generated/graphql";
 import moment from "moment";
 import {format} from "utils/Number";
 import "swiper/css";
+import {Image} from "antd";
 import {LINK_HOME_ARENA} from "../../../utils/Enum";
 import {slugify} from "../../../utils/String";
 
@@ -61,7 +62,8 @@ export default function ItemArena(prop: Props) {
               <p>Free entry</p>
             </div>
             <div className={s.itemAva}>
-              <img src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : "/assets/homepage/default_avatar.png"} alt=""/>
+              {/*<img src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : "/assets/homepage/default_avatar.png"} alt=""/>*/}
+              <Image src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : '/assets/homepage/default_avatar.png'} preview={false} alt="" fallback="/assets/homepage/default_avatar.png" />
             </div>
             <div className={s.itemCreator}>
               <p>Creator</p>

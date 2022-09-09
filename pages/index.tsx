@@ -125,8 +125,8 @@ const Home: NextPage = () => {
       <FavoriteGames />
       {/*<LucisNFT />*/}
       <LucisNFTs />
-      <LuckyChest />
       <Raffles />
+      <LuckyChest />
       <Arena />
       <Destiny />
       <LastNews />

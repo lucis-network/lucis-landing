@@ -1,135 +1,143 @@
+// @ts-nocheck
 import s from "./index.module.sass";
 import React, {useEffect, useState} from "react";
 import {useGetDataArena} from "../../../hooks/useArena";
-import {Bracket, TournamentGql} from "../../../src/generated/graphql";
-import moment from "moment";
-import {format} from "utils/Number";
-import { useRouter } from "next/router";
+import {TournamentGql} from "../../../src/generated/graphql";
 import {LINK_HOME_ARENA} from "../../../utils/Enum";
 import { slugify } from "utils/String";
-
-const BracketType = [
-  { value: "SINGLE", label: "Single elimination" },
-  { value: "DOUBLE", label: "Double elimination" },
-  { value: "BATTLE_ROYALE", label: "Battle Royal" },
-];
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import ItemArena from "./item";
 
 export default function Arena() {
-  const {getDataArena, getDataArenaLoading, getDataArenaError} = useGetDataArena();
+  const {getDataArena} = useGetDataArena();
   const [data, setData] = useState<TournamentGql[] | undefined>();
-  const router = useRouter()
 
   useEffect(() => {
     let k = getDataArena;
-    if(getDataArena && getDataArena.length > 4) {
-      k = getDataArena.slice(0,4);
+    if(getDataArena && getDataArena.length > 10) {
+      k = getDataArena.slice(0,10);
     }
     setData(k);
   }, [getDataArena])
 
-  const elimination = (item:Bracket) => {
-    return BracketType.find(
-      (bracket) => bracket.value === item?.type
-    )?.label;
-  }
-
   const joinNow = () => {
-    window.open(LINK_HOME_ARENA, '_blank');
+    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena", '_blank');
   }
 
   const createNow = () => {
-    window.open(LINK_HOME_ARENA + "/create", '_blank');
+    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena/create", '_blank');
   }
 
   const getDetailArena = (item: TournamentGql) => {
-    window.open(LINK_HOME_ARENA + `/${item.uid}/${slugify(item.name)}`, '_blank');
+    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena" + `/${item.uid}/${slugify(item.name)}`, '_blank');
   }
+
+  useEffect(() => {
+    let btn = document.querySelector('.btn_hover');
+    // @ts-ignore
+    if(btn) {
+      btn.addEventListener('mousemove', e => {
+        if(e) {
+          let rect = e.target.getBoundingClientRect();
+          let x = e.clientX - rect.left;
+          let y = e.clientY - rect.top;
+          const span = btn.querySelector('.btn_glow');
+          if(span) {
+            span.style.left = x + 'px';
+            span.style.top = y + 'px';
+          }
+        }
+      });
+    }
+  }, [])
+
+  useEffect(() => {
+    let btn = document.querySelector('.btn_cr_hover');
+    // @ts-ignore
+    if(btn) {
+      btn.addEventListener('mousemove', e => {
+        if(e) {
+          // @ts-ignore
+          let rect = e.target.getBoundingClientRect();
+          let x = e.clientX - rect.left;
+          let y = e.clientY - rect.top;
+          const span = btn.querySelector('.btn_cr_glow');
+          if(span) {
+            span.style.left = x + 'px';
+            span.style.top = y + 'px';
+          }
+        }
+      });
+    }
+  }, [])
+
   return (
     <>
-      <div className={s.wrapper}>
-        <div className={`lucis-container-2 ${s.container}`}>
-          <div className={s.title}>
-            <img src="/assets/homepage/arena.png" alt=""/>
-          </div>
-          <div className={s.listItems}>
-            {
-              data && data.map((item, index) => {
-                return (
-                  <div key={`${item.uid}${index}`}>
-                    <div className={s.item} onClick={() => getDetailArena(item)}>
-                      <div className={s.itemImg}>
-                        <div className={s.itemDescImg}>
-                          <div className={s.itemDescImgLR}>
-                            <img src="/assets/homepage/ic_user_arena.svg" alt=""/>
-                            <span>
-                              { item.cache_tournament?.team_participated === undefined || null
-                                ? 0
-                              : item.cache_tournament?.team_participated }
-                              /{item?.participants}
-                            </span>
-                          </div>
-                          <div className={s.itemDescImgGameMode}>
-                            <span>{item?.brackets && item?.brackets[0] && elimination(item?.brackets[0])}</span>
-                          </div>
-                          <div className={s.itemDescImgLR}>
-                            <img src="/assets/homepage/play_arena.svg" alt=""/>
-                            <span>{item?.team_size} vs {item?.team_size}</span>
-                          </div>
-                        </div>
-                        <div className={s.thumbnail}>
-                          <img
-                            //src={item?.cover}
-                            src="/assets/homepage/test_arena.png"
-                            alt=""/>
-                        </div>
-                      </div>
-                      <div className={s.itemDesc}>
-                        <div className={s.itemFreeEntry}>
-                          {/*<p>{item?.game?.name}</p>*/}
-                          <span>Free entry</span>
-                        </div>
-                        <div className={s.itemAva}>
-                          <img src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : "/assets/homepage/default_avatar.png"} alt=""/>
-                        </div>
-                        <div className={s.itemCreator}>
-                          <p>Creator</p>
-                          <h2>{item?.user?.profile?.display_name}</h2>
-                        </div>
-                      </div>
-                      <div className={s.itemTitle}>
-                          <p>{item?.name}</p>
-                      </div>
-                      <div className={s.itemGroupCT}>
-                        <div className={s.itemCurrency}>{
-                          format(Number(item?.totalPrizePool), 2, {zero_trim: true})
-                        }{" "}
-                          {item.currency.symbol}</div>
-                        <div className={s.itemTime}>
-                          <img src="/assets/homepage/date_range_arena.svg" alt=""/>
-                          <span>{moment(item.brackets?.[0].start_at).format(
-                            "MMM Do hh:mm"
-                          )}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )
-              })
-            }
-          </div>
-          <div className={s.desc}>
-            <p>Let's create your own playing field and show your level to others!</p>
-          </div>
-          <div className={s.groupBtn}>
-            <div className={`${s.btn} ${s.btnJoin}`} onClick={joinNow}>
-              <div>Join Now</div>
+      <section>
+        <div className={s.wrapper}>
+          <div className={`lucis-container-2 ${s.container}`}>
+            <div className={s.title}>
+              <img srcSet="/assets/homepage/new_arena.png" alt=""/>
             </div>
-            <div className={`${s.btn} ${s.btnCreate}`} onClick={createNow}>
-              <div>Create Now</div>
+            <div className={s.listItems}>
+              <Swiper
+                slidesPerView={2}
+                spaceBetween={8}
+                initialSlide={1}
+                loop={true}
+                pagination={{
+                  clickable: true
+                }}
+                breakpoints={{
+                  360: {
+                    slidesPerView: 2,
+                    spaceBetween: 7.5
+                  },
+                  575: {
+                    slidesPerView: 3,
+                    spaceBetween: 8
+                  },
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 16
+                  },
+                  1320: {
+                    slidesPerView: 4,
+                    spaceBetween: 32
+                  }
+                }}
+              >
+                {
+                  data && data.map((item, index) => {
+                    return (
+                      <div key={`${item?.team_size}-${item?.uid}`}>
+                        <SwiperSlide onClick={() => getDetailArena(item)} key={`${item?.team_size}-${item?.uid}`}>
+                          <ItemArena item={item}></ItemArena>
+                        </SwiperSlide>
+                      </div>
+                    )
+                  })
+                }
+              </Swiper>
+            </div>
+
+            <div className={s.desc}>
+              <p>Let's create your own playing field and show your level to others!</p>
+            </div>
+            <div className={s.groupBtn}>
+              <div className={`${s.btn} btn_hover`} onClick={joinNow}>
+                <div>Join Now</div>
+                <span className={`${s.btn_hover} btn_glow`}></span>
+              </div>
+              <div className={`${s.btn} btn_cr_hover`} onClick={createNow}>
+                <div>Create Now</div>
+                <span className={`${s.btn_hover} btn_cr_glow`}></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       </>
   );
 };

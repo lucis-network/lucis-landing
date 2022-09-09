@@ -9,6 +9,61 @@
   font-family: 'RevxNeueDemo';
   src: url(/font/RevxNeueDemo-Regular.ttf)
 }
+/*@font-face {*/
+/*  font-family: 'Revx Neue Demo';*/
+/*  src: url("/font/RevxNeue/RevxNeueDemo-Regular.ttf");*/
+/*  font-weight: 400;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Revx Neue Demo';*/
+/*  src: url("/font/RevxNeue/RevxNeueDemo-Italic.ttf");*/
+/*  font-weight: 400;*/
+/*  font-style: italic;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Revx Neue Demo';*/
+/*  src: url("/font/RevxNeue/RevxNeueDemo-SemiBold.ttf");*/
+/*  font-weight: 600;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Revx Neue Demo';*/
+/*  src: url("/font/RevxNeue/RevxNeueDemo-SemiBoldItalic.ttf");*/
+/*  font-weight: 600;*/
+/*  font-style: italic;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Lexend';*/
+/*  src: url("/font/lexend/Lexend-Light.ttf");*/
+/*  font-weight: 300;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Lexend';*/
+/*  src: url("/font/lexend/Lexend-Regular.ttf");*/
+/*  font-weight: 400;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Lexend';*/
+/*  src: url("/font/lexend/Lexend-Medium.ttf");*/
+/*  font-weight: 500;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Lexend';*/
+/*  src: url("/font/lexend/Lexend-SemiBold.ttf");*/
+/*  font-weight: 600;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'Lexend';*/
+/*  src: url("/font/lexend/Lexend-Bold.ttf");*/
+/*  font-weight: 700;*/
+/*}*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,6 +88,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   height: auto !important;
+
 }
 
 body .ant-Layout {
@@ -51,18 +107,20 @@ body h1, h2, h3, h4, h5, h6{
 
 /* body gradient */
 body {
-  background:
-  radial-gradient(1200px 1800px at calc(100vw/2 + 400px) 750px,#05056c 0%, transparent),
-  radial-gradient(1200px 1800px at calc(100vw/2 + 750px) 750px,#0000ff -150%, transparent)
+  /*background:*/
+  /*radial-gradient(1200px 1800px at calc(100vw/2 + 400px) 750px,#05056c 0%, transparent),*/
+  /*radial-gradient(1200px 1800px at calc(100vw/2 + 750px) 750px,#0000ff -150%, transparent)*/
 
 
-  ,radial-gradient(1200px 1800px at calc(100vw/2 - 400px) 4850px,#05056c 0%, transparent)
-  ,radial-gradient(1200px 1800px at calc(100vw/2 - 400px) 7000px,#05056c 0%, transparent)
-  ,radial-gradient(1200px 1800px at calc(100vw/2 + 400px) 9550px,#05056c 0%, transparent)
-  ,radial-gradient(1200px 1800px at calc(100vw/2 + 400px) 10550px,#05056c 0%, transparent)
-  ;
+  /*,radial-gradient(1200px 1800px at calc(100vw/2 - 400px) 4850px,#05056c 0%, transparent)*/
+  /*,radial-gradient(1200px 1800px at calc(100vw/2 - 400px) 7000px,#05056c 0%, transparent)*/
+  /*,radial-gradient(1200px 1800px at calc(100vw/2 + 400px) 9550px,#05056c 0%, transparent)*/
+  /*,radial-gradient(1200px 1800px at calc(100vw/2 + 400px) 10550px,#05056c 0%, transparent)*/
+  /*;*/
   /* background: linear-gradient(45deg, rgba(0,0,49,1) 0%, rgba(0,0,49,1) 38%, rgba(0,0,255,1) 100%); */
 
+  background: linear-gradient(0deg, rgba(23, 29, 46, 0.8), rgba(23, 29, 46, 0.8)), url("/assets/homepage/lucis-home.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 

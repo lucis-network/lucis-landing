@@ -5,9 +5,9 @@ import {Maybe} from "@graphql-tools/utils";
 
 type PrizePopoverProps = {
   image: string,
-  title: string,
-  description: Maybe<string> | undefined,
-  rarity: string,
+  title?: Maybe<string>,
+  description: Maybe<string>,
+  rarity?: Maybe<string>,
   children?: JSX.Element
 }
 
@@ -16,9 +16,7 @@ const PrizeDetail = ({image, title, description, rarity}: ChestPrizeProps) => {
     <div className={`${s.prizeDetailContent} ${rarity ?? ''}`}>
       <div className={s.detailPrizeCard}>
         <div className={s.detailPrizeImage}>
-          <img src={image ?? '/assets/P2E/lucky-chest/defaultPrizeImage.png'} alt="" onError={(e) => {
-            e.currentTarget.src = '/assets/P2E/lucky-chest/defaultPrizeImage.png'
-          }} />
+          <img src={image ?? '/assets/homepage/defaultPrizeImage.png'} alt=""/>
         </div>
         <div className={s.detailPrizeTitle}>{title ?? ''}</div>
       </div>

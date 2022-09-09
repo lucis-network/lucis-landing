@@ -1,0 +1,212 @@
+.raffles_wrapper
+    width: 100%
+    // height: 660px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .header
+        .bigName
+            color: white
+            font-family: 'RevxNeueDemo'
+            font-style: normal
+            font-weight: 400
+            font-size: 48px
+            line-height: 53px
+            text-align: center
+            letter-spacing: 0.2em
+        .subTitle
+            font-family: 'Lexend'
+            font-style: normal
+            font-weight: 300
+            font-size: 24px
+            line-height: 33px
+            text-align: center
+            letter-spacing: 0.04em
+            color: #DBE0E8
+    .body
+        background: url("/assets/homepage/raffles/bgRaffles.png") no-repeat
+        max-width: 1286px
+        width: 100%
+        height: 342px
+        padding: 0 260px
+        display: flex
+        position: relative
+        .banner1, .banner2, .banner3, .banner4, .banner5
+            position: absolute
+            border-radius: 4px
+            overflow: hidden
+            cursor: pointer
+            &:hover
+                z-index: 4
+                // transform: scale(1.02)
+                .btnHover
+                    display: flex
+            .btnHover
+                display: none
+                cursor: pointer
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%)
+                border-radius: 4px
+                align-items: center
+                justify-content: center
+                &:hover
+                    display: flex
+                .join_raffles
+                    position: relative
+                    color: white
+                    padding: 8px 20px
+                    background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+                    display: flex
+                    align-items: center
+                    text-align: center
+                    span
+                        font-family: 'Revx Neue Demo'
+                        font-style: normal
+                        font-weight: 400
+                        font-size: 14px
+                        letter-spacing: 0.2em
+                        text-transform: uppercase
+                        color: #000000
+                    .borderBtn
+                        position: absolute
+                        top: -2px
+                        bottom: -2px
+                        right: -2px
+                        left: -2px
+                        border: 1px solid #00F9FF
+
+        .banner1
+            top: 167px
+            left: -57px
+            z-index: 1
+            box-shadow: 0px 0px 120px rgba(11, 235, 214, 0.28)
+            border-radius: 4px
+            width: 320px
+            height: 160px
+        .bgBanner1
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/homepage/raffles/banner1.png")
+            background-repeat: no-repeat
+            background-size: cover
+        .banner2
+            top: 192px
+            left: 163px
+            box-shadow: 0px 0px 120px rgba(11, 235, 214, 0.28)
+            z-index: 2
+            width: 320px
+            height: 160px
+        .bgBanner2
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url("/assets/homepage/raffles/banner2.png")
+            background-repeat: no-repeat
+            background-size: cover
+        .banner3
+            top: 219px
+            left: 443px
+            z-index: 3
+            width: 400px
+            height: 200px
+            filter: drop-shadow(0px 0px 60px rgba(11, 235, 214, 0.64))
+        .bgBanner3
+            background-image: url("/assets/homepage/raffles/banner3.png")
+            background-repeat: no-repeat
+            background-size: cover
+
+        .banner4
+            top: 192px
+            right: 163px
+            z-index: 2
+            box-shadow: 0px 0px 120px rgba(11, 235, 214, 0.28)
+            width: 320px
+            height: 160px
+        .bgBanner4
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url("/assets/homepage/raffles/banner4.png")
+            background-repeat: no-repeat
+            background-size: cover
+
+        .banner5
+            top: 167px
+            right: -57px
+            box-shadow: 0px 0px 120px rgba(11, 235, 214, 0.28)
+            z-index: 1
+            width: 320px
+            height: 160px
+        .bgBanner5
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/homepage/raffles/banner5.png")
+            background-repeat: no-repeat
+            background-size: cover
+
+    .footer
+        width: 615px
+        margin-top: 100px
+        background-color: #897
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        .footerBtnJoin
+            position: relative
+            color: white
+            padding: 9px 56px 8px
+            background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+            display: flex
+            align-items: center
+            justify-content: center
+            width: max-content
+            // height: 52px
+            .borderBtn
+                position: absolute
+                top: -2px
+                bottom: -2px
+                right: -2px
+                left: -2px
+                border: 1px solid #00F9FF
+            span
+                font-family: 'Revx Neue Demo'
+                font-style: normal
+                font-weight: 400
+                font-size: 28px
+                line-height: 31px
+                letter-spacing: 0.2em
+                text-transform: uppercase
+                color: #000000
+        .footerRank
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            margin-top: 32px
+            .footerItem1
+                display: flex
+                align-items: center
+                justify-content: center
+                .time
+                    font-family: 'Lexend'
+                    font-style: normal
+                    font-weight: 300
+                    font-size: 11px
+                    line-height: 14px
+                    display: flex
+                    align-items: center
+                    text-align: right
+                    color: #FFD058
+                .name
+                    width: 121px
+                    height: 14px
+                    font-family: 'Lexend'
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 11px
+                    line-height: 14px
+                    color: #FFFFFF
+
+@media (max-width: 1400px) and (min-width: 980px)
+    .raffles_wrapper
+        .body
+            width: 1286px
+            .banner1, .bgBanner1, .banner5, .bgBanner5
+                display: none !important
+@media (max-width: 980px)

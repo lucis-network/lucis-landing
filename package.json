@@ -17,8 +17,8 @@
     "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.9",
     "@ant-design/icons": "^4.7.0",
+    "@apollo/client": "^3.5.9",
     "@github/mini-throttle": "2.1.0",
     "@react-three/drei": "7.26.1",
     "@react-three/fiber": "7.0.21",
@@ -28,9 +28,14 @@
     "firebase": "^9.8.3",
     "framer-motion": "6.0.0-beta.5",
     "framer-motion-3d": "6.0.0-beta.5",
+    "graphql": "^16.3.0",
+    "graphql-ws": "^5.6.3",
     "highcharts": "^9.3.2",
-    "next": "12.0.7",
+    "moment": "^2.29.3",
+    "moment-timezone": "^0.5.34",
+    "next": "^12.0.7",
     "next-plugin-antd-less": "^1.6.0",
+    "numeral": "^2.0.6",
     "popmotion": "11.0.3",
     "rc-queue-anim": "^2.0.0",
     "rc-scroll-anim": "^2.7.6",
@@ -45,13 +50,8 @@
     "react-use-measure": "2.1.1",
     "slick-carousel": "^1.8.1",
     "smoothscroll-polyfill": "^0.4.4",
-    "swiper": "^8.3.1",
-    "three": "0.135.0",
-    "graphql": "^16.3.0",
-    "graphql-ws": "^5.6.3",
-    "moment": "^2.29.3",
-    "moment-timezone": "^0.5.34",
-    "numeral": "^2.0.6"
+    "swiper": "^8.3.2",
+    "three": "0.135.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "2.6.2",

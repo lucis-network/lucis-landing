@@ -12,10 +12,24 @@
     display: block
 .menuMobile
   margin-top: 0
-  padding: 10px 30px
+  padding: 12px 30px
   background: rgba(0, 6, 37, 0.8)
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8)
   backdrop-filter: blur(40px)
+  height: 46px
+  @media screen and (min-width: 575px)
+    height: 54px
+  @media screen and (min-width: 768px)
+    height: 68px
+  a
+    img
+      width: 77px
+      @media screen and (min-width: 575px)
+        width: 102px
+      @media screen and (min-width: 768px)
+        width: 120px
+      @media screen and (min-width: 1024px)
+        width: 150px
 .mHumber
   position: absolute
   top: 10px
@@ -67,7 +81,7 @@
   justify-content: center
   align-items: center
   span
-    font-family: 'Revx Neue Demo'
+    font-family: 'RevxNeueDemo'
     font-style: normal
     font-weight: 600
     font-size: 12px
@@ -149,3 +163,8 @@
 .menuMobileItemMarginTop
   margin-top: auto
   padding-top: 24px
+
+.menuMobileLg
+  display: flex
+  align-items: center
+  justify-content: space-between

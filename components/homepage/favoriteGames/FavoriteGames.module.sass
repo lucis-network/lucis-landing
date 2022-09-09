@@ -1,0 +1,153 @@
+.sectionFavoriteGames
+  padding-top: 80px
+  :global(.lucis-container-2)
+    @media screen and (max-width: 1199px)
+      width: 100%
+      padding: 0
+.sliderWrap
+  @media screen and (min-width: 725px)
+    width: 725px
+    margin: auto
+  @media screen and (min-width: 1200px)
+    width: 977px
+  @media screen and (min-width: 1600px)
+    width: 1340px
+  :global(.swiper-wrapper)
+    height: 176px
+    @media screen and (min-width: 1200px)
+      height: 208px
+    @media screen and (min-width: 1600px)
+      height: 320px
+  :global(.swiper-slide):not(.swiper-slide-active)
+    width: 236px !important
+    @media screen and (min-width: 1200px)
+      width: 260px !important
+    @media screen and (min-width: 1600px)
+      width: 436px !important
+  :global(.swiper-slide)
+    display: flex
+    align-items: flex-start
+    opacity: 0
+    transition: opacity .3s
+    .gameItem
+      margin-right: 8px
+      @media screen and (min-width: 1600px)
+        margin-right: 16px
+      &:last-of-type
+        margin-right: 0
+  :global(.swiper-slide-prev)
+    opacity: 1
+    .gameItem
+      &:first-of-type
+        img
+          width: 108px
+          height: 144px
+          @media screen and (min-width: 1600px)
+            width: 200px
+            height: 266px
+      &:last-of-type
+        img
+          width: 120px
+          height: 160px
+          @media screen and (min-width: 1600px)
+            width: 220px
+            height: 292px
+  :global(.swiper-slide-next)
+    opacity: 1
+    .gameItem
+      &:first-of-type
+        img
+          width: 120px
+          height: 160px
+          @media screen and (min-width: 1600px)
+            width: 220px
+            height: 292px
+      &:last-of-type
+        img
+          width: 108px
+          height: 144px
+          @media screen and (min-width: 1600px)
+            width: 200px
+            height: 266px
+  :global(.swiper-slide-active)
+    opacity: 1
+    width: 272px !important
+    @media screen and (min-width: 1600px)
+      width: 496px !important
+    .gameItem
+      img
+        width: 132px
+        height: 176px
+        @media screen and (min-width: 1200px)
+          width: 156px
+          height: 208px
+        @media screen and (min-width: 1600px)
+          width: 240px
+          height: 320px
+  :global(.swiper-pagination)
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 16px
+    @media screen and (min-width: 1600px)
+      margin-top: 32px
+    :global(.swiper-pagination-bullet)
+      width: 8px
+      height: 8px
+      border-radius: 50%
+      background: #fff
+      display: block
+      margin-right: 12px
+      @media screen and (min-width: 1600px)
+        width: 12px
+        height: 12px
+      &:last-of-type
+        margin-right: 0
+    :global(.swiper-pagination-bullet-active)
+      background: #00FFFF
+.gameItem
+  position: relative
+  opacity: 0.5
+  cursor: no-drop
+  &:global(.available)
+    opacity: 1
+    cursor: pointer
+    &:after
+      opacity: 0
+    &:hover
+      &:after
+        opacity: 1
+      .btnCommon
+        opacity: 1
+        visibility: visible
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 12, 13, 0) 0%, #000C0D 100%)
+    z-index: 0
+    border-radius: 4px
+    transition: .3s
+  img
+    border-radius: 4px
+    transition: .3s
+    width: 132px
+    height: 176px
+    @media screen and (min-width: 1600px)
+      width: 240px
+      height: 320px
+      border-radius: 8px
+  .btnCommon
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1
+    opacity: 0
+    visibility: hidden
+    transition: .3s
+    @media screen and (min-width: 1600px)
+      font-size: 14px

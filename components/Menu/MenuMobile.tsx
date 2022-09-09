@@ -78,13 +78,13 @@ export const MenuMobile = (props: any) => {
         className={`${s.mobileMenu} fixed top-0 left-0 right-0 z-[101] bg-nav backdrop-blur-sm`}
       >
         <div className={`${s.menuMobile} flex justify-between items-center`}>
-          <div style={{width: 150, height: 42, padding: "3px 0"}}>
+          <div>
             {/*<Link href="/">*/}
             {/*  <Image src="/assets/header/logo_mobile.png" width={150} height={42} alt="logo" layout="responsive"></Image>*/}
             {/*</Link>*/}
             <Link href="/" passHref>
               <a>
-                <img src="/assets/header/logo_mobile.png" width={150} height={42} alt="logo"/>
+                <img src="/assets/header/logo_mobile.png"  alt="logo"/>
               </a>
             </Link>
           </div>

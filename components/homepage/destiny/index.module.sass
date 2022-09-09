@@ -3,8 +3,11 @@
   display: flex
   align-items: center
   justify-content: center
-  margin-top: 180px
-
+  margin-top: 80px
+  @media screen and (min-width: 768px)
+    margin-top: 120px
+  @media screen and (min-width: 1200px)
+    margin-top: 200px
   .container
     max-width: 1400px
     z-index: 1
@@ -19,38 +22,61 @@
       h1
         font-family: "RevxNeueDemo" , serif
         font-weight: 400
-        font-size: 48px
-        line-height: 53px
+        font-size: 24px
+        line-height: 26px
         color: #FFFFFF
-
+        @media screen and (min-width: 575px)
+          font-size: 34px
+          line-height: 38px
+        @media screen and (min-width: 992px)
+          font-size: 48px
+          line-height: 53px
     .navigate
       display: flex
       align-items: center
-      justify-content: center
-      margin-top: 48px
-      width: 100%
-      font-weight: 400
-      font-size: 16px
-      line-height: 18px
+      justify-content: flex-start
+      margin-top: 24px
       overflow-x: scroll
       min-height: 46px
       padding-bottom: 14px
+      margin-left: 10px
+      margin-right: 10px
       color: #DBE0E8
+      span
+        font-weight: 400
+        font-size: 14px
+        line-height: 15px
+        @media screen and (min-width: 992px)
+          font-size: 16px
+          line-height: 18px
+      @media screen and (min-width: 992px)
+        margin-top: 36px
+      @media screen and (min-width: 1200px)
+        margin-top: 48px
+      @media screen and (min-width: 1400px)
+        align-items: center
+        justify-content: center
+        margin-left: 0
+        margin-right: 0
       &::-webkit-scrollbar
         display: none
-
+      @media screen and (min-width: 1400px)
+        align-items: center
+        justify-content: center
+        margin-left: 0
       .naviItem, .naviItemActive
         position: relative
         width: max-content
         font-family: "RevxNeueDemo"
         cursor: pointer
-        padding: 10px 47px
+        padding: 10px 26px
         height: 38px
         display: flex
         align-items: center
         justify-content: center
         border-right: 1px solid rgba(255, 255, 255, 0.3)
-
+        @media screen and (min-width: 992px)
+          padding: 10px 47px
         &:last-child
           border: none
           padding-right: 0
@@ -87,46 +113,109 @@
         border-top: 1px solid rgba(255, 255, 255, 0.3)
         width: 100%
     .someDestiny
-      margin-top: 12px
-      padding: 36px 0 36px 8px
+      padding: 24px 0
+      @media screen and (min-width: 992px)
+        margin-top: 12px
+        padding: 36px 0 36px 8px
 
 .titleTab
   font-family: 'RevxNeueDemo'
   font-style: normal
   font-weight: 600
-  font-size: 32px
-  line-height: 35px
+  font-size: 24px
+  line-height: 26px
   text-transform: uppercase
   color: #0BEBD6
   margin-bottom: 16px !important
+  @media screen and (min-width: 768px)
+    font-size: 28px
+    line-height: 32px
+  @media screen and (min-width: 1200px)
+    font-size: 32px
+    line-height: 35px
 
+.titleTabRes
+  display: flex
+  justify-content: center
+  margin-bottom: 0 !important
+  @media screen and (min-width: 992px)
+    display: none
+.titleTabHid
+  @media screen and (max-width: 991px)
+    display: none
 .title
   h3
     font-family: 'Lexend'
     font-weight: 400
-    font-size: 24px
-    line-height: 34px
+    font-size: 14px
+    line-height: 20px
     text-transform: capitalize
     color: #FFFFFF
+    @media screen and (min-width: 768px)
+      font-size: 16px
+      line-height: 20px
+    @media screen and (min-width: 992px)
+      font-size: 20px
+      line-height: 24px
+    @media screen and (min-width: 1200px)
+      font-size: 24px
+      line-height: 34px
 .desc
-  margin-top: 4px
+  margin-top: 8px
   margin-bottom: 24px
+  @media screen and (min-width: 1200px)
+    margin-top: 4px
   p
     font-family: 'Lexend'
     font-weight: 300
-    font-size: 24px
-    line-height: 34px
+    font-size: 14px
+    line-height: 20px
     color: #E6E6E6
+    @media screen and (min-width: 575px)
+      font-size: 16px
+      line-height: 20px
+    @media screen and (min-width: 768px)
+      font-size: 18px
+      line-height: 22px
+    @media screen and (min-width: 1200px)
+      font-size: 22px
+      line-height: 26px
+    @media screen and (min-width: 1400px)
+      font-size: 24px
+      line-height: 34px
+.rightContentC
+  @media screen and (min-width: 575px)
+    padding: 0 20px
+  @media screen and (min-width: 768px)
+    padding: 0 30px
+  @media screen and (min-width: 992px)
+    padding: 0 10px 0 0
+.wrapperC
+  display: flex
+  flex-direction: column-reverse
+  gap: 16px 24px
+  @media screen and (min-width: 992px)
+    flex-direction: row
+.leftContentC
+  padding: 0 16px
+  @media screen and (min-width: 992px)
+    padding: 0
+  @media screen and (min-width: 1400px)
+    min-width: 660px
+    max-width: 660px
 .wrapperSocialFi
   display: flex
-  gap: 0 24px
+  flex-direction: column-reverse
+  gap: 16px 24px
+  @media screen and (min-width: 992px)
+    flex-direction: row
   .leftContent
-    width: 660px
+    @media screen and (min-width: 1200px)
+      margin-top: 22px
   .rightContent
     position: relative
     &:before
       position: absolute
-      content: ""
       background: url(/assets/homepage/destiny/bg_img.png) no-repeat
       background-size: cover
       width: 100%
@@ -134,58 +223,74 @@
       left: -9%
       aspect-ratio: 710/498
       z-index: -1
-    img
-      position: relative
+      @media screen and (min-width: 992px)
+        content: ""
 .wrapperArena
-  display: flex
-  gap: 0 16px
   .leftContent
-    width: 660px
-    display: flex
-    flex-direction: column
-    justify-content: center
     .descArena
       font-family: 'Lexend'
-      font-size: 24px
-      line-height: 34px
+      font-size: 14px
+      line-height: 20px
       .descArenaBold
         text-transform: capitalize
         font-weight: 400
         margin-right: 6px
       .descArenaNormal
-        text-transform: lowercase
         font-weight: 300
         color: #DBE0E8
+      @media screen and (min-width: 575px)
+        font-size: 16px
+        line-height: 20px
+      @media screen and (min-width: 768px)
+        font-size: 18px
+        line-height: 22px
+      @media screen and (min-width: 1200px)
+        font-size: 22px
+        line-height: 26px
+      @media screen and (min-width: 1400px)
+        font-size: 24px
+        line-height: 34px
     .descArenaB
-      margin-top: 24px
+      margin-top: 16px
       margin-bottom: 24px
+      @media screen and (min-width: 1400px)
+        margin-top: 24px
 .wrapperInsight
-  display: flex
-  gap: 0 24px
   .leftContent
-    width: 660px
+    @media screen and (min-width: 1200px)
+      min-width: 660px
+      max-width: 660px
 .wrapperMedia
-  display: flex
-  gap: 0 24px
   .leftContent
-    width: 660px
-    display: flex
-    flex-direction: column
-    justify-content: center
+    @media screen and (min-width: 1200px)
+      min-width: 660px
+      max-width: 660px
 .wrapperLaunchpad
-  display: flex
-  gap: 0 16px
   .leftContent
-    width: 660px
+
+  .descLaunchpad
     display: flex
     flex-direction: column
-    justify-content: center
-  .descLaunchpad
+    gap: 16px 0
+    @media screen and (min-width: 992px)
+      gap: 16px 0
     font-family: 'Lexend'
-    font-size: 24px
-    line-height: 34px
+    font-size: 14px
+    line-height: 20px
     margin-bottom: 24px
-    span
+    @media screen and (min-width: 575px)
+      font-size: 16px
+      line-height: 20px
+      @media screen and (min-width: 768px)
+        font-size: 18px
+        line-height: 22px
+      @media screen and (min-width: 1200px)
+        font-size: 22px
+        line-height: 26px
+      @media screen and (min-width: 1400px)
+        font-size: 24px
+        line-height: 34px
+    div
       font-weight: 300
       color: #DBE0E8
     b
@@ -197,6 +302,7 @@
   flex-direction: column
   justify-content: center
   margin-bottom: 65px
+
 
 .btn
   color: #000000 !important

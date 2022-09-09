@@ -138,6 +138,7 @@
   display: flex
   justify-content: center
   margin-bottom: 0 !important
+  text-align: center
   @media screen and (min-width: 992px)
     display: none
 .titleTabHid
@@ -200,6 +201,8 @@
   padding: 0 16px
   @media screen and (min-width: 992px)
     padding: 0
+  @media screen and (min-width: 1200px)
+    margin-top: 22px
   @media screen and (min-width: 1400px)
     min-width: 660px
     max-width: 660px
@@ -273,7 +276,7 @@
     flex-direction: column
     gap: 16px 0
     @media screen and (min-width: 992px)
-      gap: 16px 0
+      gap: 24px 0
     font-family: 'Lexend'
     font-size: 14px
     line-height: 20px
@@ -303,8 +306,30 @@
   justify-content: center
   margin-bottom: 65px
 
-
 .btn
   color: #000000 !important
   padding: 0 21px
   width: fit-content
+
+.descRanking
+  display: flex
+  flex-direction: column
+  gap: 16px 0
+  @media screen and (min-width: 992px)
+    gap: 24px 0
+  font-family: 'Lexend'
+  font-size: 14px
+  line-height: 20px
+  margin-bottom: 24px
+  @media screen and (min-width: 575px)
+    font-size: 16px
+    line-height: 20px
+    @media screen and (min-width: 768px)
+      font-size: 18px
+      line-height: 22px
+    @media screen and (min-width: 1200px)
+      font-size: 22px
+      line-height: 26px
+    @media screen and (min-width: 1400px)
+      font-size: 24px
+      line-height: 34px

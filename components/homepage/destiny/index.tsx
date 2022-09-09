@@ -21,7 +21,7 @@ const Destiny = () => {
   const SocialFi = () => {
     return (
       <div className={`${s.wrapperC} ${s.wrapperSocialFi}`}>
-        <div className={s.leftContent}>
+        <div className={`${s.leftContentC} ${s.leftContent}`}>
           <h2 className={`${s.titleTab} ${s.titleTabHid}`}>Social-Fi network platform</h2>
           <div className={s.title}>
             <h3>Social platform</h3>
@@ -56,7 +56,7 @@ const Destiny = () => {
           <h2 className={`${s.titleTab} ${s.titleTabHid}`}>Arena</h2>
           <div className={s.descArena}>
             <span className={s.descArenaBold}>A platform</span>
-            <span className={s.descArenaNormal}>For Creating, Running Tournament Events.</span>
+            <span className={s.descArenaNormal}>for creating, running tournament events.</span>
           </div>
           <div className={`${s.descArena} ${s.descArenaB}`}>
             <span className={s.descArenaBold}>Team</span>
@@ -111,7 +111,7 @@ const Destiny = () => {
     return (
       <div className={`${s.wrapperC} ${s.wrapperMedia}`}>
         <div className={`${s.leftContentC} ${s.leftContent}`}>
-          <h2 className={`${s.titleTab} ${s.titleTabHid}`}>Launchpad & Marketplace</h2>
+          <h2 className={`${s.titleTab} ${s.titleTabHid}`}>Lucis Media</h2>
           <div className={s.title}>
             <h3>lucis TV and Lucis blog</h3>
           </div>
@@ -127,7 +127,7 @@ const Destiny = () => {
         <div className={s.rightContentC}>
           <img src="/assets/homepage/destiny/lucisMedia.png" alt=""/>
         </div>
-        <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Launchpad & Marketplace</h2>
+        <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Lucis Media</h2>
       </div>
     );
   }
@@ -136,7 +136,7 @@ const Destiny = () => {
     return (
       <div className={`${s.wrapperC} ${s.wrapperLaunchpad}`}>
         <div className={`${s.leftContentC} ${s.leftContent}`}>
-          <h2 className={`${s.titleTab} ${s.titleTabHid}`}>Lucis Media</h2>
+          <h2 className={`${s.titleTab} ${s.titleTabHid}`}>Launchpad & Marketplace</h2>
           <div className={s.descLaunchpad}>
             <div><b>Game publisher</b> can host INO to sell NFT mistery boxes to Lucis community or users.</div>
             <div>Sell <b>NFT boxes</b> or <b>NFT</b> collection on Lucis marketplace.</div>
@@ -150,7 +150,7 @@ const Destiny = () => {
         <div className={s.rightContentC}>
           <img src="/assets/homepage/destiny/launchpad.png" alt=""/>
         </div>
-        <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Lucis Media</h2>
+        <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Launchpad & Marketplace</h2>
       </div>
     );
   }
@@ -160,10 +160,10 @@ const Destiny = () => {
       <div className={`${s.wrapperC} ${s.wrapperSocialFi}`}>
         <div className={`${s.leftContentC} ${s.leftContent} ${s.leftContentRanking}`}>
           <h2 className={`${s.titleTab} ${s.titleTabHid}`}>Lucis ranking System</h2>
-          <div className={s.desc}>
-            <p>Create a competitive environment for gamers, game clubs and guild games that lets them to actively engage and enjoy the game.<br/>
-              As a result, landing at the top of the leaderboard with monetary or physical prizes.<br/>
-              Achieving the top position will result in numerous awards and recognition on the system.</p>
+          <div className={s.descRanking}>
+            <div><p>Create a competitive environment for gamers, game clubs and guild games that lets them to actively engage and enjoy the game.</p></div>
+            <div><p>As a result, landing at the top of the leaderboard with monetary or physical prizes.</p></div>
+            <div><p>Achieving the top position will result in numerous awards and recognition on the system.</p></div>
           </div>
           <ButtonBorder>
             <div className={s.btn} onClick={() => window.open(process.env.NEXT_PUBLIC_P2E_URL + "/ranking", '_blank')}>

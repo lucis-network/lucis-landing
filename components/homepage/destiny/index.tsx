@@ -201,7 +201,7 @@ const Destiny = () => {
   }
 
   return (
-    <div className={s.destiny_wrapper}>
+    <div className={`lucis-container-2 ${s.destiny_wrapper}`}>
       <div className={s.container}>
         <div className={s.header}>
           <h1>Welcome to our Destiny</h1>

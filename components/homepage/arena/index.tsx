@@ -92,7 +92,7 @@ export default function Arena() {
                 breakpoints={{
                   360: {
                     slidesPerView: 2,
-                    spaceBetween: 7.5
+                    spaceBetween: 8
                   },
                   575: {
                     slidesPerView: 3,
@@ -102,9 +102,17 @@ export default function Arena() {
                     slidesPerView: 3,
                     spaceBetween: 16
                   },
+                  992: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                  },
+                  1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 10
+                  },
                   1320: {
                     slidesPerView: 4,
-                    spaceBetween: 32
+                    spaceBetween: 40
                   }
                 }}
               >

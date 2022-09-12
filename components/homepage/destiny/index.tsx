@@ -42,7 +42,7 @@ const Destiny = () => {
           </ButtonBorder>
         </div>
         <div className={`${s.rightContentC} ${s.rightContent}`}>
-          <img src="/assets/homepage/destiny/imgSocialFi.png" alt=""/>
+          <img src="/assets/homepage/destiny/imgSocial.png" alt=""/>
         </div>
         <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Social-Fi network platform</h2>
       </div>

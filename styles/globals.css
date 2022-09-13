@@ -536,11 +536,11 @@ body .backdrop-blur-sm {
 
 @media screen and (min-width: 1400px) {
   .lucis-container-2 {
-    width: 14000px;
+    width: 1320px;
   }
 }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1600px) {
   .lucis-container-2 {
     width: 1400px;
   }

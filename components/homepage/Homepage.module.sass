@@ -4,24 +4,28 @@
     margin-bottom: 200px
 .sectionTitleWrap
   margin-bottom: 32px
+  @media screen and (max-width: 574px)
+    padding: 0
   @media screen and (min-width: 1200px)
     margin-bottom: 48px
 .sectionTitle
   font-family: 'RevxNeueDemo'
   font-weight: 400
   font-size: 24px
+  line-height: 26px
   text-align: center
   letter-spacing: 0.2em
   color: #FFFFFF
   margin-bottom: 0
   @media screen and (min-width: 1200px)
     font-size: 48px
+    line-height: 53px
 .sectionDesc
   font-family: 'Lexend'
   font-weight: 300
   font-size: 14px
   line-height: 20px
-  letter-spacing: 0.02em
+  letter-spacing: 0.04em
   color: #DBE0E8
   margin-top: 8px
   text-align: center
@@ -33,13 +37,14 @@
   font-family: 'RevxNeueDemo'
   font-weight: 400
   font-size: 12px
+  line-height: 13px
   text-align: center
   letter-spacing: 0.04em
   text-transform: uppercase
   color: #000625
   position: relative
   padding: 7px 10px
-  min-width: 125px
+  min-width: 133px
   &:after
     content: ''
     position: absolute
@@ -50,3 +55,4 @@
     border: 1px solid #000625
   @media screen and (min-width: 1600px)
     font-size: 28px
+    line-height: 31px

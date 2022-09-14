@@ -213,7 +213,7 @@ const Destiny = () => {
                 className={
                   tab === navigateIndex ? s.naviItemActive : s.naviItem
                 }
-                key={navigateItem.key}
+                key={`${navigateItem.key}-${navigateIndex}`}
                 onClick={(e) => onchangeTab(navigateIndex, e)}
               >
                 {tab === navigateIndex ? (

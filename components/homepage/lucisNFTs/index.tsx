@@ -12,8 +12,8 @@ const LucisNFTs = () => {
 
   return (
     <section className={`${homepage.section} ${lucisNFTs.sectionFavoriteGames}`}>
-      <div className={homepage.sectionTitleWrap}>
-        <div className="lucis-container-2">
+      <div className={`lucis-container-2 ${homepage.sectionTitleWrap}`}>
+        <div>
           <h2 className={homepage.sectionTitle}>LUCIS NFTS</h2>
           <p className={homepage.sectionDesc}>Want to earn real money from playing your games?</p>
         </div>
@@ -147,7 +147,7 @@ const LucisNFTs = () => {
           </div>
         </div>
       </div>
-      <button className={`${homepage.btnCommon} ${lucisNFTs.btnCommon}`}>OWN LUCIS NFTS</button>
+      <button className={`${homepage.btnCommon} ${lucisNFTs.btnCommon}`} onClick={() => window.open("https://launchpad.lucis.network/")}>OWN LUCIS NFTS</button>
     </section>
   )
 }

@@ -201,7 +201,7 @@ const Destiny = () => {
   }
 
   return (
-    <div className={s.destiny_wrapper}>
+    <div className={`lucis-container-2 ${s.destiny_wrapper}`}>
       <div className={s.container}>
         <div className={s.header}>
           <h1>Welcome to our Destiny</h1>
@@ -213,7 +213,7 @@ const Destiny = () => {
                 className={
                   tab === navigateIndex ? s.naviItemActive : s.naviItem
                 }
-                key={navigateItem.key}
+                key={`${navigateItem.key}-${navigateIndex}`}
                 onClick={(e) => onchangeTab(navigateIndex, e)}
               >
                 {tab === navigateIndex ? (

@@ -45,14 +45,12 @@ export default function ItemArena(prop: Props) {
               </div>
               <div className={s.itemDescImgLR}>
                 <img src="/assets/homepage/play_arena.svg" alt=""/>
-                <span>{item?.team_size} vs {item?.team_size}</span>
+                <span>{item?.team_size} v {item?.team_size}</span>
               </div>
             </div>
             <div className={s.thumbnail}>
               <img
-                //src={item?.cover}
-                src="/assets/homepage/test_arena.png"
-                alt=""/>
+                src={item?.cover ? item?.cover : "/assets/homepage/test_arena.png"}/>
             </div>
           </div>
           <div className={s.itemDesc}>

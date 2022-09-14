@@ -4,12 +4,13 @@
 
 .pageContainer:before {
   content: "";
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
   transform: skew(-24deg);
   mix-blend-mode: soft-light;
-  left: -30%;
-  background: linear-gradient(35.2deg,rgba(0,0,10,0) 23.09%,rgba(0,0,10,.58) 58.32%,rgba(0,0,10,.37) 61.71%,rgba(0,0,10,0) 98.79%);
+  left: -32%;
+  background: linear-gradient(25.36deg, #1d1b1bab 68.01%, #AFAFAF 90.25%);
+  z-index: 0;
 }

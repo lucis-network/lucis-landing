@@ -70,8 +70,10 @@
   @media screen and (max-width: 991px)
     flex-direction: column-reverse
   @media screen and (min-width: 1400px)
-    width: 1400px !important
+    width: 1320px !important
     height: 580px
+  @media screen and (min-width: 1600px)
+    width: 1400px !important
   .leftContainer
     display: flex
     flex-direction: column
@@ -93,21 +95,27 @@
     min-width: 375px
     max-width: 375px
     gap: 8px 8px
-    //flex-wrap: wrap
     margin-bottom: 24px
+    @media screen and (max-width: 574px)
+      padding: 0 8px
+    @media screen and (min-width: 375px) and (max-width: 574px)
+      margin-bottom: 8px !important
     :global(.swiper-slide)
       height: auto
       margin-top: 0 !important
+      //@media screen and (max-width: 574px)
+      //  width: 84px !important
       @media screen and (min-width: 992px)
         margin-bottom: 8px !important
+
     :global(.swiper-grid-column>.swiper-wrapper)
       flex-direction: row
     @media screen and (min-width: 575px)
-      min-width: 575px
-      max-width: 575px
+      min-width: 540px
+      max-width: 540px
     @media screen and (min-width: 768px)
-      min-width: 768px
-      max-width: 768px
+      min-width: 720px
+      max-width: 720px
     @media screen and (min-width: 992px)
       min-width: 463px
       max-width: 463px

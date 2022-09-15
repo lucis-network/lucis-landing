@@ -47,19 +47,19 @@ export default function Header() {
                       HOME
                     </a>
                   </Link></li>
-                <li className={`${router.pathname.includes("/playcore") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD ?? "/"} passHref>
+                <li className={`${router.pathname.includes("/playcore") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD ?? ""} passHref>
                   <a target="_blank">
                     PLAYCORE
                   </a>
                 </Link></li>
-                <li className={`${router.pathname.includes("/arena") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD + "/arena" ?? "/"} passHref>
+                <li className={`${router.pathname.includes("/arena") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD + "arena" ?? ""} passHref>
                   <a target="_blank">
                     ARENA
                   </a>
                 </Link></li>
                 <li><a href="https://insight.lucis.network/" target="_blank"
                        rel="noopener noreferrer">INSIGHT</a></li>
-                <li className={`${router.pathname.includes("/ranking") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD + "/ranking" ?? "/"} passHref>
+                <li className={`${router.pathname.includes("/ranking") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD + "ranking" ?? ""} passHref>
                   <a target="_blank">
                     RANKING
                   </a>

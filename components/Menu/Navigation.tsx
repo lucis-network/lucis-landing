@@ -86,7 +86,7 @@ export const Navigation = () => {
     {
       color: "#FF008C",
       text: "ARENA",
-      src: process.env.NEXT_PUBLIC_P2E_URL_PROD + "/arena" ?? "",
+      src: process.env.NEXT_PUBLIC_P2E_URL_PROD + "arena" ?? "",
     },
     {
       color: "#FF008C",
@@ -96,7 +96,7 @@ export const Navigation = () => {
     {
       color: "#FF008C",
       text: "RANKING",
-      src: process.env.NEXT_PUBLIC_P2E_URL_PROD + "/ranking" ?? "",
+      src: process.env.NEXT_PUBLIC_P2E_URL_PROD + "ranking" ?? "",
     },
     {
       color: "#FF008C",

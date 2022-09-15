@@ -1,17 +1,22 @@
-import React, { useState, useEffect } from "react";
-import s from "./index.module.sass";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {EffectCoverflow, Navigation, Pagination} from "swiper";
+import React from "react";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Mousewheel, Pagination} from "swiper";
 import homepage from "../Homepage.module.sass";
 import rafflesStyle from "./Raffles.module.sass";
-import { Mousewheel } from "swiper";
-import { useGetRecentWinners } from "hooks/useRafflesList";
+import {useGetRaffles, useGetRecentWinners} from "hooks/useRafflesList";
 import {Image} from "antd";
+import {RaffleStatusType} from "../../../src/generated/graphql_p2e";
 
 const Raffles = () => {
   const {getRecentWinnersLoading, getRecentWinnersError, getRecentWinnersData} = useGetRecentWinners();
+  const {getRafflesLoading, getRafflesError, getRafflesData} = useGetRaffles({
+    filter: {
+      status: RaffleStatusType.Enabled,
+      page: 1
+    }
+  });
 
-  console.log("getRecentWinnersData", getRecentWinnersData);
+  const rafflesData = getRafflesData?.searchRaffle
 
   return (
     <section className={`${homepage.section} ${rafflesStyle.sectionRaffles}`}>
@@ -28,40 +33,15 @@ const Raffles = () => {
             centeredSlides
             initialSlide={2}
             slidesPerView="auto"
-            // breakpoints={{
-            //   320: {
-            //     slidesPerView: 2,
-            //   },
-            //   1600: {
-            //     slidesPerView: 5,
-            //   },
-            // }}
+            slideToClickedSlide
           >
-            <SwiperSlide>
-              <div className={rafflesStyle.sliderItem}>
-                <img src="/assets/homepage/raffles/raffle2.jpg" alt=""/>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={rafflesStyle.sliderItem}>
-                <img src="/assets/homepage/raffles/raffle1.jpg" alt=""/>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={rafflesStyle.sliderItem}>
-                <img src="/assets/homepage/raffles/raffle3.jpg" alt=""/>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={rafflesStyle.sliderItem}>
-                <img src="/assets/homepage/raffles/raffle2.jpg" alt=""/>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className={rafflesStyle.sliderItem}>
-                <img src="/assets/homepage/raffles/raffle1.jpg" alt=""/>
-              </div>
-            </SwiperSlide>
+            {rafflesData && rafflesData.map(raffle => (
+              <SwiperSlide key={raffle?.uid}>
+                <div className={rafflesStyle.sliderItem}>
+                  <img src={raffle?.img ?? ''} alt=""/>
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

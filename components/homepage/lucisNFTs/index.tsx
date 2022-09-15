@@ -45,14 +45,14 @@ const LucisNFTs = () => {
                 <img src="/assets/homepage/lucisNFTs/nftBuffallo.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Tarusboss NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
               <div className={lucisNFTs.nftItem}>
                 <img src="/assets/homepage/lucisNFTs/nftSnake.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Pythonite NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -61,14 +61,14 @@ const LucisNFTs = () => {
                 <img src="/assets/homepage/lucisNFTs/nftCat.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Meowy NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
               <div className={lucisNFTs.nftItem}>
                 <img src="/assets/homepage/lucisNFTs/nftChicken.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Roosteron NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -77,14 +77,14 @@ const LucisNFTs = () => {
                 <img src="/assets/homepage/lucisNFTs/nftDog.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Inuka NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
               <div className={lucisNFTs.nftItem}>
                 <img src="/assets/homepage/lucisNFTs/nftDragon.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Dragod NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -93,14 +93,14 @@ const LucisNFTs = () => {
                 <img src="/assets/homepage/lucisNFTs/nftGoat.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Megacapra NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
               <div className={lucisNFTs.nftItem}>
                 <img src="/assets/homepage/lucisNFTs/nftHorse.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Equusbot NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -109,14 +109,14 @@ const LucisNFTs = () => {
                 <img src="/assets/homepage/lucisNFTs/nftMonkey.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Kongzilla NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
               <div className={lucisNFTs.nftItem}>
                 <img src="/assets/homepage/lucisNFTs/nftMouse.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Robomice NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
             </SwiperSlide>
@@ -125,14 +125,14 @@ const LucisNFTs = () => {
                 <img src="/assets/homepage/lucisNFTs/nftPig.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Scrofasus NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
               <div className={lucisNFTs.nftItem}>
                 <img src="/assets/homepage/lucisNFTs/nftTiger.jpg" alt=""/>
                 <div className={lucisNFTs.nftInfo}>
                   <h3 className={lucisNFTs.nftName}>Tigerion NFT</h3>
-                  <p className={lucisNFTs.nftValue}>7800USD</p>
+                  <p className={lucisNFTs.nftValue}>7,800 USD</p>
                 </div>
               </div>
             </SwiperSlide>

@@ -4,6 +4,7 @@ import {useRouter} from "next/router";
 import React, {useState} from "react";
 import { MenuMobile } from "components/Menu/MenuMobile";
   import {Modal} from "antd";
+  import ButtonBorder from "../Button/buttonBorder/ButtonBorder";
 
 export default function Header() {
   const router = useRouter();
@@ -46,11 +47,23 @@ export default function Header() {
                       HOME
                     </a>
                   </Link></li>
-                <li className={`${router.pathname.includes("/playcore") ? s.active : ""}`}><Link href="https://play-beta.lucis.network/">PLAYCORE</Link></li>
-                <li className={`${router.pathname.includes("/arena") ? s.active : ""}`}><Link href="https://play-beta.lucis.network/arena">ARENA</Link></li>
+                <li className={`${router.pathname.includes("/playcore") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD ?? "/"} passHref>
+                  <a target="_blank">
+                    PLAYCORE
+                  </a>
+                </Link></li>
+                <li className={`${router.pathname.includes("/arena") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD + "/arena" ?? "/"} passHref>
+                  <a target="_blank">
+                    ARENA
+                  </a>
+                </Link></li>
                 <li><a href="https://insight.lucis.network/" target="_blank"
                        rel="noopener noreferrer">INSIGHT</a></li>
-                <li className={`${router.pathname.includes("/ranking") ? s.active : ""}`}><Link href="/ranking">RANKING</Link></li>
+                <li className={`${router.pathname.includes("/ranking") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD + "/ranking" ?? "/"} passHref>
+                  <a target="_blank">
+                    RANKING
+                  </a>
+                </Link></li>
                 <li className={s.default}><a>SCHORLARSHIP <span>Coming Soon</span></a></li>
                 <li className={s.default}><a>SOCIAL <span style={{left: 0}}>Coming Soon</span></a></li>
               </ul>
@@ -117,21 +130,12 @@ export default function Header() {
           </p>
         </div>
         <div id="content_btn">
-          <div id="btn_Chat">
-            <a href="mailto://partner@lucis.network">Email us</a>
-            <img src="/assets/Banner/teleChat.svg" alt="" />
-          </div>
-
-          {/* <div id="btn_Chat">
-                <a
-                  href="https://t.me/lucis_network_application_form"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Chat with us
-                </a>
-                <img src="/assets/Banner/teleChat.svg" alt="" />
-              </div> */}
+          <ButtonBorder>
+            <div className={s.btnEmailUs}>
+              <a href="mailto://partner@lucis.network">Email us</a>
+              <img src="/assets/Banner/teleChat.svg" alt="" />
+            </div>
+          </ButtonBorder>
         </div>
       </Modal>
     </>

@@ -168,3 +168,56 @@
   display: flex
   align-items: center
   justify-content: space-between
+
+.menuNavMobile
+  background: rgba(0, 6, 37, 0.5)
+  backdrop-filter: blur(40px)
+  .listMenuNavMobile
+    li
+      font-family: 'Revx Neue Demo'
+      font-style: normal
+      font-weight: 400
+      font-size: 16px
+      line-height: 26px
+      letter-spacing: 0.04em
+      color: #FFFFFF
+      padding-bottom: 26px
+      &:hover
+        cursor: pointer
+        color: #00FFEC
+  .line
+    border: 1px solid #3D475C
+  .contactUs
+    width: 100%
+    margin-top: 20px
+    .btn
+      width: 100%
+      span
+        padding: 0 76px
+        color: #000625
+        font-weight: 600
+        font-size: 14px
+        line-height: 15px
+.default
+  cursor: not-allowed
+  a
+    pointer-events: none
+    display: flex
+    flex-direction: column
+    position: relative
+    color: #FFFFFF
+    opacity: 0.5
+    span
+      color: #0BEBD6
+      position: absolute
+      bottom: -12px
+      right: 0
+      white-space: nowrap
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      @media ( max-width: 1200px )
+        font-size: 10px
+.btnEmailUs
+  display: flex
+  gap: 0 10px
+  padding: 0 20px

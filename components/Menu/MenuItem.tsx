@@ -57,7 +57,6 @@ export const MenuItem = (props: { item: MenuItemType }) => {
       whileHover={{ scale: 1.05 }}
       // whileTap={{ scale: 0.95 }}
       onClick={() => click(props.item.src)}
-      className="text-placeholder font-saira text-white px-3 py-3"
       style={{ fontSize: "20px", lineHeight: "22px" }}
     >
       {props.item.text}

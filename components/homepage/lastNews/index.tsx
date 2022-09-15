@@ -28,7 +28,7 @@ export default function LastNews() {
             <div className={s.wrapper}>
                 <div className={`lucis-container-2 ${s.container}`}>
                     <div className={s.title}>
-                        <h2>MEDIA</h2>
+                        <h2>SPOTLIGHTS</h2>
                     </div>
                     <div className={s.listNews}>
                       {
@@ -66,15 +66,6 @@ export default function LastNews() {
                               </div>
                             ))
                           }
-                          {/*<div className={`${s.itemHotNews}`}>*/}
-                          {/*  <div className={`${s.tagNameRaffles} ${s.tagNameNews}`}>*/}
-                          {/*    Lucis Review*/}
-                          {/*  </div>*/}
-                          {/*  <img src="/assets/homepage/lucis_review.png" alt=""/>*/}
-                          {/*  <div className={`${s.descHotRaffles} ${s.descHotNews}`}>*/}
-                          {/*    <p>Luicis review Current game market assessment.</p>*/}
-                          {/*  </div>*/}
-                          {/*</div>*/}
                         </div>
                     </div>
                 </div>

@@ -294,7 +294,7 @@ body .ant-modal-close{
     margin-left: -6px;
   }
   .background {
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     right: 0;
     bottom: 0;
@@ -322,7 +322,7 @@ body .ant-modal-close{
   }
 
   .nav-list {
-    padding: 0px 8px;
+    padding: 36px 24px 0 24px;
     position: absolute;
     top: 0;
     left: 0;
@@ -338,8 +338,8 @@ body .ant-modal-close{
   /*.nav-list li:first-child {*/
   /*  margin-bottom: 12px;*/
   /*}*/
-  .nav-list li:last-child {
-    margin-top: 12px;
+  .nav-list {
+    margin-top: 32px;
   }
 
   .icon-placeholder {

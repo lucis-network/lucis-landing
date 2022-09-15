@@ -98,9 +98,11 @@
     :global(.swiper-slide)
       height: auto
       @media screen and (max-width: 374px)
-        width: 176px !important
-    @media screen and (max-width: 574px)
-      width: 360px !important
+        width: 160px !important
+    @media screen and (max-width: 374px)
+      width: 328px !important
+    @media screen and (min-width: 375px) and (max-width: 574px)
+      width: 342px !important
     @media screen and (min-width: 575px)
       width: 540px !important
     @media screen and (min-width: 768px)
@@ -118,12 +120,14 @@
       flex-direction: column
       flex-wrap: wrap
       color: #FFFFFF
-      width: 176px
+      width: 160px
       position: relative
       cursor: pointer
       border-radius: 4px
+      @media screen and (min-width: 375px)
+        width: 167px
       @media screen and (min-width: 575px)
-        width: 176px
+        width: 174px
       @media screen and (min-width: 768px)
         width: 233px
       @media screen and (min-width: 992px)
@@ -170,9 +174,12 @@
             display: flex
             align-items: center
             img
-              width: 12px
-              height: 12px
+              width: 10px
+              height: 10px
               margin-right: 4px
+              @media screen and (min-width: 375px)
+                width: 12px
+                height: 12px
               @media screen and (min-width: 768px)
                 width: 15px
                 height: 15px
@@ -192,9 +199,12 @@
             display: flex
             align-items: center
             img
-              width: 14px
+              width: 12px
               height: 15px
               margin-right: 4px
+              @media screen and (min-width: 375px)
+                width: 14px
+                height: 15px
               @media screen and (min-width: 768px)
                 width: 18px
                 height: 13px
@@ -202,8 +212,11 @@
             span
               font-family: 'Lexend', serif
               font-weight: 300
-              font-size: 10px
+              font-size: 9px
               line-height: 15px
+              @media screen and (min-width: 375px)
+                font-size: 10px
+                line-height: 15px
               @media screen and (min-width: 768px)
                 font-size: 12px
                 line-height: 18px
@@ -213,8 +226,11 @@
           .itemDescImgGameMode
             font-family: 'Lexend', serif
             font-weight: 300
-            font-size: 10px
+            font-size: 9px
             line-height: 15px
+            @media screen and (min-width: 375px)
+              font-size: 10px
+              line-height: 15px
             @media screen and (min-width: 768px)
               font-size: 12px
               line-height: 15px
@@ -238,8 +254,8 @@
         //  margin-top: 12px
         .itemFreeEntry
           padding: 9px 20px 9px 9px
-          min-width: 58px
-          max-width: 58px
+          min-width: 56px
+          max-width: 56px
           position: relative
           overflow: hidden
           @media screen and (min-width: 575px)
@@ -295,8 +311,8 @@
           @media screen and (min-width: 992px)
             margin-left: 10px
           img
-            width: 20px
-            height: 20px
+            min-width: 18px
+            height: 18px
             border-radius: 50%
             @media screen and (min-width: 575px)
               min-width: 25px
@@ -373,9 +389,12 @@
         .itemCurrency
           font-family: 'Lexend', serif
           font-weight: 600
-          font-size: 12px
+          font-size: 11px
           line-height: 15px
           color: #FFD058
+          @media screen and (min-width: 575px)
+            font-size: 12px
+            line-height: 15px
           @media screen and (min-width: 768px)
             font-size: 14px
             line-height: 18px
@@ -405,10 +424,12 @@
             margin-bottom: 0
             font-family: 'Lexend', serif
             font-weight: 400
-            font-size: 10px
+            font-size: 9px
             line-height: 15px
             color: #00F9FF
-            margin-top: 2px
+            @media screen and (min-width: 375px)
+              font-size: 10px
+              line-height: 15px
             @media screen and (min-width: 768px)
               font-size: 12px
               line-height: 16px

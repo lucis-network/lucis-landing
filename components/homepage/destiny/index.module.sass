@@ -204,7 +204,8 @@
     padding: 0 30px
   @media screen and (min-width: 992px)
     padding: 0 10px 0 0
-
+  img
+    object-fit: contain
 .wrapperC
   display: flex
   flex-direction: column-reverse
@@ -213,8 +214,13 @@
     flex-direction: row
 .leftContentC
   padding: 0
+  @media screen and (min-width: 992px)
+    min-width: 500px
+    max-width: 500px
   @media screen and (min-width: 1200px)
     margin-top: 22px
+    min-width: 600px
+    max-width: 600px
   @media screen and (min-width: 1400px)
     min-width: 660px
     max-width: 660px
@@ -240,6 +246,9 @@
       z-index: -1
       @media screen and (min-width: 992px)
         content: ""
+    img
+      width: 100%
+      aspect-ratio: 375/196
 .wrapperArena
   .leftContent
     .descArena
@@ -271,15 +280,13 @@
       @media screen and (min-width: 1400px)
         margin-top: 24px
 .wrapperInsight
-  .leftContent
-    @media screen and (min-width: 1200px)
-      min-width: 660px
-      max-width: 660px
+  .rightContent
+    @media screen and (min-width: 1600px)
+      margin-top: 20px
 .wrapperMedia
-  .leftContent
+  .rightContent
     @media screen and (min-width: 1200px)
-      min-width: 660px
-      max-width: 660px
+      margin-top: 20px
 .wrapperLaunchpad
   .descLaunchpad
     display: flex
@@ -309,7 +316,9 @@
     b
       font-weight: 500
       color: #FFFFFF
-
+  .rightContent
+    @media screen and (min-width: 992px)
+      margin-top: 20px
 .leftContentRanking
   display: flex
   flex-direction: column

@@ -68,7 +68,7 @@ const Destiny = () => {
             </div>
           </ButtonBorder>
         </div>
-        <div className={s.rightContentC}>
+        <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/tournaments.png" alt=""/>
         </div>
         <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Arena</h2>
@@ -99,7 +99,7 @@ const Destiny = () => {
             </div>
           </ButtonBorder>
         </div>
-        <div className={s.rightContentC}>
+        <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/lucisInsight.png" alt=""/>
         </div>
         <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Lucis Insight & Game Ranking system</h2>
@@ -124,7 +124,7 @@ const Destiny = () => {
             </div>
           </ButtonBorder>
         </div>
-        <div className={s.rightContentC}>
+        <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/lucisMedia.png" alt=""/>
         </div>
         <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Lucis Media</h2>
@@ -147,7 +147,7 @@ const Destiny = () => {
             </div>
           </ButtonBorder>
         </div>
-        <div className={s.rightContentC}>
+        <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/launchpad.png" alt=""/>
         </div>
         <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Launchpad & Marketplace</h2>

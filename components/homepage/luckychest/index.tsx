@@ -58,7 +58,7 @@ export default function LuckyChest() {
                   breakpoints={{
                     360: {
                       slidesPerView: 4,
-                      spaceBetween: 8,
+                      spaceBetween: 10,
                       //loop: true,
                       grid: {
                         rows: 1,

@@ -1,42 +1,5 @@
 .wrapper
   background: rgba(0, 6, 37, 0.48)
-.container1
-  //display: flex
-  //align-items: center
-  text-align: center
-  ul
-    margin: 0
-    padding: 0
-  @media screen and (min-width: 1400px)
-    width: 615px !important
-    height: 84px
-  .rowData
-    .time
-      font-family: 'Lexend'
-      font-weight: 300
-      font-size: 16px
-      line-height: 20px
-      color: #FFD058
-    .name
-      font-family: 'Lexend'
-      font-weight: 400
-      font-size: 16px
-      line-height: 20px
-      color: #FFFFFF
-    .desc
-      font-family: 'Lexend'
-      font-weight: 300
-      font-size: 16px
-      line-height: 20px
-      color: #D9D9D9
-    .value
-      font-family: 'Lexend'
-      font-weight: 400
-      font-size: 16px
-      line-height: 20px
-      background: linear-gradient(90deg, #BB7239 0%, #FCEEAE 22.75%, #E09E5B 52.16%, #FCE9A4 75.29%, #F1D693 82.75%, #E1BD7C 92.16%, #D08A4A 100%)
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
 .container
   display: flex
   align-items: center
@@ -92,19 +55,20 @@
       padding-top: 0
   .listItems
     display: flex
-    min-width: 375px
-    max-width: 375px
+    min-width: 360px
+    max-width: 360px
     gap: 8px 8px
-    margin-bottom: 24px
-    @media screen and (max-width: 574px)
-      padding: 0 8px
+    margin-bottom: 24px !important
     @media screen and (min-width: 375px) and (max-width: 574px)
-      margin-bottom: 8px !important
+      min-width: 375px
+      max-width: 375px
     :global(.swiper-slide)
       height: auto
       margin-top: 0 !important
-      //@media screen and (max-width: 574px)
-      //  width: 84px !important
+      @media screen and (max-width: 374px)
+        width: 84px !important
+      @media screen and (min-width: 375px) and (max-width: 574px)
+        width: 87px !important
       @media screen and (min-width: 992px)
         margin-bottom: 8px !important
 

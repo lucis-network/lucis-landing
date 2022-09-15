@@ -1,6 +1,10 @@
 .sectionRaffles
   .sectionTitleWrap
-    margin-bottom: -30px
+    margin-bottom: -50px
+    @media screen and (min-width: 1200px)
+      margin-bottom: -120px
+    @media screen and (min-width: 1400px)
+      margin-bottom: -150px
 .rafflesBg
   width: 444px
   max-width: 100%
@@ -27,6 +31,7 @@
     width: 1286px
     margin: 0 auto -213px
 .sliderWrap
+  margin-bottom: -26px
   @media screen and (min-width: 768px)
     width: 760px
     margin: auto
@@ -124,6 +129,11 @@
           transform: translateX(60px)
         @media screen and (min-width: 1900px)
           transform: translateX(100px)
+.btnCommon
+  position: relative
+  z-index: 1
+  @media screen and (min-width: 768px)
+    width: 277px
 .spotlight
   display: flex
   justify-content: center

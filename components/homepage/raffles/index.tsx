@@ -64,44 +64,45 @@ const Raffles = () => {
             </SwiperSlide>
           </Swiper>
         </div>
+      </div>
+      <div className="lucis-container-2 text-center">
         <button className={`${homepage.btnCommon} ${rafflesStyle.btnCommon}`}>JOIN NOW</button>
+      </div>
+      <div className={rafflesStyle.spotlight}>
+        <Swiper
+          direction={"vertical"}
+          slidesPerView={4}
+          spaceBetween={4}
+          centeredSlides
+          initialSlide={3}
+          mousewheel={true}
+          loopedSlides={1}
+          loopedSlidesLimit={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Mousewheel, Pagination]}
+          className="mySwiper"
+          loop={true}
+        >
+          {
+            getRecentWinnersData && getRecentWinnersData?.getRecentWinners?.slice(0,8).map((item, index) => {
+                return (
+                  <div key={`${item?.raffle?.uid}${index}`}>
+                    <SwiperSlide>
+                      <span className={rafflesStyle.time}></span>
+                      <Image src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : '/assets/homepage/default_avatar.png'} preview={false} alt="" fallback="/assets/homepage/default_avatar.png" />
+                      <span className={rafflesStyle.name}>{item?.user?.profile?.display_name}</span>
+                      <span className={rafflesStyle.desc}>Received a prize at</span>
+                      <span className={rafflesStyle.value}> ${item?.raffle?.valued_at}</span>
+                    </SwiperSlide>
+                  </div>
+                )
+              }
+            )
+          }
 
-        <div className={rafflesStyle.spotlight}>
-          <Swiper
-            direction={"vertical"}
-            slidesPerView={4}
-            spaceBetween={4}
-            centeredSlides
-            initialSlide={3}
-            mousewheel={true}
-            loopedSlides={1}
-            loopedSlidesLimit={true}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Mousewheel, Pagination]}
-            className="mySwiper"
-            loop={true}
-          >
-            {
-              getRecentWinnersData && getRecentWinnersData?.getRecentWinners?.slice(0,8).map((item, index) => {
-                  return (
-                    <div key={`${item?.raffle?.uid}${index}`}>
-                      <SwiperSlide>
-                        <span className={rafflesStyle.time}></span>
-                        <Image src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : '/assets/homepage/default_avatar.png'} preview={false} alt="" fallback="/assets/homepage/default_avatar.png" />
-                        <span className={rafflesStyle.name}>{item?.user?.profile?.display_name}</span>
-                        <span className={rafflesStyle.desc}>Received a prize at</span>
-                        <span className={rafflesStyle.value}> ${item?.raffle?.valued_at}</span>
-                      </SwiperSlide>
-                    </div>
-                  )
-                }
-              )
-            }
-
-          </Swiper>
-        </div>
+        </Swiper>
       </div>
     </section>
   )

@@ -233,7 +233,9 @@ const Destiny = () => {
         <div className={s.someDestiny}>
           {listTabDestiny.map((navigateItem, navigateIndex) =>
             (
-              renderWithTab(navigateItem.key, navigateIndex)
+              <div key={`${navigateItem.key}-${navigateIndex}`}>
+                {renderWithTab(navigateItem.key, navigateIndex)}
+              </div>
             )
           )}
         </div>

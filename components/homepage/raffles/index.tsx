@@ -28,6 +28,7 @@ const Raffles = () => {
             centeredSlides
             initialSlide={2}
             slidesPerView="auto"
+            slideToClickedSlide
             // breakpoints={{
             //   320: {
             //     slidesPerView: 2,

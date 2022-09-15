@@ -1,3 +1,16 @@
 .pageContainer {
   padding: 0;
 }
+
+.pageContainer:before {
+  content: "";
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  transform: skew(-24deg);
+  mix-blend-mode: soft-light;
+  left: -32%;
+  background: linear-gradient(25.36deg, #1d1b1bab 68.01%, #AFAFAF 90.25%);
+  z-index: 0;
+}

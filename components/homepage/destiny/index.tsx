@@ -42,7 +42,7 @@ const Destiny = () => {
           </ButtonBorder>
         </div>
         <div className={`${s.rightContentC} ${s.rightContent}`}>
-          <img src="/assets/homepage/destiny/imgSocialFi.png" alt=""/>
+          <img src="/assets/homepage/destiny/imgSocial.png" alt=""/>
         </div>
         <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Social-Fi network platform</h2>
       </div>
@@ -201,7 +201,7 @@ const Destiny = () => {
   }
 
   return (
-    <div className={s.destiny_wrapper}>
+    <div className={`lucis-container-2 ${s.destiny_wrapper}`}>
       <div className={s.container}>
         <div className={s.header}>
           <h1>Welcome to our Destiny</h1>
@@ -213,7 +213,7 @@ const Destiny = () => {
                 className={
                   tab === navigateIndex ? s.naviItemActive : s.naviItem
                 }
-                key={navigateItem.key}
+                key={`${navigateItem.key}-${navigateIndex}`}
                 onClick={(e) => onchangeTab(navigateIndex, e)}
               >
                 {tab === navigateIndex ? (

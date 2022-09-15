@@ -1,0 +1,201 @@
+.sectionRaffles
+  .sectionTitleWrap
+    margin-bottom: -30px
+.rafflesBg
+  width: 444px
+  max-width: 100%
+  aspect-ratio: 444 / 172
+  background: url("/assets/homepage/raffles/rafflesBgMobile.png") no-repeat top center
+  background-size: 118%
+  margin: 0 auto -54px
+  @media screen and (min-width: 414px)
+    background-size: cover
+    margin: 0 auto -80px
+  @media screen and (min-width: 768px)
+    background: url("/assets/homepage/raffles/rafflesBg.png") no-repeat top center
+    background-size: cover
+    aspect-ratio: 1286 / 491
+    width: 675px
+    margin: 0 auto -132px
+  @media screen and (min-width: 1200px)
+    width: 1045px
+    margin: 0 auto -154px
+  @media screen and (min-width: 1400px)
+    width: 1215px
+    margin: 0 auto -163px
+  @media screen and (min-width: 1900px)
+    width: 1286px
+    margin: 0 auto -213px
+.sliderWrap
+  @media screen and (min-width: 768px)
+    width: 760px
+    margin: auto
+  @media screen and (min-width: 1200px)
+    width: 1140px
+  @media screen and (min-width: 1400px)
+    width: 1320px
+  @media screen and (min-width: 1900px)
+    width: 1400px
+  :global(.swiper)
+    padding: 40px 0 83px
+    @media screen and (min-width: 768px)
+      padding: 40px 0 119px
+    @media screen and (min-width: 1900px)
+      padding: 40px 0 141px
+  :global(.swiper-slide)
+    width: 176px !important
+    aspect-ratio: 176 / 88
+    transition: .2s
+    position: relative
+    @media screen and (min-width: 1200px)
+      width: 252px !important
+    @media screen and (min-width: 1400px)
+      width: 288px !important
+    @media screen and (min-width: 1900px)
+      width: 320px !important
+    .sliderItem
+      width: 100%
+      aspect-ratio: 176 / 88
+      transition: .3s
+      border-radius: 4px
+      overflow: hidden
+      position: relative
+      img
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        object-fit: cover
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 1
+        transition: .3s
+    &:not(:global(.swiper-slide-active), :global(.swiper-slide-next), :global(.swiper-slide-prev))
+      .sliderItem
+        &:before
+          background: rgba(0, 0, 0, 0.8)
+      @media screen and (max-width: 767px)
+        opacity: 0
+        visibility: hidden
+    &:global(.swiper-slide-active)
+      z-index: 2
+      .sliderItem
+        transform: scale(1.25) translateY(16px) !important
+        box-shadow: 0 0 32.9763px rgba(11, 235, 214, 0.64)
+        @media screen and (min-width: 768px)
+          transform: scale(1.25) translateY(45px) !important
+        @media screen and (min-width: 1900px)
+          transform: scale(1.25) translateY(60px) !important
+    &:global(.swiper-slide-next)
+      z-index: 1
+      .sliderItem
+        transform: translateX(-30px) !important
+        box-shadow: 0 0 32.9763px rgba(11, 235, 214, 0.20)
+        &:before
+          background: rgba(0, 0, 0, 0.28)
+        @media screen and (min-width: 768px)
+          transform: translateX(-30px) translateY(25px) !important
+      & ~ :global(.swiper-slide)
+        .sliderItem
+          @media screen and (min-width: 768px)
+            transform: translateX(-60px) !important
+          @media screen and (min-width: 1900px)
+            transform: translateX(-100px) !important
+    &:global(.swiper-slide-prev)
+      z-index: 1
+      .sliderItem
+        transform: translateX(30px)
+        box-shadow: 0 0 32.9763px rgba(11, 235, 214, 0.20)
+        &:before
+          background: rgba(0, 0, 0, 0.28)
+        @media screen and (min-width: 768px)
+          transform: translateX(30px) translateY(20px)
+        @media screen and (min-width: 1900px)
+          transform: translateX(30px) translateY(25px)
+    &:not(:global(.swiper-slide-prev), :global(.swiper-slide-prev) ~ :global(.swiper-slide))
+      .sliderItem
+        @media screen and (min-width: 768px)
+          transform: translateX(60px)
+        @media screen and (min-width: 1900px)
+          transform: translateX(100px)
+.spotlight
+  display: flex
+  justify-content: center
+  align-items: center
+  color: #FFFFFF
+  :global(.swiper-wrapper)
+    height: 84px
+    display: flex
+    text-align: center
+  :global(.swiper-slide)
+    display: flex
+    align-items: center
+    justify-content: center
+  :global(.swiper-slide),
+  :global(.swiper-slide-duplicate)
+    font-family: 'Lexend'
+    font-weight: 300
+    font-size: 8px
+    line-height: 10px
+    color: #D9D9D9
+    opacity: 0.16
+    //height: 10px !important
+    margin-bottom: 0
+    span:first-child
+      color: #FFD058
+      margin-right: 4px
+    span:nth-child(2)
+      color: #FFFFFF
+      margin-right: 4px
+    span:nth-child(3)
+      color: #FFFFFF
+      margin-right: 4px
+    span:nth-child(4)
+      margin-right: 4px
+    span:last-child
+      background: linear-gradient(90deg, #BB7239 0%, #FCEEAE 22.75%, #E09E5B 52.16%, #FCE9A4 75.29%, #F1D693 82.75%, #E1BD7C 92.16%, #D08A4A 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    img
+      width: 10px
+      margin-right: 4px
+      border-radius: 4px
+  :global(.swiper-slide-active),
+  :global(.swiper-slide-duplicate-active)
+    font-weight: 400
+    font-size: 10px
+    line-height: 12px
+    height: 15px !important
+    opacity: 1
+    @media screen and (min-width: 575px)
+      font-size: 16px
+      line-height: 20px
+      height: 30px !important
+    img
+      width: 15px
+      @media screen and (min-width: 575px)
+        width: 30px
+
+  :global(.swiper-slide-prev),
+  :global(.swiper-slide-next),
+  :global(.swiper-slide-duplicate-active),
+  :global(.swiper-slide-duplicate-prev)
+    font-weight: 400
+    font-size: 8px
+    line-height: 10px
+    color: #D9D9D9
+    opacity: 0.6
+    @media screen and (min-width: 575px)
+
+      font-size: 11px
+      line-height: 14px
+      height: 16px !important
+    img
+      @media screen and (min-width: 575px)
+        width: 16px

@@ -1,136 +1,110 @@
 import React, { useState, useEffect } from "react";
 import s from "./index.module.sass";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper";
+import {EffectCoverflow, Navigation, Pagination} from "swiper";
+import homepage from "../Homepage.module.sass";
+import rafflesStyle from "./Raffles.module.sass";
+import { Mousewheel } from "swiper";
+import { useGetRecentWinners } from "hooks/useRafflesList";
+import {Image} from "antd";
+
 const Raffles = () => {
-  const bannerClasses = [s.banner1, s.banner2, s.banner3, s.banner4, s.banner5];
-  const bannerBg = [
-    s.bgBanner1,
-    s.bgBanner2,
-    s.bgBanner3,
-    s.bgBanner4,
-    s.bgBanner5,
-  ];
+  const {getRecentWinnersLoading, getRecentWinnersError, getRecentWinnersData} = useGetRecentWinners();
 
-  const [screenWidth, setScreenWidth] = useState(0)
-  useEffect(() => {
-    setScreenWidth(window.outerWidth);
-  })
+  console.log("getRecentWinnersData", getRecentWinnersData);
 
-  const [stateIndexBanner, setStateIndexBanner] = useState(0);
   return (
-    <div className={s.raffles_wrapper}>
-      <div className={s.header}>
-        <div className={s.bigName}>RAFFLES</div>
-        <div className={s.subTitle}>
-          Free to get big rewards. for hard and skilled gamers Join Lucis
-          raffles!
+    <section className={`${homepage.section} ${rafflesStyle.sectionRaffles}`}>
+      <div className={`${homepage.sectionTitleWrap} ${rafflesStyle.sectionTitleWrap}`}>
+        <div className="lucis-container-2">
+          <h2 className={homepage.sectionTitle}>RAFFLES</h2>
+          <p className={homepage.sectionDesc}>Free to get big rewards for hard and skilled gamers. Join Lucis raffles!</p>
         </div>
       </div>
-      <div className={s.body}>
-        {bannerClasses.map((bannerClass, bannerIndex) => {
-          // let index =
-          //   stateIndexBanner + bannerIndex > 4
-          //     ? stateIndexBanner + bannerIndex - 4
-          //     : stateIndexBanner + bannerIndex;
-          return (
-            <div
-              className={`${bannerClasses[bannerIndex]} ${bannerBg[bannerIndex]}`}
-              key={bannerClass}
-              onClick={() => setStateIndexBanner(bannerIndex)}
-            >
-              <div className={s.btnHover}>
-                <div className={s.join_raffles}>
-                  <div className={s.borderBtn}></div>
-                  <span>Join raffles</span>
-                </div>
+      <div className={rafflesStyle.rafflesWrap}>
+        <div className={rafflesStyle.rafflesBg}></div>
+        <div className={rafflesStyle.sliderWrap}>
+          <Swiper
+            centeredSlides
+            initialSlide={2}
+            slidesPerView="auto"
+            // breakpoints={{
+            //   320: {
+            //     slidesPerView: 2,
+            //   },
+            //   1600: {
+            //     slidesPerView: 5,
+            //   },
+            // }}
+          >
+            <SwiperSlide>
+              <div className={rafflesStyle.sliderItem}>
+                <img src="/assets/homepage/raffles/raffle2.jpg" alt=""/>
               </div>
-            </div>
-          );
-        })}
-        {/* <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2,
-          slideShadows: true,
-        }}
-        loop={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="imgBanner" src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-      </Swiper> */}
-      </div>
-      <div className={s.footer}>
-        <div className={s.footerBtnJoin}>
-          <div className={s.borderBtn}></div>
-          <span>join now</span>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={rafflesStyle.sliderItem}>
+                <img src="/assets/homepage/raffles/raffle1.jpg" alt=""/>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={rafflesStyle.sliderItem}>
+                <img src="/assets/homepage/raffles/raffle3.jpg" alt=""/>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={rafflesStyle.sliderItem}>
+                <img src="/assets/homepage/raffles/raffle2.jpg" alt=""/>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className={rafflesStyle.sliderItem}>
+                <img src="/assets/homepage/raffles/raffle1.jpg" alt=""/>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
-        <div className={s.footerRank}>
-          <div className={s.footerItem1}>
-            <div className={s.time}>June 29th, 6:30 am</div>
-            <div className={s.img}>{"[]"}</div>
-            <div className={s.name}>Ngô Thị Là Ánh Dương</div>
-            <div className={s.received}>Received a prize</div>
-            <div className={s.value}>Valued at €20</div>
-          </div>
-          <div className={s.footerItem2}>
-            <div className={s.time}>{screenWidth}</div>
-            <div className={s.img}></div>
-            <div className={s.name}></div>
-            <div className={s.received}></div>
-            <div className={s.value}></div>
-          </div>
-          <div className={s.footerItem3}>
-            <div className={s.time}></div>
-            <div className={s.img}></div>
-            <div className={s.name}></div>
-            <div className={s.received}></div>
-            <div className={s.value}></div>
-          </div>
-          <div className={s.footerItem4}>
-            <div className={s.time}></div>
-            <div className={s.img}></div>
-            <div className={s.name}></div>
-            <div className={s.received}></div>
-            <div className={s.value}></div>
-          </div>
+        <button className={`${homepage.btnCommon} ${rafflesStyle.btnCommon}`}>JOIN NOW</button>
+
+        <div className={rafflesStyle.spotlight}>
+          <Swiper
+            direction={"vertical"}
+            slidesPerView={4}
+            spaceBetween={4}
+            centeredSlides
+            initialSlide={3}
+            mousewheel={true}
+            loopedSlides={1}
+            loopedSlidesLimit={true}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Mousewheel, Pagination]}
+            className="mySwiper"
+            loop={true}
+          >
+            {
+              getRecentWinnersData && getRecentWinnersData?.getRecentWinners?.slice(0,8).map((item, index) => {
+                  return (
+                    <div key={`${item?.raffle?.uid}${index}`}>
+                      <SwiperSlide>
+                        <span className={rafflesStyle.time}></span>
+                        <Image src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : '/assets/homepage/default_avatar.png'} preview={false} alt="" fallback="/assets/homepage/default_avatar.png" />
+                        <span className={rafflesStyle.name}>{item?.user?.profile?.display_name}</span>
+                        <span className={rafflesStyle.desc}>Received a prize at</span>
+                        <span className={rafflesStyle.value}> ${item?.raffle?.valued_at}</span>
+                      </SwiperSlide>
+                    </div>
+                  )
+                }
+              )
+            }
+
+          </Swiper>
         </div>
       </div>
-    </div>
-  );
-};
+    </section>
+  )
+}
 
 export default Raffles;

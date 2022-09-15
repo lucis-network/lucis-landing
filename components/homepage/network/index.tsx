@@ -23,7 +23,7 @@ export default function NetWork() {
                 <img src="/assets/homepage/Partners.png" alt=""/>
               </div>
               <div className={s.descLinearTitlePartner}>
-                <img src="/assets/homepage/Backer.png" alt=""/>
+                <img src="/assets/homepage/BackerN.png" alt=""/>
               </div>
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function NetWork() {
               and
             </span>
             <span className={s.linearCenterTitlePartner}>
-              Backed
+              Backer
             </span>
           </div>
           <Partner />

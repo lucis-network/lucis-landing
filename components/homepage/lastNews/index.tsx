@@ -28,7 +28,7 @@ export default function LastNews() {
             <div className={s.wrapper}>
                 <div className={`lucis-container-2 ${s.container}`}>
                     <div className={s.title}>
-                        <h2>LATEST NEWS</h2>
+                        <h2>MEDIA</h2>
                     </div>
                     <div className={s.listNews}>
                       {

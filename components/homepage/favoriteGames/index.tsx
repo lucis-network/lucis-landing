@@ -11,7 +11,7 @@ const FavoriteGames = () => {
     <section className={`${homepage.section} ${fvGame.sectionFavoriteGames}`}>
       <div className={homepage.sectionTitleWrap}>
         <div className="lucis-container-2">
-          <h2 className={homepage.sectionTitle}>PLAY YOUR FAVORITE GAME</h2>
+          <h2 className={homepage.sectionTitle}>PLAY YOUR FAVORITE GAMES</h2>
         </div>
       </div>
       <div className={fvGame.sliderWrap}>

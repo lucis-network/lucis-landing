@@ -37,34 +37,36 @@ export default function Header() {
             <div>
               <ul className={s.block_item_menu}>
                 <li className={s.logoTab}>
-                  <Link href="/">
-                    <img src="/assets/header/logo_mobile.png" className={s.logo} alt="logo"/>
+                  <Link href="#" passHref>
+                    <a rel="noopener noreferrer">
+                      <img src="/assets/header/logo_mobile.png" className={s.logo} alt="logo"/>
+                    </a>
                   </Link>
                 </li>
                 <li className={`${router.pathname === "/" || router.pathname.includes("home") ? s.active : ""}`}>
-                  <Link href="/" passHref>
-                    <a>
+                  <Link href="#" passHref>
+                    <a rel="noopener noreferrer">
                       HOME
                     </a>
                   </Link></li>
                 <li className={`${router.pathname.includes("/playcore") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD ?? ""} passHref>
-                  <a target="_blank">
+                  <a target="_blank" rel="noopener noreferrer">
                     PLAYCORE
                   </a>
                 </Link></li>
                 <li className={`${router.pathname.includes("/arena") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD + "arena" ?? ""} passHref>
-                  <a target="_blank">
+                  <a target="_blank" rel="noopener noreferrer">
                     ARENA
                   </a>
                 </Link></li>
                 <li><a href="https://insight.lucis.network/" target="_blank"
                        rel="noopener noreferrer">INSIGHT</a></li>
                 <li className={`${router.pathname.includes("/ranking") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL_PROD + "ranking" ?? ""} passHref>
-                  <a target="_blank">
+                  <a target="_blank" rel="noopener noreferrer">
                     RANKING
                   </a>
                 </Link></li>
-                <li className={s.default}><a>SCHORLARSHIP <span>Coming Soon</span></a></li>
+                <li className={s.default}><a>SCHORLARSHIP<span>Coming Soon</span></a></li>
                 <li className={s.default}><a>SOCIAL <span style={{left: 0}}>Coming Soon</span></a></li>
               </ul>
             </div>

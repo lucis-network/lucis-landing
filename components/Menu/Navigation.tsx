@@ -101,12 +101,12 @@ export const Navigation = () => {
     {
       color: "#FF008C",
       text: <span className={s.default}><a>SCHORLARSHIP<span>Coming Soon</span></a></span>,
-      src: ""
+      //src: ""
     },
     {
       color: "#FF008C",
       text: <span className={s.default}><a>SOCIAL <span style={{left: 0}}>Coming Soon</span></a></span>,
-      src: ""
+      //src: ""
     },
   ];
 
@@ -132,9 +132,10 @@ export const Navigation = () => {
         <div className={s.contactUs}>
           <ButtonBorder>
             <div className={s.btn} onClick={() => setIsModalVisible(true)}>
-              <span>CONTACT US</span>
+              CONTACT US
             </div>
           </ButtonBorder>
+
         </div>
       </motion.ul>
       <Modal

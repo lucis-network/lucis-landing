@@ -20,7 +20,7 @@ export const useGetDataArena = (): {
   } = useQuery(SEARCH_ARENA, {
     variables: {
       input: {
-        type: "ONGOING",
+        type: "CLOSED",
         value: ""
       },
       data: {

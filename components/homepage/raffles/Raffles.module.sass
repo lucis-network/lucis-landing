@@ -39,7 +39,7 @@
     width: 1140px
   @media screen and (min-width: 1400px)
     width: 1320px
-  @media screen and (min-width: 1900px)
+  @media screen and (min-width: 1600px)
     width: 1400px
   :global(.swiper)
     padding: 40px 0 83px
@@ -57,6 +57,8 @@
       width: 252px !important
     @media screen and (min-width: 1400px)
       width: 288px !important
+    @media screen and (min-width: 1600px)
+      width: 304px !important
     @media screen and (min-width: 1900px)
       width: 320px !important
     .sliderItem
@@ -133,8 +135,16 @@
 .btnCommon
   position: relative
   z-index: 1
+  display: inline-block
+  position: relative
+  &:hover
+    color: inherit
+  span
+    display: block
   @media screen and (min-width: 768px)
     width: 277px
+    span
+      padding-top: 5px
 .spotlight
   display: flex
   justify-content: center
@@ -149,6 +159,7 @@
     display: flex
     align-items: center
     justify-content: center
+    transition: .3s
   :global(.swiper-slide),
   :global(.swiper-slide-duplicate)
     font-family: 'Lexend'
@@ -204,10 +215,19 @@
     color: #D9D9D9
     opacity: 0.6
     @media screen and (min-width: 575px)
-
       font-size: 11px
       line-height: 14px
       height: 16px !important
     img
       @media screen and (min-width: 575px)
         width: 16px
+  .winnerName
+    max-width: 160px
+    text-overflow: ellipsis
+    /* Needed to make it work */
+    overflow: hidden
+    white-space: nowrap
+    @media screen and (min-width: 575px)
+      max-width: 200px
+    @media screen and (min-width: 768px)
+      max-width: 260px

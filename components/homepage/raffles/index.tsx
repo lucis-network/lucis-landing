@@ -1,23 +1,19 @@
 import React from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {Mousewheel, Pagination} from "swiper";
+import {Mousewheel, Pagination, Autoplay} from "swiper";
 import homepage from "../Homepage.module.sass";
 import rafflesStyle from "./Raffles.module.sass";
 import {useGetRaffles, useGetRecentWinners} from "hooks/useRafflesList";
 import {Image} from "antd";
 import {RaffleStatusType} from "../../../src/generated/graphql_p2e";
 import moment from "moment";
+import Link from "next/link";
 
 const Raffles = () => {
   const {getRecentWinnersLoading, getRecentWinnersError, getRecentWinnersData} = useGetRecentWinners();
-  const {getRafflesLoading, getRafflesError, getRafflesData} = useGetRaffles({
-    filter: {
-      status: RaffleStatusType.Enabled,
-      page: 1
-    }
-  });
+  const {getRafflesLoading, getRafflesError, getRafflesData} = useGetRaffles();
 
-  const rafflesData = getRafflesData?.searchRaffle
+  const rafflesData = getRafflesData?.topRaffle
 
   return (
     <section className={`${homepage.section} ${rafflesStyle.sectionRaffles}`}>
@@ -39,7 +35,9 @@ const Raffles = () => {
             {rafflesData && rafflesData.map(raffle => (
               <SwiperSlide key={raffle?.uid}>
                 <div className={rafflesStyle.sliderItem}>
-                  <img src={raffle?.img ?? ''} alt=""/>
+                  <img src={raffle?.img ?? ''} alt="" onError={(e) => {
+                    e.currentTarget.src = '/assets/homepage/raffles/rafflesError.jpg'
+                  }}/>
                 </div>
               </SwiperSlide>
             ))}
@@ -47,7 +45,11 @@ const Raffles = () => {
         </div>
       </div>
       <div className="lucis-container-2 text-center">
-        <button className={`${homepage.btnCommon} ${rafflesStyle.btnCommon}`}>JOIN NOW</button>
+        <Link href={process.env.NEXT_PUBLIC_P2E_URL + '/playcore/raffles'} passHref>
+          <a target="_blank" className={`${homepage.btnCommon} ${rafflesStyle.btnCommon}`}>
+            <span>JOIN NOW</span>
+          </a>
+        </Link>
       </div>
       <div className={rafflesStyle.spotlight}>
         <Swiper
@@ -62,9 +64,13 @@ const Raffles = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[Mousewheel, Pagination]}
+          modules={[Mousewheel, Pagination, Autoplay]}
           className="mySwiper"
           loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
         >
           {
             getRecentWinnersData && getRecentWinnersData?.getRecentWinners?.slice(0,8).map((item, index) => {
@@ -73,7 +79,7 @@ const Raffles = () => {
                     <SwiperSlide>
                       <span className={rafflesStyle.time}>{moment(item?.raffle?.end_at).format("MMMM Do hh:mm")}</span>
                       <Image src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : '/assets/homepage/default_avatar.png'} preview={false} alt="" fallback="/assets/homepage/default_avatar.png" />
-                      <span className={rafflesStyle.name}>{item?.user?.profile?.display_name}</span>
+                      <span className={rafflesStyle.winnerName}>{item?.user?.profile?.display_name}</span>
                       <span className={rafflesStyle.desc}>received a prize at</span>
                       <span className={rafflesStyle.value}> ${item?.raffle?.valued_at}</span>
                     </SwiperSlide>
@@ -82,7 +88,6 @@ const Raffles = () => {
               }
             )
           }
-
         </Swiper>
       </div>
     </section>

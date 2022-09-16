@@ -34,11 +34,13 @@ const Raffles = () => {
           >
             {rafflesData && rafflesData.map(raffle => (
               <SwiperSlide key={raffle?.uid}>
-                <div className={rafflesStyle.sliderItem}>
-                  <img src={raffle?.img ?? ''} alt="" onError={(e) => {
-                    e.currentTarget.src = '/assets/homepage/raffles/rafflesError.jpg'
-                  }}/>
-                </div>
+                <Link href={process.env.NEXT_PUBLIC_P2E_URL + '/playcore/raffles/' + raffle?.uid} passHref>
+                  <a target="_blank" className={rafflesStyle.sliderItem}>
+                    <img src={raffle?.img ?? ''} alt="" onError={(e) => {
+                      e.currentTarget.src = '/assets/homepage/raffles/rafflesError.jpg'
+                    }}/>
+                  </a>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

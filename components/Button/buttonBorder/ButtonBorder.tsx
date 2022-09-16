@@ -15,7 +15,6 @@ const ButtonBorder: React.FC<Props> = (props: Props) => {
   useEffect(() => {
     let btn = document.querySelector('.btn_hover_common');
     if(btn) {
-
       btn.addEventListener('mousemove', e => {
         if(e) {
           let rect = e.target.getBoundingClientRect();

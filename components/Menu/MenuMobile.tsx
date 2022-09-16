@@ -105,7 +105,7 @@ export const MenuMobile = (props: any) => {
         custom={height}
         ref={containerRef}
         variants={nav}
-        className="mobile-nav z-[101]"
+        className={`mobile-nav z-[101] ${s.menuNavMobile}`}
       >
         <motion.div className="background" variants={sidebar}>
           <div className="bg-glass w-full h-full opacity-[0.15]"/>

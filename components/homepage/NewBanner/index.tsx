@@ -3,7 +3,7 @@ import s from "./index.module.sass";
 import React, { useEffect, useState } from "react";
 
 const data = {
-    'gamers': 2068,
+    'gamers': 3000,
     'reward': 1400200
 }
 
@@ -22,7 +22,7 @@ export default function NewBanner() {
                 <div className={s.statContainer}>
                     <div>
                         <p>Total Gamers</p>
-                        <p id={s.gamers}>{data.gamers.toLocaleString('vi')}</p>
+                        <p id={s.gamers}>{data.gamers.toLocaleString('vi')}+</p>
                     </div>
                     <div>
                         <p>Total Reward</p>

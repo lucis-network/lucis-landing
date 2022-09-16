@@ -13,7 +13,6 @@ export default function Footer(props: Props) {
             <li><Link href="https://lucis.network">ZONE</Link></li>
             <li><Link href="/">FAQ</Link></li>
             <li><Link href="/">Privacy Policy</Link></li>
-            <li><Link href="/"><a>Contact Us</a></Link></li>
           </ul>
         </div>
         <div className={s.logoTab}>

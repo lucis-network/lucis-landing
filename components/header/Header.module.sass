@@ -20,11 +20,12 @@
 .logoSection
   display: none
   @media screen and (min-width: 1800px)
-    display: block
     position: absolute
     left: 62px
     top: 50%
     transform: translate(0, -50%)
+    display: flex
+    align-items: center
   .logo
     cursor: pointer
     height: 40px
@@ -33,12 +34,12 @@
       font-size: 12px
       color: white
 .logoTab
-  display: block
+  display: flex
+  align-items: center
   .logo
     cursor: pointer
     height: 40px
     margin-right: 64px
-    margin-bottom: 20px
   @media screen and (min-width: 1800px)
     display: none
   @media screen and ( min-width: 1024px )
@@ -98,7 +99,6 @@
         letter-spacing: 0.04em
         text-transform: uppercase
         @media ( max-width: 1200px )
-          font-size: 6px
 .block_item_menu li a:hover
   color: #0BEBD6
 

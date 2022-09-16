@@ -81,12 +81,12 @@ export const Navigation = () => {
     {
       color: "#FF008C",
       text: "PLAYCORE",
-      src: process.env.NEXT_PUBLIC_P2E_URL_PROD ?? "",
+      src: process.env.NEXT_PUBLIC_P2E_URL ?? "",
     },
     {
       color: "#FF008C",
       text: "ARENA",
-      src: process.env.NEXT_PUBLIC_P2E_URL_PROD + "/arena" ?? "",
+      src: process.env.NEXT_PUBLIC_P2E_URL + "/arena" ?? "",
     },
     {
       color: "#FF008C",
@@ -96,7 +96,7 @@ export const Navigation = () => {
     {
       color: "#FF008C",
       text: "RANKING",
-      src: process.env.NEXT_PUBLIC_P2E_URL_PROD + "/ranking" ?? "",
+      src: process.env.NEXT_PUBLIC_P2E_URL + "/ranking" ?? "",
     },
     {
       color: "#FF008C",

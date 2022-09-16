@@ -52,7 +52,6 @@
     aspect-ratio: 176 / 88
     transition: .2s
     position: relative
-    cursor: pointer
     @media screen and (min-width: 1200px)
       width: 252px !important
     @media screen and (min-width: 1400px)
@@ -68,6 +67,8 @@
       border-radius: 4px
       overflow: hidden
       position: relative
+      display: block
+      pointer-events: none
       img
         position: absolute
         top: 0
@@ -93,9 +94,11 @@
         visibility: hidden
     &:global(.swiper-slide-active)
       z-index: 2
+      cursor: pointer
       .sliderItem
         transform: scale(1.25) translateY(16px) !important
         box-shadow: 0 0 32.9763px rgba(11, 235, 214, 0.64)
+        pointer-events: auto
         @media screen and (min-width: 768px)
           transform: scale(1.25) translateY(45px) !important
         @media screen and (min-width: 1900px)
@@ -143,6 +146,8 @@
     display: block
   @media screen and (min-width: 768px)
     width: 277px
+    height: 48px
+    line-height: 27px
     span
       padding-top: 5px
 .spotlight

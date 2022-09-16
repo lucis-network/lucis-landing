@@ -1,0 +1,308 @@
+.wrapper
+  width: 100%
+  position: relative
+  color: #ffffff
+  display: flex
+  justify-content: center
+  align-items: space-between
+  &::before
+    content: ""
+    position: absolute
+    background: url("/assets/homepage/bg_left_newbanner.png") no-repeat
+    background-size: 100%
+    transform: rotate(-45deg)
+    aspect-ratio: 1251/853
+    z-index: 0
+  &::after
+    content: ""
+    position: absolute
+    z-index: 0
+    right: 0
+
+.container
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  text-align: center
+  font-family: 'Lexend', serif
+  position: relative
+  z-index: 1
+
+.logo
+  aspect-ratio: 160/52
+  content: url("/assets/homepage/lucis.png")
+  margin: 0 auto 18px auto
+
+.slogan
+  p
+    margin-bottom: 8px
+    
+#slogan1
+  color: #00F9FF
+  font-family: 'RevxNeueDemo'
+  font-style: normal
+  font-weight: 600
+
+#slogan2
+  color: #DBE0E8
+  font-weight: 300
+  margin-bottom: 0px
+  width: 70vw
+  margin: 0 auto
+
+.statContainer
+  div
+    p
+      font-style: normal
+      text-transform: capitalize
+      letter-spacing: 0.04em
+      &:nth-child(1)
+        font-weight: 300
+        color: #fff
+        margin: 0
+      &:nth-child(2)
+        width: fit-content
+        font-weight: 600
+        margin: 0 auto
+        &::selection
+          -webkit-text-fill-color: white
+          text-fill-color: white
+
+#gamers
+  background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+
+#reward
+  background: linear-gradient(90deg, #BB7239 0%, #FCEEAE 22.75%, #E09E5B 52.16%, #FCE9A4 75.29%, #F1D693 82.75%, #E1BD7C 92.16%, #D08A4A 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+
+.games
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  div
+    margin-left: 24px
+    &:nth-child(1)
+      margin-left: 0px
+      content: url("/assets/homepage/pubg.svg")
+    &:nth-child(2)
+      content: url("/assets/homepage/lol.svg")
+    &:nth-child(3)
+      content: url("/assets/homepage/csgo.svg")
+    &:nth-child(4)
+      content: url("/assets/homepage/tft.svg")
+    &:nth-child(5)
+      content: url("/assets/homepage/val.svg")
+    &:nth-child(6)
+      content: url("/assets/homepage/dota.svg")
+
+@media screen and (min-width: 0px) //mobile
+  .wrapper
+    flex-direction: column
+    margin-top: 46px
+    margin-bottom: 240px
+    padding-top: 200px
+    &::before
+      width: 350px
+      top: -5px
+      left: -75px
+    &::after
+      background: url("/assets/homepage/bg_right_newbanner_m.png") no-repeat
+      background-size: 100%
+      background-position-x: 30px
+      width: 350px
+      height: 230px
+      top: 550px
+  .container
+    width: 100vw
+  .logo
+    max-width: 115px
+  #slogan1
+    letter-spacing: 0.04em
+    font-size: 20px
+    line-height: 22px
+  #slogan2
+    font-size: 14px
+    line-height: 18px
+    max-width: 257px
+  .statContainer
+    margin-top: 18px
+    margin-bottom: 16px
+    div
+      &:nth-child(1)
+        margin-bottom: 16px
+      p
+        &:nth-child(1)
+          font-size: 14px
+          line-height: 18px
+        &:nth-child(2)
+          font-size: 42px
+          line-height: 53px
+  #reward
+    margin-top: 4px
+  .games
+    div
+      max-height: 12px
+
+@media screen and (min-width: 540px) //mobile L
+  .wrapper
+    flex-direction: row
+    margin-top: 48px
+    margin-bottom: 100px
+    padding-top: 64px
+    &::before
+      width: 300px
+      top: 230px
+      left: -100px
+    &::after
+      background: url("/assets/homepage/bg_right_newbanner.png") no-repeat
+      background-size: 100%
+      width: 300px
+      height: 250px
+      background-position-x: 90px
+      top: 220px
+  .container
+    width: 712px
+  .logo
+    max-width: 135px
+    margin-bottom: 24px
+  #slogan1
+    font-size: 24px
+    line-height: 30px
+    letter-spacing: 0.1em
+  #slogan2
+    font-size: 17px
+    line-height: 30px
+    letter-spacing: 0.04em
+    max-width: 712px
+  .statContainer
+    margin-top: 32px
+    margin-bottom: 48px
+    div
+      &:nth-child(1)
+        margin-bottom: 8px
+      p
+        &:nth-child(1)
+          font-size: 16px
+          line-height: 20px
+        &:nth-child(2)
+          font-size: 54px
+          line-height: 70px
+  #reward
+    margin: 0
+  .games
+    div
+      max-height: 24px
+
+@media screen and (min-width: 768px) //tablet
+  .wrapper
+    margin-top: 70px
+    &::before
+      width: 350px
+      top: 230px
+      left: -72px
+    &::after
+      width: 350px
+      height: 300px
+      background-position-x: 80px
+  .logo
+    max-width: 150px
+  #slogan1
+    font-size: 28px
+    line-height: 35px
+  #slogan2
+    font-size: 21px
+    line-height: 33px
+    max-width: 25em
+  .statContainer
+    div
+      p
+        &:nth-child(1)
+          font-size: 17px
+          line-height: 22px
+        &:nth-child(2)
+          font-size: 61px
+          line-height: 77px
+
+@media screen and (min-width: 1024px) //laptop
+  .wrapper
+    margin-top: 92px
+    &::before
+      width: 450px
+      top: 170px
+      left: -130px
+    &::after
+      width: 450px
+      height: 360px
+      background-position-x: 100px
+      top: 200px
+  #slogan1
+    font-size: 30px
+  #slogan2
+    font-size: 23px
+    max-width: 712px
+  .statContainer
+    div
+      p
+        &:nth-child(2)
+          font-size: 64px
+
+@media screen and (min-width: 1280px)
+  .wrapper
+    &::before
+      width: 550px
+      top: 180px
+      left: -125px
+    &::after
+      width: 550px
+      height: 450px
+      background-position-x: 100px
+
+@media screen and (min-width: 1440px) //laptop L
+  .wrapper
+    &::before
+      width: 650px
+      top: 150px
+      left: -115px
+    &::after
+      width: 650px
+      height: 530px
+      background-position-x: 150px
+      top: 130px
+  #slogan1
+    font-size: 32px
+  #slogan2
+    font-size: 24px
+  .statContainer
+    div
+      p
+        &:nth-child(1)
+          font-size: 20px
+          line-height: 25px
+        &:nth-child(2)
+          font-size: 80px
+          line-height: 100px
+
+@media screen and (min-width: 1920px) //desktop
+  .wrapper
+    margin-top: 88px
+    padding-top: 113px
+    &::before
+      width: 750px
+      top: 190px
+      left: -95px
+    &::after
+      width: 715px
+      height: 600px
+      top: 155px
+      background-position-x: 60px
+  .logo
+    max-width: 160px

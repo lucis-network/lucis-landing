@@ -181,7 +181,7 @@ const datas = [
       </p>
     `,
     titleButton: "More Detail",
-    href: "/ranking",
+    href: "ranking",
     srcImg: "/assets/Feature/insight1.png",
     statusHref: true,
   },

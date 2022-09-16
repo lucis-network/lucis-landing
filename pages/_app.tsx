@@ -4,6 +4,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "antd/lib/style/themes/default.less";
 import "antd/dist/antd.less";
 import "../styles/globals.css";
+import "../styles/destiny.css";
+import { ApolloProvider } from "@apollo/client";
+import client from "utils/apollo_client";
 // @ts-ignore
 import smoothscroll from 'smoothscroll-polyfill';
 
@@ -26,10 +29,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       app_origin: app_origin
     });
   });
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ApolloProvider client={client}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ApolloProvider>
   );
 }
 

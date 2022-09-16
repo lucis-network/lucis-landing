@@ -1,14 +1,38 @@
+@import "/styles/common"
+
 .pcMenu
   border-bottom: 1px solid #010242
 
 .mobileMenu
   border-bottom: 1px solid #010242
+  background: #000625
+  backdrop-filter: blur(40px)
+  display: none
+  @media screen and (max-width: 1024px)
+    display: block
 .menuMobile
   margin-top: 0
-  padding: 10px 30px
+  padding: 12px 30px
+  background: rgba(0, 6, 37, 0.8)
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8)
+  backdrop-filter: blur(40px)
+  height: 46px
+  @media screen and (min-width: 575px)
+    height: 54px
+  @media screen and (min-width: 768px)
+    height: 68px
+  a
+    img
+      width: 77px
+      @media screen and (min-width: 575px)
+        width: 102px
+      @media screen and (min-width: 768px)
+        width: 120px
+      @media screen and (min-width: 1024px)
+        width: 150px
 .mHumber
   position: absolute
-  top: 10px
+  top: 2px
   right: 30px
 
 .container
@@ -39,6 +63,168 @@
     background: linear-gradient(121.07deg, rgba(255, 255, 255, 0.3) -26.88%, rgba(255, 255, 255, 0.1) 73.85%)
     opacity: 0.8
 
-  .disabled
-    opacity: 0.5
+.disable
+  opacity: 0.5
+  pointer-events: none
+
+.User_avatar
+  display: none
+
+.headerButton
+  width: 100%
+  height: 34px
+  line-height: 1
+  color: #000625
+  background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+  border-radius: 4px
+  display: flex
+  justify-content: center
+  align-items: center
+  span
+    font-family: 'RevxNeueDemo'
+    font-style: normal
+    font-weight: 600
+    font-size: 12px
+.profileMobileUser
+  display: flex
+  .avatar
+    margin-right: 12px
+    img
+      min-width: 40px
+      min-height: 40px
+      max-width: 40px
+      max-height: 40px
+      border-radius: 50%
+  .profileMobileName
+    font-family: 'Lexend'
+    font-style: normal
+    font-weight: 300
+    font-size: 16px
+    line-height: 18px
+    color: #00F9FF
+    width: 152px
+    margin-bottom: 4px
+  .profileMobileInfo
+    min-width: 0
+    .profileMobileBalance
+      display: flex
+      width: 100%
+      flex-wrap: wrap
+      .rewardItem
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: 'Lexend'
+        font-size: 14px
+        .lucisPoint
+          margin-right: 8px
+          color: #DF9B16
+        img
+          min-width: 14px
+          min-height: 14px
+          max-width: 14px
+          max-height: 14px
+          margin-right: 4px
+          box-shadow: 0 0 6.3px rgba(11, 235, 214, 0.5)
+          border-radius: 50%
+        span
+          word-break: break-all
+.profileMobileWallet
+  margin-top: 24px
+  .address
+    white-space: nowrap
+    width: 216px
+    overflow: hidden
+    border-radius: 50px
+    background: #2E384D
+    text-overflow: ellipsis
+    padding: 8px 28px
+    margin-bottom: 8px
+    font-family: 'Lexend'
+    font-style: normal
+    font-weight: 500
+    font-size: 12px
+    text-align: center
+
+.menuMobileItem
+  :global(.comingSoon)
+    position: relative
+    span
+      font-weight: 300
+      font-family: "Lexend", serif
+      font-size: 8px
+      line-height: 115%
+      color: #0BEBD6
+      position: absolute
+      bottom: -5px
+      left: 10px
+      white-space: nowrap
+      text-transform: uppercase
+.menuMobileItemMarginTop
+  margin-top: auto
+  padding-top: 24px
+
+.menuMobileLg
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.menuNavMobile
+  background: rgba(0, 6, 37, 0.5)
+  backdrop-filter: blur(40px)
+  .listMenuNavMobile
+    ul
+      padding-bottom: 26px
+      li
+        font-family: 'Revx Neue Demo'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 26px
+        letter-spacing: 0.04em
+        color: #FFFFFF
+        &:hover
+          cursor: pointer
+          color: #00FFEC
+.line
+  margin-top: 30px
+  margin-bottom: 30px
+  height: 1px
+  border: 1px solid #3D475C
+
+.contactUs
+  width: 100%
+  margin-top: 20px
+
+.default
+  cursor: not-allowed
+  a
     pointer-events: none
+    display: flex
+    flex-direction: column
+    position: relative
+    color: #FFFFFF
+    opacity: 0.5
+    margin-bottom: 0 !important
+    span
+      color: #0BEBD6
+      position: absolute
+      bottom: -14px
+      right: 0
+      white-space: nowrap
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      margin-top: 4px
+      @media ( max-width: 1200px )
+        font-size: 8px
+.btnEmailUs
+  display: flex
+  gap: 0 10px
+  padding: 0 20px
+.btn
+  color: #000625 !important
+  padding: 0 74px
+  width: fit-content
+  font-weight: 600 !important
+  font-size: 14px !important
+  line-height: 15px !important

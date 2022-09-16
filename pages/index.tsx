@@ -17,6 +17,20 @@ import useScroll from "hooks/useScroll";
 import PartnersStrategic from "components/Home/Backers";
 import IvestorBackers from "components/Home/IvestorBackers";
 import MediaPage from "components/media";
+import LuckyChest from "../components/homepage/luckychest";
+import Arena from "../components/homepage/arena";
+import LastNews from "../components/homepage/lastNews";
+import NetWork from "../components/homepage/network";
+
+// import NewBanner from "../components/Home/NewBanner";
+import Destiny from './../components/homepage/destiny/index';
+import Raffles from './../components/homepage/raffles/index';
+
+
+import FavoriteGames from "../components/homepage/favoriteGames";
+import LucisNFTs from "../components/homepage/lucisNFTs";
+import NewBanner from "../components/homepage/NewBanner";
+
 
 const Home: NextPage = () => {
   const title = "Lucis Platform - Gaming SocialFi and Insights";
@@ -48,7 +62,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/assets/favicon.png" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
         />
         <meta charSet="utf-8" />
 
@@ -74,48 +88,49 @@ const Home: NextPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <AnimWhenVisible
-        variants={{
-          visible: { opacity: 1 },
-          hidden: { opacity: 0 },
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <Banner />
-      </AnimWhenVisible>
-      {/* <AnimWhenVisible>
-        <Community />
-      </AnimWhenVisible> */}
-
-      <AnimWhenVisible>
-        <Features />
-      </AnimWhenVisible>
-
-      {/* <AnimWhenVisible>
-        <SlideGame />
-      </AnimWhenVisible> */}
-
-      {/*<AnimWhenVisible>*/}
-      {/*  <MediaPage />*/}
+      {/*<AnimWhenVisible*/}
+      {/*  variants={{*/}
+      {/*    visible: { opacity: 1 },*/}
+      {/*    hidden: { opacity: 0 },*/}
+      {/*  }}*/}
+      {/*  transition={{ duration: 0.3 }}*/}
+      {/*>*/}
       {/*</AnimWhenVisible>*/}
-      <AnimWhenVisible>
-        <TokenAllocation />
-      </AnimWhenVisible>
-      <Roadmap />
-      <AnimWhenVisible>
-        <PartnersStrategic />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Advisor />
-      </AnimWhenVisible>
-      <AnimWhenVisible>
-        <Team />
-      </AnimWhenVisible>
-      {showButton && (
-        <button onClick={scrollToTop} className="btn-scrollTop">
-          &#8679;
-        </button>
-      )}
+      {/*<AnimWhenVisible>*/}
+      {/*  <Features />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <TokenAllocation />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<Roadmap />*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <PartnersStrategic />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <Advisor />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*<AnimWhenVisible>*/}
+      {/*  <Team />*/}
+      {/*</AnimWhenVisible>*/}
+      {/*{showButton && (*/}
+      {/*  <button onClick={scrollToTop} className="btn-scrollTop">*/}
+      {/*    &#8679;*/}
+      {/*  </button>*/}
+      {/*)}*/}
+
+      {/* <NewBanner /> */}
+
+      <NewBanner></NewBanner>
+      {/*<LuckyChest />*/}
+      <FavoriteGames />
+      {/*<LucisNFT />*/}
+      <LucisNFTs />
+      <Raffles />
+      <LuckyChest />
+      <Arena />
+      <Destiny />
+      <LastNews />
+      <NetWork />
     </div>
   );
 };

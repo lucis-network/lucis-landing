@@ -1,0 +1,95 @@
+.container_footer
+  :global(.lucis-container-2)
+    @media screen and (min-width: 1600px)
+      width: 1400px
+  background: #000625
+  backdrop-filter: blur(42px)
+  //@media (max-width: 992px)
+  //  height: 70px
+  //  line-height: 70px
+  //@media (max-width: 768px)
+  //  height: 48px
+  //  line-height: 48px
+  .logo
+    @media screen and (min-width: 1800px)
+      display: flex
+      align-items: center
+      position: absolute
+      left: 62px
+      top: 50%
+      transform: translate(0, -50%)
+    img
+      height: 40px
+      min-height: 40px
+      max-height: 40px
+      margin-bottom: 18px
+  .logoTab
+    margin: 12px 0
+    @media screen and (min-width: 575px)
+      margin: 36px 0
+    @media screen and (min-width: 768px)
+      margin: 48px 0
+    img
+      height: 24px
+      @media screen and (min-width: 575px)
+        height: 32px
+      @media screen and (min-width: 768px)
+        height: 40px
+  .wrapper
+    display: flex
+  .group_ic
+    display: flex
+    align-items: center
+    gap: 0 8px
+    @media screen and (min-width: 575px)
+      gap: 0 10px
+    .ic_item
+      width: 24px
+      @media screen and (min-width: 575px)
+        width: 30px
+  .block_item_menu
+    height: 100%
+    display: flex
+    align-items: center
+    margin: 0
+    gap: 0 12px
+    @media screen and (min-width: 992px)
+      gap: 0 36px
+    li
+      display: flex
+      align-items: center
+      a
+        font-family: 'RevxNeueDemo'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 18px
+        letter-spacing: 0.08em
+        color: #FFFFFF
+        @media (max-width: 1400px)
+          font-size: 14px
+      a:hover
+        color: #00FFEC
+.container
+  display: flex
+  align-items: center
+  justify-content: space-between
+  .group_link
+    @media screen and (max-width: 767px)
+      display: none
+  .btn_help
+    margin-left: 10px
+    @media (max-width: 991px)
+      display: none
+    //span
+    width: 199px
+    font-family: 'RevxNeueDemo'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    color: #002130
+    letter-spacing: 0.2em
+    height: 30px
+

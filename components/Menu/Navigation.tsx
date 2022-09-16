@@ -8,6 +8,7 @@ import { Modal, Button, Menu } from "antd";
 import { AppEmitter } from "../../services/emitter";
 import Link from "next/link";
 import s from "./MenuMobile.module.sass";
+import ButtonBorder from "../Button/buttonBorder/ButtonBorder";
 
 const variants = {
   open: {
@@ -71,58 +72,41 @@ export const Navigation = () => {
   const styleSub = isSubMenu == false ? 0 : 272;
 
   const menuItems: MenuItemType[] = [
+    // {
+    //   color: "#FF008C",
+    //   text: "HOME",
+    //   src: "#",
+    //   scrollTarget: "#EcoSystem",
+    // },
     {
       color: "#FF008C",
-      text: "Zone",
-      src: "",
-      scrollTarget: "#EcoSystem",
+      text: "PLAYCORE",
+      src: process.env.NEXT_PUBLIC_P2E_URL ?? "",
     },
     {
       color: "#FF008C",
-      text: "Docs",
-      src: "/docs",
+      text: "ARENA",
+      src: process.env.NEXT_PUBLIC_P2E_URL + "/arena" ?? "",
     },
     {
       color: "#FF008C",
-      text: (
-        <div>
-          <div onClick={showSubmenu}>Ecosystem</div>
-          <ul style={{ height: styleSub }} className={s.submenu}>
-            {dataSubMenu.map((data: any) => (
-              <li
-                className={`${data.disabled == true && s.disabled}`}
-                key={data.id}
-                onClick={hideMenu}
-              >
-                <Link href={`${data.href}`}>{data.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ),
-      src: "",
-      subMenu: true,
+      text: "INSIGHT",
+      src: "https://insight.lucis.network/",
     },
     {
       color: "#FF008C",
-      text: (
-        <GradientButton
-          onClick={() => {
-            setIsModalVisible(true);
-          }}
-          type={1}
-          className="text-white font-saira nw"
-          style={{
-            whiteSpace: "nowrap",
-            fontSize: "20px",
-            lineHeight: "22px",
-            padding: "10px 16px",
-          }}
-        >
-          Contact Us
-        </GradientButton>
-      ),
-      src: "",
+      text: "RANKING",
+      src: process.env.NEXT_PUBLIC_P2E_URL + "/ranking" ?? "",
+    },
+    {
+      color: "#FF008C",
+      text: <span className={s.default}><a>SCHORLARSHIP<span>Coming Soon</span></a></span>,
+      //src: ""
+    },
+    {
+      color: "#FF008C",
+      text: <span className={s.default}><a>SOCIAL <span style={{left: 0}}>Coming Soon</span></a></span>,
+      //src: ""
     },
   ];
 
@@ -139,13 +123,21 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <div>
+    <div className={s.listMenuNavMobile}>
       <motion.ul className="nav-list" variants={variants}>
         {menuItems.map((i, idx) => (
           <MenuItem item={i} key={idx} />
         ))}
-      </motion.ul>
+        <div className={s.line}></div>
+        <div className={s.contactUs}>
+          <ButtonBorder>
+            <div className={s.btn} onClick={() => setIsModalVisible(true)}>
+              CONTACT US
+            </div>
+          </ButtonBorder>
 
+        </div>
+      </motion.ul>
       <Modal
         title="Contact us"
         visible={isModalVisible}
@@ -191,21 +183,14 @@ export const Navigation = () => {
           </p>
         </div>
         <div id="content_btn">
-          <div id="btn_Chat">
-            <a href="mailto://partner@lucis.network">Email us</a>
-            <img src="/assets/Banner/teleChat.svg" alt="" />
-          </div>
-
-          {/* <div id="btn_Chat">
-                <a
-                  href="https://t.me/lucis_network_application_form"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Chat with us
-                </a>
+          <div className={s.contactUs}>
+            <ButtonBorder>
+              <div className={s.btnEmailUs}>
+                <a href="mailto://partner@lucis.network">Email us</a>
                 <img src="/assets/Banner/teleChat.svg" alt="" />
-              </div> */}
+              </div>
+            </ButtonBorder>
+          </div>
         </div>
       </Modal>
     </div>

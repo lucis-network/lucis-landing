@@ -1,0 +1,249 @@
+@import "styles/common"
+
+.pcMenu
+  position: fixed
+  top: 0
+  width: 100%
+  background: #000625
+  z-index: 13
+  // position: relative
+  @media screen and (max-width: 1024px)
+    display: none
+.menu_container
+  color: inherit
+  background: #000625
+  height: 88px
+  display: flex
+  :global(.lucis-container-2)
+    @media screen and (min-width: 1600px)
+      width: 1400px
+.logoSection
+  display: none
+  @media screen and (min-width: 1800px)
+    position: absolute
+    left: 62px
+    top: 50%
+    transform: translate(0, -50%)
+    display: flex
+    align-items: center
+  .logo
+    cursor: pointer
+    height: 40px
+    p
+      margin: 0
+      font-size: 12px
+      color: white
+.logoTab
+  display: flex
+  align-items: center
+  .logo
+    cursor: pointer
+    height: 40px
+    margin-right: 64px
+  @media screen and (min-width: 1800px)
+    display: none
+  @media screen and ( min-width: 1024px )
+    .logo
+      margin-right: 24px
+
+.block_item_menu
+  display: flex
+  align-items: center
+  margin: 0
+  color: #FFF
+  li
+    a
+      white-space: nowrap
+      font-family: 'RevxNeueDemo'
+      font-style: normal
+      font-weight: 400
+      font-size: 20px
+      line-height: 26px
+      letter-spacing: 0.04em
+      color: #fff
+      transition: 0.3s
+      @media ( min-width: 1024px )
+        margin-right: 20px
+        font-size: 14px
+      @media ( min-width: 1200px )
+        margin-right: 25px
+        font-size: 18px
+      @media ( min-width: 1400px )
+        font-size: 20px
+      @media ( min-width: 1800px )
+        margin-right: 64px
+        font-size: 20px
+
+  .active
+    a
+      color: #0BEBD6
+  .default
+    cursor: not-allowed
+    a
+      pointer-events: none
+      display: flex
+      flex-direction: column
+      position: relative
+      color: #FFFFFF
+      opacity: 0.5
+      span
+        font-weight: 300
+        font-family: 'Lexend', serif
+        font-size: 8px
+        line-height: 26px
+        color: #0BEBD6
+        position: absolute
+        bottom: -12px
+        right: 0
+        white-space: nowrap
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        @media ( max-width: 1200px )
+.block_item_menu li a:hover
+  color: #0BEBD6
+
+.loginCol
+  display: flex !important
+.profileUser
+  display: flex
+  justify-content: flex-end
+  .address
+    color: #0BEBD6
+    display: flex
+    align-items: flex-end
+    div
+      overflow: hidden
+      font-family: 'Lexend'
+      font-style: normal
+      font-weight: 300
+      font-size: 13px
+      margin-right: 10px
+  .avatar
+    margin-left: 8px
+    cursor: pointer
+    display: flex
+    align-items: flex-end
+    height: 100%
+    img
+      width: 40px
+      height: 40px
+      min-width: 40px
+      border-radius: 50%
+  .profileName
+    font-family: 'Lexend'
+    font-style: normal
+    font-weight: 300
+    font-size: 16px
+    text-align: right
+    color: #fff
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    .displayName
+      white-space: nowrap
+      width: 230px
+      overflow: hidden
+      text-overflow: ellipsis
+  .profileInfo
+    .profileBalance
+      display: flex
+      justify-content: flex-end
+      .wrapperReward
+        background: rgba(255, 255, 255, 0.1)
+        padding: 2px 8px
+        border-radius: 2px
+        display: flex
+      .rewardItem
+        display: flex
+        justify-content: center
+        align-items: center
+        font-family: 'Lexend'
+        font-size: 14px
+        .lucisPoint
+          color: #DF9B16
+        img
+          width: 14px
+          height: 14px
+          margin-left: 4px
+          box-shadow: 0 0 6.3px rgba(11, 235, 214, 0.5)
+          border-radius: 50%
+.overviewBtn
+  //width: 107px
+  //height: 24px
+  background: #ffffff
+  position: relative
+  cursor: pointer
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: 1px
+    right: 1px
+    bottom: 1px
+    left: 1px
+    border: 1px solid #000000
+  &:hover
+    background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+    div
+      color: #fff
+  div
+    font-family: 'RevxNeueDemo'
+    font-weight: 400
+    font-size: 20px
+    line-height: 22px
+    letter-spacing: 0.2em
+    height: 100%
+    color: #333333
+    align-items: center
+    justify-content: center
+    display: flex
+    padding-top: 2px
+.loginSection
+  display: flex
+  justify-content: right
+
+.overviewBtn
+  width: 190px
+  height: 38px
+  background: #ffffff
+  cursor: pointer
+  position: relative
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: 1px
+    right: 1px
+    bottom: 1px
+    left: 1px
+    border: 1px solid #000000
+  &:hover
+    background: linear-gradient(93.02deg, #1889E4 0.52%, #0BEBD6 100.48%)
+    div
+      color: #fff
+  div
+    font-family: 'RevxNeueDemo'
+    font-weight: 400
+    font-size: 20px
+    line-height: 22px
+    letter-spacing: 0.2em
+    width: 100%
+    height: 100%
+    color: #333333
+    align-items: center
+    justify-content: center
+    display: flex
+    padding-top: 2px
+.container
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.logoTabMobile
+  @media screen and (min-width: 768px)
+    display: none
+
+.btnEmailUs
+  display: flex
+  gap: 0 10px
+  padding: 0 20px

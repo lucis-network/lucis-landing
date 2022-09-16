@@ -78,9 +78,14 @@ export const MenuMobile = (props: any) => {
         className={`${s.mobileMenu} fixed top-0 left-0 right-0 z-[101] bg-nav backdrop-blur-sm`}
       >
         <div className={`${s.menuMobile} flex justify-between items-center`}>
-          <div style={{width: 150, height: 42, padding: "3px 0"}}>
-            <Link href="/">
-              <Image src={Logo} width={150} height={42} alt="logo" layout="responsive"></Image>
+          <div>
+            {/*<Link href="/">*/}
+            {/*  <Image src="/assets/header/logo_mobile.png" width={150} height={42} alt="logo" layout="responsive"></Image>*/}
+            {/*</Link>*/}
+            <Link href="/" passHref>
+              <a>
+                <img src="/assets/header/new_logo.png"  alt="logo"/>
+              </a>
             </Link>
           </div>
           
@@ -100,7 +105,7 @@ export const MenuMobile = (props: any) => {
         custom={height}
         ref={containerRef}
         variants={nav}
-        className="mobile-nav z-[101]"
+        className={`mobile-nav z-[101] ${s.menuNavMobile}`}
       >
         <motion.div className="background" variants={sidebar}>
           <div className="bg-glass w-full h-full opacity-[0.15]"/>

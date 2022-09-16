@@ -35,21 +35,27 @@ export type MenuItemType = {
 
 export const MenuItem = (props: { item: MenuItemType }) => {
   const router = useRouter();
-  const click = useCallback((src: string) => {
-    if (src && src != "") {
-      router.push(src);
-    } else {
-      if (props.item.scrollTarget) {
-        router.push("/")
-        setTimeout(() => {
-          scrollToSection(props.item.scrollTarget ?? "", true, -90);
-        }, 500);
-      }
+  const click = (src?: string) => {
+    if (src == "") {
+      router.push("/");
     }
-    if (!props.item.subMenu) {
-      AppEmitter.emit("setMbMenuVisible", false);
-    }
-  }, []);
+    // else {
+    //   if (props.item.scrollTarget) {
+    //     router.push("/")
+    //     setTimeout(() => {
+    //       scrollToSection(props.item.scrollTarget ?? "", true, -90);
+    //     }, 500);
+    //   }
+    // }
+    // if(src == "") {
+    //   setTimeout(() => {
+    //     scrollToSection(props.item.scrollTarget ?? "", true, -90);
+    //   }, 500);
+    // }
+    // if (!props.item.subMenu) {
+    //   AppEmitter.emit("setMbMenuVisible", false);
+    // }
+  };
 
   return (
     <motion.li
@@ -61,7 +67,7 @@ export const MenuItem = (props: { item: MenuItemType }) => {
       {
         props.item.src &&
           <Link href={props.item.src} passHref>
-              <a target="_blank" rel="noopener noreferrer"><span>{props.item.text}</span></a>
+              <a target={"_blank"} rel="noopener noreferrer"><span>{props.item.text}</span></a>
           </Link>
       }
       {

@@ -83,6 +83,7 @@ const GET_RECENT_WINNERS = gql`
         uid
         img
         valued_at
+        end_at
       }
     }
   }

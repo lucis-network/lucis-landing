@@ -6,6 +6,7 @@ import rafflesStyle from "./Raffles.module.sass";
 import {useGetRaffles, useGetRecentWinners} from "hooks/useRafflesList";
 import {Image} from "antd";
 import {RaffleStatusType} from "../../../src/generated/graphql_p2e";
+import moment from "moment";
 
 const Raffles = () => {
   const {getRecentWinnersLoading, getRecentWinnersError, getRecentWinnersData} = useGetRecentWinners();
@@ -70,10 +71,10 @@ const Raffles = () => {
                 return (
                   <div key={`${item?.raffle?.uid}${index}`}>
                     <SwiperSlide>
-                      <span className={rafflesStyle.time}></span>
+                      <span className={rafflesStyle.time}>{moment(item?.raffle?.end_at).format("MMMM Do hh:mm")}</span>
                       <Image src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : '/assets/homepage/default_avatar.png'} preview={false} alt="" fallback="/assets/homepage/default_avatar.png" />
                       <span className={rafflesStyle.name}>{item?.user?.profile?.display_name}</span>
-                      <span className={rafflesStyle.desc}>Received a prize at</span>
+                      <span className={rafflesStyle.desc}>received a prize at</span>
                       <span className={rafflesStyle.value}> ${item?.raffle?.valued_at}</span>
                     </SwiperSlide>
                   </div>

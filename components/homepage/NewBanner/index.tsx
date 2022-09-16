@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 const data = {
     'gamers': 3000,
-    'reward': 1400200
+    'reward': 20321
 }
 
 export default function NewBanner() {

@@ -35,11 +35,14 @@ const Destiny = () => {
           <div className={s.desc}>
             <p>Lucis Gaming Guild provides investors a place to recruit scholars (gamers) in order to work together in the gaming field for big prizes.</p>
           </div>
-          <ButtonBorder>
-            <div className={s.btn} onClick={() => window.open(process.env.NEXT_PUBLIC_P2E_URL, '_blank')}>
-              MORE DETAIL
-            </div>
-          </ButtonBorder>
+          <div>
+            <ButtonBorder disable={true}>
+              <div className={s.btn}>
+                Coming Soon
+              </div>
+            </ButtonBorder>
+          </div>
+
         </div>
         <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/imgSocial.png" alt=""/>
@@ -119,7 +122,7 @@ const Destiny = () => {
             <p>will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets.</p>
           </div>
           <ButtonBorder>
-            <div className={s.btn} onClick={() => window.open("https://insight.lucis.network/", '_blank')}>
+            <div className={s.btn} onClick={() => window.open("https://www.tiktok.com/@lucistvv", '_blank')}>
               MORE DETAIL
             </div>
           </ButtonBorder>
@@ -142,7 +145,7 @@ const Destiny = () => {
             <div>Sell <b>NFT boxes</b> or <b>NFT</b> collection on Lucis marketplace.</div>
           </div>
           <ButtonBorder>
-            <div className={s.btn} onClick={() => window.open("https://insight.lucis.network/", '_blank')}>
+            <div className={s.btn} onClick={() => window.open("https://launchpad.lucis.network/", '_blank')}>
               MORE DETAIL
             </div>
           </ButtonBorder>
@@ -201,7 +204,7 @@ const Destiny = () => {
   }
 
   return (
-    <div className={`lucis-container-2 ${s.destiny_wrapper}`}>
+    <div id="id_destiny" className={`lucis-container-2 ${s.destiny_wrapper}`}>
       <div className={s.container}>
         <div className={s.header}>
           <h1>Welcome to our Destiny</h1>

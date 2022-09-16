@@ -84,7 +84,7 @@ export const MenuMobile = (props: any) => {
             {/*</Link>*/}
             <Link href="/" passHref>
               <a>
-                <img src="/assets/header/logo_mobile.png"  alt="logo"/>
+                <img src="/assets/header/new_logo.png"  alt="logo"/>
               </a>
             </Link>
           </div>

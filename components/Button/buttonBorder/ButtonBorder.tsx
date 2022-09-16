@@ -7,10 +7,11 @@ type Props = {
   onClick?: () => void;
   width?: string;
   children?: React.ReactNode;
+  disable?: boolean;
 };
 
 const ButtonBorder: React.FC<Props> = (props: Props) => {
-  const {onClick, children} = props;
+  const {onClick, children, disable} = props;
 
   useEffect(() => {
     let btn = document.querySelector('.btn_hover_common');
@@ -31,7 +32,7 @@ const ButtonBorder: React.FC<Props> = (props: Props) => {
   }, [])
 
   return (
-    <div className={`${s.btn} btn_hover_common`} onClick={onClick}>
+    <div className={`${s.btn} btn_hover_common ${disable ? s.btnDisable: ""}`} onClick={onClick}>
       {children}
       <span className={`${s.btn_hover} btn_glow_common`}></span>
     </div>

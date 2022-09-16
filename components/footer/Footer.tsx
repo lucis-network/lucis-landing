@@ -5,13 +5,20 @@ import homepage from "../homepage/Homepage.module.sass";
 
 type Props = {};
 export default function Footer(props: Props) {
+  const gotoDestiny = () => {
+    const section = document.getElementById( 'id_destiny' );
+    console.log(section);
+    if(section) {
+      section.scrollIntoView({behavior: "smooth", block: "end"});
+    }
+  }
   return (
     <section className={`${s.container_footer}`} >
       <div className={`lucis-container-2 ${s.container}`}>
         <div className={s.group_link}>
           <ul className={s.block_item_menu}>
-            <li><Link href="https://lucis.network">ZONE</Link></li>
-            <li><Link href="/">FAQ</Link></li>
+            <li><a onClick={() => gotoDestiny()}>ZONE</a></li>
+            <li><Link href="https://tournament-lucis.gitbook.io/lucis-tournament/"><a target="_blank">FAQ</a></Link></li>
             <li><Link href="/">Privacy Policy</Link></li>
           </ul>
         </div>

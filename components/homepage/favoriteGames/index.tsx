@@ -1,5 +1,6 @@
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Link from "next/link";
 
 import homepage from '../Homepage.module.sass'
 import fvGame from './FavoriteGames.module.sass'
@@ -36,31 +37,43 @@ const FavoriteGames = () => {
           <SwiperSlide>
             <div className={fvGame.gameItem}>
               <img src="/assets/homepage/favoriteGames/gameThetan.jpg" alt=""/>
-              <button className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</button>
+              <Link href={`${process.env.NEXT_PUBLIC_P2E_URL}`} passHref>
+                <a target="_blank" className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</a>
+              </Link>
             </div>
             <div className={fvGame.gameItem}>
               <img src="/assets/homepage/favoriteGames/gameValorant.jpg" alt=""/>
-              <button className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</button>
+              <Link href={`${process.env.NEXT_PUBLIC_P2E_URL}`} passHref>
+                <a target="_blank" className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</a>
+              </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className={`${fvGame.gameItem} available`}>
               <img src="/assets/homepage/favoriteGames/gameLOL.jpg" alt=""/>
-              <button className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</button>
+              <Link href={`${process.env.NEXT_PUBLIC_P2E_URL}`} passHref>
+                <a target="_blank" className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</a>
+              </Link>
             </div>
             <div className={`${fvGame.gameItem} available`}>
               <img src="/assets/homepage/favoriteGames/gameCSGO.jpg" alt=""/>
-              <button className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</button>
+              <Link href={`${process.env.NEXT_PUBLIC_P2E_URL}`} passHref>
+                <a target="_blank" className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</a>
+              </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className={fvGame.gameItem}>
               <img src="/assets/homepage/favoriteGames/gameDOTA.jpg" alt=""/>
-              <button className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</button>
+              <Link href={`${process.env.NEXT_PUBLIC_P2E_URL}`} passHref>
+                <a target="_blank" className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</a>
+              </Link>
             </div>
             <div className={fvGame.gameItem}>
               <img src="/assets/homepage/favoriteGames/gameFortnite.jpg" alt=""/>
-              <button className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</button>
+              <Link href={`${process.env.NEXT_PUBLIC_P2E_URL}`} passHref>
+                <a target="_blank" className={`${homepage.btnCommon} ${fvGame.btnCommon}`}>CONNECT GAME</a>
+              </Link>
             </div>
           </SwiperSlide>
         </Swiper>

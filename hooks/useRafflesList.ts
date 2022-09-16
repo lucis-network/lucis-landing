@@ -38,12 +38,12 @@ type GetRafflesProps = {
   }
 }
 
-export const useGetRaffles = ({filter}: GetRafflesProps): {
+export const useGetRaffles = (): {
   getRafflesLoading: boolean,
   getRafflesError: ApolloError | undefined,
   refetchRaffles: () => Promise<ApolloQueryResult<any>>,
   getRafflesData: {
-    searchRaffle: RaffleGql[]
+    topRaffle: RaffleGql[]
   },
 } => {
   const {
@@ -52,9 +52,6 @@ export const useGetRaffles = ({filter}: GetRafflesProps): {
     refetch: refetchRaffles,
     data: getRafflesData,
   } = useQuery(GET_RAFFLES, {
-    variables: {
-      filter: filter
-    },
     context: {
       endpoint: 'p2e'
     }
@@ -89,8 +86,8 @@ const GET_RECENT_WINNERS = gql`
 `
 
 const GET_RAFFLES = gql`
-  query ($filter: RaffleFilter!) {
-    searchRaffle (filter: $filter) {
+  query {
+    topRaffle {
       uid
       name
       img

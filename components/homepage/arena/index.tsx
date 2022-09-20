@@ -3,7 +3,6 @@ import s from "./index.module.sass";
 import React, {useEffect, useState} from "react";
 import {useGetDataArena} from "../../../hooks/useArena";
 import {TournamentGql} from "../../../src/generated/graphql";
-import {LINK_HOME_ARENA} from "../../../utils/Enum";
 import { slugify } from "utils/String";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

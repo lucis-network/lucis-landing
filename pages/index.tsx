@@ -112,18 +112,10 @@ const Home: NextPage = () => {
       {/*<AnimWhenVisible>*/}
       {/*  <Team />*/}
       {/*</AnimWhenVisible>*/}
-      {/*{showButton && (*/}
-      {/*  <button onClick={scrollToTop} className="btn-scrollTop">*/}
-      {/*    &#8679;*/}
-      {/*  </button>*/}
-      {/*)}*/}
 
-      {/* <NewBanner /> */}
 
-      <NewBanner></NewBanner>
-      {/*<LuckyChest />*/}
+      <NewBanner />
       <FavoriteGames />
-      {/*<LucisNFT />*/}
       <LucisNFTs />
       <Raffles />
       <LuckyChest />

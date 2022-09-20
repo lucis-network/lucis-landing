@@ -18,6 +18,8 @@ export default function Footer(props: Props) {
         <div className={s.group_link}>
           <ul className={s.block_item_menu}>
             <li><a onClick={() => gotoDestiny()}>ZONE</a></li>
+            <li><a onClick={() => gotoDestiny()}>DOC</a></li>
+            <li><a onClick={() => gotoDestiny()}>Careers</a></li>
             <li><Link href="https://tournament-lucis.gitbook.io/lucis-tournament/"><a target="_blank">FAQ</a></Link></li>
             <li><Link href="/">Privacy Policy</Link></li>
           </ul>
@@ -27,7 +29,7 @@ export default function Footer(props: Props) {
             href="./"
             rel="noopener noreferrer"
           >
-            <img src="/assets/header/new_logo.png" alt=""/>
+            <img src="/assets/logo_Lucis.svg" alt=""/>
           </a>
         </div>
         <div className={s.wrapper}>

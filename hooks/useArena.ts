@@ -38,13 +38,13 @@ export const useGetDataArena = (): {
     getDataArenaLoading,
     getDataArenaError,
     refetchgetDataArena,
-    getDataArena: data?.search,
+    getDataArena: data?.getTopTournament,
   }
 }
 
 const SEARCH_ARENA = gql`
-  query search($input: TournamentSearchInput!, $data: TournamentFilterInput!) {
-    search(input: $input, data: $data) {
+  query getTopTournament {
+    getTopTournament {
       uid
       name
       cover

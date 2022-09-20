@@ -23,7 +23,7 @@ export default function Header() {
           <div className={s.logoSection}>
             <Link href="/" passHref>
               <a>
-                <img src="/assets/header/new_logo.png" className={s.logo} alt="logo"/>
+                <img src="/assets/logo_Lucis.svg" className={s.logo} alt="logo"/>
               </a>
             </Link>
             {
@@ -39,7 +39,7 @@ export default function Header() {
                 <li className={s.logoTab}>
                   <Link href="#" passHref>
                     <a rel="noopener noreferrer">
-                      <img src="/assets/header/new_logo.png" className={s.logo} alt="logo"/>
+                      <img src="/assets/logo_Lucis.svg" className={s.logo} alt="logo"/>
                     </a>
                   </Link>
                 </li>

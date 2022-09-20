@@ -7,19 +7,19 @@ export default function Partner() {
     <>
       <div className={s.wrapper}>
         <div className={`${s.container}`}>
-          <div className={`${s.itemLg} ${s.lgBizverse}`}>
+          <div className={`${s.itemLg} ${s.lgBizverse}`} onClick={() => window.open("https://bizverse.io/", '_blank')}>
             <img srcSet="/assets/lg_partner/bizverse.png" alt="" />
           </div>
-          <div className={`${s.itemLg} ${s.lgAnimverse}`}>
+          <div className={`${s.itemLg} ${s.lgAnimverse}`} onClick={() => window.open("https://animverse.com/", '_blank')}>
             <img srcSet="/assets/lg_partner/animverse.png" alt="" />
           </div>
-          <div className={s.itemLg}>
+          <div className={s.itemLg} onClick={() => window.open("https://mones.io/", '_blank')}>
             <img srcSet="/assets/lg_partner/mones.png" alt="" />
           </div>
-          <div className={`${s.itemLg} ${s.lgGalaxy}`}>
+          <div className={`${s.itemLg} ${s.lgGalaxy}`} onClick={() => window.open("https://www.galaxysurvivor.io/", '_blank')}>
             <img srcSet="/assets/lg_partner/galaxy.png" alt="" />
           </div>
-          <div className={`${s.itemLg} ${s.lgAiza}`}>
+          <div className={`${s.itemLg} ${s.lgAiza}`} onClick={() => window.open("https://aizaworld.com/", '_blank')}>
             <img srcSet="/assets/lg_partner/aiza.png" alt="" />
           </div>
           <div className={`${s.itemLg} ${s.lgCoinbay}`}>

@@ -77,15 +77,13 @@ const Raffles = () => {
           {
             getRecentWinnersData && getRecentWinnersData?.getRecentWinners?.slice(0,8).map((item, index) => {
                 return (
-                  <div key={`${item?.raffle?.uid}${index}`}>
-                    <SwiperSlide>
+                    <SwiperSlide key={`${index}`}>
                       <span className={rafflesStyle.time}>{moment(item?.raffle?.end_at).format("MMMM Do hh:mm")}</span>
                       <Image src={item?.user?.profile?.avatar ? item?.user?.profile?.avatar : '/assets/homepage/default_avatar.png'} preview={false} alt="" fallback="/assets/homepage/default_avatar.png" />
                       <span className={rafflesStyle.winnerName}>{item?.user?.profile?.display_name}</span>
                       <span className={rafflesStyle.desc}>received a prize at</span>
                       <span className={rafflesStyle.value}> ${item?.raffle?.valued_at}</span>
                     </SwiperSlide>
-                  </div>
                 )
               }
             )

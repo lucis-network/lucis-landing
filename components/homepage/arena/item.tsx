@@ -1,12 +1,11 @@
 import s from "./index.module.sass";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Bracket, TournamentGql} from "../../../src/generated/graphql";
 import moment from "moment";
 import {format} from "utils/Number";
 import "swiper/css";
 import {Image} from "antd";
-import {LINK_HOME_ARENA} from "../../../utils/Enum";
-import {slugify} from "../../../utils/String";
+
 
 type Props = {
   item: TournamentGql

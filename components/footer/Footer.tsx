@@ -14,9 +14,23 @@ export default function Footer(props: Props) {
   }
   return (
     <section className={`${s.container_footer}`} >
+      <div className={s.logoSection}>
+        <Link href="/" passHref>
+          <a>
+            <img src="/assets/logo_Lucis.svg" className={s.logo} alt="logo"/>
+          </a>
+        </Link>
+      </div>
       <div className={`lucis-container-2 ${s.container}`}>
         <div className={s.group_link}>
           <ul className={s.block_item_menu}>
+            <li className={s.logo_group}>
+              <Link href="#" passHref>
+                <a rel="noopener noreferrer">
+                  <img src="/assets/logo_Lucis.svg" className={s.logo} alt="logo"/>
+                </a>
+              </Link>
+            </li>
             <li><a onClick={() => gotoDestiny()}>ZONE</a></li>
             <li><a onClick={() => gotoDestiny()}>DOC</a></li>
             <li><a onClick={() => gotoDestiny()}>Careers</a></li>

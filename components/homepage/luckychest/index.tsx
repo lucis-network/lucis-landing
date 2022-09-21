@@ -55,6 +55,7 @@ export default function LuckyChest() {
                     clickable: true
                   }}
                   modules={[Grid]}
+                  className={s.swiper}
                   breakpoints={{
                     360: {
                       slidesPerView: 4,
@@ -102,6 +103,7 @@ export default function LuckyChest() {
                         rows: 2,
                       },
                       spaceBetween: 8,
+                      //width: 824
                       //loop: false
                     },
                   }}

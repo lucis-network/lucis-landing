@@ -86,7 +86,7 @@ export default function Footer(props: Props) {
             </div>
             <div className={s.ic_item}>
               <a
-                href="https://twitter.com/LucisNetwork"
+                href="https://twitter.com/LucisNetworkLSN"
                 target="_blank"
                 rel="noopener noreferrer"
               >

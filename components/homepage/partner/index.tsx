@@ -22,19 +22,19 @@ export default function Partner() {
           <div className={`${s.itemLg} ${s.lgAiza}`} onClick={() => window.open("https://aizaworld.com/", '_blank')}>
             <img srcSet="/assets/lg_partner/aiza.png" alt="" />
           </div>
-          <div className={`${s.itemLg} ${s.lgCoinbay}`}>
+          <div className={`${s.itemLg} ${s.lgCoinbay}`} onClick={() => window.open("https://coinbay.io/vi/home/", '_blank')}>
             <img srcSet="/assets/lg_partner/coinbay.png" alt="" />
           </div>
-          <div className={`${s.itemLg} ${s.lgFltrend}`}>
+          <div className={`${s.itemLg} ${s.lgFltrend}`} onClick={() => window.open("https://followtrend.net/", '_blank')}>
             <img srcSet="/assets/lg_partner/fl_trend.png" alt="" />
           </div>
-          <div className={`${s.itemLg} ${s.lgMetawork}`}>
+          <div className={`${s.itemLg} ${s.lgMetawork}`} onClick={() => window.open("https://www.metawork.com/", '_blank')}>
             <img srcSet="/assets/lg_partner/metawork.png" alt="" />
           </div>
-          <div className={`${s.itemLg} ${s.lgMifu}`}>
+          <div className={`${s.itemLg} ${s.lgMifu}`} onClick={() => window.open("https://aizaworld.com/", '_blank')}>
             <img srcSet="/assets/lg_partner/mifu.png" alt="" />
           </div>
-          <div className={`${s.itemLg} ${s.lgSpac3ship}`}>
+          <div className={`${s.itemLg} ${s.lgSpac3ship}`} onClick={() => window.open("https://mifu.asia/", '_blank')}>
             <img srcSet="/assets/lg_partner/spac3ship.png" alt="" />
           </div>
         </div>

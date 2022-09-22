@@ -54,14 +54,14 @@ export default function Header() {
                     PLAYCORE
                   </a>
                 </Link></li>
-                <li className={`${router.pathname.includes("/arena") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL + "/arena" ?? ""} passHref>
+                <li className={`${router.pathname.includes("arena") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL + "arena" ?? ""} passHref>
                   <a target="_blank" rel="noopener noreferrer">
                     ARENA
                   </a>
                 </Link></li>
                 <li><a href="https://insight.lucis.network/" target="_blank"
                        rel="noopener noreferrer">INSIGHT</a></li>
-                <li className={`${router.pathname.includes("/ranking") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL + "/ranking" ?? ""} passHref>
+                <li className={`${router.pathname.includes("ranking") ? s.active : ""}`}><Link href={process.env.NEXT_PUBLIC_P2E_URL + "ranking" ?? ""} passHref>
                   <a target="_blank" rel="noopener noreferrer">
                     RANKING
                   </a>

@@ -12,10 +12,6 @@ export default function LuckyChest() {
 
   const {getDataAllChest} = useGetAllChest();
 
-  const joinNow = () => {
-    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/playcore/lucky-chest", '_blank');
-  }
-
   useEffect(() => {
     let btn = document.querySelector('.btn_hover_luckychest');
     if(btn) {
@@ -123,10 +119,12 @@ export default function LuckyChest() {
                   ))}
                 </Swiper>
               </div>
-              <div className={`${s.btn} btn_hover_luckychest`} onClick={joinNow}>
-                <div>LUCKY CHEST</div>
-                <span className={`${s.btn_hover} btn_glow`}></span>
-              </div>
+              <a href={process.env.NEXT_PUBLIC_P2E_URL + "/playcore/lucky-chest"} target="_blank" rel="noopener noreferrer">
+                <div className={`${s.btn} btn_hover_luckychest`}>
+                  <div>LUCKY CHEST</div>
+                  <span className={`${s.btn_hover} btn_glow`}></span>
+                </div>
+              </a>
             </div>
 
             <div className={s.boxImages}>

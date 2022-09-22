@@ -34,7 +34,7 @@ const Raffles = () => {
           >
             {rafflesData && rafflesData.map(raffle => (
               <SwiperSlide key={raffle?.uid}>
-                <Link href={process.env.NEXT_PUBLIC_P2E_URL + '/playcore/raffles/' + raffle?.uid} passHref>
+                <Link href={process.env.NEXT_PUBLIC_P2E_URL + 'playcore/raffles/' + raffle?.uid} passHref>
                   <a target="_blank" className={rafflesStyle.sliderItem}>
                     <img src={raffle?.img ?? ''} alt="" onError={(e) => {
                       e.currentTarget.src = '/assets/homepage/raffles/rafflesError.jpg'
@@ -47,7 +47,7 @@ const Raffles = () => {
         </div>
       </div>
       <div className="lucis-container-2 text-center">
-        <Link href={process.env.NEXT_PUBLIC_P2E_URL + '/playcore/raffles'} passHref>
+        <Link href={process.env.NEXT_PUBLIC_P2E_URL + 'playcore/raffles'} passHref>
           <a target="_blank" className={`${homepage.btnCommon} ${rafflesStyle.btnCommon}`}>
             <span>JOIN NOW</span>
           </a>

@@ -16,7 +16,7 @@ export default function LastNews() {
   }, [])
 
   const openUrlNewTab = (link: string, lang: string) => {
-    const content = link.split(LINK_API_INSIGHT);
+    const content = link?.split(LINK_API_INSIGHT) ?? "";
     window.open(LINK_INSIGHT + lang + "/" + content[1]);
   }
 

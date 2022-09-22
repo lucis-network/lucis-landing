@@ -20,14 +20,6 @@ export default function Arena() {
     setData(k);
   }, [getDataArena])
 
-  const joinNow = () => {
-    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena", '_blank');
-  }
-
-  const createNow = () => {
-    window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena/create", '_blank');
-  }
-
   const getDetailArena = (item: TournamentGql) => {
     window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena" + `/${item.uid}/${slugify(item.name)}`, '_blank');
   }
@@ -119,8 +111,10 @@ export default function Arena() {
                   data && data.map((item, index) => {
                     return (
                       <div key={`${item?.team_size}-${item?.uid}`}>
-                        <SwiperSlide onClick={() => getDetailArena(item)} key={`${item?.team_size}-${item?.uid}`}>
+                        <SwiperSlide>
+                          <a href={process.env.NEXT_PUBLIC_P2E_URL + "/arena" + `/${item.uid}/${slugify(item.name)}`} target="_blank" rel="noopener noreferrer">
                           <ItemArena item={item}></ItemArena>
+                          </a>
                         </SwiperSlide>
                       </div>
                     )
@@ -133,14 +127,18 @@ export default function Arena() {
               <p>Let's create your own playing field and show your level to others!</p>
             </div>
             <div className={s.groupBtn}>
-              <div className={`${s.btn} btn_hover`} onClick={joinNow}>
-                <div>Join Now</div>
-                <span className={`${s.btn_hover} btn_glow`}></span>
-              </div>
-              <div className={`${s.btn} btn_cr_hover`} onClick={createNow}>
-                <div>Create Now</div>
-                <span className={`${s.btn_hover} btn_cr_glow`}></span>
-              </div>
+              <a href={process.env.NEXT_PUBLIC_P2E_URL + "/arena"} target="_blank" rel="noopener noreferrer">
+                <div className={`${s.btn} btn_hover`}>
+                  <div>Join Now</div>
+                  <span className={`${s.btn_hover} btn_glow`}></span>
+                </div>
+              </a>
+              <a href={process.env.NEXT_PUBLIC_P2E_URL + "/arena/create"} target="_blank" rel="noopener noreferrer">
+                <div className={`${s.btn} btn_cr_hover`}>
+                  <div>Create Now</div>
+                  <span className={`${s.btn_hover} btn_cr_glow`}></span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

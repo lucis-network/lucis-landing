@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import s from "./index.module.sass";
 import DiamondIcon from "./icon/DiamondIcon";
 import ButtonBorder from "../../Button/buttonBorder/ButtonBorder";
+import {slugify} from "../../../utils/String";
 
 const Destiny = () => {
   const listTabDestiny = [
@@ -65,11 +66,13 @@ const Destiny = () => {
             <span className={s.descArenaBold}>Team</span>
             <span className={s.descArenaNormal}>will get more popular and big prizes, big donation amount from Lucis Tournament platform.</span>
           </div>
-          <ButtonBorder>
-            <div className={s.btn} onClick={() => window.open(process.env.NEXT_PUBLIC_P2E_URL + "/arena", '_blank')}>
-              MORE DETAIL
-            </div>
-          </ButtonBorder>
+          <a href={process.env.NEXT_PUBLIC_P2E_URL + "/arena"} target="_blank" rel="noopener noreferrer">
+            <ButtonBorder>
+                <div className={s.btn}>
+                  MORE DETAIL
+                </div>
+            </ButtonBorder>
+          </a>
         </div>
         <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/tournaments.png" alt=""/>
@@ -96,11 +99,13 @@ const Destiny = () => {
           <div className={s.desc}>
             <p>We auto collect game & market data and provide our users an completed overview and insight about a game with a glance.</p>
           </div>
-          <ButtonBorder>
-            <div className={s.btn} onClick={() => window.open("https://insight.lucis.network/", '_blank')}>
-              MORE DETAIL
-            </div>
-          </ButtonBorder>
+          <a href="https://insight.lucis.network/" target="_blank" rel="noopener noreferrer">
+            <ButtonBorder>
+              <div className={s.btn}>
+                MORE DETAIL
+              </div>
+            </ButtonBorder>
+          </a>
         </div>
         <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/lucisInsight.png" alt=""/>
@@ -121,11 +126,13 @@ const Destiny = () => {
           <div className={s.desc}>
             <p>will provide up to date and valuable info about the market, deeply analysis for game projects, NFT, and the whole markets.</p>
           </div>
-          <ButtonBorder>
-            <div className={s.btn} onClick={() => window.open("https://www.tiktok.com/@lucistvv", '_blank')}>
-              MORE DETAIL
-            </div>
-          </ButtonBorder>
+          <a href="https://www.tiktok.com/@lucistvv" target="_blank" rel="noopener noreferrer">
+            <ButtonBorder>
+              <div className={s.btn}>
+                MORE DETAIL
+              </div>
+            </ButtonBorder>
+          </a>
         </div>
         <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/lucisMedia.png" alt=""/>
@@ -144,11 +151,13 @@ const Destiny = () => {
             <div><b>Game publisher</b> can host INO to sell NFT mistery boxes to Lucis community or users.</div>
             <div>Sell <b>NFT boxes</b> or <b>NFT</b> collection on Lucis marketplace.</div>
           </div>
-          <ButtonBorder>
-            <div className={s.btn} onClick={() => window.open("https://launchpad.lucis.network/", '_blank')}>
-              MORE DETAIL
-            </div>
-          </ButtonBorder>
+          <a href="https://launchpad.lucis.network/" target="_blank" rel="noopener noreferrer">
+            <ButtonBorder>
+              <div className={s.btn}>
+                MORE DETAIL
+              </div>
+            </ButtonBorder>
+          </a>
         </div>
         <div className={`${s.rightContentC} ${s.rightContent}`}>
           <img src="/assets/homepage/destiny/launchpad.png" alt=""/>
@@ -168,11 +177,13 @@ const Destiny = () => {
             <div><p>As a result, landing at the top of the leaderboard with monetary or physical prizes.</p></div>
             <div><p>Achieving the top position will result in numerous awards and recognition on the system.</p></div>
           </div>
+          <a href={process.env.NEXT_PUBLIC_P2E_URL + "/ranking"} target="_blank" rel="noopener noreferrer">
           <ButtonBorder>
-            <div className={s.btn} onClick={() => window.open(process.env.NEXT_PUBLIC_P2E_URL + "/ranking", '_blank')}>
+            <div className={s.btn}>
               MORE DETAIL
             </div>
           </ButtonBorder>
+          </a>
         </div>
         <div className={`${s.rightContentC} ${s.rightContent} ${s.rightContentRanking}`}>
           <img src="/assets/homepage/destiny/imgRanking.png" alt=""/>

@@ -110,13 +110,11 @@ export default function Arena() {
                 {
                   data && data.map((item, index) => {
                     return (
-                      <div key={`${item?.team_size}-${item?.uid}`}>
-                        <SwiperSlide>
+                        <SwiperSlide key={`${item?.team_size}-${item?.uid}-${index}`}>
                           <a href={process.env.NEXT_PUBLIC_P2E_URL + "/arena" + `/${item.uid}/${slugify(item.name)}`} target="_blank" rel="noopener noreferrer">
                           <ItemArena item={item}></ItemArena>
                           </a>
                         </SwiperSlide>
-                      </div>
                     )
                   })
                 }

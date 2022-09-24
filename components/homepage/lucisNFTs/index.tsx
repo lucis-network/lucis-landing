@@ -15,7 +15,7 @@ const LucisNFTs = () => {
       <div className={`lucis-container-2 ${homepage.sectionTitleWrap}`}>
         <div>
           <h2 className={homepage.sectionTitle}>LUCIS NFTS</h2>
-          <p className={homepage.sectionDesc}>Want to earn real money from playing your games?</p>
+          <p className={`${homepage.sectionDesc} ${lucisNFTs.sectionDesc}`}>Want to earn real money from playing your games?</p>
         </div>
       </div>
       <div className={lucisNFTs.sliderWrap}>

@@ -160,7 +160,7 @@ const Destiny = () => {
           </a>
         </div>
         <div className={`${s.rightContentC} ${s.rightContent}`}>
-          <img src="/assets/homepage/destiny/launchpad.png" alt=""/>
+          <img src="/assets/homepage/destiny/bg_launchpad.png" alt=""/>
         </div>
         <h2 className={`${s.titleTab} ${s.titleTabRes}`}>Launchpad & Marketplace</h2>
       </div>

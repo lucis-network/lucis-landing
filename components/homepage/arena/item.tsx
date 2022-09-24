@@ -78,7 +78,7 @@ export default function ItemArena(prop: Props) {
             <div className={s.itemTime}>
               <img src="/assets/homepage/date_range_arena.svg" alt=""/>
               <span>{moment(item.brackets?.[0].start_at).format(
-                "MMM Do, hh:mm"
+                "MMM Do, HH:mm"
               )}</span>
             </div>
           </div>
